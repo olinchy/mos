@@ -1,0 +1,13 @@
+className: LACPCascadePTP
+tid: 602
+reference:
+  - name: cascadePort
+    type: PhyPort
+    isMulti: true
+    maxItems: 8
+    under: ConstraintPolicyInList
+  - name: cascadeRadioPort
+    type: EthPort_Air
+    isMulti: true
+    maxItems: 8
+    under: ConstraintPolicyInList

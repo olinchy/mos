@@ -1,0 +1,36 @@
+className: LagMemPortInfo
+attributes:
+  - name: portState
+    attrId: 0
+    type: BYTE
+    mutable: false
+  - name: aggMode
+    attrId: 1
+    type: BYTE
+    mutable: false
+  - name: priority
+    attrId: 2
+    type: WORD16
+    mutable: false
+  - name: workMode
+    attrId: 3
+    type: LacpWorkModeEnum
+    mutable: false
+  - name: pktSendNum
+    attrId: 4
+    type: WORD32
+    mutable: false
+  - name: pktRcvNum
+    attrId: 5
+    type: WORD32
+    mutable: false
+  - name: ethCap
+    attrId: 6
+    type: WORD32
+    mutable: false
+reference:
+  - name: portId
+    type: PhyPort
+    isMulti: false
+    under: DependencyPolicy
+

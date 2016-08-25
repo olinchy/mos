@@ -1,0 +1,20 @@
+className: Rmue
+baseClass: Board
+tid: 133
+persistence: None
+attributes:
+   - name: boardType
+     attrId: 0
+     type: BoardTypeEnum
+     default: rmue
+     mutable: false
+children:
+   - name : AirPort
+     id : 1
+     count : 1
+     autoCreate: true
+   - name : HDInfo
+     id : 2
+     count : 1
+     autoCreate: true
+

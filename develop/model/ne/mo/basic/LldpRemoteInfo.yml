@@ -1,0 +1,12 @@
+className: LldpRemoteInfo
+tid: 430
+persistence: None
+triggers: [afterGet]
+attributes:
+  - name: remoteInfo
+    attrId: 0
+    type: Set
+    maxItems: 8
+    items:
+      type: LldpMultiRemoteInfo
+    mutable: false   

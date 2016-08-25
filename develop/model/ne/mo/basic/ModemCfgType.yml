@@ -1,0 +1,10 @@
+className: ModemCfgType
+tid: 517
+isAbstract : True
+attributes:
+  - name: syncToRemote
+    attrId: 0
+    type: StateEnum
+    default: disable
+    mutable: true
+

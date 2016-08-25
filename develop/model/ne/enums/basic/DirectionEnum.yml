@@ -1,0 +1,6 @@
+name: DirectionEnum
+type: BYTE
+default: main
+enum:
+    main: 0
+    spatial: 2

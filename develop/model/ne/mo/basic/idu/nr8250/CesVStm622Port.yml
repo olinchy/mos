@@ -1,0 +1,11 @@
+className: CesVStm622Port
+baseClass: VStm622Port
+tid: 123
+persistence: None
+attributes:
+  - name: featureList
+    attrId: 0
+    type: FeatureList
+    default: [ces]
+    mutable: false
+

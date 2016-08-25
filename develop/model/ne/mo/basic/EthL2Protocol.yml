@@ -1,0 +1,26 @@
+className: EthL2Protocol
+tid: 401
+persistence: None
+children:
+   - name : ErpsV2
+     id : 1
+     autoCreate: true
+   - name : Cfm
+     id : 2     
+     autoCreate: true
+   - name : Lldp
+     id : 3     
+     autoCreate: true
+   - name : Lcpt
+     id : 4     
+     autoCreate: true
+   - name : Efm
+     id : 5 
+     autoCreate: true
+   - name : SlowProtocol
+     id : 6
+     autoCreate: true
+   - name : Xstp
+     id : 7
+     autoCreate: true
+

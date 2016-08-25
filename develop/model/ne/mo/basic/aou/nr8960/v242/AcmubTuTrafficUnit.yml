@@ -1,0 +1,19 @@
+className: AcmubTuTrafficUnit
+baseClass: TrafficUnit
+tid: 224
+triggers: [afterAdd, afterSet, recover]
+#attributes:
+#   - name: BoardType
+#     attrId: 0
+#     type: BoardTypeEnum
+#     default: acmub
+#     mutable: false
+children:
+   - name : EthPort
+     type : PhyPort
+     id : 1
+     count : 4
+     groupType : map
+     autoCreate: {"E-1": [EthPort_E_1G, {displayName: "GbE1(PoE)"}], "O-2": [EthPort_O_1G, {displayName: "GbE2"}], "O-3": [EthPort_O_10G, {displayName: "GbE3/10GbE"}], "O-4": [EthPort_O_3in1, {displayName: "GbE4/EXT"}]}
+
+

@@ -1,0 +1,66 @@
+className: Vmp
+tid: 204
+persistence: None
+actions:
+  customs:
+    - name: Download
+      actionId: 1
+      attributes:
+        - name: ftpServer
+          attrId: 0  
+          type: IPv4Addr
+          maxLength: 20
+          mutable: true
+        - name: userName
+          attrId: 1  
+          type: String
+          maxLength: 20
+          default: "zte"
+          mutable: true
+        - name: userPassword
+          attrId: 2  
+          type: String
+          maxLength: 20
+          default: "zte"
+          mutable: true
+        - name: port
+          attrId: 3  
+          type: WORD16
+          default: 21
+          mutable: true
+        - name: filePath
+          attrId: 4  
+          type: String
+          maxLength: 255
+          mutable: true
+    - name: DownloadRsp
+      actionId: 101
+    - name: QueryVersion
+      actionId: 2
+    - name: QueryVersionRsp
+      actionId: 102
+children:
+   - name : Software
+     id : 1
+     count : 2
+     groupType : map
+   - name : Firmware
+     id : 2
+     count : 1
+     groupType : map
+   - name : HostedAouSoftware
+     id : 3
+     count : 1
+     groupType : map
+   - name : HostedAouInfo
+     id : 4
+     count : 1
+     autoCreate: True
+   - name : DownloadResult
+     id : 6
+     count : 1
+     autoCreate: True
+   - name : AdvancedCheckResult
+     id : 12
+     count : 1
+     autoCreate: True

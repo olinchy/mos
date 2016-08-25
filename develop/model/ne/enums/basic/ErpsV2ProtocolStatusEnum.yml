@@ -1,0 +1,10 @@
+name: ErpsV2ProtocolStatusEnum
+type: BYTE
+default: init
+enum: 
+  init: 0
+  pending: 1
+  idle: 2
+  manual_switch: 3
+  protection: 4
+  force_switch: 5

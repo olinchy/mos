@@ -1,0 +1,61 @@
+className: PmpWleth
+tid: 374
+triggers: [afterGet]
+persistence: None
+attributes:
+  - name: date
+    attrId: 0
+    type: Date
+    maxLength: 50
+    mutable: false
+  - name: validFlag
+    attrId: 1 
+    type : PmpValidFlagEnum
+    default: valid
+    mutable: false
+  - name: maxThroughput
+    attrId: 2 
+    type : FLOAT
+    mutable: false
+  - name: minThroughput
+    attrId: 3 
+    type : FLOAT
+    mutable: false
+  - name: avgThroughput
+    attrId: 4 
+    type : FLOAT
+    mutable: false
+  - name: maxCapacity
+    attrId: 5 
+    type : FLOAT
+    mutable: false
+  - name: minCapacity
+    attrId: 6 
+    type : FLOAT
+    mutable: false
+  - name: avgCapacity
+    attrId: 7 
+    type : FLOAT
+    mutable: false
+  - name: maxUtilize
+    attrId: 8 
+    type : WORD32
+    mutable: false
+  - name: minUtilize
+    attrId: 9 
+    type : WORD32
+    mutable: false
+  - name: avgUtilize
+    attrId: 10 
+    type : WORD32
+    mutable: false
+  - name: overUtilizeTime
+    attrId: 11 
+    type : WORD32
+    mutable: false
+actions:
+  customs:
+    - name: Clear
+      actionId: 1
+    - name: ClearRsp
+      actionId: 101

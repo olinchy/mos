@@ -1,0 +1,20 @@
+className: SysPara
+tid: 175
+persistence: None
+children:
+  - name : DevicePara
+    id : 1
+    count : 1
+    autoCreate: True
+  - name : Time
+    id : 2
+    count : 1
+    autoCreate: True
+  - name : DebugIp
+    id : 3
+    count : 1
+    autoCreate: false
+  - name : TarBbxPath
+    id : 4
+    count : 1
+    autoCreate: True

@@ -1,0 +1,9 @@
+className: NeinModule
+tid: 943801
+attributes:
+  - name: NeinData
+    attrId: 1
+    type: WORD16
+    default: 0
+    mutable: true
+

@@ -1,0 +1,36 @@
+className: BlockedVlan
+tid: 2
+attributes:
+  - name: Elps
+    attrId: 1
+    type: Range   
+    maxItems: 4094    
+    items:       
+      type: BYTE       
+    default: [[0]]
+    mutable: true
+  - name: ErpsV1
+    attrId: 2
+    type: Range   
+    maxItems: 4094    
+    items:       
+      type: BYTE       
+    default: [[0]]
+    mutable: true
+  - name: ErpsV2
+    attrId: 3
+    type: Range   
+    maxItems: 4094    
+    items:       
+      type: BYTE       
+    default: [[0]]
+    mutable: true
+  - name: Stp
+    attrId: 4
+    type: Range   
+    maxItems: 4094    
+    items:       
+      type: BYTE       
+    default: [[0]]
+    mutable: true
+    

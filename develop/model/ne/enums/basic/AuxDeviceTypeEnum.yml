@@ -1,0 +1,5 @@
+name: AuxDeviceTypeEnum
+type: BYTE
+enum:
+  AUX_DTE_DEVICE  : 1
+

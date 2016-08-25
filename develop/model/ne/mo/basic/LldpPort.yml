@@ -1,0 +1,43 @@
+className: LldpPort
+tid: 328
+attributes:
+  - name: state
+    attrId: 1
+    type: StateEnum
+    default: enable
+    mutable: true
+  - name: adminStatus
+    attrId: 2
+    type: AdminStateEnum
+    default: txrx
+    mutable: true
+  - name: pktEncapType
+    attrId: 3
+    type: EncapEnum
+    default: Ethernet
+    mutable: true
+  - name: dot1Tlv
+    attrId: 4
+    type: Set
+    maxItems: 4
+    items:
+        type: Dot1Enum
+    mutable: true
+  - name: dot3Tlv
+    attrId: 5
+    type: Set
+    maxItems: 4
+    items:
+        type: Dot3Enum
+    mutable: true
+children:
+  - name: LldpStatisInfo
+    id: 1
+    autoCreate: true
+  - name: LldpLocalInfo
+    id: 2
+    autoCreate: true
+  - name: LldpRemoteInfo
+    id: 3
+    autoCreate: true
+   

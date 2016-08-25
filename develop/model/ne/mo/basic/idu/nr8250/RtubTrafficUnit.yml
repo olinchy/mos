@@ -1,0 +1,25 @@
+className: RtubTrafficUnit
+baseClass: TrafficUnit
+tid: 142
+persistence: None
+triggers: [afterAdd, afterSet]
+attributes:
+  - name: LogicMode
+    attrId: 0
+    type: RtubLogicModeEnum
+    default: adm
+    mutable: true
+children:
+   - name : VE1Port
+     type : NativeVE1Port
+     id : 1
+     count : 8
+     autoCreate: true
+   - name : VStm155Port
+     type : TubVStm155Port
+     id : 2
+     count : 2
+   - name : VStm622Port
+     type : TubVStm622Port
+     id : 3
+     count : 2

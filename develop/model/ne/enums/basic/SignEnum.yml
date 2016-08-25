@@ -1,0 +1,7 @@
+name: SignEnum
+type: BYTE
+default: Positive 
+enum:
+  Positive: 0
+  Negtive: 1
+

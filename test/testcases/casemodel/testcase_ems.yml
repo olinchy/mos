@@ -1,0 +1,16 @@
+- name: test_add_an_unexisted_data_should_success_1
+  steps:
+  - {command: add /Ems/1/Ne/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - command: get /Ems/1/Ne/1
+    connection: cli1
+    result: {result: 0}
+  - command: get /Ems/1/Ne/1
+    connection: cli2
+    result: {result: 0}
+  - {command: 'MW_MOS.t_Ne[DN]{DN=/Ems/1/Ne/1}', connection: db, result: /Ems/1/Ne/1}
+  - command: del /Ems/1/Ne/1
+    connection: cli1
+    result: {result: 0}

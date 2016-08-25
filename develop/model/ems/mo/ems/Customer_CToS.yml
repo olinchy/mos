@@ -1,0 +1,36 @@
+className: Customer_CToS
+tid: 6009
+#triggers: [constraintSet]
+attributes:
+  - name: cVlanMin
+    attrId: 0
+    type: WORD16
+    minimum: 1
+    maximum: 4094
+    default: 1
+    mutable: true
+  - name: cVlanMax
+    attrId: 1
+    type: WORD16
+    minimum: 1
+    maximum: 4094
+    default: 1
+    mutable: true
+  - name: sVlan
+    attrId: 2
+    type: WORD16
+    minimum: 1
+    maximum: 4094
+    default: 1
+    mutable: true
+  - name: sVlanPriority
+    attrId: 3
+    type: BYTE
+    range: [[0,7],[255]]
+    default: 0
+    mutable: true
+  - name: activeFlag
+    attrId: 4
+    type: ActiveStateEnum  
+    default: active
+    mutable: true

@@ -1,0 +1,14 @@
+className: Rtune
+baseClass: Board
+tid: 452
+attributes:
+  - name: boardType
+    attrId: 0
+    type: BoardTypeEnum
+    default: rtune
+    mutable: false
+children:
+   - name : HDInfo
+     id : 1
+     count : 1
+     autoCreate: true

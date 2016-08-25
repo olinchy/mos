@@ -1,0 +1,7 @@
+name: MuteEnum
+type: BYTE
+default: unMute
+enum:
+    unMute: 0   
+    Mute: 1
+    

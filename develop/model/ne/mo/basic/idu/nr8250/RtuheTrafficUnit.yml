@@ -1,0 +1,20 @@
+className: RtuheTrafficUnit
+baseClass: TrafficUnit
+tid: 151
+triggers: [afterAdd, afterSet, afterDel, recover]
+children:
+   - name : VE1Port
+     type : NativeVE1Port
+     id : 1
+     count : 8
+     autoCreate: true
+children:
+   - name : EthPort
+     type : PhyPort
+     id : 2
+     count : 3
+     groupType : map
+     autoCreate: {"E-1": [EthPort_E_1G, {displayName: "GbE1"}], "E-2": [EthPort_E_1G, {displayName: "GbE2"}], "E-3": [EthPort_E_1G, {displayName: "GbE3"}]}
+
+
+

@@ -1,0 +1,40 @@
+className: RmQryEthPort
+tid: 389
+triggers: [afterGet]
+persistence: None
+attributes:
+  - name: linkStatus
+    attrId: 0
+    type : LinkStatusEnum
+    default: down
+    mutable: true
+  - name: enableStatus
+    attrId: 1
+    type : StateEnum
+    default: disable
+    mutable: true
+  - name: isOptOrElec
+    attrId: 2
+    type : PortTypeEnum
+    default: electric
+    mutable: true
+  - name: curSpeedMode
+    attrId: 3
+    type : PortSpeedEnum
+    default: 10M
+    mutable: true
+  - name: curDeluxMode
+    attrId: 4
+    type : PortDuplexEnum
+    default: halfDuplex
+    mutable: true
+  - name: laserStatus
+    attrId: 5
+    type : SfpStatusEnum
+    default: close
+    mutable: true
+  - name: loopBack
+    attrId: 6
+    type : PortLoopbackEnum
+    default: unloopBack
+    mutable: true

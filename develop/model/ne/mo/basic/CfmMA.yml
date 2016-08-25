@@ -1,0 +1,48 @@
+className: CfmMA
+tid: 358
+#maxCount: 512
+triggers: [constraintAdd, afterSet, constraintSet, constraintDel]
+attributes:
+  - name: vlanId
+    attrId: 0
+    type: WORD16
+    minimum: 1
+    maximum: 4094
+    default: 1
+    mutable: true
+  - name: ccmInterval
+    attrId: 1
+    type: BYTE
+    enum:
+        3330us: 1
+        10ms: 2
+        100ms: 3
+        1s: 4
+        10s: 5
+        1min: 6
+        10min: 7
+    default: 100ms
+    mutable: true
+  - name: nameFormat
+    attrId: 2
+    type: BYTE
+    enum:
+       primary_vid: 1
+       character_string: 2
+       octet_integer: 3
+    default: primary_vid
+    mutable: true
+  - name: sVlan
+    attrId: 3
+    type: WORD16
+    minimum: 0
+    maximum: 4094
+    default: 0
+    mutable: true
+children:
+  - name: MP
+    type: CfmMP
+    id: 1
+    count: 1000
+    groupType: map
+    autoCreate: false

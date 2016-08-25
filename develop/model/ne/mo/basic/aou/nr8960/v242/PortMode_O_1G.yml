@@ -1,0 +1,46 @@
+className: PortMode_O_1G
+baseClass: PortMode
+tid: 293
+#triggers: [constraintSet]
+attributes:
+  - name: portEnable
+    attrId: 0
+    type: BYTE
+    enum:
+      disable: 0
+      enable: 2
+      enableWithAls: 1
+    default: disable
+    mutable: true
+  - name: speed
+    attrId: 1
+    type: BYTE
+    enum:
+      100M: 2
+      1000M: 3
+    default: 1000M
+    mutable: true
+  - name: type
+    attrId: 2
+    type: BYTE
+    enum:
+      optical: 3
+    default: optical
+    mutable: false
+  - name: autoNegotiationStatus
+    attrId: 3
+    type: StateEnum
+    default: enable
+    mutable: true
+  - name: isSupTwoSpeed
+    attrId: 4
+    type: BYTE
+    enum:
+      notSupport: 0
+      support: 1
+    default: notSupport
+    mutable: false
+  - name: featureList
+    attrId: 5
+    type: FeatureList
+    mutable: false

@@ -1,0 +1,121 @@
+className: TaskBase
+tid: 100410
+attributes:
+  - name: type
+    attrId: 1
+    type: BYTE
+    enum:
+      download: 1      
+      activate: 2
+      deactivate: 3
+      rollback: 4
+      delete: 5
+      switch: 6
+    default: download
+    mutable: false
+
+  - name: neid
+    attrId: 2
+    type: WORD32
+    default: 0
+    mutable: false
+
+  - name: createtime
+    attrId: 3
+    type: WORD32
+    default: 0
+    mutable: true
+
+  - name: scheduletime
+    attrId: 4
+    type: WORD32
+    default: 0
+    mutable: true
+
+  - name: starttime
+    attrId: 5
+    type: WORD32
+    default: 0
+    mutable: true
+
+  - name: finishtime
+    attrId: 6
+    type: WORD32
+    default: 0
+    mutable: true
+
+  - name: status
+    attrId: 7
+    type: BYTE
+    enum:
+      ready: 0
+      running: 1      
+      finish: 2
+      unexpected: 3
+    default: ready
+    mutable: true
+
+  - name: result
+    attrId: 8
+    type: BYTE
+    enum:
+      success: 1      
+      failed: 2
+      timeout: 3
+      canceled: 4
+    default: success
+    mutable: true
+
+  - name: errormessage
+    attrId: 9
+    type: String
+    maxLength: 512
+    mutable: true
+
+  - name: timeout
+    attrId: 10
+    type: WORD16
+    default: 0
+    mutable: true
+
+  - name: priority
+    attrId: 11
+    type: BYTE
+    default: 0
+    mutable: true
+
+  - name: progress
+    attrId: 12
+    type: BYTE
+    default: 0
+    mutable: true
+
+  - name: versionNo
+    attrId: 13
+    type: String
+    maxLength: 100
+    mutable: true
+
+  - name: packagetype
+    attrId: 14
+    type: VersionPkgTypeEnum
+    default: SOFTWARE
+    mutable: true
+
+  - name: netype
+    attrId: 15
+    type: NeTypeEnum
+    default: nr8960
+    mutable: true
+
+  - name: mateTaskId
+    attrId: 16
+    type: WORD32
+    mutable: true
+
+  - name: sourceVersion
+    attrId: 17
+    type: String
+    maxLength: 100
+    mutable: true
+

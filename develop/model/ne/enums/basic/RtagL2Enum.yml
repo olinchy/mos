@@ -1,0 +1,9 @@
+name: RtagL2Enum
+type: WORD32
+default: l2All
+enum:
+    outerVlan: 0x1
+    etherType: 0x2
+    dstMac: 0x4
+    srcMac: 0x8
+    l2All: 0xf

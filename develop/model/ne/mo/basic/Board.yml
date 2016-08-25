@@ -1,0 +1,21 @@
+className: Board
+tid: 101
+persistence: None
+isAbstract: True
+attributes:
+  - name: state
+    attrId: 0
+    type: WORD32
+    default: 1
+    mutable: true
+  - name: _function
+    attrId: 1
+    type: WORD32
+    default: 0
+    mutable: true
+actions:
+  customs:
+    - name: queryHDInfo
+      actionId: 1
+    - name: queryHDInfoRsp
+      actionId: 101

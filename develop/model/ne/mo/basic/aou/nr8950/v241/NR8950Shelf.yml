@@ -1,0 +1,39 @@
+className: NR8950Shelf
+baseClass: Shelf
+tid: 477
+persistence: None
+children:
+  - name: Board
+    type: Acmua
+    id: 1
+    count: 1
+    groupType: map
+    autoCreate: false
+  - name: TrafficUnit
+    id: 2
+    count: 2
+    groupType: map
+    autoCreate: {"0": AcmuaMuTrafficUnit}
+  - name: PmpEnvInfo
+    id: 3
+    count: 1
+    autoCreate: true
+  - name: TrafficPort
+    type: TrafficPort
+    id: 4
+    count: 24
+  - name: XPIC
+    type: NR8950XPIC
+    id: 5
+    count: 10
+    autoCreate: false
+  - name: ChipPort
+    type: ChipPort
+    id: 6
+    count: 30
+    autoCreate: false
+  - name: ProtoIF
+    id: 7
+    count: 32
+    autoCreate: false
+

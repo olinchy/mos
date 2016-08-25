@@ -1,0 +1,20 @@
+className: Rtuc
+baseClass: Board
+tid: 145
+persistence: None
+attributes:
+   - name: boardType
+     attrId: 0
+     type: BoardTypeEnum
+     default: rtuc
+     mutable: false
+children:
+   - name : E1Port
+     id : 1
+     count : 32
+     autoCreate: true
+   - name : HDInfo
+     id : 2
+     count : 1
+     autoCreate: true
+

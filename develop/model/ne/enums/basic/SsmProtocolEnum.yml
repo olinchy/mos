@@ -1,0 +1,7 @@
+name: SsmProtocolEnum
+type: BYTE
+default: Extend
+enum:
+  Standard  : 0
+  Extend  : 1
+

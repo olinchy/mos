@@ -1,0 +1,38 @@
+className: Pmp
+tid : 386
+persistence: None
+actions:
+  customs:
+    - name: ClearAll
+      actionId: 1
+    - name: ClearAllRsp
+      actionId: 101
+children:
+  - name: Vlan
+    type: PmpVlanCfg
+    id : 1
+    count : 40
+    groupType : map
+    autoCreate : false
+  - name: VlanPri
+    type: PmpVlanPriCfg
+    id: 2
+    count: 40
+    groupType: map
+    autoCreate: false
+  - name: DSCP
+    type: PmpDSCPCfg
+    id: 3
+    count: 40
+    groupType: map
+    autoCreate: false
+  - name: HQOS
+    type: PmpHQOSQueueCfg
+    id: 4
+    count: 128
+    groupType: map
+    autoCreate: false
+  - name : PmpEnvInfo
+    id : 5
+    count : 1
+    autoCreate : True

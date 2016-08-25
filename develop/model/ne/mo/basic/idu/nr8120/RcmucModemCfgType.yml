@@ -1,0 +1,12 @@
+className: RcmucModemCfgType
+baseClass: ModemCfgType
+tid: 161
+triggers: [recover, afterAdd]
+attributes:
+  - name: cfgType
+    attrId: 0
+    type: BYTE
+    enum:
+      enhanced: 1
+    default: enhanced
+    mutable: false

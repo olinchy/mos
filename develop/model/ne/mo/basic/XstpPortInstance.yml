@@ -1,0 +1,33 @@
+className: XstpPortInstance
+tid: 504
+#triggers: [constraintAdd,constraintSet,constraintDel]
+attributes:
+  - name: priority
+    attrId: 0
+    type: WORD16
+    enum:
+        0X0: 0
+        0X10: 16
+        0X20: 32
+        0X30: 48
+        0X40: 64
+        0X50: 80
+        0X60: 96
+        0X70: 112
+        0X80: 128
+        0X90: 144
+        0XA0: 160
+        0XB0: 176
+        0XC0: 192
+        0XD0: 208
+        0XE0: 224
+        0XF0: 240
+    default: 0X80
+    mutable: true
+  - name: pathCost
+    attrId: 1
+    type: WORD32
+    minimum: 0
+    maximum: 2000000
+    default: 0
+    mutable: true

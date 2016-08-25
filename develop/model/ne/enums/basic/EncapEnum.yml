@@ -1,0 +1,6 @@
+name: EncapEnum
+type: BYTE
+default: Ethernet
+enum:
+  Ethernet: 0
+  SNAP: 1 

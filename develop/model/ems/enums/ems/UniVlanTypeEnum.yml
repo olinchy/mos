@@ -1,0 +1,6 @@
+name: UniVlanTypeEnum
+type: BYTE
+enum:
+   uni: 0
+   uni_vlan: 1
+ 

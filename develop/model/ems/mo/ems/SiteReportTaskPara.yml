@@ -1,0 +1,110 @@
+className: SiteReportTaskPara
+tid: 10041
+attributes:
+  - name: planTime
+    attrId: 1
+    type: WORD32
+    default: 0
+    mutable: true
+
+  - name: setup
+    attrId: 2
+    type: BYTE
+    enum:
+      selected: 1      
+      unselected: 0    
+    default: unselected
+    mutable: true
+
+  - name: shelf
+    attrId: 3
+    type: BYTE
+    enum:
+      selected: 1      
+      unselected: 0
+    default: unselected
+    mutable: true
+
+  - name: clock
+    attrId: 4
+    type: BYTE
+    enum:
+      selected: 1      
+      unselected: 0
+    default: unselected
+    mutable: true
+
+  - name: maintenance
+    attrId: 5
+    type: BYTE
+    enum:
+      selected: 1      
+      unselected: 0
+    default: unselected
+    mutable: true
+
+  - name: security
+    attrId: 6
+    type: BYTE
+    enum:
+      selected: 1      
+      unselected: 0
+    default: unselected
+    mutable: true
+
+  - name: radiolink
+    attrId: 7
+    type: BYTE
+    enum:
+      selected: 1      
+      unselected: 0
+    default: unselected
+    mutable: true
+
+  - name: inventory
+    attrId: 8
+    type: BYTE
+    enum:
+      selected: 1      
+      unselected: 0
+    default: unselected
+    mutable: true
+
+  - name: tdm
+    attrId: 9
+    type: BYTE
+    enum:
+      selected: 1      
+      unselected: 0
+    default: unselected
+    mutable: true
+
+  - name: eth
+    attrId: 10
+    type: BYTE
+    enum:
+      selected: 1      
+      unselected: 0
+    default: unselected
+    mutable: true
+
+  - name: exportPath
+    attrId: 11
+    type: String
+    default: c:/Administrator
+    maxLength: 200
+    mutable: true
+
+  - name: fileType
+    attrId: 12
+    type: String      
+    default: XLS
+    maxLength: 52
+    mutable: true
+
+  - name: isImmediate
+    attrId: 13
+    type: bool
+    default: true
+    mutable: true
+  

@@ -1,0 +1,39 @@
+className: Radius
+tid: 489
+triggers: [afterGet]
+attributes:
+  - name: enable
+    attrId: 0
+    type: BYTE
+    default: 0
+    mutable: true
+  - name: serverip
+    attrId: 1 
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: serverport
+    attrId: 2 
+    type: WORD16
+    default: 1812
+    mutable: true
+  - name: secretkey
+    attrId: 3
+    type: String
+    maxLength: 33
+    mutable: true
+  - name: retry
+    attrId: 4 
+    type: BYTE
+    default: 2
+    mutable: true
+  - name: timeout
+    attrId: 5 
+    type: BYTE
+    default: 3
+    mutable: true
+  - name: privateip
+    attrId: 6 
+    type: WORD32
+    default: 0
+    mutable: true

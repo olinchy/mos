@@ -1,0 +1,27 @@
+className: XstpPortInfo
+attributes:
+  - name: port
+    attrId: 0
+    type: String
+    maxLength: 20
+    mutable: false
+  - name: extPathCost
+    attrId: 1
+    type: WORD32
+    mutable: false
+  - name: intPathCost
+    attrId: 2
+    type: WORD32
+    mutable: false
+  - name: priority
+    attrId: 3
+    type: WORD16
+    mutable: false
+  - name: portRole
+    attrId: 4
+    type: BYTE
+    mutable: false
+  - name: portState
+    attrId: 5
+    type: BYTE
+    mutable: false

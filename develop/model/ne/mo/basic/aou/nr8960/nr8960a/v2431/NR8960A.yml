@@ -1,0 +1,151 @@
+className: NR8960A
+tid : 216
+derivedFrom: Product
+derivedBy: "NR8960A"
+msgMode: Multi
+imagedProtocol: RPC
+mosVersion: 1.1f
+persistence: None
+children:
+  - name : Shelf
+    type : NR8960AShelf
+    id : 1
+    count : 1
+    autoCreate : True
+  - name : Vmp
+    id : 2
+    count : 1
+    autoCreate : True
+  - name : VmpAdvancedCheck
+    id : 3
+    count : 1
+    autoCreate : True
+  - name : Inventory
+    id : 4
+    count : 1
+    autoCreate : True
+  - name : Configuration
+    id : 5
+    count : 1
+    autoCreate : True
+  - name : LOG
+    id : 6
+    count : 1
+    autoCreate : True
+  - name : NEAlarm
+    id : 7
+    count : 1
+    autoCreate : True
+  - name : SysPara
+    id : 8
+    count : 1
+    autoCreate : True
+  - name : Neighbor
+    id : 9
+    count : 1
+    autoCreate : True
+  - name : CAR
+    id : 10
+    count : 20
+    autoCreate : False
+  - name : ACL
+    id : 11
+    count : 100
+    autoCreate : False
+  - name : DropProfile
+    id : 12
+    count : 128
+    autoCreate : False
+  - name : EtmGlobal
+    id : 13
+    autoCreate : true
+  - name : MacVlan
+    id : 14
+    count : 100
+    autoCreate : False
+  - name : Mirror
+    id : 15
+    count : 16
+    autoCreate : False
+  - name : PacketAgeTime
+    id : 16
+    autoCreate : true
+  - name : ProtocolVlan
+    id : 17
+    count : 9
+    autoCreate : False
+  - name : Userdefine_EgTransAct
+    id : 18
+    count : 32
+    autoCreate : False
+  - name : Userdefine_EgTransRule
+    id : 19
+    count : 32
+    autoCreate : False
+  - name : Userdefine_InTransAct
+    id : 20
+    count : 32
+    autoCreate : False
+  - name : Userdefine_InTransRule
+    id : 21
+    count : 32
+    autoCreate : False
+  - name : Security
+    id : 22
+    count : 1
+    autoCreate : True
+  - name : License
+    id : 23
+    count : 1
+    autoCreate : True
+  - name : EthProtocol
+    id : 24
+    autoCreate : True
+  - name : Pmp
+    id : 25
+    count : 1
+    autoCreate : True
+  - name: StaticMacIVL
+    id: 26
+    count: 32
+    autoCreate: false
+  - name: StaticMacSVL
+    id: 27
+    count: 32
+    autoCreate: false
+  - name : ProtocolLogCfg
+    id : 28
+    autoCreate : True
+  - name : Clock
+    id : 29
+    autoCreate : True
+  - name : Maintain
+    id : 31
+    count : 1
+    autoCreate : True
+  - name : EowGlobal
+    id : 32
+    count : 1
+    autoCreate : False
+  - name : EowTU
+    id : 33
+    count : 1
+    autoCreate : False
+  - name : Wifi
+    id : 34
+    count : 1
+    autoCreate : True
+  - name : SummerTimeActived
+    id : 35
+    count : 1
+    autoCreate : True
+actions:
+  customs:    
+    - name: Logout
+      actionId: 1
+    - name: LogoutRsp
+      actionId: 101
+    - name: LogoutConfirm
+      actionId: 2
+    - name: LogoutConfirmRsp
+      actionId: 102

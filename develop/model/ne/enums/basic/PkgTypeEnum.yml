@@ -1,0 +1,10 @@
+name: PkgTypeEnum
+type: BYTE
+default: software
+enum:
+  software: 1
+  patch: 2
+  firmware: 5
+  hotpatch: 6
+  taousoftware: 7
+  sdsoftware: 8

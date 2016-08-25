@@ -1,0 +1,13 @@
+name: LacpLBStrategyEnum
+type: BYTE
+default: SrcDstMac
+enum:
+  SrcMac: 1
+  DstMac: 2
+  SrcDstMac: 3
+  SrcIp: 4
+  DstIp: 5
+  SrcDstIp: 6
+  EnhanceLoadBalance: 7
+  VlanId: 8
+   

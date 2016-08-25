@@ -1,0 +1,9 @@
+className: SNMPPassage
+tid: 2502
+baseClass: ManagementPassage
+persistence: All
+children:
+   - name: Oid
+     id: 1
+     count: 10
+

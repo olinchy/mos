@@ -1,0 +1,11 @@
+className: PortVlan_Details
+persistence: None
+tid: 369
+isAbstract : True
+attributes:
+  - name: vlanId
+    attrId: 0
+    type: Range
+    maxItems: 4094
+    default: [[1]]
+    mutable: true

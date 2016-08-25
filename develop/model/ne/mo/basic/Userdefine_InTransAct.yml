@@ -1,0 +1,108 @@
+className: Userdefine_InTransAct
+tid: 307
+attributes:
+  - name: actName
+    attrId: 0
+    type: String
+    maxLength: 9
+    mutable: true
+  - name: DTOAct
+    attrId: 1
+    type: BYTE
+    enum:
+      Unmodified: 0
+      Add: 1
+      Replace: 2
+    default: Unmodified
+    mutable: true
+  - name: DTIAct
+    attrId: 2
+    type: BYTE
+    enum:
+      Unmodified: 0
+      Replace: 2
+      Delete: 3
+    default: Unmodified
+    mutable: true
+  - name: SOTOAct
+    attrId: 3
+    type: BYTE
+    enum:
+      Unmodified: 0
+      Add: 1
+      Replace: 2
+    default: Unmodified
+    mutable: true
+  - name: SOTIAct
+    attrId: 4
+    type: BYTE
+    enum:
+      Unmodified: 0
+      Add: 1
+    default: Unmodified
+    mutable: true
+  - name: SITOAct
+    attrId: 5
+    type: BYTE
+    enum:
+      Add: 1
+    default: Add
+    mutable: true
+  - name: SITIAct
+    attrId: 6
+    type: BYTE
+    enum:
+      Unmodified: 0
+      Replace: 2
+      Delete: 3
+    default: Unmodified
+    mutable: true
+  - name: UTOAct
+    attrId: 7
+    type: BYTE
+    enum:
+      Add: 1
+    default: Add
+    mutable: true
+  - name: UTIAct
+    attrId: 8
+    type: BYTE
+    enum:
+      Unmodified: 0
+      Add: 1
+    default: Unmodified
+    mutable: true
+  - name: DTOPriAct
+    attrId: 9
+    type: BYTE
+    enum:
+      Add: 1
+      Replace: 2
+    default: Replace
+    mutable: true
+  - name: DTIPriAct
+    attrId: 10
+    type: BYTE
+    enum:
+      Unmodified: 0
+      Replace: 2
+      Delete: 3
+    default: Unmodified
+    mutable: true
+  - name: SOTOPriAct
+    attrId: 11
+    type: BYTE
+    enum:
+      Add: 1
+      Replace: 2
+    default: Add
+    mutable: true
+  - name: SITIPriAct
+    attrId: 12
+    type: BYTE
+    enum:
+      Unmodified: 0
+      Replace: 2
+      Delete: 3
+    default: Unmodified
+    mutable: true

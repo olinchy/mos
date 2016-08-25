@@ -1,0 +1,12 @@
+className: MumModemCfgType
+baseClass: ModemCfgType
+tid: 437
+triggers: [recover, afterAdd]
+attributes:
+  - name: cfgType
+    attrId: 0
+    type: BYTE
+    enum:
+      enhanced: 1
+    default: enhanced
+    mutable: false

@@ -1,0 +1,10 @@
+name: PackageFileStatusEnum
+type: BYTE
+default: init
+enum:
+  init: 0
+  verActive: 1
+  hpIdle: 2
+  download_success: 3
+  download_fail: 4
+  fwActive: 5

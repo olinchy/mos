@@ -1,0 +1,13 @@
+className: ChipPort_RadioPort
+tid: 581
+persistence: None
+baseClass: ChipPort
+children:
+  - name: LldpPort
+    type: LldpPort
+    id: 1
+    autoCreate: true
+  - name: RateLimit
+    type: RateLimit_RadioPort
+    id: 2
+    autoCreate: true

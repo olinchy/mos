@@ -1,0 +1,18 @@
+className: MultiMacAddr
+tid: 221
+persistence: None
+triggers: [afterGet]
+attributes:
+  - name: macAddr
+    attrId: 0
+    type: Array
+    maxItems: 24
+    items:
+      type: MacAddr
+    mutable: false
+actions:
+  customs:
+    - name: Refresh
+      actionId: 1
+    - name: RefreshRsp
+      actionId: 101

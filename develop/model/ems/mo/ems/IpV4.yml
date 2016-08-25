@@ -1,0 +1,19 @@
+className: IpV4
+tid: 2501
+persistence: None
+attributes:
+  - name: ip_addr
+    attrId: 0
+    type: IPv4Addr
+    default: 0.0.0.0
+    mutable: false
+  - name: net_mask
+    attrId: 1
+    type: IPv4Addr
+    default: 255.0.0.0
+    mutable: true
+  - name: gate_way
+    attrId: 2
+    type: IPv4Addr
+    default: 0.0.0.0
+    mutable: true

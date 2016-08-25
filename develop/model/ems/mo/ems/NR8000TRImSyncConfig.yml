@@ -1,0 +1,17 @@
+className: NR8000TRImSyncConfig
+baseClass: ImSyncConfig
+tid: 333
+persistence: None
+override_attributes:
+  - name: neType
+    attrId: 2
+    type: String
+    default: mw.nr8000tr
+    maxLength: 64
+    mutable: true
+  - name: pollTaskName
+    attrId: 5
+    type: String
+    maxLength: 128
+    default: ZXMW 8000TR
+    mutable: false

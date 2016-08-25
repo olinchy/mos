@@ -1,0 +1,5 @@
+name: AuxTransTypeEnum
+type: BYTE
+enum:
+  Syn_Transmode: 1
+

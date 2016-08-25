@@ -1,0 +1,17 @@
+className: LldpEthNeighbor
+attributes:
+  - name: localPortName
+    attrId: 0
+    type: String
+    maxLength: 16
+    mutable: false
+  - name: neighborIp
+    attrId: 1
+    type: IPv4Addr
+    mutable: false
+  - name: neighborPortName
+    attrId: 2
+    type: String
+    maxLength: 16
+    mutable: false
+

@@ -1,0 +1,6 @@
+name: ElpsPortStateEnum
+type: BYTE
+enum:
+  active: 0
+  backup: 1
+default: active

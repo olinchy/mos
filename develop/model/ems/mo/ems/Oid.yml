@@ -1,0 +1,17 @@
+className: Oid
+tid: 2504
+persistence: All
+attributes:
+  - name: nodeName
+    attrId: 1
+    type: String
+    maxLength: 200
+    default: sysinfo
+    mutable: true
+  - name: nodeValue
+    attrId: 2
+    type: String
+    maxLength: 200
+    default: 1.3.6.1
+    mutable: true
+

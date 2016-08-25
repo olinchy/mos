@@ -1,0 +1,7 @@
+name: SwitchTypeEnum
+type: BYTE
+default: currentCfg
+enum:
+  currentCfg: 0
+  defaultCfg: 1
+  backupCfg: 2

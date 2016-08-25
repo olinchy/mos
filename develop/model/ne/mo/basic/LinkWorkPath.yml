@@ -1,0 +1,47 @@
+className: LinkWorkPath
+tid: 521
+persistence: None
+attributes: 
+  - name: rmuMsStatus
+    attrId: 0
+    type: MsStatusEnum
+    default: Master
+    mutable: true
+  - name: oduMsStatus
+    attrId: 1
+    type: MsStatusEnum
+    default: Master
+    mutable: true
+  - name: linkStatus
+    attrId: 2
+    type: LinkStatusEnum
+    default: down
+    mutable: true
+  - name: macLinkStatus
+    attrId: 3
+    type: LinkStatusEnum
+    default: down
+    mutable: true
+  - name: remoteHostPortStatus
+    attrId: 4
+    type: LinkStatusEnum
+    default: down
+    mutable: true
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

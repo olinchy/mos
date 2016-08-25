@@ -1,0 +1,60 @@
+className: SDHRTBL
+tid: 107
+triggers: [afterGet]
+attributes:
+  - name: ucRackNo
+    attrId: 0
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: ucSourceShelfNo
+    attrId: 1
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: ucSourceUnitNo
+    attrId: 2
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: dwSourcePortID
+    attrId: 3
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: ucSourceVC4
+    attrId: 4
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: ucDestShelfNo
+    attrId: 5
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: ucDestUnitNo
+    attrId: 6
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: dwDestPortID
+    attrId: 7
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: ucDestVC4
+    attrId: 8
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: ucDirection
+    attrId: 9
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: ucActiveFlag
+    attrId: 10
+    type: WORD32
+    default: 0
+    mutable: true
+    

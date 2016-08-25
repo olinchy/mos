@@ -1,0 +1,116 @@
+className: PmpHQOSQueueCfg
+tid: 406
+triggers: [beforeAdd, recover]
+attributes:
+  - name: portId
+    attrId: 0
+    type: WORD32
+    mutable: true
+  - name: L0Node
+    attrId: 1
+    type: BYTE
+    mutable: true
+  - name: L1Node
+    attrId: 2
+    type: BYTE
+    mutable: true
+  - name: L0KeyType
+    attrId: 3
+    type: WORD32
+    enum:
+      DSCP: 0
+      Outer_VLAN_Priority: 1
+      Inner_VLAN_Priority: 2
+      TCPUDP_Source_Port: 3
+      TCPUDP_Destination_Port: 4
+      Source_IP: 5
+      Destination_IP: 6
+      Source_MAC: 7
+      Destination_MAC: 8
+      IPV6TC: 9
+      Outer_VLAN_ID: 10
+      Inner_VLAN_ID: 11
+      Ethernet_Type: 12
+      MPLS_EXP: 13
+      Vlan: 14
+      SVlan: 15
+      CVlan: 16
+      DEFAULT: 255
+    default: DEFAULT
+    mutable: true
+  - name: L0KeyValue
+    attrId: 4
+    type: Array
+    maxItems: 6
+    items:
+      type: BYTE
+    mutable: true
+  - name: L0KeyMask
+    attrId: 5
+    type: Array
+    maxItems: 6
+    items:
+      type: BYTE
+    mutable: true
+  - name: L1KeyType
+    attrId: 6
+    type: WORD32
+    enum:
+      DSCP: 0
+      Outer_VLAN_Priority: 1
+      Inner_VLAN_Priority: 2
+      TCPUDP_Source_Port: 3
+      TCPUDP_Destination_Port: 4
+      Source_IP: 5
+      Destination_IP: 6
+      Source_MAC: 7
+      Destination_MAC: 8
+      IPV6TC: 9
+      Outer_VLAN_ID: 10
+      Inner_VLAN_ID: 11
+      Ethernet_Type: 12
+      MPLS_EXP: 13
+      Vlan: 14
+      SVlan: 15
+      CVlan: 16
+      DEFAULT: 255
+    default: DEFAULT
+    mutable: true
+  - name: L1KeyValue
+    attrId: 7
+    type: Array
+    maxItems: 6
+    items:
+      type: BYTE
+    mutable: true
+  - name: L1KeyMask
+    attrId: 8
+    type: Array
+    maxItems: 6
+    items:
+      type: BYTE
+    mutable: true
+  - name: L0NodeName
+    attrId: 9
+    type: String
+    maxLength: 29
+    default: L0Default
+    mutable: false
+  - name: L1NodeName
+    attrId: 10
+    type: String
+    maxLength: 29
+    default: L1Default
+    mutable: false
+reference:
+  - name: sourcePort
+    type: HQOSL1Node
+    isMulti: false
+    under: DependencyPolicy
+children:
+   - name : HQOSPerfData
+     type : PmpHqos
+     id : 1
+     count : 1
+     groupType : map
+     autoCreate: true

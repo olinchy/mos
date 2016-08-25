@@ -1,0 +1,55 @@
+className: Lldp
+tid: 327
+triggers: [afterSet]
+attributes:
+  - name: state
+    attrId: 0
+    type: StateEnum
+    default: enable
+    mutable: true
+  - name: txInterval
+    attrId: 1
+    type: WORD16
+    range: [[5,32768]]
+    default: 30
+    mutable: true
+  - name: txDelay
+    attrId: 2
+    type: WORD16
+    range: [[1,8196]]
+    default: 2
+    mutable: true
+  - name: txHoldMulti
+    attrId: 3
+    type: BYTE
+    range: [[2,10]]
+    default: 4
+    mutable: true
+  - name: restartDelay
+    attrId: 4
+    type: BYTE
+    range: [[1,10]]
+    default: 2
+    mutable: true
+  - name: trapState
+    attrId: 5
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: trapInterval
+    attrId: 6
+    type: WORD16
+    range: [[1,10]]
+    default: 5
+    mutable: true
+  - name: fastTxCount
+    attrId: 7
+    type: BYTE
+    range: [[1,10]]
+    default: 3
+    mutable: true
+children:
+   - name : LldpNeighbor
+     id : 1
+     count: 1
+     autoCreate: true

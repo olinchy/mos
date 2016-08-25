@@ -1,0 +1,146 @@
++++image: docker 容器的配置，docker的基本单位
++++tag: tag镜像标签，描述更为精确的信息
++++repository: 镜像分类，repository：tag 表示一个image
++++registry: 镜像存储，有公有存储和私有存储
++++container: 可以理解为镜像实例
+
+
+++++下载并安装docker @ubuntu
+# update key
+sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+
+Open the /etc/apt/sources.list.d/docker.list file in your favorite editor.
+
+If the file doesn’t exist, create it.
+
+Remove any existing entries.
+Add an entry for your Ubuntu operating system.
+The possible entries are:
+
+    On Ubuntu Precise 12.04 (LTS)
+
+    deb https://apt.dockerproject.org/repo ubuntu-precise main
+
+    On Ubuntu Trusty 14.04 (LTS)
+
+    deb https://apt.dockerproject.org/repo ubuntu-trusty main
+
+    On Ubuntu Vivid 15.04
+
+    deb https://apt.dockerproject.org/repo ubuntu-vivid main
+
+    Ubuntu Wily 15.10
+
+    deb https://apt.dockerproject.org/repo ubuntu-wily main
+
+Save and close the /etc/apt/sources.list.d/docker.list file
+
+sudo apt-get update
+sudo apt-get purge lxc-docker
+sudo apt-cache policy docker-engine
+
+sudo apt-get update
+sudo apt-get install linux-image-extra-$(uname -r)
+
+if @ubuntu 12.04 execute these below first:
+	sudo apt-get install linux-image-generic-lts-trusty
+	sudo reboot
+
+
+sudo apt-get install docker-engine
+sudo service docker start
+# This command downloads a test image and runs it in a container. When the container runs, it prints an informational message. Then, it exits.
+sudo docker run hello-world 
+
+++++ add a docker group
+sudo usermod -aG docker [login user]
+# Log out and log back in.
+# test with
+docker run hello-world
+
+++++ Configure Docker to start on boot
+sudo systemctl enable docker
+
+
+++++docker pull&push
+#from private registry
+docker pull private-registry.com/user-name/ubuntu:latest
+#from docker hub
+docker pull
+
+# 推送本地镜像到私有服务器
+docker tag [IMAGE_ID] 192.168.0.100:5000/REPOSITORY:[TAG]
+docker push 192.168.0.100:5000/REPOSITORY:[TAG]
+
+
+++++docker run
+
+docker run [OPTIONS] [reposity:tag]|image ID
+
+++++delete all containers
+docker rm -f $(docker ps -a -q)
+
+++++docker build
+docker build --rm -t repository:tag PATH
+
+++++how to build a better image
+
+
+++++ sim ne
+ftp://mos:mos@10.86.56.6
+/simone/nr8960_sim_v242.tar
+
+sudo curl --noproxy 10.86.56.6 ftp://mos:mos@10.86.56.6/simone/nr8960_sim_v242.tar>nr8960_sim_v242.tar
+docker load < nr8960_sim_v242.tar
+
+docker run nr8960_v242:latest
+
+ Docker选项快速指南
+
+这里有一份关于Docker网络配置的命令行选项列表，省去您查找相关资料的麻烦。
+一些网络配置的命令行选项只能在服务器启动时提供给Docker服务器。并且一旦启动起来就无法改变。
+
+一些网络配置命令选项只能在启动时提供给Docker服务器，并且在运行中不能改变:
+
+    -b BRIDGE或--bridge=BRIDGE— see    建立自己的网桥
+
+    --bip=CIDR— see    定制docker0
+
+    -H SOCKET...或--host=SOCKET...—   它看起来像是在设置容器的网络，但实际却恰恰相反：它告诉Docker服务器要接收命令的通道，例如“run container"和"stop container"。
+
+    --icc=true|false— see    容器间通信
+
+    --ip=IP_ADDRESS— see    绑定容器端口
+
+    --ip-forward=true|false— see    容器间通信
+
+    --iptables=true|false— see   容器间通信
+
+    --mtu=BYTES— see    定制docker0
+
+有两个网络配置选项可以在启动时或调用docker run时设置。当在启动时设置它会成为docker run的默认值:
+
+    --dns=IP_ADDRESS...— see    配置DNS
+
+    --dns-search=DOMAIN...— see    配置DNS
+
+最后，一些网络配置选项只能在调用docker run时指出，因为它们要为每个容器做特定的配置:
+
+    -h HOSTNAME或--hostname=HOSTNAME— see    配置DNS 和  Docker与容器连接原理
+
+    --link=CONTAINER_NAME:ALIAS— see   配置DNS and    容器间通信
+
+    --net=bridge|none|container:NAME_or_ID|host— see   Docker与容器连接原理
+
+    -p SPECor--publish=SPEC— see    绑定容器端口
+
+    -P或--publish-all=true|false— see    绑定容器端口
+
+
+
+
+
+
+
+
+

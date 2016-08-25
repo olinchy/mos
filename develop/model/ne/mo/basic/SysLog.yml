@@ -1,0 +1,13 @@
+className: SysLog
+tid: 245
+attributes:
+  - name: status
+    attrId: 0
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: serverIp
+    attrId: 1
+    type: IPv4Addr
+    default: "192.168.1.1"
+    mutable: true

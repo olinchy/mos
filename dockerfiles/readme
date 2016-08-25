@@ -1,0 +1,12 @@
+sim_ne evolution path:
+
+ubuntu:1510 --> moslite:basic --> moslite:jdk --> moslite:sim --> nr8960_v242 --> nr8960_v242_1000_ip
+                                                              --> nr8250_v[XXX] --> nr8250_v[XXX]_1000_ip
+
+moslite:basic : ubuntu with basic tools(wget, vsftp, snmp...)
+moslite:jdk : moslite:basic with jdk and remove all temp files
+moslite:sim : ftp configs and user zteftp
+
+nr8960_v242 : with device model, mos and snmp configuration
+
+

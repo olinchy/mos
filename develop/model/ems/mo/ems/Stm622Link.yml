@@ -1,0 +1,8 @@
+className: Stm622Link
+baseClass: PhysicalLink
+tid: 52
+reference:
+  - name: aEnd
+    type: Stm622Port
+  - name: zEnd
+    type: Stm622Port

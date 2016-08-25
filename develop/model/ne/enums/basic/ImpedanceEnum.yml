@@ -1,0 +1,6 @@
+name: ImpedanceEnum
+type: BYTE
+default: 120ohm
+enum:
+  75ohm: 0
+  120ohm: 1

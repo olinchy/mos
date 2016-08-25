@@ -1,0 +1,14 @@
+name: ElpsGroupStateEnum
+type: BYTE
+enum:
+    NO_REQUEST: 0x00
+    LOCK: 0x01
+    F_SWITCH: 0x02
+    S_INVALID_W: 0x03
+    S_INVALID_P: 0x04
+    MANUAL_SWITCH: 0x07
+    NO_REVERT: 0x08
+    WAIT_RECOVER: 0x09
+    TRAIN: 0x0a
+    REVERSE_REQ: 0x0b
+default: NO_REQUEST

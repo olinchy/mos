@@ -1,0 +1,13 @@
+module: mos-ne
+dependency:
+  - mosjava
+script: |
+  version=$(cat $CURRENT_DIR/version)
+  varray=(${version//-/ })
+  varray=${varray[0]}
+  export MODEL_VERSION=(${varray//V/})
+  export MOS_JAVA_OUTPUT=$(pwd)/${MODEL_VERSION}
+  mvn -q clean package -f $CURRENT_DIR -DoutputPath=${MOS_JAVA_OUTPUT} -Dlibpath=${MOS_JAVA_OUTPUT}
+  chmod -R +x ${MOS_JAVA_OUTPUT}
+  mkdir ${MOS_JAVA_OUTPUT}/log
+

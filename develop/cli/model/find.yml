@@ -1,0 +1,7 @@
+name: find
+params:
+  - name : dn
+    type : Dn
+  - name : criteria
+    type : Sentence
+msgType: method  

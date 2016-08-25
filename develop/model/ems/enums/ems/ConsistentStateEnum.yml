@@ -1,0 +1,5 @@
+name: ConsistentStateEnum
+type: BYTE
+enum:
+   consistent: 0
+   inconsistent: 1

@@ -1,0 +1,70 @@
+className: OduVersion
+tid: 600
+persistence: None
+attributes:
+  - name : updateResult
+    id : 0
+    type : UpdateResultEnum
+    default: noUpdate
+    mutable: true
+  - name : progress
+    id : 1
+    type : BYTE
+    mutable: true
+  - name : currentVerionInfo
+    id : 2
+    type : String
+    maxLength: 32
+    mutable: true
+  - name : localVersionInfo
+    id : 3
+    type : Array
+    maxItems: 16
+    items:
+      type: String
+      maxLength: 32    
+    mutable: true
+  - name : localVersionNum
+    id : 4
+    type : BYTE
+    mutable: true
+
+actions:
+  customs:   
+    - name: LocalUpdate
+      actionId: 1
+      attributes:
+        - name: versionInfo
+          attrId: 0
+          type: String
+          maximum: 32
+          mutable: true
+    - name: FtpUpdate
+      actionId: 2
+      attributes:
+        - name: ftpIP
+          attrId: 0
+          type: IPv4Addr
+          mutable: true
+        - name: ftpuser
+          attrId: 1
+          type: String
+          maximum: 19
+          mutable: true
+        - name: password
+          attrId: 2
+          type: String
+          maximum: 19
+          mutable: true
+        - name: versionInfo
+          attrId: 3
+          type: String
+          maximum: 32
+          mutable: true
+    - name: LocalUpdateRsp
+      actionId: 101
+    - name: FtpUpdateRsp
+      actionId: 102
+
+
+

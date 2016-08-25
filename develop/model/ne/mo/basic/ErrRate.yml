@@ -1,0 +1,23 @@
+className: ErrRate
+tid: 421
+triggers: [afterGet]
+persistence: None
+attributes:
+  - name: validFlag
+    attrId: 0
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: perOrBer
+    attrId: 1
+    type: PerOrBerEnum
+    default: perv
+    mutable: true
+  - name: value
+    attrId: 2
+    type: FLOAT
+    mutable: true
+  - name: startTime
+    attrId: 3
+    type: Date
+    mutable: true

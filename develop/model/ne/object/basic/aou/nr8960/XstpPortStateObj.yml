@@ -1,0 +1,13 @@
+className: XstpPortStateObj
+attributes:
+  - name: portId  
+    attrId: 0 
+    type: TrafficPort
+    mutable: false
+  - name: state
+    attrId: 1
+    type: BYTE
+    minimum: 0
+    maximum: 1
+    default: 0
+    mutable: false

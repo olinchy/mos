@@ -1,0 +1,41 @@
+className: RcmucAcm
+baseClass: Acm
+tid: 141
+triggers: [constraintSet, afterSet, afterGet, beforeSet]
+attributes: 
+  - name: startModulation
+    attrId: 0
+    type: Qam2048ModulationEnum
+    default: QPSK
+    mutable: true
+  - name: endModulation
+    attrId: 1
+    type: Qam2048ModulationEnum
+    default: QPSK
+    mutable: true
+  - name: startCodingType
+    attrId: 2
+    type: CodingTypeEnum
+    default: normal
+    mutable: true
+  - name: endCodingType
+    attrId: 3
+    type: CodingTypeEnum
+    default: normal
+    mutable: true
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

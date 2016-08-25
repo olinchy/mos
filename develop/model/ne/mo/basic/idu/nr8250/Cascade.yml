@@ -1,0 +1,14 @@
+className: Cascade
+tid: 577
+persistence: None
+#(triggered by cascade table)
+triggers: [afterAdd, afterDel, afterSet, recover]
+attributes:
+  - name: logicAirPortIds
+    attrId: 0
+    type: Array
+    maxItems: 8
+    items:
+      type: WORD32
+    mutable: true
+

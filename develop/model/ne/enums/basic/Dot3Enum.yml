@@ -1,0 +1,9 @@
+name: Dot3Enum
+type: BYTE
+default: Dot3Null
+enum:
+  Dot3Null: 0
+  LinkAgg: 1
+  MacPhy: 2
+  MaxFrameNum: 4
+  Power: 8

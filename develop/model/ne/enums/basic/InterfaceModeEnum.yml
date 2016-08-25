@@ -1,0 +1,8 @@
+name: InterfaceModeEnum
+type: BYTE
+default: Dynamically
+enum:
+  Channel1: 0
+  Channel2: 1
+  Dynamically: 2
+

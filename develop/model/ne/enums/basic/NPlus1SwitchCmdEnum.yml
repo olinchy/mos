@@ -1,0 +1,15 @@
+name: NPlus1SwitchCmdEnum
+type: BYTE
+default: autoSwitch
+enum:
+  autoSwitch: 0  
+  forceWorkchannel7Switch: 1
+  forceWorkchannel6Switch: 2
+  forceWorkchannel5Switch: 3
+  forceWorkchannel4Switch: 4
+  forceWorkchannel3Switch: 5
+  forceWorkchannel2Switch: 6
+  forceWorkchannel1Switch: 7
+  clear: 8
+  reset: 9
+

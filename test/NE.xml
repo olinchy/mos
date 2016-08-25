@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ROWDATA>
+    <ROW>
+        <column name="DN" value="/Ems/1/Ne/mw.nr8250=8080"/>
+        <column name="state" value="online"/>
+        <column name="url" value="http://127.0.0.1:8080"/>
+        <column name="version" value="02.04.04"/>
+    </ROW>
+</ROWDATA>

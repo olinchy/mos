@@ -1,0 +1,60 @@
+className: ModemStatus
+tid: 203
+persistence: None
+triggers: [afterGet]
+attributes: 
+  - name: lockStatus
+    attrId: 0
+    type: LockStatusEnum
+    default: unLock
+    mutable: true
+  - name: acmStatus
+    attrId: 1
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: xpdValue
+    attrId: 2
+    type: BYTE
+    default: 255
+    mutable: true
+  - name: txModulation
+    attrId: 3
+    type: ModulationEnum
+    default: QPSK
+    mutable: true
+  - name: rxModulation
+    attrId: 4
+    type: ModulationEnum
+    default: QPSK    
+    mutable: true
+  - name: mse
+    attrId: 5
+    type: SWORD16  
+    default: 0  
+    mutable: true
+  - name: txCodingType
+    attrId: 6
+    type: CodingTypeEnum
+    default: normal      
+    mutable: true
+  - name: rxCodingType
+    attrId: 7
+    type: CodingTypeEnum 
+    default: normal    
+    mutable: true
+  - name: modemTone
+    attrId: 8
+    type: StateEnum
+    default: disable       
+    mutable: true
+  - name: modemToneTime
+    attrId: 9
+    type: WORD32 
+    default: 10
+    mutable: true
+  - name: modemToneRemainingTime
+    attrId: 10
+    type: WORD32 
+    default: 0
+    mutable: true

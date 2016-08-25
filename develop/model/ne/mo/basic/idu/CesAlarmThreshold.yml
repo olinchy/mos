@@ -1,0 +1,54 @@
+className: CesAlarmThreshold
+tid: 102
+attributes:
+  - name: misConnAlarm
+    attrId: 0
+    type: BYTE
+    minimum: 1
+    maximum: 100
+    default: 5
+    mutable: true
+  - name: lofAlarm
+    attrId: 1
+    type: BYTE
+    minimum: 1
+    maximum: 100
+    default: 5
+    mutable: true
+  - name: lofClear
+    attrId: 2
+    type: BYTE
+    minimum: 1
+    maximum: 100
+    default: 3
+    mutable: true
+  - name: lateFrameAlarm
+    attrId: 3
+    type: BYTE
+    minimum: 1
+    maximum: 100
+    default: 5
+    mutable: true
+  - name: lateFrameClear
+    attrId: 4
+    type: BYTE
+    minimum: 1
+    maximum: 100
+    default: 3
+    mutable: true
+  - name: malFormAlarm
+    attrId: 5
+    type: BYTE
+    minimum: 1
+    maximum: 100
+    default: 5
+    mutable: true
+  - name: bufferOverRunAlarm
+    attrId: 6
+    type: BYTE
+    minimum: 1
+    maximum: 100
+    default: 5
+    mutable: true
+
+    

@@ -1,0 +1,10 @@
+className: HQOSL2Node
+tid: 320
+triggers: [constraintSet, constraintDel]
+attributes:
+  - name: hqosQueue
+    attrId: 0      
+    type: Array
+    maxItems: 8
+    items:
+        type: HQOSL2Object

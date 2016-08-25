@@ -1,0 +1,29 @@
+className: L2Frame_Reserved_0C
+attributes:
+  - name: mac
+    attrId: 0
+    type: MacAddr
+    default: "01:80:C2:00:00:0C"
+    mutable: false
+  - name: prococol
+    attrId: 1
+    type: String
+    maxLength: 39
+    default: "Reserved"
+    mutable: false
+  - name: subType
+    attrId: 2
+    type: String
+    maxLength: 19
+    default: ""
+    mutable: false
+  - name: passThrough
+    attrId: 3
+    type: StateEnum
+    default: enable
+    mutable: true
+  - name: force
+    attrId: 4
+    type: StateEnum
+    default: enable
+    mutable: false

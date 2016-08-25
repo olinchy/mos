@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<project>
+    <modules root="testcases">
+        <module name="transTest" filePath="casemodel/emsmos_core.yml"/>
+    </modules>
+    <config>
+        <devices>
+        </devices>
+        <clis>
+            <cli name="cli1" address="http://127.0.0.1:54321" dnPrefix=""/>
+            <cli name="cli2" address="http://127.0.0.1:54321" dnPrefix=""/>
+        </clis>
+        <failureconfig failurePolicy="stopOnFailure"/>
+        <logconfig stdLevel="INFO" fileLevel="INFO"/>
+        <pressureconfig ispressure="yes" repetition="1"/>
+    </config>
+</project>

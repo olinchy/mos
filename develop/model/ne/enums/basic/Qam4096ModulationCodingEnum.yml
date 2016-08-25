@@ -1,0 +1,15 @@
+name: Qam4096ModulationCodingEnum
+type: BYTE
+default: QPSK_normal
+enum:
+    QPSK_normal   : 0   
+    16QAM_normal  : 1
+    32QAM_normal  : 2
+    64QAM_normal  : 3
+    128QAM_normal : 4
+    256QAM_normal : 5
+    512QAM_normal : 6
+    1024QAM_normal: 7
+    1024QAM_light : 8
+    2048QAM_normal: 9
+    4096QAM_normal: 10

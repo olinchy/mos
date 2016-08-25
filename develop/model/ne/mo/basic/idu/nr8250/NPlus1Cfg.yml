@@ -1,0 +1,279 @@
+className: NPlus1Cfg
+tid: 128
+triggers: [afterGet]
+attributes:
+  - name: workPathNum
+    attrId: 0
+    type: BYTE
+    minimum: 2
+    maximum: 7
+    default: 2
+    mutable: true
+  - name: workPath1TUNo
+    attrId: 1
+    type: BYTE
+    minimum: 3
+    maximum: 255
+    mutable: true
+  - name: workPath2TUNo
+    attrId: 2
+    type: BYTE
+    minimum: 3
+    maximum: 255
+    mutable: true
+  - name: workPath3TUNo
+    attrId: 3
+    type: BYTE
+    minimum: 3
+    maximum: 255
+    mutable: true
+  - name: protectPathTUNo
+    attrId: 4
+    type: BYTE
+    minimum: 3
+    maximum: 255
+    mutable: true
+  - name: wtrMode
+    attrId: 5
+    type: WORD16
+    enum:
+      revert: 1
+    default: revert
+    mutable: true
+  - name: wtrTime
+    attrId: 6
+    type: WORD16
+    minimum: 60
+    maximum: 720
+    default: 600
+    mutable: true
+  - name: path1status
+    attrId: 7
+    type: NPlus1PathStatusEnum
+    default: Connection
+    mutable: true
+  - name: path2status
+    attrId: 8
+    type: NPlus1PathStatusEnum
+    default: Connection
+    mutable: true
+  - name: path3status
+    attrId: 9
+    type: NPlus1PathStatusEnum
+    default: Connection
+    mutable: true
+  - name: propathstatus
+    attrId: 10
+    type: NPlus1PathStatusEnum
+    default: Connection
+    mutable: true
+  - name: currentProtection
+    attrId: 11
+    type: BYTE
+    minimum: 0
+    maximum: 255
+    default: 255
+    mutable: true
+  - name: groupstatus
+    attrId: 12
+    type: NPlus1GroupStatusEnum   
+    default: automatic
+    mutable: true
+  - name: switchCmd
+    attrId: 13
+    type: NPlus1SwitchCmdEnum 
+    default: autoSwitch
+    mutable: true
+  - name: is_protectEnable
+    attrId: 14
+    type: BYTE
+    mutable: true  
+  - name: workPathShelf
+    attrId: 15
+    type: Array
+    maxItems: 8
+    items:
+      type: BYTE
+    mutable: true
+  - name: workPathTUNo
+    attrId: 16
+    type: Array
+    maxItems: 8
+    items:
+      type: BYTE
+    mutable: true
+  - name: workPathStatus
+    attrId: 17
+    type: Array
+    maxItems: 8
+    items:
+      type: BYTE
+    mutable: true
+  - name: protectPathShelf
+    attrId: 18
+    type: BYTE
+    minimum: 1
+    maximum: 2
+    mutable: true
+  - name: holdOffTime
+    attrId: 19
+    type: WORD16
+    minimum: 0
+    maximum: 30
+    default: 0
+    mutable: true
+
+actions:
+  customs:
+    - name: Force
+      actionId: 1
+      attributes:
+        - name: signalNo
+          attrId: 0
+          type: BYTE
+          minimum: 1
+          maximum: 7
+          default: 1
+          mutable: true
+    - name: ForceRsp
+      actionId: 101
+      attributes:
+        - name: groupId 
+          attrId: 0 
+          type: BYTE         
+          mutable: true    
+        - name: path1status
+          attrId: 1
+          type: NPlus1PathStatusEnum
+          default: Connection
+          mutable: true
+        - name: path2status
+          attrId: 2
+          type: NPlus1PathStatusEnum
+          default: Connection
+          mutable: true
+        - name: path3status
+          attrId: 3
+          type: NPlus1PathStatusEnum
+          default: Connection
+          mutable: true
+        - name: propathstatus
+          attrId: 4
+          type: NPlus1PathStatusEnum
+          default: Connection
+          mutable: true
+        - name: currentProtection
+          attrId: 5
+          type: NPlus1CurProtectEnum       
+          default: propath
+          mutable: true
+        - name: groupstatus
+          attrId: 6
+          type: NPlus1GroupStatusEnum        
+          default: automatic
+          mutable: true
+        - name: switchCmd
+          attrId: 7
+          type: NPlus1SwitchCmdEnum       
+          default: autoSwitch
+          mutable: true
+        - name: is_protectEnable
+          attrId: 8
+          type: BYTE
+          mutable: true
+    - name: Auto
+      actionId: 2
+    - name: AutoRsp
+      actionId: 102
+      attributes:
+        - name: groupId 
+          attrId: 0 
+          type: BYTE         
+          mutable: true    
+        - name: path1status
+          attrId: 1
+          type: NPlus1PathStatusEnum
+          default: Connection
+          mutable: true
+        - name: path2status
+          attrId: 2
+          type: NPlus1PathStatusEnum
+          default: Connection
+          mutable: true
+        - name: path3status
+          attrId: 3
+          type: NPlus1PathStatusEnum
+          default: Connection
+          mutable: true
+        - name: propathstatus
+          attrId: 4
+          type: NPlus1PathStatusEnum
+          default: Connection
+          mutable: true
+        - name: currentProtection
+          attrId: 5
+          type: NPlus1CurProtectEnum
+          default: propath
+          mutable: true          
+        - name: groupstatus
+          attrId: 6
+          type: NPlus1GroupStatusEnum          
+          default: automatic
+          mutable: true
+        - name: switchCmd
+          attrId: 7
+          type: NPlus1SwitchCmdEnum          
+          default: autoSwitch
+          mutable: true
+        - name: is_protectEnable
+          attrId: 8
+          type: BYTE
+          mutable: true
+    - name: Clear
+      actionId: 3
+    - name: ClearRsp
+      actionId: 103
+      attributes:
+        - name: groupId 
+          attrId: 0 
+          type: BYTE         
+          mutable: true    
+        - name: path1status
+          attrId: 1
+          type: NPlus1PathStatusEnum
+          default: Connection
+          mutable: true
+        - name: path2status
+          attrId: 2
+          type: NPlus1PathStatusEnum
+          default: Connection
+          mutable: true
+        - name: path3status
+          attrId: 3
+          type: NPlus1PathStatusEnum
+          default: Connection
+          mutable: true
+        - name: propathstatus
+          attrId: 4
+          type: NPlus1PathStatusEnum
+          default: Connection
+          mutable: true
+        - name: currentProtection
+          attrId: 5
+          type: NPlus1CurProtectEnum
+          default: propath          
+          mutable: true
+        - name: groupstatus
+          attrId: 6
+          type: NPlus1GroupStatusEnum         
+          default: automatic
+          mutable: true
+        - name: switchCmd
+          attrId: 7
+          type: NPlus1SwitchCmdEnum       
+          default: autoSwitch
+          mutable: true
+        - name: is_protectEnable
+          attrId: 8
+          type: BYTE
+          mutable: true    

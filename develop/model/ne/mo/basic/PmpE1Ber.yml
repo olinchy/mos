@@ -1,0 +1,25 @@
+className: PmpE1Ber
+tid: 378
+triggers: [afterGet]
+persistence: None
+attributes:
+  - name: date
+    attrId: 0
+    type: Date
+    maxLength: 50
+    mutable: false
+  - name: validFlag
+    attrId: 1 
+    type : PmpValidFlagEnum
+    default: valid
+    mutable: false
+  - name: codeViolation
+    attrId: 2 
+    type : WORD64
+    mutable: false
+actions:
+  customs:
+    - name: Clear
+      actionId: 1
+    - name: ClearRsp
+      actionId: 101

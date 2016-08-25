@@ -1,0 +1,9 @@
+name: EVCTypeEnum
+type: BYTE
+enum:
+      EPL: 1      
+      EVPL: 2
+      EPLAN: 3
+      EVPLAN: 4
+      EPTREE: 5
+      EVPTREE: 6

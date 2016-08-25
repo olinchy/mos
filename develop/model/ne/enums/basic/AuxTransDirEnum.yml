@@ -1,0 +1,6 @@
+name: AuxTransDirEnum
+type: BYTE
+enum:
+  inPut: 0
+  outPut: 1
+

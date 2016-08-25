@@ -1,0 +1,51 @@
+className: License
+tid: 193
+persistence: None
+triggers: [afterGet, constraintSet]
+attributes:
+  - name: linkState
+    attrId: 0
+    type: BYTE
+    enum:
+      offline: 0
+      online: 1
+    default: online
+    mutable: true
+  - name: lastAuthTime
+    attrId: 1
+    type: Date
+    mutable: true
+  - name: licenseInfo
+    attrId: 2
+    type: String
+    maxLength: 2000
+    mutable: true
+actions:
+  customs:
+    - name: getNeLicense
+      actionId: 1   
+    - name: getNeLicenseRsp
+      actionId: 101
+      attributes:
+        - name: state
+          attrId: 0  
+          type: BYTE
+          mutable: true
+        - name: licenseInfo
+          attrId: 1  
+          type: String
+          mutable: true
+    - name: setNeLicenseResult
+      actionId: 2
+      attributes:
+        - name: licenseAuthResult
+          attrId: 0  
+          type: String
+          mutable: true
+    - name: setNeLicenseResultRsp
+      actionId: 102
+      attributes:
+        - name: result
+          attrId: 0  
+          type: WORD32
+          mutable: true

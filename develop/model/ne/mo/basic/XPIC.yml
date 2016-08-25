@@ -1,0 +1,20 @@
+className: XPIC
+tid: 574
+isAbstract : True
+attributes:
+  - name: state
+    attrId: 0
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: mode
+    attrId: 1
+    type: XpicModeEnum
+    default: auto
+    mutable: true
+  - name: mateIp
+    attrId: 2
+    type: IPv4Addr
+    mutable: true
+
+

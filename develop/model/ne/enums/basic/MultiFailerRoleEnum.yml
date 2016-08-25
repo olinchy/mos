@@ -1,0 +1,7 @@
+name: MultiFailerRoleEnum
+type: BYTE
+default: disable
+enum:
+  disable: 0
+  primary: 1
+  secondary: 2

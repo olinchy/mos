@@ -1,0 +1,46 @@
+className: PLA
+tid: 554
+triggers: [beforeAdd, beforeDel, afterAdd, afterDel, afterSet, recover]
+attributes:
+  - name: state
+    attrId: 0
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: memberNum
+    attrId: 1
+    type: BYTE
+    minimum: 2
+    maximum: 8
+    mutable: true
+  - name: masterPortId
+    attrId: 2
+    type: WORD32
+    mutable: true
+  - name: memberPortId
+    attrId: 3
+    type: Array
+    maxItems: 8
+    items:
+      type: WORD32
+    mutable: true
+  - name: memberPortBlock
+    attrId: 4
+    type: Array
+    maxItems: 8
+    items:
+      type: WORD32
+    mutable: true
+children:
+  - name : PLALinkId
+    id : 1
+    count : 1
+    autoCreate: true
+  - name : PmpRmon
+    id : 2
+    count : 1
+    autoCreate: true
+  - name : PmpWleth
+    id : 3
+    count : 1
+    autoCreate: true

@@ -1,0 +1,474 @@
+{
+  "moClass":"MucAcm",
+  "dn":"/Shelf/1/TrafficUnit/5/LogicAirPort/1/Acm/1",
+  "mo":{
+    "rxModulation":"QPSK",
+    "state":"disable",
+    "enableLog":"disable",
+    "classType":null,
+    "endCodingType":null,
+    "syncToRemote":"disable",
+    "txCodingType":"normal",
+    "rxCodingType":"normal",
+    "startCodingType":null,
+    "standbyMse":0,
+    "startModulation":"QPSK",
+    "endModulation":"16QAM",
+    "txModulation":"QPSK",
+    "mse":0
+  }
+}
+
+{
+  "moClass":"MucWorkmode",
+  "dn":"/Shelf/1/TrafficUnit/5/LogicAirPort/1/Workmode/1",
+  "mo":{
+    "codingType":null,
+    "modulation":"QPSK",
+    "capacity":1,
+    "classType":null,
+    "syncToRemote":"disable",
+    "bandwidth":"ETSI_7M"
+  }
+}
+
+{
+  "moClass":"XstpInstanceReportEms",
+  "dn":"/EthProtocol/EthL2Protocol/MstpGlobal/Instance/0/XstpInstanceReportEms",
+  "mo":{
+    "PortState":[
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      }
+    ],
+    "PortNum":0,
+    "classType":null,
+    "VlanMap":null
+  }
+}
+
+{
+  "moClass":"XstpInstanceReportEms",
+  "dn":"/EthProtocol/EthL2Protocol/Xstp/Instance/0/XstpInstanceReportEms",
+  "mo":{
+    "PortState":[
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      }
+    ],
+    "PortNum":0,
+    "classType":null,
+    "VlanMap":null
+  }
+}
+
+/Pmp/1/Vlan/AIR-5-0_23/VlanPerfData/1
+
+/Pmp/1/Vlan/GBE_E-0-1_12/VlanPerfData/1
+
+/Pmp/1/Vlan/AIR-5-0_23/VlanPerfData
+
+/Pmp/1/Vlan/GBE_E-0-1_12/VlanPerfData
+
+{
+  "moClass":"SysLog",
+  "dn":"/LOG/1/SysLog/1",
+  "mo":{
+    "status":"disable",
+    "serverIp":"192.168.1.1",
+    "classType":null
+  }
+}
+
+/Pmp/1/Vlan/AIR-5-0_23
+
+/Pmp/1/Vlan/GBE_E-0-1_12
+
+{
+  "moClass":"Radius",
+  "dn":"/Security/1/Radius/1",
+  "mo":{
+    "privateip":0,
+    "serverip":0,
+    "enable":0,
+    "serverport":1812,
+    "classType":null,
+    "retry":2,
+    "timeout":3,
+    "secretkey":null
+  }
+}
+
+{
+  "moClass":"DevicePara",
+  "dn":"/SysPara/1/DevicePara/1",
+  "mo":{
+    "neName":"8250-65-2338-yuan",
+    "mibVersion":"8250V2.03.03.07",
+    "siteId":"",
+    "neId":48,
+    "neType":"NR8250",
+    "classType":null,
+    "mac":"90-1D-27-F1-9E-F1",
+    "health":"None",
+    "netMask":"255.255.255.0",
+    "defaultGw":"0.0.0.0",
+    "ip":"108.28.170.65"
+  }
+}
+
+{
+  "moClass":"TdmCascade",
+  "dn":"/TdmCascade/1",
+  "mo":{
+    "remoteShelfIp":"0.0.0.0",
+    "classType":null,
+    "remoteShelfNo":1,
+    "remoteShelfType":null
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

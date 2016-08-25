@@ -1,0 +1,17 @@
+className: ScanFreqData
+attributes:
+  - name: RSL
+    attrId: 0
+    type: SWORD16
+    default: 0
+    mutable: true
+  - name: TxFreq
+    attrId: 1
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: RxFreq
+    attrId: 2
+    type: WORD32
+    default: 0
+    mutable: true

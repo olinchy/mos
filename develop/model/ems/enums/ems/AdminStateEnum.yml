@@ -1,0 +1,7 @@
+name: AdminStateEnum
+type: BYTE
+enum:
+   initializing: 0
+   synchronizing: 1
+   idle: 2
+   inconsistent: 3

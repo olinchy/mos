@@ -1,0 +1,6 @@
+name: CesDstModeEnum
+type: BYTE
+default: macMode
+enum:
+  macMode: 0
+  ipMode: 1

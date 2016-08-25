@@ -1,0 +1,23 @@
+className: Uni
+tid: 6003
+attributes:
+  - name: type
+    attrId: 0
+    type: UniTypeEnum
+    default: None
+    mutable: true  
+  - name: vlanType
+    attrId: 1
+    type: UniVlanTypeEnum
+    default: uni
+    mutable: true  
+reference:
+  - name: logicalPort
+    type: LogicalPort
+    isMulti: false
+    under: LVDependencyPolicy
+children:
+  - name: CToS
+    id: 1
+    count: 8
+    type: Customer_CToS

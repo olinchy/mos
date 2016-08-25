@@ -1,0 +1,11 @@
+name: RtagL3Enum
+type: WORD32
+default: l3Null
+enum:
+    l3Null: 0
+    outerVlan: 0x1
+    dstIp: 0x10
+    srcIp: 0x20
+    protocol: 0x200
+    dstPort: 0x400
+    srcPort: 0x800

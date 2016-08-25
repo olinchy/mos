@@ -1,0 +1,8 @@
+name: NPlus1GroupStatusEnum
+type: BYTE
+default: automatic
+enum:
+  automatic: 1
+  force: 2  
+  wtr: 3
+

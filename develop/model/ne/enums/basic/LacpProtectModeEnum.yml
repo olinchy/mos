@@ -1,0 +1,7 @@
+name: LacpProtectModeEnum
+type: BYTE
+default: aggregation
+enum:
+  aggregation: 1
+  protect: 2
+   

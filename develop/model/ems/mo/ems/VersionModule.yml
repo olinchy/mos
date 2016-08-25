@@ -1,0 +1,51 @@
+className: VersionModule
+tid: 1004
+attributes:
+  - name: taskgroupcount
+    attrId: 1
+    type: WORD16
+    default: 0
+    mutable: true
+
+children:
+   - name : TaskGroup
+     id : 1
+     count : 1000
+     autoCreate: false
+   - name : UnifiedVersionPackage
+     id : 2
+     count : 1000
+     autoCreate: false
+
+actions:
+  customs:
+    - name: allocVmTaskGroupId
+      actionId: 1
+    - name: allocVmTaskGroupIdRsp
+      actionId: 101
+      attributes:
+        - name: taskgroupid 
+          attrId: 0 
+          type: WORD32         
+          mutable: true    
+    - name: queryVersionCacheInfo
+      actionId: 2
+    - name: queryVersionSet
+      actionId: 3
+    - name: queryNeList
+      actionId: 4  
+    - name: querySingleNeVersion
+      actionId: 5  
+    - name: queryVersionCacheByNeOid
+      actionId: 6
+    - name: queryAouVersionCacheByNeOid
+      actionId: 7
+    - name: createVersionCache
+      actionId: 8
+    - name: deleteVersionCache
+      actionId: 9
+    - name: updateAouVersionCache
+      actionId: 10
+    - name: deleteNeAllVersionCache
+      actionId: 11
+

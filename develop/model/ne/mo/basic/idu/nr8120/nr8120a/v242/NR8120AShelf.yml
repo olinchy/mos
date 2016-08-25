@@ -1,0 +1,58 @@
+className: NR8120AShelf
+baseClass: Shelf
+tid: 113
+persistence: None
+children:
+  - name: Board
+    id: 1
+    count: 10
+    groupType: map
+  - name: TrafficUnit
+    id: 2
+    count: 10
+    groupType: map
+  - name : CesAlarmThreshold
+    id: 3
+    count: 1
+    autoCreate: true
+  - name: PLA
+    id: 4
+    groupType : map
+    count: 8
+    autoCreate: false
+  - name: XPIC
+    type: NR8120AXPIC
+    id: 5
+    count: 10
+    autoCreate: false
+  - name: LACP
+    id: 6
+    count: 4
+    autoCreate: false
+  - name: Antenna
+    id: 7
+    count: 6
+    autoCreate: false
+  - name: TrafficPort
+    type: TrafficPort
+    id: 8
+    count: 24 
+    autoCreate: false
+  - name: PmpEnvInfo
+    id: 9
+    count: 1
+    autoCreate: true
+  - name: ShelfConfig
+    type: NR8120AShelfConfig
+    id: 10
+    count: 1
+    autoCreate: true
+  - name: ChipPort
+    type: ChipPort
+    id: 11
+    count: 30
+    autoCreate: false
+  - name: ProtoIF
+    id: 12
+    count: 32
+    autoCreate: false

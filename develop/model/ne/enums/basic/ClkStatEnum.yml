@@ -1,0 +1,9 @@
+name: ClkStatEnum
+type: BYTE
+default: Init
+enum:
+  Lost  : 0
+  Exist  : 1
+  Unknown : 15
+  Init    : 240
+  Invalid : 255

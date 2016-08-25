@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec>
+    <subroot name="P2pRoute">
+        <sub name="PDH"
+             select="P2pRoute.acrossLevel = 'VC12' and P2pRoute.srcPortType = 'E1' and P2pRoute.dstPortType = 'E1'"/>
+        <sub name="SDH-VC12"
+             select="P2pRoute.acrossLevel = 'VC12' and (P2pRoute.srcPortType = 'STM1' and P2pRoute.dstPortType = 'STM1')"/>
+        <sub name="SDH-VC4"
+             select="P2pRoute.acrossLevel = 'VC4' and (P2pRoute.srcPortType in ['STM1', 'STM4'] and P2pRoute.dstPortType = in ['STM1', 'STM4'])"/>
+        <sub name="ADM"
+             select="P2pRoute.acrossLevel = 'VC12' and (P2pRoute.srcPortType != P2pRoute.dstPortType)"/>
+    </subroot>
+    <subroot name="SncpRoute">
+        <sub name="PDH"
+             select="P2pRoute.acrossLevel = 'VC12' and P2pRoute.srcPortType = 'E1' and P2pRoute.dstPortType = 'E1'"/>
+        <sub name="SDH-VC12"
+             select="P2pRoute.acrossLevel = 'VC12' and (P2pRoute.srcPortType = 'STM1' and P2pRoute.dstPortType = 'STM1')"/>
+        <sub name="SDH-VC4"
+             select="P2pRoute.acrossLevel = 'VC4' and (P2pRoute.srcPortType in ['STM1', 'STM4'] and P2pRoute.dstPortType = in ['STM1', 'STM4'])"/>
+    </subroot>
+    <subroot name="CesRoute">
+        <sub name="CES"
+             select="P2pRoute.acrossLevel = 'VC12' and P2pRoute.srcPortType = 'E1' and P2pRoute.dstPortType = 'E1'"/>
+    </subroot>
+</sec>

@@ -1,0 +1,149 @@
+className: Ne
+tid: 2
+attributes:
+  - name: version
+    attrId: 1
+    type: String
+    maxLength: 200
+    default: 2.04.02.01
+    mutable: true
+  - name: netype
+    attrId: 2
+    type: NeTypeEnum
+    default: nr8250
+    mutable: false
+  - name: longitude
+    attrId: 3
+    type: String
+    maxLength: 256
+    mutable: true
+  - name: latitude
+    attrId: 4
+    type: String
+    maxLength: 256
+    mutable: true
+  - name: location
+    attrId: 5
+    type: String
+    maxLength: 256
+    mutable: true
+  - name: adminState
+    attrId: 7
+    type: BYTE
+    enum:
+      activate: 0      
+      inactivate: 4
+    default: inactivate
+    mutable: true
+  - name: connectionState
+    attrId: 8
+    type: BYTE
+    enum:
+      online: 0      
+      offline: 1
+      unknown: 2
+    default: unknown
+    mutable: false
+  - name: workState
+    attrId: 9
+    type: BYTE
+    enum:
+      normal: 95001
+      abnormal: 95002
+      unknown: 95003
+      init: 95004
+    default: init
+    mutable: false
+  - name: neName
+    attrId: 10
+    type: String
+    maxLength: 255
+    mutable: true
+  - name: siteId
+    attrId: 11
+    type: String
+    maxLength: 255
+    mutable: true
+  - name: siteName
+    attrId: 12
+    type: String
+    maxLength: 255
+    mutable: true
+  - name: sysType
+    attrId: 14
+    type: String
+    maxLength: 255
+    mutable: false
+    default: "20801"
+  - name: subType
+    attrId: 15
+    type: String
+    maxLength: 256
+    mutable: true
+  - name: parentOid
+    attrId: 16
+    type: String
+    maxLength: 256
+    mutable: true
+  - name: description
+    attrId: 17
+    type: String
+    maxLength: 200
+    mutable: true
+  - name: mac
+    attrId: 18
+    type: MacAddr
+    mutable: true
+reference:
+  - name: ipV4
+    type: IpV4
+    isMulti: false
+  - name: parentGroup
+    type: GroupNode
+    isMulti: false
+children:
+  - name: Communication
+    id: 1
+    autoCreate: {"ftp" : Ftp, "http" : Http, "sftp" : SFtp, "https" : Https, "snmp" : Snmp, "snmpV3": SnmpV3, "snmpV2" : SnmpV2, "telnet": Telnet, "ssh" : Ssh}
+  - name: Product
+    id: 2
+    count: 1
+    autoCreate: true
+  - name: ManagementPassage
+    id: 3
+    count: 2
+  - name: VersionInfo
+    id: 4
+    count: 1
+    autoCreate: true
+actions:
+  customs:
+    - name: authNeLicense
+      actionId: 1
+    - name: authNeLicenseRsp
+      actionId: 101
+      attributes:
+        - name: authResult 
+          attrId: 0 
+          type: String         
+          mutable: true
+    - name: recoverNeLicense
+      actionId: 2
+    - name: recoverNeLicenseRsp
+      actionId: 102
+      attributes:
+        - name: recoverResult 
+          attrId: 0 
+          type: String         
+          mutable: true
+    - name: recycleNeLicense
+      actionId: 3
+    - name: recycleNeLicenseRsp
+      actionId: 103
+      attributes:
+        - name: recycleResult 
+          attrId: 0 
+          type: String         
+          mutable: true
+    - name: setAttribute
+      actionId: 4

@@ -1,0 +1,102 @@
+className: RingInstance
+tid: 366
+triggers: [beforeSet,beforeAdd,constraintSet, constraintAdd]  
+attributes: 
+  - name: rapsChannelVid
+    attrId: 0
+    type: WORD16
+    range: [[1,4094]]
+    default: 1
+    mutable: true
+  - name: rplRole
+    attrId: 1
+    type: RplRoleEnum
+    default: rplOther
+    mutable: true
+  - name: revertiveMode
+    attrId: 2
+    type: BYTE
+    enum:
+      nonRevertive: 0
+      revertive: 1
+    default: revertive
+    mutable: true
+  - name: ringRole
+    attrId: 3
+    type: RingRoleEnum
+    default: majorRing
+    mutable: true
+  - name: rplPort
+    attrId: 4
+    type: ErpsPortTypeEnum
+    default: eastPort
+    mutable: true
+  - name: propagateTcFlag
+    attrId: 5
+    type: StateEnum
+    default: enable
+    mutable: true
+  - name: rapsVirChannelFlag
+    attrId: 6
+    type: StateEnum
+    default: enable
+    mutable: true
+  - name: virChannelVid
+    attrId: 7
+    type: WORD16
+    range: [[0,4094]]
+    default: 1
+    mutable: true 
+  - name: holdoffTimerLen
+    attrId: 8
+    type: WORD32
+    range: [[0,10000]]
+    default: 0
+    mutable: true 
+  - name: wtrTimerLen
+    attrId: 9
+    type: WORD32
+    range: [[1,12]]
+    default: 5
+    mutable: true 
+  - name: guardTimerLen
+    attrId: 10
+    type: WORD32
+    range: [[10,2000]]
+    default: 500
+    mutable: true 
+  - name: multipleFailerRole
+    attrId: 11
+    type: MultiFailerRoleEnum
+    default: disable
+    mutable: true 
+  - name: multipleFailerVlan
+    attrId: 12
+    type: WORD16
+    range: [[0,4094]]
+    default: 1
+    mutable: true 
+  - name: rapsPktLevel
+    attrId: 13
+    type: BYTE
+    range: [[0,7]]
+    default: 7
+    mutable: true
+reference:
+  - name: eastPort
+    type: TrafficPort
+    isMulti: false
+    under: ConstraintPolicy
+  - name: westPort
+    type: TrafficPort
+    isMulti: false 
+    under: ConstraintPolicy
+  - name: vlanGroupId
+    type: VlanGroup
+    isMulti: false
+    under: ConstraintPolicy
+children:
+  - name: ErpsV2DI
+    id: 1
+    count : 1
+    autoCreate: true

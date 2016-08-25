@@ -1,0 +1,28 @@
+className: SFtp
+tid: 2506
+attributes:
+  - name: user_name
+    attrId: 1
+    type: String
+    maxLength: 200
+    default: "zte"
+    mutable: false
+
+  - name: passwd
+    attrId: 2
+    type: String
+    maxLength: 256
+    default: "Zxtj2013"
+    mutable: true
+
+  - name: port
+    attrId: 3
+    type: WORD32
+    default: 22
+    mutable: true
+
+  - name: status
+    attrId: 4
+    type: BYTE
+    default: 0
+    mutable: true

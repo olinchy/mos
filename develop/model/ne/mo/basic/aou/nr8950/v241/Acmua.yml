@@ -1,0 +1,22 @@
+className: Acmua
+baseClass: Board
+tid: 478
+attributes:
+  - name: boardType
+    attrId: 0
+    type: BoardTypeEnum
+    default: acmua
+    mutable: false
+children:
+   - name : AirPort
+     id : 1
+     count : 1
+     autoCreate: true
+   - name : HDInfo
+     id : 2
+     count : 1
+     autoCreate: true
+   - name : InnerCPU
+     id : 3
+     count : 1
+     autoCreate: true

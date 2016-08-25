@@ -1,0 +1,21 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.zte.mos.persistent</groupId>
+    <artifactId>persistent-parent</artifactId>
+    <packaging>pom</packaging>
+    <parent>
+        <groupId>com.zte.mos</groupId>
+        <artifactId>parent</artifactId>
+        <version>1.2</version>
+    </parent>
+    <name>persistent-parent</name>
+    
+    <modules>
+        <module>mos_persistent_xml</module>
+        <module>mos_persistent_db</module>
+        <module>mos_persistent_setter</module>
+        <module>mos_persistent_db_setter</module>
+    </modules>
+</project>

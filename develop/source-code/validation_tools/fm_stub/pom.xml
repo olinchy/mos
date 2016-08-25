@@ -1,0 +1,39 @@
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>fm_stub</artifactId>
+    <parent>
+        <groupId>com.zte.mos</groupId>
+        <artifactId>validation_tools</artifactId>
+        <version>1.2</version>
+    </parent>
+    <name>fm_stub</name>
+    <dependencies>
+        <dependency>
+            <groupId>com.zte.mos.tools</groupId>
+            <artifactId>mos_java_util</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.zte.mos.app</groupId>
+            <artifactId>app-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.zte.mos.app.gear</groupId>
+            <artifactId>ne-cache</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.zte.uep</groupId>
+            <artifactId>uep_server</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.zte.uep</groupId>
+            <artifactId>uep_server_3rd</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.zte.mos.app.gear</groupId>
+            <artifactId>uepservice</artifactId>
+        </dependency>
+    </dependencies>
+</project>

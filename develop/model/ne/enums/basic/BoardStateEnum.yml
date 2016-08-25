@@ -1,0 +1,6 @@
+name: BoardStateEnum
+type: WORD32
+default: master
+enum:
+  slave: 0
+  master: 1

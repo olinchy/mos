@@ -1,0 +1,21 @@
+className: MIMO
+tid: 571
+isAbstract : True
+attributes:
+  - name: state
+    attrId: 0
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: mode
+    attrId: 1
+    type: MIMOModeEnum
+    default: auto
+    mutable: true
+  - name: direction
+    attrId: 2
+    type: DirectionEnum
+    default: main
+    mutable: true
+
+

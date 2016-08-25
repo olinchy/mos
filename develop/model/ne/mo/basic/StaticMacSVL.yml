@@ -1,0 +1,13 @@
+className: StaticMacSVL
+tid: 305
+triggers: [constraintAdd]
+attributes:
+  - name: mac
+    attrId: 0
+    type: MacAddr
+    mutable: true
+reference:
+  - name: portId
+    type: TrafficPort
+    isMulti: false
+    under: DependencyPolicy

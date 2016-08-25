@@ -1,0 +1,19 @@
+className: Rtua
+baseClass: Board
+tid: 139
+persistence: None
+attributes:
+   - name: boardType
+     attrId: 0
+     type: BoardTypeEnum
+     default: rtua
+     mutable: false
+children:
+   - name : E1Port
+     id : 1
+     count : 16
+     autoCreate: true
+   - name : HDInfo
+     id : 2
+     count : 1
+     autoCreate: true

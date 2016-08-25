@@ -1,0 +1,20 @@
+className: Rpu
+baseClass: Board
+tid: 471
+triggers: [afterGet]
+attributes:
+  - name: boardType
+    attrId: 0
+    type: BoardTypeEnum
+    default: rpu_v1
+    mutable: false
+  - name: ps1status
+    attrId: 1
+    type: BYTE
+    default: 0
+    mutable: true
+  - name: ps2status
+    attrId: 2
+    type: BYTE
+    default: 0
+    mutable: true

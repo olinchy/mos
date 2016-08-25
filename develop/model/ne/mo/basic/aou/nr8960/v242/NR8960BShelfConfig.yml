@@ -1,0 +1,18 @@
+className: NR8960BShelfConfig
+baseClass: ShelfConfig
+tid: 235
+persistence: All
+triggers: [afterSet]
+attributes:
+  - name: CurCfgScene
+    attrId: 0
+    type: BYTE
+    enum:
+      1plus0: 0
+      2plus0: 1
+      2plus2Hsb: 2
+      2plus2Sd: 3
+      4multi4mimo_lag: 4
+      4multi4mimo_pla: 5
+    default: 2plus0
+    mutable: true

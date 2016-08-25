@@ -1,0 +1,6 @@
+name: UniTypeEnum
+type: BYTE
+enum:
+   None: 0
+   Root: 1
+   Leaf: 2

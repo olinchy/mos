@@ -1,0 +1,8 @@
+name: AdminStateEnum
+type: BYTE
+default: txrx
+enum:
+   tx: 1
+   rx: 2
+   txrx: 4
+   disable: 8

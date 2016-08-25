@@ -1,0 +1,64 @@
+className: Sntp
+tid: 201
+triggers: [afterGet, afterSet]
+attributes:
+  - name: serverIp
+    attrId: 0
+    type: IPv4Addr
+    default: "192.168.1.1"
+    mutable: true
+  - name: interval
+    attrId: 1
+    type: WORD32
+    minium: 1
+    maxinum: 24
+    default: 6
+    mutable: true
+  - name: state
+    attrId: 2
+    type: BYTE
+    enum:
+      enablesntp: 0
+      disablesntp: 1
+    default: disablesntp
+    mutable: true
+  - name: timeZone
+    attrId: 3
+    type: SWORD16
+    minimum: -765
+    maximum: 825
+    default: 0
+    mutable: true
+  - name: city
+    attrId: 4
+    type: BYTE
+    default: 0
+    mutable: true
+  - name: sysTime
+    attrId: 5
+    type: Date
+    mutable: true
+  - name: mode
+    attrId: 6
+    type: BYTE
+    default: 0
+    mutable: true
+  - name: timeOut
+    attrId: 7
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: syncTimeResult
+    attrId: 8
+    type: WORD32
+    enum:
+      success: 0
+      fail: 1
+    default: fail
+    mutable: true
+actions:
+  customs:
+    - name: SyncTime
+      actionId: 1
+    - name: SyncTimeRsp
+      actionId: 101

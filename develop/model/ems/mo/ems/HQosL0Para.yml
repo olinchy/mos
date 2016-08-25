@@ -1,0 +1,7 @@
+className: HQosL0Para
+baseClass: DSAttrTemplate
+tid: 7003
+children:
+  - name: HQosL1Para
+    id: 0
+    count: 8

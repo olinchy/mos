@@ -1,0 +1,46 @@
+className: CfmLtResult
+tid: 357
+triggers: [afterGet]
+persistence: None
+attributes:
+  - name: validResult
+    attrId: 0 
+    type: BYTE
+    minimum: 0
+    maximum: 1
+    default: 0
+    mutable: false
+  - name: sourceMPID
+    attrId: 1 
+    type: WORD16
+    default: 0
+    mutable: false
+  - name: destinationMac
+    attrId: 2
+    type:  MacAddr    
+    mutable: false
+  - name: nodeNumber
+    attrId: 3 
+    type: BYTE
+    default: 0
+    mutable: false
+  - name: ltNode
+    attrId: 4
+    type: Array 
+    maxItems: 20 
+    items:
+        type: LtNodeObject 
+    mutable: false  
+  - name: startTime
+    attrId: 5 
+    type: Date
+    mutable: false
+  - name: endTime
+    attrId: 6 
+    type: Date
+    mutable: false
+  - name: failInfo
+    attrId: 7 
+    type: WORD32
+    default: 0
+    mutable: false

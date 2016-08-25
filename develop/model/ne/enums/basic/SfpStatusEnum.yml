@@ -1,0 +1,6 @@
+name: SfpStatusEnum
+type: BYTE
+default: close
+enum:
+  close: 0
+  open: 1

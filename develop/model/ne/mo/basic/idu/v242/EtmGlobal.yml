@@ -1,0 +1,91 @@
+className: EtmGlobal
+tid: 310
+triggers: [beforeSet, constraintSet]
+attributes:
+  - name: macAgeTime
+    attrId: 0
+    type: WORD32
+    minimum: 0
+    maximum: 1048575
+    default: 300
+    mutable: true
+  - name: netManagementVlanId
+    attrId: 1
+    type: WORD32
+    minimum: 1
+    maximum: 4094
+    default: 1
+    mutable: true
+  - name: macLearnMode
+    attrId: 2
+    type: BYTE
+    enum:
+      ivl: 0
+      svl: 1
+    default: ivl
+    mutable: true
+  - name: ctrlMask
+    attrId: 3
+    type: Set
+    maxItems: 4
+    items:
+        type: CtrlMaskEnum
+    mutable: true
+  - name: l2LearnMode
+    attrId: 4
+    type: BYTE
+    enum:
+      defaultLearn: 2
+      lsbLearn: 3
+    default: defaultLearn
+    mutable: true
+  - name: macStationMove
+    attrId: 5
+    type: BYTE
+    enum:
+      overlap: 0
+      drop: 1
+    default: overlap
+    mutable: true
+  - name: l1l2RateMode
+    attrId: 6
+    type: WORD32
+    enum:
+      l2: 0
+      l1: 1
+    default: l2
+    mutable: true
+  - name: threshflag
+    attrId: 7
+    type: BYTE
+    minimum: 1
+    maximum: 3
+    default: 3
+    mutable: true
+  - name: cellLimit
+    attrId: 8
+    type: WORD16
+    minimum: 80
+    maximum: 12000
+    default: 4000
+    mutable: true
+  - name: pktLimit
+    attrId: 9
+    type: WORD16
+    minimum: 16
+    maximum: 1464
+    default: 144
+    mutable: true
+  - name: cpuMTU
+    attrId: 10
+    type: WORD32
+    minimum: 68
+    maximum: 9312
+    default: 1500
+    mutable: true
+  - name: BlackWhiteListEnable
+    attrId: 11
+    type: StateEnum
+    default: disable
+    mutable: true
+

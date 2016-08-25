@@ -1,0 +1,6 @@
+name: EowTypeEnum
+type: BYTE
+default: AUX_DTE_DEVICE
+enum:
+  AUX_DTE_DEVICE: 1
+ 

@@ -1,0 +1,21 @@
+className: MacLearn
+tid: 180
+attributes:
+  - name: adminState
+    attrId: 0
+    type: StateEnum
+    default: enable
+    mutable: true
+actions:
+  customs:
+    - name: ClearMac
+      actionId: 1
+      attributes:
+        - name: portId
+          attrId: 0
+          type: String
+          maxLength: 20
+          default: ""
+          mutable: true
+    - name: ClearMacRsp
+      actionId: 101

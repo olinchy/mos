@@ -1,0 +1,29 @@
+className: EthPort_Air
+baseClass: PhyPort
+tid: 233
+attributes:
+  - name: portType
+    attrId: 0
+    type: PortTypeEnum
+    default: air
+    mutable: false
+  - name: featureList
+    attrId: 1
+    type: FeatureList
+    default: [clock]
+    mutable: false
+children:
+  - name: PortMode
+    type: PortMode_Air
+    id: 1
+    autoCreate: true
+  - name: LldpPort
+    id: 2
+    autoCreate: true
+  - name: ssmSwitch
+    type: SsmSwitch
+    id: 3
+    autoCreate: true
+  - name: LacpPort
+    id: 4
+    autoCreate: false

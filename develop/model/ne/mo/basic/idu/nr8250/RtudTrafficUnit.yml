@@ -1,0 +1,31 @@
+className: RtudTrafficUnit
+baseClass: TrafficUnit
+tid: 125
+persistence: None
+triggers: [afterAdd, beforeSet]
+attributes:
+  - name: featureList
+    attrId: 1
+    type: FeatureList
+    default: [ces]
+    mutable: true
+  - name: CesMode
+    attrId: 2
+    type: CesModeEnum
+    default: ces
+    mutable: true
+  - name: Impedance
+    attrId: 3
+    type: ImpedanceEnum
+    default: 120ohm
+    mutable: true
+children:
+   - name : VE1Port
+     id : 1
+     count : 16
+   - name : EthPort
+     type : PhyPort
+     id : 2
+     count : 1
+     groupType : map
+     autoCreate: {"E-1": [EthPort_E_CES, {displayName: "GbE1"}]}

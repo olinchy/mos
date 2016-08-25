@@ -1,0 +1,13 @@
+name: LmspSwitchStatusEnum
+type: BYTE
+default: noRequest
+enum:
+  noRequest: 0
+  protectionLockout: 1
+  autoSwitch: 2
+  forceSwitch: 3  
+  manualSwitch: 4
+  exercisize: 5
+  waitForRecovery: 6
+  doNotRevert: 7
+

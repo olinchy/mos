@@ -1,0 +1,39 @@
+className: PackageFile
+tid: 206
+attributes:
+  - name: swid
+    attrId: 1  
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: fileName
+    attrId: 2  
+    type: String
+    maxLength: 128
+    mutable: true
+  - name: pkgName
+    attrId: 3  
+    type: String
+    maxLength: 44
+    mutable: true
+  - name: size
+    attrId: 4  
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: crc
+    attrId: 5  
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: status
+    attrId: 6  
+    type: PackageFileStatusEnum
+    default: init
+    mutable: true
+  - name: downloadDate
+    attrId: 7  
+    type: Date
+    mutable: true
+
+

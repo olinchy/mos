@@ -1,0 +1,15 @@
+className: LogingLock
+tid: 190
+attributes:
+  - name: retryLimit
+    attrId: 0
+    type: BYTE
+    range: [[1,10]]
+    default: 5
+    mutable: true
+  - name: lockPeriod
+    attrId: 1
+    type: BYTE
+    range: [[10,60]]
+    default: 10
+    mutable: true

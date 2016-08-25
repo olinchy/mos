@@ -1,0 +1,39 @@
+className: CesService
+tid: 3
+attributes:
+  - name: creator
+    attrId: 0
+    type: String
+    mutable: true
+    maxLength: 30
+  - name: createDate
+    attrId: 1
+    type: Date
+    mutable: false
+  - name: userLabel
+    attrId: 2
+    type: String
+    mutable: true
+    maxLength: 255
+  - name: consistentState
+    attrId: 3
+    type: ConsistentStateEnum
+    default: consistent
+    mutable: true
+  - name: activeState
+    attrId: 4
+    type: ActiveStateEnum
+    default: deactive
+    mutable: true
+reference:
+  - name: aEnd
+    type: CesRoute
+    under: LVDependencyPolicy
+  - name: zEnd
+    type: CesRoute
+    under: LVDependencyPolicy
+  - name: evc
+    type: EVC
+    isMulti: false
+    under: LVDependencyPolicy
+  

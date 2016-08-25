@@ -1,0 +1,10 @@
+className: SummerTimeActived
+tid: 611
+triggers: [afterGet]
+persistence: None
+attributes: 
+  - name: isUsing
+    attrId: 0
+    type: bool
+    default: false
+    mutable: false

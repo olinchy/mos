@@ -1,0 +1,90 @@
+className: OduAttribute
+tid: 552
+persistence: None
+attributes: 
+  - name: boardStatus
+    attrId: 0
+    type: BYTE
+    mutable: true
+  - name: totalChannelNumberOfBand
+    attrId: 1
+    type: WORD16    
+    mutable: true
+  - name: firstChannelNumber
+    attrId: 2
+    type: WORD16    
+    mutable: true
+  - name: minTxFreq
+    attrId: 3
+    type: WORD32    
+    mutable: true
+  - name: maxTxFreq
+    attrId: 4
+    type: WORD32    
+    mutable: true
+  - name: minRxFreq
+    attrId: 5
+    type: WORD32    
+    mutable: true
+  - name: maxRxFreq
+    attrId: 6
+    type: WORD32    
+    mutable: true
+  - name: step
+    attrId: 7
+    type: WORD16    
+    mutable: true
+  - name: rep
+    attrId: 8
+    type: WORD16    
+    mutable: true
+  - name: lowFreq
+    attrId: 9
+    type: WORD32    
+    mutable: true
+  - name: highFreq
+    attrId: 10
+    type: WORD32    
+    mutable: true
+  - name: minTxPower
+    attrId: 11
+    type: SWORD16    
+    mutable: true
+  - name: maxTxPower
+    attrId: 12
+    type: SWORD16    
+    mutable: true
+  - name: lsbUsbSet
+    attrId: 13
+    type: OduBankEnum
+    default: High    
+    mutable: true
+  - name: version
+    attrId: 14
+    type: String   
+    maxLength: 17 
+    mutable: true
+  - name: type
+    attrId: 15
+    type: OduTypeEnum    
+    default: none
+    mutable: true
+  - name: freqBand
+    attrId: 16
+    type: OduBandIdEnum    
+    default: unknown
+    mutable: true
+  - name: name
+    attrId: 17
+    type: String   
+    maxLength: 13 
+    mutable: true
+  - name: trSpacing
+    attrId: 18
+    type: Set
+    maxItems: 10
+    items:
+      type: WORD32
+    mutable: true
+
+triggers: [afterGet]

@@ -1,0 +1,28 @@
+className: ModThres
+tid: 578
+isAbstract : True
+attributes:
+  - name: time
+    attrId: 0
+    type: WORD32
+    default: 24
+    mutable: true
+  - name: workBandLimit
+    attrId: 1
+    type: BYTE
+    default: 0
+    mutable: true
+  - name: acmState
+    attrId: 2
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: codeStatusForLmt
+    attrId: 3
+    type: BYTE
+    enum:
+      normal: 0
+      light: 1 
+    default: normal
+    mutable: true
+

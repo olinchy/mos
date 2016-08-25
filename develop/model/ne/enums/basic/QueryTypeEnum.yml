@@ -1,0 +1,14 @@
+name: QueryTypeEnum
+type: BYTE
+default: pre_download
+enum:
+  pre_download: 0
+  after_download: 1
+  pre_active: 2
+  after_active: 3
+  pre_switch: 4
+  pre_download_fw: 5
+  pre_active_fw: 6
+  pre_download_hp: 7
+  pre_active_hp: 8
+  pre_deactive_hp: 9

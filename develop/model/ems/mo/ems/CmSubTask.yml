@@ -1,0 +1,115 @@
+className: CmSubTask
+tid: 100411
+attributes:
+  - name: groupId
+    attrId: 1
+    type: WORD16
+    default: 0
+    mutable: true
+
+  - name: taskId
+    attrId: 2
+    type: WORD16
+    default: 0
+    mutable: true
+
+  - name: neid
+    attrId: 3
+    type: String
+    maxLength: 50
+    mutable: true
+
+  - name: neName
+    attrId: 4
+    type: String
+    maxLength: 50
+    mutable: true
+
+  - name: ip
+    attrId: 5
+    type: String
+    maxLength: 50
+    mutable: true
+
+  - name: taskType
+    attrId: 6
+    type: String
+    maxLength: 50
+    mutable: true
+
+  - name: param
+    attrId: 7
+    type: String
+    maxLength: 1000
+    mutable: true
+
+  - name: paramClass
+    attrId: 8
+    type: String
+    maxLength: 50
+    mutable: true
+
+  - name: taskStatus
+    attrId: 9
+    type: String
+    maxLength: 50
+    mutable: true
+
+  - name: isSuccess
+    attrId: 10
+    type: bool
+    default: false
+    mutable: true
+
+  - name: errorCode
+    attrId: 11
+    type: String
+    maxLength: 100
+    mutable: true
+
+  - name: detail
+    attrId: 12
+    type: String
+    maxLength: 1000
+    mutable: true
+
+  - name: beginTime
+    attrId: 13
+    type: WORD32
+    default: 0
+    mutable: true
+
+  - name: endTime
+    attrId: 14
+    type: WORD32
+    default: 0
+    mutable: true
+
+  - name: schedueTime
+    attrId: 15
+    type: WORD32
+    default: 0
+    mutable: true
+
+  - name: operState
+    attrId: 16
+    type: WORD16
+    default: 0
+    mutable: true
+
+  - name: taskKey
+    attrId: 17
+    type: String
+    maxLength: 50
+    mutable: true
+
+  - name: isOem
+    attrId: 18
+    type: bool
+    default: false
+    mutable: true
+
+actions:
+  customs:
+    - name: schedule
+      actionId: 1

@@ -1,0 +1,35 @@
+className: PmpDSCPCfg
+tid: 405
+key:
+  type: user-defined
+triggers: [beforeAdd, constraintAdd]
+attributes:
+  - name: portId
+    attrId: 0
+    type: WORD32
+    mutable: true
+  - name: vlanDSCPStart
+    attrId: 1
+    type: BYTE
+    minimum: 0
+    maximum: 63
+    mutable: true
+  - name: vlanDSCPEnd
+    attrId: 2
+    type: BYTE
+    minimum: 0
+    maximum: 63
+    mutable: true
+reference:
+  - name: sourcePort
+    type: ChipPort
+    isMulti: false
+    under: DependencyPolicy
+children:
+   - name : DscpPerfData
+     type : PmpDscp
+     id : 1
+     count : 1
+     groupType : map
+     autoCreate: true
+

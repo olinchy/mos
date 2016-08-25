@@ -1,0 +1,34 @@
+className: PortLicenseItem
+attributes:  
+  - name: position
+    attrId: 0
+    type: String
+    maxLength: 20
+    mutable: false
+  - name: type
+    attrId: 1
+    type: LicenseTypeEnum
+    default: invalidType
+    mutable: true
+  - name: state
+    attrId: 2
+    type: WORD32
+    default: 0
+    mutable: false
+  - name: itemState
+    attrId: 4
+    type: WORD32
+    enum:
+      disable: 1
+      island: 2
+      fail: 3
+      success: 4
+      freeze: 5
+      unauth: 6
+    default: unauth
+    mutable: true
+  - name: leftDays
+    attrId: 5
+    type: WORD32
+    default: 0
+    mutable: true

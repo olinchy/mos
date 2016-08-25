@@ -1,0 +1,6 @@
+name: QueuePriorityEnum
+type: WORD32
+default: lowPriority
+enum:
+  lowPriority: 0
+  highPriority: 1

@@ -1,0 +1,8 @@
+name: LacpAggPolicyEnum
+type: BYTE
+default: staticMode
+enum:
+  staticMode: 1
+  manuel: 2
+  dynamic: 3
+   

@@ -1,0 +1,168 @@
+className: PtpPorts
+tid: 398
+triggers: [constraintAdd, constraintSet, afterGet]
+attributes:
+  - name: enableStat
+    attrId: 0
+    type: StateEnum
+    default: enable
+    mutable: true
+  - name: vlanId
+    attrId: 1
+    type: WORD16
+    minimum: 1
+    maximum: 4094
+    default: 1
+    mutable: true
+  - name: destIp
+    attrId: 2
+    type: Array
+    maxItems: 4
+    items:
+      type: BYTE
+    mutable: true
+  - name: transProtocol
+    attrId: 3
+    type: TransProtocolEnum
+    default: IEEE802_3
+    mutable: true
+  - name: unicast
+    attrId: 4
+    type: StateEnum
+    default: enable
+    mutable: true
+  - name: unicastNeg
+    attrId: 5
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: portState
+    attrId: 6
+    type: PtpPortStatEnum
+    default: Passive
+    mutable: true
+  - name: announceIntv
+    attrId: 7
+    type: BYTE
+    range: [[0], [-3,-1]]
+    default: 255
+    mutable: true
+  - name: announceTimeout
+    attrId: 8
+    type: BYTE
+    minimum: 2
+    maximum: 10
+    default: 3
+    mutable: true
+  - name: announceDur
+    attrId: 9
+    type: WORD32
+    minimum: 300
+    maximum: 1000
+    default: 300
+    mutable: true
+  - name: syncIntv
+    attrId: 10
+    type: BYTE
+    range: [[0], [-5,-1]]
+    default: 252
+    mutable: true
+  - name: syncDur
+    attrId: 11
+    type: WORD32
+    minimum: 300
+    maximum: 1000
+    default: 300
+    mutable: true
+  - name: delayReqIntv
+    attrId: 12
+    type: BYTE
+    range: [[0], [-5,-1]]
+    default: 252
+    mutable: true
+  - name: delayRespIntv
+    attrId: 13
+    type: BYTE
+    range: [[0], [-5,-1]]
+    default: 252
+    mutable: true
+  - name: delayRespDur
+    attrId: 14
+    type: WORD32
+    minimum: 300
+    maximum: 1000
+    default: 300
+    mutable: true
+  - name: signallingIntv
+    attrId: 15
+    type: BYTE
+    range: [[0,4], [-3,-1]]
+    default: 1
+    mutable: true
+  - name: signallingDur
+    attrId: 16
+    type: WORD32
+    minimum: 300
+    maximum: 65535
+    default: 300
+    mutable: true
+  - name: targetClockId
+    attrId: 17
+    type: Array
+    maxItems: 8
+    items:
+      type: BYTE
+    mutable: true
+  - name: targetPortNo
+    attrId: 18
+    type: WORD16
+    minimum: 1
+    maximum: 16
+    default: 1
+    mutable: true
+  - name: realPtpState
+    attrId: 19
+    type: PtpPortStatEnum
+    default: Passive
+    mutable: true
+  - name: localPriority
+    attrId: 20
+    type: BYTE
+    default: 128
+    mutable: true
+  - name: notSlave
+    attrId: 21
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: aucGateWay
+    attrId: 22
+    type: Array
+    maxItems: 4
+    items:
+      type: BYTE
+    mutable: true
+  - name: aucSrcIP
+    attrId: 23
+    type: Array
+    maxItems: 4
+    items:
+      type: BYTE
+    mutable: true
+  - name: portId
+    attrId: 24
+    type: WORD32
+    mutable: false
+  - name: dwUnsymOffset
+    attrId: 25
+    type: WORD32
+    mutable: false
+  - name: ucUnsymSign
+    attrId: 26
+    type: WORD32
+    mutable: false
+children:
+  - name: PtpMasterLink
+    id: 1
+    count: 1
+    autoCreate: true

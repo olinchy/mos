@@ -1,0 +1,9 @@
+className: LVlink
+isAbstract: True
+tid: 50
+attributes:
+  - name: userLabel
+    attrId: 1
+    type: String
+    maxLength: 900
+    mutable: true

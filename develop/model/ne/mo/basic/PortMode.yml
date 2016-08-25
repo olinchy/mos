@@ -1,0 +1,17 @@
+className: PortMode
+tid: 291
+isAbstract : True
+attributes:
+  - name: duplexMode
+    attrId: 0
+    type: BYTE
+    enum:
+      fullDuplex: 1
+      halfDuplex: 0
+    default: fullDuplex
+    mutable: false
+  - name: portDescription
+    attrId: 1
+    type: String
+    maxLength: 30
+    mutable: true

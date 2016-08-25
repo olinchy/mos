@@ -1,0 +1,59 @@
+className: RcmucLogicAirPort
+baseClass: LogicAirPort
+persistence: None
+tid: 143
+triggers: [afterGet, beforeDel]
+children:
+   - name : Workmode
+     type : RcmucWorkmode
+     id : 1
+     count : 1
+     autoCreate: true
+   - name : Acm
+     type : RcmucAcm
+     id : 2
+     count : 1
+     autoCreate: true
+   - name : Protect
+     id : 3
+     count : 1
+     autoCreate: true
+   - name : Atpc
+     id : 4
+     count : 1
+     autoCreate: true
+   - name : Rf
+     id : 5
+     count : 1
+     autoCreate: true
+   - name : Desc
+     id : 6
+     count : 1
+     autoCreate: true
+   - name : Rdi
+     type : MuRdi
+     id : 7
+     count : 1
+     autoCreate: true
+   - name : ModemCfgType
+     type : RcmucModemCfgType
+     id : 8
+     count : 1
+     autoCreate: true
+   - name : LinkWorkPath
+     id : 9
+     count : 1
+     autoCreate: true
+   - name : LinkId
+     id : 10
+     count : 1
+     autoCreate: true
+   - name : ModThres
+     type : RcmucModThres
+     id : 11
+     count : 1
+     autoCreate: true
+   - name : PmpRadioLink
+     id : 12
+     count : 1
+     autoCreate: true

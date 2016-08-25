@@ -1,0 +1,83 @@
+className: LACP
+tid: 575
+#(triggered by lacp table)  
+triggers: [beforeAdd, beforeDel, afterAdd, afterDel, afterSet, recover, constraintAdd, constraintSet]
+attributes:
+  - name: memberNum
+    attrId: 0
+    type: BYTE
+    minimum: 2
+    maximum: 8
+    mutable: true
+  - name: masterPortId
+    attrId: 1
+    type: String
+    maxLength: 60
+    mutable: true
+  - name: lagName
+    attrId: 2
+    type: String
+    maxLength: 32
+    default: "SG"
+    mutable: true
+  - name: lagPriority
+    attrId: 3
+    type: WORD16
+    minimum: 1
+    maximum: 65535
+    default: 32768
+    mutable: true
+  - name: lagPolicy
+    attrId: 4
+    type: LacpAggPolicyEnum
+    default: staticMode
+    mutable: true
+  - name: lagLBStrategy
+    attrId: 5
+    type: LacpLBStrategyEnum
+    default: SrcDstMac
+    mutable: true
+  - name: protectMode
+    attrId: 6
+    type: LacpProtectModeEnum
+    default: aggregation
+    mutable: true
+  - name: revertiveMode
+    attrId: 7
+    type: LacpReverModeEnum
+    default: revertive
+    mutable: true
+  - name: holdOffTime
+    attrId: 8
+    type: WORD32
+    range: [[0, 10]]
+    default: 5
+    mutable: true
+  - name: wtrTime
+    attrId: 9
+    type: WORD32
+    range: [[0, 65535]]
+    default: 5
+    mutable: true
+reference:
+  - name: memberPortId
+    type: PhyPort
+    isMulti: true
+    maxItems: 8
+    under: ConstraintPolicyInList
+children:
+  - name: LacpMemPortInfo
+    id: 1
+    autoCreate: true
+  - name: LacpSGInfo
+    id: 2
+    autoCreate: true
+  - name: LacpLinkInfo
+    id: 3
+    autoCreate: true
+
+    
+    
+
+
+

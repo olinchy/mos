@@ -1,0 +1,9 @@
+className: Rtuio
+baseClass: Board
+tid: 450
+attributes:
+  - name: boardType
+    attrId: 0
+    type: BoardTypeEnum
+    default: rtuio
+    mutable: false

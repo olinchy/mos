@@ -1,0 +1,168 @@
+className: Root
+tid : 2
+persistence: None
+derivedFrom: Product
+derivedBy: "NR8250"
+msgMode: Multi
+imagedProtocol: RPC
+mosVersion: 1.1f
+children:
+  - name : Shelf
+    type : NR8250Shelf
+    id : 1
+    count : 2
+    autoCreate : True
+  - name : LmspGroup
+    id : 2
+    count : 2
+  - name : NPlus1Cfg
+    id : 3
+    count : 2
+  - name : P2pRoute
+    id : 4
+    count : 300
+  - name : SncpRoute
+    id : 5
+    count : 300
+  - name : CesRoute
+    id : 8
+    count : 378
+  - name : TdmCascade
+    id : 9
+    count : 1
+    autoCreate : True
+  - name : License
+    id : 10
+    count : 1
+    autoCreate : True
+  - name : NEAlarm
+    id : 11
+    count : 1
+    autoCreate: True
+  - name : VirtualShelf
+    id : 12
+    count : 1
+    autoCreate : True
+  - name : Vmp
+    id : 13
+    count : 1
+    autoCreate: True
+  - name : VmpAdvancedCheck
+    id : 14
+    count : 1
+    autoCreate : True
+  - name : SysPara
+    id : 15
+    count : 1
+    autoCreate : True
+  - name : Security
+    id : 16
+    count : 1
+    autoCreate : True
+  - name : Neighbor
+    id : 17
+    count : 1
+    autoCreate : True
+  - name : Maintain
+    id : 18
+    count : 1
+    autoCreate : True
+  - name : EthProtocol
+    id : 19
+    autoCreate : True
+  - name: CAR
+    id : 21
+    count : 20
+    autoCreate : False
+  - name: ACL
+    id : 22
+    count : 100
+    autoCreate : False
+  - name : Clock
+    id : 24
+    autoCreate : True
+  - name : Configuration
+    id : 25
+    count : 1
+    autoCreate : True
+  - name : ProtocolVlan
+    id : 26
+    count : 9
+    autoCreate : False
+  - name : Userdefine_EgTransAct
+    id : 27
+    count : 32
+    autoCreate : False
+  - name : Userdefine_EgTransRule
+    id : 28
+    count : 32
+    autoCreate : False
+  - name : Userdefine_InTransAct
+    id : 29
+    count : 32
+    autoCreate : False
+  - name : Userdefine_InTransRule
+    id : 30
+    count : 32
+    autoCreate : False
+  - name : EowGlobal
+    id : 31
+    count : 1
+    autoCreate : False
+  - name : EowTU
+    id : 32
+    count : 1
+    autoCreate : False
+  - name : Inventory
+    id : 33
+    count : 1
+    autoCreate : True
+  - name : MacVlan
+    id : 34
+    count : 1
+    autoCreate : False
+  - name : Mirror
+    id : 35
+    count : 1
+    autoCreate : False
+  - name : StaticMacIVL
+    id : 36
+    count : 32
+    autoCreate : False
+  - name : StaticMacSVL
+    id : 37
+    count : 32
+    autoCreate : False
+  - name : Pmp
+    id : 38
+    count : 1
+    autoCreate : True
+  - name : LOG
+    id : 39
+    count : 1
+    autoCreate : True
+  - name : SDHRTBL
+    id : 40
+    count : 1000
+    autoCreate : False
+  - name : PDHRTBL
+    id : 41
+    count : 1000
+    autoCreate : False
+  - name : PDHSNCPCFG
+    id : 42
+    count : 1000
+    autoCreate : False
+actions:
+  customs:
+  - name: traverseMos
+    actionId: 1
+  - name: lmtExitAck
+    actionId: 2
+  - name: Logout
+    actionId: 3
+  - name: LogoutRsp
+    actionId: 103
+  - name: getDynamicnMo
+    actionId: 4
+

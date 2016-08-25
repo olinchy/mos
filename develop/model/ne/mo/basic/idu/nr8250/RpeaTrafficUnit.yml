@@ -1,0 +1,11 @@
+className: RpeaTrafficUnit
+baseClass: TrafficUnit
+tid: 447
+triggers: [afterAdd, afterSet, afterDel, recover]
+children:
+   - name : EthPort
+     type : PhyPort
+     id : 1
+     count : 4
+     groupType : map
+     autoCreate: {"E-1": [EthPort_E_1G, {displayName: "GbE1"}], "E-2": [EthPort_E_1G, {displayName: "GbE2"}], "E-3": [EthPort_E_1G, {displayName: "GbE3(POE1)"}], "E-4": [EthPort_E_1G, {displayName: "GbE4(POE2)"}]}

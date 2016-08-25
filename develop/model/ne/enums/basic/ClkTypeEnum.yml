@@ -1,0 +1,17 @@
+name: ClkTypeEnum
+type: BYTE
+default: InnerClk
+enum:
+  SyncE: 1
+  Sdh: 2
+  E1: 3
+  Bits: 4
+  1PPS: 5
+  Gps: 6
+  Ptp: 7
+  Air: 8
+  Ptp_SyncE: 9
+  Ptp_Air: 10
+  Ces: 11
+  InnerClk: 12
+  10Ge: 13

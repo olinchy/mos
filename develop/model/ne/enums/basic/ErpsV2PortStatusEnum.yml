@@ -1,0 +1,9 @@
+name: ErpsV2PortStatusEnum
+type: BYTE
+default: brokenBlock
+enum:
+  normalUnblock: 0
+  normalBlock: 1
+  brokenUnblock: 2
+  brokenBlock: 3
+  invalidState: 4

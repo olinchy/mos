@@ -1,0 +1,55 @@
+className: MucLogicAirPort
+baseClass: LogicAirPort
+tid: 522
+persistence: None
+triggers: [afterGet, beforeDel]
+children:
+   - name : Workmode
+     type : MucWorkmode
+     id : 1
+     count : 1
+     autoCreate: true
+   - name : Acm
+     type : MucAcm
+     id : 2
+     count : 1
+     autoCreate: true
+   - name : Protect
+     id : 3
+     count : 1
+     autoCreate: true
+   - name : Atpc
+     id : 4
+     count : 1
+     autoCreate: true
+   - name : Rf
+     id : 5
+     count : 1
+     autoCreate: true
+   - name : Desc
+     id : 6
+     count : 1
+     autoCreate: true
+   - name : Rdi
+     type : MuRdi
+     id : 7
+     count : 1
+     autoCreate: true
+   - name : ModemCfgType
+     type : MucModemCfgType
+     id : 8
+     count : 1
+     autoCreate: true
+   - name : LinkWorkPath
+     id : 9
+     count : 1
+   - name : ModThres
+     type : MucModThres
+     id : 10
+     count : 1
+     autoCreate: true
+   - name : PmpRadioLink
+     id : 11
+     count : 1
+     autoCreate: true
+

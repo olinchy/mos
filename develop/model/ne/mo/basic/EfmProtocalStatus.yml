@@ -1,0 +1,70 @@
+className: EfmProtocalStatus
+tid: 490
+triggers: [afterGet]
+persistence: None
+attributes:
+  - name: localCritclEvent
+    attrId: 0
+    type: IndicatorEnum
+    default: NoOccur
+    mutable: true
+  - name: localDyingGasp
+    attrId: 1
+    type: IndicatorEnum
+    default: NoOccur
+    mutable: true
+  - name: localLinkStts
+    attrId: 2
+    type: IndicatorEnum
+    default: NoOccur
+    mutable: true
+  - name: localMuxAction
+    attrId: 3
+    type: BYTE
+    enum:
+      FWD: 0
+      LB: 1
+      DISCARD: 2
+    default: FWD
+    mutable: true
+  - name: localParState
+    attrId: 4
+    type: BYTE
+    enum:
+      FWD: 0
+      LB: 1
+      DISCARD: 2
+    default: FWD
+    mutable: true
+  - name: localSatsfy
+    attrId: 5
+    type: BYTE
+    enum:
+      unsatisfaction: 0
+      satisfaction: 1
+    default: unsatisfaction
+    mutable: true
+  - name: localStable
+    attrId: 6
+    type: BYTE
+    enum:
+      NotAcknowledged: 0
+      Acknowledged: 1
+    default: NotAcknowledged
+    mutable: true
+  - name: rmtSatsfy
+    attrId: 7
+    type: BYTE
+    enum:
+      unsatisfaction: 0
+      satisfaction: 1
+    default: unsatisfaction
+    mutable: true
+  - name: rmtStateValid
+    attrId: 8
+    type: BYTE
+    enum:
+      NotRecv: 0
+      Recv: 1
+    default: NotRecv
+    mutable: true

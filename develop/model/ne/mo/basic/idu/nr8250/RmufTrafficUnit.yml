@@ -1,0 +1,37 @@
+className: RmufTrafficUnit
+baseClass: TrafficUnit
+tid: 136
+triggers: [afterAdd, afterSet, recover]
+persistence: None
+attributes:
+  - name: featureList
+    attrId: 0
+    type: FeatureList
+    default: [nplus1, xpic, xpic2_2, xpic7_14M, airport]
+    mutable: false
+children:
+   - name : VE1Port
+     type : NativeVE1Port
+     id : 1
+     count : 75
+     autoCreate: true
+
+   - name : VStm155Port
+     type : MuVStm155Port
+     id : 2
+     count : 2
+     autoCreate: true
+
+   - name : LogicAirPort
+     type : MufLogicAirPort
+     id : 3
+     count : 1
+     autoCreate: true
+
+   - name : EthPort
+     type : PhyPort
+     id : 4
+     count : 1
+     groupType : map
+     autoCreate: {"AIR-0": EthPort_Air}
+

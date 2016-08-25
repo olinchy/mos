@@ -1,0 +1,18 @@
+className: StaticRoute
+tid: 413
+triggers: [constraintAdd]
+attributes:
+  - name: dstIp 
+    attrId: 0   
+    type: IPv4Addr
+    mutable: true
+  - name: subnetMask 
+    attrId: 1   
+    type: IPv4Addr
+    mutable: true
+  - name: gateWay 
+    attrId: 2   
+    type: IPv4Addr
+    mutable: true
+
+

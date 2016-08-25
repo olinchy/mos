@@ -1,0 +1,57 @@
+className: SnmpV3
+baseClass: Snmp
+tid: 2503
+attributes:
+  - name: security_level
+    attrId: 1
+    type: BYTE
+    enum:      
+      none_authentication_none_private: 0
+      authentication_none_private: 1
+      authentication_private: 3
+    default: authentication_private
+    mutable: true
+
+  - name: auth_protocal
+    attrId: 2
+    type: BYTE
+    enum:
+      none_authentication: 20
+      md5: 21
+      sha: 22
+    default: md5
+    mutable: true
+
+  - name: auth_algrithom
+    attrId: 3
+    type: BYTE
+    enum:
+      des: 50
+      none_authentication: 51
+      aes: 52
+    default: des
+    mutable: true
+
+  - name: principal
+    attrId: 4
+    type: String
+    maxLength: 52
+    default: "zte"
+    mutable: false
+
+  - name: authPassword
+    attrId: 5
+    type: String
+    maxLength: 52
+    default: "ztesnmp2013"
+    mutable: true
+
+  - name: privPassword
+    attrId: 6
+    type: String
+    maxLength: 52
+    default: "ztesnmp2013"
+    mutable: true
+
+
+

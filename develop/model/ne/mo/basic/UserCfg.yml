@@ -1,0 +1,13 @@
+className: UserCfg
+tid: 249
+persistence: None
+children:
+  - name : User
+    id : 1
+    groupType : map
+    count : 10
+    autoCreate: {"admin": User}
+  - name : LogingLock
+    id : 2
+    count : 1
+    autoCreate: True

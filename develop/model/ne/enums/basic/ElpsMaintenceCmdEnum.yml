@@ -1,0 +1,10 @@
+name: ElpsMaintenceCmdEnum
+type: BYTE
+enum:
+    Clear: 1
+    Lockout: 2
+    ForcedSwitch: 3
+    ManualSwitch: 4
+    ManualSwitchWork: 5
+    Exercise: 6
+default: Clear

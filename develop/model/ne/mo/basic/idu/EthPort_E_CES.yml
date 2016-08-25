@@ -1,0 +1,14 @@
+className: EthPort_E_CES
+baseClass: PhyPort
+tid: 610
+attributes:
+  - name: portType
+    attrId: 0
+    type: PortTypeEnum
+    default: electric
+    mutable: false
+children:
+  - name: PortMode
+    type: PortMode_E_1G
+    id: 1
+    autoCreate: true

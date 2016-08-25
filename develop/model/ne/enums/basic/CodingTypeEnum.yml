@@ -1,0 +1,8 @@
+name: CodingTypeEnum
+type: BYTE
+default: normal
+enum:
+    normal: 0   
+    light: 1
+
+

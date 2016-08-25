@@ -1,0 +1,34 @@
+className: LacpLagInfo
+attributes:
+  - name: index
+    attrId: 0
+    type: WORD32
+    mutable: false
+  - name: sgName
+    attrId: 1
+    type: String
+    maxLength: 32
+    mutable: false
+  - name: priority
+    attrId: 2
+    type: WORD32
+    mutable: false
+  - name: aggPolicy
+    attrId: 3
+    type: WORD32
+    mutable: false
+  - name: loadStrategy
+    attrId: 4
+    type: WORD32
+    mutable: false
+  - name: masterPortId
+    attrId: 5
+    type: String
+    maxLength: 60
+    mutable: false
+reference:
+  - name: memberPort
+    type: PhyPort
+    isMulti: true
+    maxItems: 8
+    under: ConstraintPolicyInList

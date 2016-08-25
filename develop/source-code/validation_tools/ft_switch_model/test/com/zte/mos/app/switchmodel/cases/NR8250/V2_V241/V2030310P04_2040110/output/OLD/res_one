@@ -1,0 +1,768 @@
+{
+  "moClass":"MucAcm",
+  "dn":"/Shelf/1/TrafficUnit/5/LogicAirPort/1/Acm/1",
+  "mo":{
+    "rxModulation":"QPSK",
+    "state":"enable",
+    "enableLog":"disable",
+    "classType":null,
+    "endCodingType":null,
+    "syncToRemote":"disable",
+    "txCodingType":"normal",
+    "rxCodingType":"normal",
+    "startCodingType":null,
+    "standbyMse":0,
+    "startModulation":"QPSK",
+    "endModulation":"256QAM",
+    "txModulation":"QPSK",
+    "mse":0
+  }
+}
+
+{
+  "moClass":"MucWorkmode",
+  "dn":"/Shelf/1/TrafficUnit/5/LogicAirPort/1/Workmode/1",
+  "mo":{
+    "codingType":null,
+    "modulation":"QPSK",
+    "capacity":1,
+    "classType":null,
+    "syncToRemote":"disable",
+    "bandwidth":"ETSI_14M"
+  }
+}
+
+{
+  "moClass":"MucAcm",
+  "dn":"/Shelf/1/TrafficUnit/6/LogicAirPort/1/Acm/1",
+  "mo":{
+    "rxModulation":"QPSK",
+    "state":"disable",
+    "enableLog":"disable",
+    "classType":null,
+    "endCodingType":null,
+    "syncToRemote":"disable",
+    "txCodingType":"normal",
+    "rxCodingType":"normal",
+    "startCodingType":null,
+    "standbyMse":0,
+    "startModulation":"QPSK",
+    "endModulation":"QPSK",
+    "txModulation":"QPSK",
+    "mse":0
+  }
+}
+
+{
+  "moClass":"MucWorkmode",
+  "dn":"/Shelf/1/TrafficUnit/6/LogicAirPort/1/Workmode/1",
+  "mo":{
+    "codingType":null,
+    "modulation":"QPSK",
+    "capacity":1,
+    "classType":null,
+    "syncToRemote":"disable",
+    "bandwidth":"ETSI_7M"
+  }
+}
+
+{
+  "moClass":"MucAcm",
+  "dn":"/Shelf/1/TrafficUnit/7/LogicAirPort/1/Acm/1",
+  "mo":{
+    "rxModulation":"QPSK",
+    "state":"disable",
+    "enableLog":"disable",
+    "classType":null,
+    "endCodingType":null,
+    "syncToRemote":"disable",
+    "txCodingType":"normal",
+    "rxCodingType":"normal",
+    "startCodingType":null,
+    "standbyMse":0,
+    "startModulation":"QPSK",
+    "endModulation":"QPSK",
+    "txModulation":"QPSK",
+    "mse":0
+  }
+}
+
+{
+  "moClass":"MucWorkmode",
+  "dn":"/Shelf/1/TrafficUnit/7/LogicAirPort/1/Workmode/1",
+  "mo":{
+    "codingType":null,
+    "modulation":"QPSK",
+    "capacity":1,
+    "classType":null,
+    "syncToRemote":"disable",
+    "bandwidth":"ETSI_7M"
+  }
+}
+
+{
+  "moClass":"MucAcm",
+  "dn":"/Shelf/1/TrafficUnit/8/LogicAirPort/1/Acm/1",
+  "mo":{
+    "rxModulation":"QPSK",
+    "state":"disable",
+    "enableLog":"disable",
+    "classType":null,
+    "endCodingType":null,
+    "syncToRemote":"disable",
+    "txCodingType":"normal",
+    "rxCodingType":"normal",
+    "startCodingType":null,
+    "standbyMse":0,
+    "startModulation":"QPSK",
+    "endModulation":"QPSK",
+    "txModulation":"QPSK",
+    "mse":0
+  }
+}
+
+{
+  "moClass":"MucWorkmode",
+  "dn":"/Shelf/1/TrafficUnit/8/LogicAirPort/1/Workmode/1",
+  "mo":{
+    "codingType":null,
+    "modulation":"QPSK",
+    "capacity":1,
+    "classType":null,
+    "syncToRemote":"disable",
+    "bandwidth":"ETSI_7M"
+  }
+}
+
+{
+  "moClass":"XstpInstanceReportEms",
+  "dn":"/EthProtocol/EthL2Protocol/MstpGlobal/Instance/0/XstpInstanceReportEms",
+  "mo":{
+    "PortState":[
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      }
+    ],
+    "PortNum":0,
+    "classType":null,
+    "VlanMap":null
+  }
+}
+
+{
+  "moClass":"XstpInstanceReportEms",
+  "dn":"/EthProtocol/EthL2Protocol/Xstp/Instance/0/XstpInstanceReportEms",
+  "mo":{
+    "PortState":[
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      }
+    ],
+    "PortNum":0,
+    "classType":null,
+    "VlanMap":null
+  }
+}
+
+/Pmp/1/Vlan/AIR-5-0_10/VlanPerfData/1
+
+{
+  "moClass":"PLALinkId",
+  "dn":"/Shelf/1/PLA/1/PLALinkId/1",
+  "mo":{
+    "memberPortId":[
+      83952896,
+      83953152,
+      0,
+      0
+    ],
+    "id":"",
+    "state":"disable",
+    "classType":null,
+    "memberNum":2,
+    "syncToRemote":"disable"
+  }
+}
+
+/Pmp/1/Vlan/AIR-5-0_10/VlanPerfData
+
+{
+  "moClass":"SysLog",
+  "dn":"/LOG/1/SysLog/1",
+  "mo":{
+    "status":"disable",
+    "serverIp":"192.168.1.1",
+    "classType":null
+  }
+}
+
+/Pmp/1/Vlan/AIR-5-0_10
+
+{
+  "moClass":"Radius",
+  "dn":"/Security/1/Radius/1",
+  "mo":{
+    "privateip":0,
+    "serverip":0,
+    "enable":0,
+    "serverport":1812,
+    "classType":null,
+    "retry":2,
+    "timeout":3,
+    "secretkey":null
+  }
+}
+
+{
+  "moClass":"Rmuc",
+  "dn":"/Shelf/1/Board/5",
+  "mo":{
+    "_function":0,
+    "boardType":"rmuc",
+    "state":1,
+    "classType":null
+  }
+}
+
+{
+  "moClass":"LACP",
+  "dn":"/Shelf/1/LACP/1",
+  "mo":{
+    "memberPortId":[
+      "/Shelf/1/TrafficUnit/7/EthPort/AIR-0",
+      "/Shelf/1/TrafficUnit/8/EthPort/AIR-0"
+    ],
+    "revertiveMode":null,
+    "wtrTime":null,
+    "masterPortId":"/Shelf/1/TrafficUnit/7/EthPort/AIR-0",
+    "lagPriority":1,
+    "lagPolicy":"staticMode",
+    "holdOffTime":null,
+    "classType":null,
+    "protectMode":null,
+    "lagName":"aaa",
+    "lagLBStrategy":"SrcMac",
+    "memberNum":2
+  }
+}
+
+{
+  "moClass":"PLA",
+  "dn":"/Shelf/1/PLA/1",
+  "mo":{
+    "memberPortId":[
+      83952896,
+      83953152,
+      0,
+      0,
+      null,
+      null,
+      null,
+      null
+    ],
+    "masterPortId":83952896,
+    "state":"enable",
+    "classType":null,
+    "memberNum":2,
+    "memberPortBlock":[
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  }
+}
+
+{
+  "moClass":"RmucTrafficUnit",
+  "dn":"/Shelf/1/TrafficUnit/5",
+  "mo":{
+    "_function":0,
+    "boardType":"rmuc",
+    "standBySlot":255,
+    "standByShelfNo":null,
+    "mainSlot":5,
+    "e1Number":0,
+    "mainPortNo":1,
+    "classType":null,
+    "standByPortNo":1,
+    "featureList":[
+      "xpic",
+      "xpic2_2",
+      "airport",
+      "nplus1"
+    ],
+    "stm1Number":0,
+    "srcMacAddr":[
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}
+
+{
+  "moClass":"RmucTrafficUnit",
+  "dn":"/Shelf/1/TrafficUnit/6",
+  "mo":{
+    "_function":0,
+    "boardType":"rmuc",
+    "standBySlot":255,
+    "standByShelfNo":null,
+    "mainSlot":6,
+    "e1Number":0,
+    "mainPortNo":1,
+    "classType":null,
+    "standByPortNo":1,
+    "featureList":[
+      "xpic",
+      "xpic2_2",
+      "airport",
+      "nplus1"
+    ],
+    "stm1Number":0,
+    "srcMacAddr":[
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}
+
+{
+  "moClass":"RmucTrafficUnit",
+  "dn":"/Shelf/1/TrafficUnit/7",
+  "mo":{
+    "_function":0,
+    "boardType":"rmuc",
+    "standBySlot":255,
+    "standByShelfNo":null,
+    "mainSlot":7,
+    "e1Number":0,
+    "mainPortNo":1,
+    "classType":null,
+    "standByPortNo":1,
+    "featureList":[
+      "xpic",
+      "xpic2_2",
+      "airport",
+      "nplus1"
+    ],
+    "stm1Number":0,
+    "srcMacAddr":[
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}
+
+{
+  "moClass":"RmucTrafficUnit",
+  "dn":"/Shelf/1/TrafficUnit/8",
+  "mo":{
+    "_function":0,
+    "boardType":"rmuc",
+    "standBySlot":255,
+    "standByShelfNo":null,
+    "mainSlot":8,
+    "e1Number":0,
+    "mainPortNo":1,
+    "classType":null,
+    "standByPortNo":1,
+    "featureList":[
+      "xpic",
+      "xpic2_2",
+      "airport",
+      "nplus1"
+    ],
+    "stm1Number":0,
+    "srcMacAddr":[
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}
+
+{
+  "moClass":"DevicePara",
+  "dn":"/SysPara/1/DevicePara/1",
+  "mo":{
+    "neName":"8250-61-2036-",
+    "mibVersion":"8250V2.03.03.10",
+    "siteId":"",
+    "neId":46,
+    "neType":"NR8250",
+    "classType":null,
+    "mac":"98-F5-37-E5-14-8F",
+    "health":"None",
+    "netMask":"255.255.255.0",
+    "defaultGw":"108.28.170.2",
+    "ip":"108.28.170.61"
+  }
+}
+
+{
+  "moClass":"TdmCascade",
+  "dn":"/TdmCascade/1",
+  "mo":{
+    "remoteShelfIp":"0.0.0.0",
+    "classType":null,
+    "remoteShelfNo":1,
+    "remoteShelfType":null
+  }
+}
+
+
+
+
+
+
+

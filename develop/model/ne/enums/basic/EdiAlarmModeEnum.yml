@@ -1,0 +1,8 @@
+name: EdiAlarmModeEnum
+type: BYTE
+default: None
+enum:
+  Energized: 0
+  Deenergized: 1
+
+

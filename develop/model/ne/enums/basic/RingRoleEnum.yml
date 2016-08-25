@@ -1,0 +1,6 @@
+name: RingRoleEnum
+type: BYTE
+default: majorRing
+enum: 
+  majorRing: 0
+  subRing: 1

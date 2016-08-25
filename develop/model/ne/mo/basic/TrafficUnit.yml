@@ -1,0 +1,74 @@
+className: TrafficUnit
+tid: 110
+persistence: None
+isAbstract : True
+attributes:
+  - name: mainSlot
+    attrId: 0
+    type: BYTE
+    minimum: 1
+    maximum: 180   
+    mutable: true
+  - name: standBySlot
+    attrId: 1
+    type: BYTE
+    minimum: 1
+    maximum: 255
+    default: 255 
+    mutable: true
+  - name: boardType
+    attrId: 2
+    type: BoardTypeEnum
+    default: rtua
+    mutable: true
+  - name: _function
+    attrId: 3
+    type: BYTE
+    minimum: 0
+    maximum: 3
+    default: 0
+    mutable: true
+  - name: srcMacAddr
+    attrId: 4
+    type: Array
+    maxItems: 6
+    items:
+      type: BYTE
+      default: 0
+    mutable: true
+  - name: mainPortNo
+    attrId: 5
+    type: BYTE
+    minimum: 1
+    maximum: 255
+    default: 1    
+    mutable: true
+  - name: standByPortNo
+    attrId: 6
+    type: BYTE
+    minimum: 1
+    maximum: 255
+    default: 255 
+    mutable: true
+  - name: standByShelfNo
+    attrId: 7
+    type: BYTE
+    minimum: 1
+    maximum: 255
+    default: 255 
+    mutable: true
+  - name: e1Number
+    attrId: 8
+    type: BYTE
+    minimum: 0
+    maximum: 255
+    default: 0
+    mutable: true
+  - name: stm1Number
+    attrId: 9
+    type: BYTE
+    minimum: 0
+    maximum: 255
+    default: 0
+    mutable: true
+

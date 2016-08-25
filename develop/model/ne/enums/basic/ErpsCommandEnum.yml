@@ -1,0 +1,7 @@
+name: ErpsCommandEnum
+type: BYTE
+default: manual
+enum: 
+  manual: 1
+  force: 2
+  clear: 3

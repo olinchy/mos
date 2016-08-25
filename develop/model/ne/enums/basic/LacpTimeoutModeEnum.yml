@@ -1,0 +1,6 @@
+name: LacpTimeoutModeEnum
+type: BYTE
+default: long
+enum:
+  long: 0
+  short: 1 

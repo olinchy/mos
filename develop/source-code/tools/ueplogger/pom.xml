@@ -1,0 +1,27 @@
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>ueplogger</artifactId>
+    <parent>
+        <groupId>com.zte.mos.tools</groupId>
+        <artifactId>tools-parent</artifactId>
+        <version>1.2</version>
+    </parent>
+    <name>ueplogger</name>
+    <dependencies>
+        <dependency>
+            <groupId>com.zte.uep</groupId>
+            <artifactId>uep_server</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-server</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>

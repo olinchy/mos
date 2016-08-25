@@ -1,0 +1,6 @@
+name: LmspProtectModeEnum
+type: BYTE
+default: unrevertive
+enum:
+  revertive: 0
+  unrevertive: 1

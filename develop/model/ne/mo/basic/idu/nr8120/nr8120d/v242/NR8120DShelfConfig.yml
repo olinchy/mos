@@ -1,0 +1,15 @@
+className: NR8120DShelfConfig
+baseClass: ShelfConfig
+tid: 169
+persistence: All
+triggers: [afterGet,afterSet]
+attributes:
+  - name: CurCfgScene
+    attrId: 0
+    type: BYTE
+    enum:
+      OneAirPort: 0
+      TwoAirPort: 1
+    default: TwoAirPort
+    mutable: true
+

@@ -1,0 +1,37 @@
+className: PLALinkId
+tid: 555
+persistence: None
+triggers: [afterSet, afterDel, afterAdd, recover]
+attributes:
+  - name: state
+    attrId: 0
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: id
+    attrId: 1
+    type: String
+    maxLength: 129
+    mutable: true
+  - name: syncToRemote
+    attrId: 2
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: memberNum
+    attrId: 3
+    type: BYTE
+    minimum: 2
+    maximum: 8
+    mutable: true
+  - name: memberPortId
+    attrId: 4
+    type: Array
+    maxItems: 8
+    items:
+      type: WORD32
+    mutable: true
+
+
+
+

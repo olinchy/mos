@@ -1,0 +1,30 @@
+className: FadeMarginInfo
+tid: 410
+persistence: None
+attributes: 
+  - name: rsl
+    attrId: 0
+    type: SWORD16    
+    mutable: true
+  - name: pdValue
+    attrId: 1
+    type: SWORD16    
+    mutable: true
+  - name: fadeMarginValue
+    attrId: 2
+    type: SWORD16   
+    mutable: true
+  - name: errorInfo
+    attrId: 3
+    type: BYTE    
+    enum:
+      NoError: 0
+      MuOrOduTypeNotHealthy: 1
+      CfgNotSupport: 2
+      LockStatusNotHealthy: 3
+    default: NoError
+    mutable: true
+
+ 
+triggers: [afterGet]
+

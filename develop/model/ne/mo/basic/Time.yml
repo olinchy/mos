@@ -1,0 +1,12 @@
+className: Time
+tid: 200
+persistence: None
+children:
+  - name : Sntp
+    id : 1
+    count : 1
+    autoCreate: True 
+  - name : SummerTime
+    id : 2
+    count : 1
+    autoCreate: True 

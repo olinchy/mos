@@ -1,0 +1,22 @@
+className: QinQ
+tid: 60021
+baseClass: Tunnel
+attributes: 
+  - name: Svlan
+    attrId: 0
+    type: WORD16
+    minimum: 1
+    maximum: 4094
+    default: 1
+    mutable: false
+reference:
+  - name: links
+    type: LogicalLink
+    isMulti: true
+    under: LVDependencyPolicy
+  - name: MP
+    type: CfmMP
+    isMulti: true
+    under: LVDependencyPolicy
+
+

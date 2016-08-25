@@ -1,0 +1,48 @@
+className: ErpsV2
+tid: 364
+triggers: [ constraintSet]
+persistence: All
+attributes:
+  - name: state
+    attrId: 0
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: version
+    attrId: 1
+    type: ErpsV2VersionEnum
+    default: erpsV2Mode
+    mutable: true
+children:   
+   - name : VlanGroup
+     id : 1     
+     count : 10
+     autoCreate: false
+   - name : RingInstance
+     id : 2
+     count : 10
+     autoCreate: false
+actions:
+  customs:
+    - name: ErpsCmd
+      actionId: 1
+      attributes:
+        - name: ringID
+          attrId: 0
+          type: BYTE
+          minimum: 1
+          maximum: 10
+          default: 1
+          mutable: true
+        - name: cmdID
+          attrId: 1
+          type: ErpsCommandEnum
+          default: manual
+          mutable: true
+        - name: port
+          attrId: 2
+          type: ErpsPortTypeEnum
+          default: eastPort
+          mutable: true
+    - name: ErpsCmdRsp
+      actionId: 101

@@ -1,0 +1,7 @@
+name: ManualCmdEum
+type: BYTE
+default: ms
+enum: 
+  ms: 1
+  fs: 2
+  clear: 3

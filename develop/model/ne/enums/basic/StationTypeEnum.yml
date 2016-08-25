@@ -1,0 +1,7 @@
+name: StationTypeEnum
+type: BYTE
+default: Ord_Station
+enum:
+  Ord_Station  : 0
+  Node_Station  : 1
+

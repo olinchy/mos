@@ -1,0 +1,45 @@
+className: TrafficPort_RadioPort
+tid: 298
+triggers: [beforeAdd, recover]  
+baseClass: TrafficPort
+reference:
+  - name: sourcePort
+    type: EthPort_Air
+    isMulti: false
+    under: DependencyPolicy
+children:
+  - name: EtmAttribute
+    id: 1
+    autoCreate: true
+  - name: MacLearn
+    id: 2
+    autoCreate: true
+  - name: L2Frame
+    id: 3
+    autoCreate: true
+  - name: Vlan
+    type: PortVlan
+    id: 4
+    autoCreate: true
+  - name: PortPriority
+    id: 5
+    autoCreate: true
+  - name: QemPolicy
+    id: 8
+    autoCreate: true
+  - name: CmPolicy
+    id: 9
+    autoCreate: true
+  - name: HeadCompress
+    type: AcmubHeadCompress
+    id: 7
+    autoCreate: true
+  - name: NetManagementBandWidth
+    id: 8
+    autoCreate: true
+  - name: PISCfg
+    id: 9
+    autoCreate: true
+  - name: XstpPort
+    id: 10
+    autoCreate: true

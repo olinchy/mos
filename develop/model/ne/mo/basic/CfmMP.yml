@@ -1,0 +1,460 @@
+className: CfmMP
+tid: 349
+#maxCount: 1000
+triggers: [beforeAdd,constraintAdd,constraintSet,constraintDel,beforeDel]
+attributes:
+  - name: type
+    attrId: 0
+    type: BYTE
+    enum:
+        LMEP: 0
+        MIP: 1
+        RMEP: 2
+    default: LMEP
+    mutable: true
+  - name: priority
+    attrId: 1
+    type: BYTE
+    minimum: 0
+    maximum: 7
+    default: 7
+    mutable: true
+  - name: direction
+    attrId: 2
+    type: BYTE
+    enum:
+        down: 0
+        up: 1
+    default: down
+    mutable: true
+  - name: adminState
+    attrId: 3
+    type: StateEnum
+    default: enable
+    mutable: true
+  - name: alarmLowestPri
+    attrId: 4
+    type: BYTE
+    minimum: 1
+    maximum: 5
+    default: 5
+    mutable: true
+  - name: cciSentFlag
+    attrId: 5
+    type: StateEnum
+    default: enable
+    mutable: true
+  - name: aisFlag
+    attrId: 6
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: lckFlag
+    attrId: 7
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: csfFlag
+    attrId: 8
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: psTlvFlag
+    attrId: 9
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: isTlvFlag
+    attrId: 10
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: aisLckIntv
+    attrId: 11
+    type: BYTE
+    enum:
+        1s: 0
+        1min: 1
+    default: 1s
+    mutable: true
+  - name: dlmFlag
+    attrId: 12
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: macAddress
+    attrId: 13
+    type: MacAddr 
+    mutable: true
+  - name: suppErps
+    attrId: 14
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: clientLevel
+    attrId: 15
+    type: BYTE
+    minimum: 0
+    maximum: 7
+    default: 7
+    mutable: true
+  - name: clientPVID
+    attrId: 16
+    type: WORD16
+    minimum: 0
+    maximum: 4094
+    default: 0
+    mutable: true
+  - name: pvid
+    attrId: 17
+    type: WORD16
+    minimum: 1
+    maximum: 4094
+    default: 1
+    mutable: false
+  - name: mdLevel
+    attrId: 18
+    type: BYTE
+    minimum: 0
+    maximum: 7
+    default: 0
+    mutable: false
+  - name: sVlan
+    attrId: 19
+    type: WORD16
+    minimum: 0
+    maximum: 4094
+    default: 0
+    mutable: false
+  - name: suppElps
+    attrId: 20
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: ccmFailTriggerLt
+    attrId: 21
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: outIfIndex
+    attrId: 22
+    type: WORD32
+    default: 0
+    mutable: false
+reference:
+  - name: locatePort
+    type: TrafficPort
+    isMulti: false
+    under: DependencyPolicy
+children:
+  - name: CfmLbResult
+    id: 1
+    autoCreate: true
+  - name: CfmLtResult
+    id: 2
+    autoCreate: true
+  - name: CfmLmResult
+    id: 3
+    autoCreate: true
+  - name: CfmOneDmResult
+    id: 4
+    autoCreate: true
+  - name: CfmDDmResult
+    id: 5
+    autoCreate: true
+  - name: CfmTstRcvResult
+    id: 6
+    autoCreate: true
+  - name: AisInfo
+    id: 7
+    autoCreate: true
+  - name: LckInfo
+    id: 8
+    autoCreate: true
+actions:
+  customs:
+    - name: OperLoopBack
+      actionId: 1
+      attributes:
+        - name: loopBackEnable
+          attrId: 0
+          type: StateEnum
+          default: enable
+          mutable: true
+        - name: repeatCount
+          attrId: 1
+          type: BYTE
+          minimum: 1
+          maximum: 5
+          default: 1
+          mutable: true
+        - name: dataLenth
+          attrId: 2
+          type: BYTE
+          enum:
+            0: 0
+            100: 1
+            500: 2
+            1000: 3   
+          default: 0
+          mutable: true
+        - name: timeOut
+          attrId: 3
+          type: BYTE
+          enum:
+            5s: 0
+            10s: 1 
+          default: 5s
+          mutable: true
+        - name: transmitType
+          attrId: 4
+          type: BYTE
+          enum:
+            Unicast: 0
+            Multicast: 1 
+          default: Unicast
+          mutable: true
+        - name: destinationMac
+          attrId: 5
+          type: MacAddr 
+          mutable: true
+    - name: OperLinkTrace
+      actionId: 2
+      attributes:
+        - name: linkTraceEnable
+          attrId: 0
+          type: StateEnum
+          default: enable
+          mutable: true
+        - name: destinationMac
+          attrId: 1
+          type: MacAddr 
+          mutable: true
+        - name: TTL
+          attrId: 2
+          type: WORD16
+          minimum: 1
+          maximum: 255
+          default: 64
+          mutable: true
+        - name: timeOut
+          attrId: 3
+          type: BYTE
+          enum:
+            5s: 0
+            10s: 1 
+          default: 5s
+          mutable: true
+    - name: OperOneDm
+      actionId: 3
+      attributes:
+        - name: intervals
+          attrId: 0
+          type: BYTE
+          minimum: 1
+          maximum: 60
+          default: 1
+          mutable: true
+        - name: transmitType
+          attrId: 1
+          type: BYTE
+          enum:
+            Unicast: 0
+            Multicast: 1 
+          default: Unicast
+          mutable: true     
+        - name: performanceTestEnable
+          attrId: 2
+          type: StateEnum
+          default: enable
+          mutable: true
+        - name: rmepID
+          attrId: 3
+          type: WORD16
+          minimum: 1
+          maximum: 8191
+          default: 1
+          mutable: true
+        - name: requireTime
+          attrId: 5
+          type: WORD32
+          minimum: 60
+          maximum: 600
+          default: 60
+          mutable: true 
+    - name: OperDDm
+      actionId: 4
+      attributes:
+        - name: intervals
+          attrId: 0
+          type: BYTE
+          minimum: 1
+          maximum: 60
+          default: 1
+          mutable: true
+        - name: transmitType
+          attrId: 1
+          type: BYTE
+          enum:
+            Unicast: 0
+            Multicast: 1 
+          default: Unicast
+          mutable: true     
+        - name: performanceTestEnable
+          attrId: 2
+          type: StateEnum
+          default: enable
+          mutable: true
+        - name: rmepID
+          attrId: 3
+          type: WORD16
+          minimum: 1
+          maximum: 8191
+          default: 1
+          mutable: true
+        - name: requireTime
+          attrId: 4
+          type: WORD32
+          minimum: 60
+          maximum: 600
+          default: 60
+          mutable: true 
+    - name: OperLm
+      actionId: 5
+      attributes:
+        - name: intervals
+          attrId: 0
+          type: BYTE
+          minimum: 1
+          maximum: 60
+          default: 1
+          mutable: true
+        - name: transmitType
+          attrId: 1
+          type: BYTE
+          enum:
+            Unicast: 0
+            Multicast: 1 
+          default: Unicast
+          mutable: true     
+        - name: performanceTestEnable
+          attrId: 2
+          type: StateEnum
+          default: enable
+          mutable: true
+        - name: rmepID
+          attrId: 3
+          type: WORD16
+          minimum: 1
+          maximum: 8191
+          default: 1
+          mutable: true
+        - name: requireTime
+          attrId: 4
+          type: WORD32
+          minimum: 60
+          maximum: 600
+          default: 60
+          mutable: true 
+    - name: OperTstSend
+      actionId: 6
+      attributes:
+        - name: transmitType
+          attrId: 0
+          type: BYTE
+          enum:
+            Unicast: 0
+            Multicast: 1 
+          default: Unicast
+          mutable: true     
+        - name: performanceTestEnable
+          attrId: 1
+          type: StateEnum
+          default: enable
+          mutable: true
+        - name: rmepID
+          attrId: 2
+          type: WORD16
+          minimum: 1
+          maximum: 8191
+          default: 1
+          mutable: true
+        - name: testTransmitRate
+          attrId: 3
+          type: BYTE
+          minimum: 1
+          maximum: 100
+          default: 1
+          mutable: true        
+        - name: testPktLenth
+          attrId: 4
+          type: WORD16
+          minimum: 64
+          maximum: 1518
+          default: 64
+          mutable: true    
+        - name: testTime
+          attrId: 5
+          type: WORD32
+          minimum: 20
+          maximum: 36000
+          default: 20
+          mutable: true
+    - name: OperTstRcv
+      actionId: 7
+      attributes:
+        - name: transmitType
+          attrId: 0
+          type: BYTE
+          enum:
+            Unicast: 0
+            Multicast: 1 
+          default: Unicast
+          mutable: true     
+        - name: performanceTestEnable
+          attrId: 1
+          type: StateEnum
+          default: enable
+          mutable: true
+        - name: rmepID
+          attrId: 2
+          type: WORD16
+          minimum: 1
+          maximum: 8191
+          default: 1
+          mutable: true
+        - name: testTransmitRate
+          attrId: 3
+          type: BYTE
+          minimum: 1
+          maximum: 100
+          default: 1
+          mutable: true        
+        - name: testPktLenth
+          attrId: 4
+          type: WORD16
+          minimum: 64
+          maximum: 1518
+          default: 64
+          mutable: true    
+        - name: testTime
+          attrId: 5
+          type: WORD32
+          minimum: 20
+          maximum: 36000
+          default: 20
+          mutable: true
+    - name: OperLoopBackRsp
+      actionId: 101
+    - name: OperLinkTraceRsp
+      actionId: 102
+    - name: OperOneDmRsp
+      actionId: 103
+    - name: OperDDmRsp
+      actionId: 104
+    - name: OperLmRsp
+      actionId: 105
+    - name: OperTstSendRsp
+      actionId: 106
+    - name: OperTstRcvRsp
+      actionId: 107

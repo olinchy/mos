@@ -1,0 +1,7 @@
+name: ClkProtModeEnum
+type: BYTE
+default: Optimal
+enum:
+  OnlyMaster : 0
+  CurMaster  : 1
+  Optimal    : 2

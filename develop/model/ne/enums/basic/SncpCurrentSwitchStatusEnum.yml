@@ -1,0 +1,12 @@
+name: SncpCurrentSwitchStatusEnum
+type: BYTE
+default: noRequest
+enum:
+  noRequest: 0
+  protectionLockout: 1
+  sfAuto: 2
+  sdAuto: 3  
+  forceSwitch: 4
+  manualSwitch: 5
+  waitForRecovery: 6
+

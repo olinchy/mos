@@ -1,0 +1,15 @@
+className: Rmea
+baseClass: Board
+tid: 116
+persistence: None
+attributes:
+   - name: boardType
+     attrId: 0
+     type: BoardTypeEnum
+     default: rmea
+     mutable: false
+children:
+   - name : AirPort
+     id : 1
+     count : 1
+     autoCreate: true

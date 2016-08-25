@@ -1,0 +1,6 @@
+name: SdhOverHeadModeEnum
+type: BYTE
+default: automatic
+enum:
+  automatic: 0
+  manual: 1

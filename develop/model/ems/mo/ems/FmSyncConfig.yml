@@ -1,0 +1,18 @@
+className: FmSyncConfig
+baseClass: SyncConfig
+tid: 333
+persistence: None
+override_attributes:
+  - name: modelType
+    attrId: 3
+    type: String
+    default: MW_FM_Module
+    maxLength: 64
+    mutable: true
+  - name: interval
+    attrId: 4
+    type: WORD32
+    default: 720
+    mutable: true
+
+

@@ -1,0 +1,32 @@
+className: GroupNode
+tid: 22
+attributes:
+  - name: name
+    attrId: 1
+    type: String
+    maxLength: 200
+    mutable: true
+  - name: oid
+    attrId: 2
+    type: String
+    maxLength: 200
+    mutable: true
+  - name: parentOid
+    attrId: 3
+    type: String
+    maxLength: 200
+    mutable: true
+  - name: type
+    attrId: 4
+    type: String
+    maxLength: 200
+    mutable: true
+  - name: fullPath
+    attrId: 5
+    type: String
+    maxLength: 999
+    mutable: true
+reference:
+  - name: parentGroup
+    type: GroupNode
+    isMulti: false

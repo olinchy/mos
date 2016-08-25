@@ -1,0 +1,39 @@
+className: PortMode_Air
+baseClass: PortMode
+tid: 323
+#triggers: [constraintSet]
+attributes:
+  - name: portEnable
+    attrId: 0
+    type: BYTE
+    enum:
+      enable: 1
+    default: enable
+    mutable: false
+  - name: speed
+    attrId: 1
+    type: BYTE
+    enum:
+      1000M: 3
+    default: 1000M
+    mutable: false
+  - name: type
+    attrId: 2
+    type: BYTE
+    enum:
+      radio: 4
+    default: radio
+    mutable: false
+  - name: autoNegotiationStatus
+    attrId: 3
+    type: StateEnum
+    default: enable
+    mutable: true
+  - name: isSupTwoSpeed
+    attrId: 4
+    type: BYTE
+    enum:
+      notSupport: 0
+      support: 1
+    default: notSupport
+    mutable: false

@@ -1,0 +1,25 @@
+className: LinkId
+tid: 506
+triggers: [beforeSet]
+attributes:  
+  - name: state
+    attrId: 0
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: id
+    attrId: 1
+    type: String
+    maxLength: 129
+    mutable: true
+  - name: syncToRemote
+    attrId: 2
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: featureList
+    attrId: 3
+    type: FeatureList
+    default: [noPla]
+    mutable: true
+

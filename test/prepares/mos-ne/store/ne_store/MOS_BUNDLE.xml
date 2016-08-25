@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ROWDATA>
+    <ROW>
+        <column name="content" value="{&quot;dn&quot;:&quot;/Ems/1/Ne/mw.nr8250=8080&quot;,&quot;parent&quot;:null,&quot;version&quot;:&quot;02.04.04&quot;,&quot;host&quot;:{&quot;dn&quot;:null,&quot;parent&quot;:null,&quot;mosExternalDN&quot;:&quot;/Ems/1/Ne/mw.nr8250=8080&quot;},&quot;state&quot;:&quot;offline&quot;,&quot;remote&quot;:&quot;http://127.0.0.1:8080&quot;,&quot;netype&quot;:&quot;NR8250&quot;}"/>
+        <column name="dn" value="/Ems/1/Ne/mw.nr8250=8080"/>
+        <column name="type" value="Ne"/>
+    </ROW>
+</ROWDATA>

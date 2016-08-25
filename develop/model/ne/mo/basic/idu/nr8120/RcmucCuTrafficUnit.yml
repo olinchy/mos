@@ -1,0 +1,12 @@
+className: RcmucCuTrafficUnit
+baseClass: TrafficUnit
+tid: 475
+triggers: [afterAdd, afterSet, afterDel, recover]
+children:
+   - name : EthPort
+     type : PhyPort
+     id : 1
+     count : 10
+     groupType : map
+     autoCreate: {"E-1": [EthPort_E_1G, {displayName: "GbE1"}], "E-2": [EthPort_E_1G, {displayName: "GbE2"}], "E-3": [EthPort_E_1G, {displayName: "GbE3"}], "E-4": [EthPort_E_1G, {displayName: "GbE4"}], "E-5": [EthPort_E_1G_NMS, {displayName: "NMS"}], "EIN-1": [EdiInPort, {displayName: "EDIin"}], "EOUT-1": [EdiOutPort, {displayName: "EDIout/SC"}], "CLK-1": [ClkInPort, {displayName: "CLKIN/MON0"}], "CLK-2": [ClkOutPort, {displayName: "CLKOUT/MON1"}], "SC-1": [Sc28Port, {displayName: "SC1"}]}
+

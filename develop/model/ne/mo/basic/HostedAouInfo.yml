@@ -1,0 +1,12 @@
+className: HostedAouInfo
+tid: 492
+persistence: None
+dynamic: true
+attributes:
+  - name: aouInfo
+    attrId: 0
+    type: Set
+    maxItems: 20
+    items:
+      type: TAouInfo  
+    mutable: true   

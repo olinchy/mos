@@ -1,0 +1,18 @@
+className: TrafficPort
+tid: 296
+isAbstract : True
+attributes:
+  - name: portId
+    attrId: 0
+    type: WORD32
+    mutable: false
+  - name: displayName
+    attrId: 1
+    type: String
+    maxLength: 20
+    mutable: false
+    maxLength: 255
+  - name: featureList
+    attrId: 2
+    type: FeatureList
+    mutable: true

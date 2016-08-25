@@ -1,0 +1,25 @@
+className: SsmGlobal
+tid: 396
+attributes:
+  - name: protType
+    attrId: 0
+    type: SsmProtocolEnum
+    default: Standard
+    mutable: true
+  - name: stationType
+    attrId: 1
+    type: StationTypeEnum
+    default: Ord_Station
+    mutable: true
+  - name: stationId
+    attrId: 2
+    type: BYTE
+    minimum: 1
+    maximum: 7
+    default: 7
+    mutable: true
+  - name: idProtState
+    attrId: 3
+    type: StateEnum
+    default: disable
+    mutable: true

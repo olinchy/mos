@@ -1,0 +1,6 @@
+name: PriorityColorEnum
+type: BYTE
+default: green
+enum:
+  green: 0
+  yellow: 1

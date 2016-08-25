@@ -1,0 +1,14 @@
+className: Rtum
+baseClass: Board
+tid: 613
+attributes:
+  - name: boardType
+    attrId: 0
+    type: BoardTypeEnum
+    default: rtum
+    mutable: false
+children:
+   - name : HDInfo
+     id : 1
+     count : 1
+     autoCreate: true

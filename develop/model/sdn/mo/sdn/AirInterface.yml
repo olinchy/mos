@@ -1,0 +1,8 @@
+className: AirInterface
+tid: 2
+attributes:
+  - name: planed_frequency
+    attrId: 1
+    type: WORD16
+    default: 700
+    mutable: true

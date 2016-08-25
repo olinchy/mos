@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ROWDATA>
+    <ROW>
+        <column name="Ems" value="1"/>
+        <column name="netype" value="NR8250"/>
+        <column name="state" value="offline"/>
+        <column name="ID" value="mw.nr8250=8080"/>
+        <column name="remote" value="http://127.0.0.1:8080"/>
+        <column name="adminState" value="idle"/>
+        <column name="version" value="02.04.04"/>
+        <column name="ipAddress" value="0.0.0.0"/>
+    </ROW>
+</ROWDATA>

@@ -1,0 +1,20 @@
+className: LtNodeObject
+attributes:
+  - name: ttl
+    attrId: 0 
+    type: BYTE
+    minimum: 0
+    maximum: 63
+    default: 0
+    mutable: true
+  - name:  nodeMAC
+    attrId: 1 
+    type: MacAddr 
+    mutable: true 
+  - name:  relayAction
+    attrId: 2 
+    type: BYTE
+    minimum: 0
+    maximum: 1
+    default: 0
+    mutable: true 

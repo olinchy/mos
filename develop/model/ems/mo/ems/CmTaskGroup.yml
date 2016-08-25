@@ -1,0 +1,74 @@
+className: CmTaskGroup
+tid: 10041
+attributes:
+  - name: taskType
+    attrId: 1
+    type: String
+    maxLength: 50
+    mutable: true
+
+  - name: total
+    attrId: 2
+    type: WORD16
+    default: 0
+    mutable: true
+
+  - name: success
+    attrId: 3
+    type: WORD16
+    default: 0
+    mutable: true
+
+  - name: failed
+    attrId: 4
+    type: WORD16
+    default: 0
+    mutable: true
+
+  - name: createTime
+    attrId: 5
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: startTime
+    attrId: 5
+    type: WORD32
+    default: 0
+    mutable: true
+
+  - name: endTime
+    attrId: 6
+    type: WORD32
+    default: 0
+    mutable: true
+
+  - name: userName
+    attrId: 7
+    type: String
+    maxLength: 50
+    mutable: true
+
+  - name: clientIp
+    attrId: 8
+    type: String
+    maxLength: 50
+    mutable: true
+
+  - name: connectMode
+    attrId: 9
+    type: String
+    maxLength: 50
+    mutable: true
+
+  - name: clientTime
+    attrId: 10
+    type: WORD32
+    default: 0
+    mutable: true
+
+children:
+   - name : CmSubTask
+     id : 1
+     count : 1000
+     autoCreate: false
+

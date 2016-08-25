@@ -1,0 +1,126 @@
+className: SiteReportSuperTask
+tid: 10041
+attributes:
+  - name: taskcount
+    attrId: 1
+    type: WORD16
+    default: 0
+    mutable: true
+
+  - name: successcount
+    attrId: 2
+    type: WORD16
+    default: 0
+    mutable: true
+
+  - name: failedcount
+    attrId: 3
+    type: WORD16
+    default: 0
+    mutable: true
+
+  - name: timeoutcount
+    attrId: 4
+    type: WORD16
+    default: 0
+    mutable: true
+
+  - name: canceledcount
+    attrId: 5
+    type: WORD16
+    default: 0
+    mutable: true
+
+  - name: status
+    attrId: 6
+    type: BYTE
+    enum:
+      Ready: 0
+      Running: 1      
+      Finish: 2
+      Block: 3
+    default: Ready
+    mutable: true
+
+  - name: result
+    attrId: 9
+    type: BYTE
+    enum:
+      Success: 1      
+      Failed: 2
+      Timeout: 3
+      Canceled: 4
+    default: Success
+    mutable: true
+
+  - name: errorcode
+    attrId: 10
+    type: String
+    maxLength: 52
+    mutable: true
+
+  - name: errormessage
+    attrId: 11
+    type: String
+    maxLength: 104
+    mutable: true
+
+  - name: plantime
+    attrId: 12
+    type: WORD32
+    default: 0
+    mutable: true
+
+  - name: createtime
+    attrId: 13
+    type: WORD32
+    default: 0
+    mutable: true
+
+  - name: starttime
+    attrId: 14
+    type: WORD32
+    default: 0
+    mutable: true
+
+  - name: finishtime
+    attrId: 15
+    type: WORD32
+    default: 0
+    mutable: true
+
+  - name: createuser
+    attrId: 16
+    type: String
+    maxLength: 50
+    mutable: true
+
+  - name: createip
+    attrId: 17
+    type: IPv4Addr
+    default: 127.0.0.1
+    mutable: true
+
+  - name: type
+    attrId: 18
+    type: String
+    maxLength: 50
+    default: superTask
+    mutable: true
+
+  - name: tasktype
+    attrId: 19
+    type: String
+    maxLength: 50
+    default: SiteReport
+    mutable: true
+
+children:
+   - name : SiteReportSubTask
+     id : 1
+     count : 1000
+     autoCreate: false
+   - name : SiteReportTaskPara
+     id : 2
+     count : 1
+     autoCreate: false

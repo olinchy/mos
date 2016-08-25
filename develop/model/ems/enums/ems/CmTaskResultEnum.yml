@@ -1,0 +1,7 @@
+name: CmTaskResultEnum
+type: BYTE
+enum:
+   success: 0      
+   failed: 1
+   timeout: 2
+   stopped: 3

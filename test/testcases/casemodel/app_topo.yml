@@ -1,0 +1,178 @@
+- name: setup_create_a_and_z_1
+  steps:
+  - command: add /Ems/1/Ne/1 netype nr8250 neName end_a;
+    connection: cli1
+    result: {result: 0}
+  - command: add /Ems/1/Ne/1/Product/1;
+    connection: cli1
+    result: {result: 0}
+  - command: add /Ems/1/Ne/1/Product/1/Shelf/1/Board/3 Rtub;
+    connection: cli1
+    result: {result: 0}
+  - command: add /Ems/1/Ne/1/Product/1/Shelf/1/Board/3/Stm622Port/1;
+    connection: cli1
+    result: {result: 0}
+  - command: add /Ems/1/Ne/1/Product/1/Shelf/1/Board/3/Stm622Port/2;
+    connection: cli1
+    result: {result: 0}
+  - command: add /Ems/1/Ne/1/Product/1/Shelf/1/Board/5 Rmuc;
+    connection: cli1
+    result: {result: 0}
+  - command: add /Ems/1/Ne/2 netype nr8250 neName end_z;
+    connection: cli1
+    result: {result: 0}
+  - command: add /Ems/1/Ne/2/Product/1;
+    connection: cli1
+    result: {result: 0}
+  - command: add /Ems/1/Ne/2/Product/1/Shelf/1/Board/6 Rtub;
+    connection: cli1
+    result: {result: 0}
+  - command: add /Ems/1/Ne/2/Product/1/Shelf/1/Board/6/Stm622Port/1;
+    connection: cli1
+    result: {result: 0}
+  - command: add /Ems/1/Ne/2/Product/1/Shelf/1/Board/6/Stm622Port/2;
+    connection: cli1
+    result: {result: 0}
+  - command: add /Ems/1/Ne/2/Product/1/Shelf/1/Board/8 Rmuc;
+    connection: cli1
+    result: {result: 0}
+- name: test_create_e1_link_2
+  steps:
+  - command: add /Ems/1/PhysicalLink/1 E1Link userLabel e1link_1 aEnd /Ems/1/Ne/1/Product/1/Shelf/1/Board/3/E1Port/1
+      zEnd /Ems/1/Ne/2/Product/1/Shelf/1/Board/6/E1Port/8;
+    connection: cli1
+    result: {result: 0}
+  - command: get /Ems/1/PhysicalLink/1
+    connection: cli1
+    result: {result: 0}
+  - {command: 'MW_CM.TOPO_NELINK_TABLE[OID]{OID=e1 link=1}', connection: db, result: e1
+      link=1}
+- name: test_create_stm1_link_3
+  steps:
+  - command: add /Ems/1/PhysicalLink/2 Stm155Link userLabel stm1link_2 aEnd /Ems/1/Ne/1/Product/1/Shelf/1/Board/3/Stm155Port/1
+      zEnd /Ems/1/Ne/2/Product/1/Shelf/1/Board/6/Stm155Port/2;
+    connection: cli1
+    result: {result: 0}
+  - command: get /Ems/1/PhysicalLink/2
+    connection: cli1
+    result: {result: 0}
+  - {command: 'MW_CM.TOPO_NELINK_TABLE[OID]{OID=stm1 link=2}', connection: db, result: stm1
+      link=2}
+- name: test_create_stm4_link_4
+  steps:
+  - command: add /Ems/1/PhysicalLink/3 Stm622Link userLabel stm4link_3 aEnd /Ems/1/Ne/1/Product/1/Shelf/1/Board/3/Stm622Port/1
+      zEnd /Ems/1/Ne/2/Product/1/Shelf/1/Board/6/Stm622Port/1;
+    connection: cli1
+    result: {result: 0}
+  - command: get /Ems/1/PhysicalLink/3
+    connection: cli1
+    result: {result: 0}
+  - {command: 'MW_CM.TOPO_NELINK_TABLE[OID]{OID=stm4 link=3}', connection: db, result: stm4
+      link=3}
+- name: test_create_radio_link_5
+  steps:
+  - command: add /Ems/1/PhysicalLink/4 RadioLink userLabel radiolink_4 aEnd /Ems/1/Ne/1/Product/1/Shelf/1/Board/5/AirPort/1
+      zEnd /Ems/1/Ne/2/Product/1/Shelf/1/Board/8/AirPort/1;
+    connection: cli1
+    result: {result: 0}
+  - command: get /Ems/1/PhysicalLink/3
+    connection: cli1
+    result: {result: 0}
+  - {command: 'MW_CM.TOPO_NELINK_TABLE[OID]{OID=radio link=4}', connection: db, result: radio
+      link=4}
+- name: test_create_e1_link_with_oem_2
+  steps:
+  - command: add /Ems/1/PhysicalLink/5 E1Link userLabel e1link_5 aEnd /Ems/1/Ne/1/Product/1/Shelf/1/Board/3/E1Port/5
+      zEnd Ems/1/Ne/mw.sr10.s340=4/Product/1/Shelf/1/Board/1/E1Port/mw.sr10.s340.e1=1;
+    connection: cli1
+    result: {result: 0}
+  - command: get /Ems/1/PhysicalLink/5
+    connection: cli1
+    result: {result: 0}
+  - {command: 'MW_CM.TOPO_NELINK_TABLE[OID]{OID=e1 link=5}', connection: db, result: e1
+      link=5}
+- name: test_create_e1_link_oem_with_oem_2
+  steps:
+  - command: add /Ems/1/PhysicalLink/6 E1Link userLabel e1link_6 aEnd Ems/1/Ne/mw.sr10.s340=5/Product/1/Shelf/1/Board/1/E1Port/mw.sr10.s340.e1=1
+      zEnd Ems/1/Ne/mw.sr10.s340=4/Product/1/Shelf/1/Board/1/E1Port/mw.sr10.s340.e1=2;
+    connection: cli1
+    result: {result: 0}
+  - command: get /Ems/1/PhysicalLink/6
+    connection: cli1
+    result: {result: 0}
+  - {command: 'MW_CM.TOPO_NELINK_TABLE[OID]{OID=e1 link=6}', connection: db, result: e1
+      link=5}
+- name: test_modify_e1_link_6
+  steps:
+  - command: set /Ems/1/PhysicalLink/1 userLabel e1link_1_changed aEnd /Ems/1/Ne/1/Product/1/Shelf/1/Board/3/E1Port/2
+      zEnd /Ems/1/Ne/2/Product/1/Shelf/1/Board/6/E1Port/7;
+    connection: cli1
+    result: {result: 0}
+  - command: get /Ems/1/PhysicalLink/1
+    connection: cli1
+    result: {result: 0}
+  - {command: 'MW_CM.TOPO_NELINK_TABLE[NAME]{OID=e1 link=1}', connection: db, result: e1link_1_changed}
+  - {command: 'MW_CM.TOPO_NELINK_TABLE[APORTID]{OID=e1 link=1}', connection: db, result: 2}
+  - {command: 'MW_CM.TOPO_NELINK_TABLE[ZPORTID]{OID=e1 link=1}', connection: db, result: 7}
+- name: test_modify_e1_link_with_oem_6
+  steps:
+  - command: set /Ems/1/PhysicalLink/5 userLabel e1link_5_changed aEnd /Ems/1/Ne/1/Product/1/Shelf/1/Board/3/E1Port/6  zEnd
+      Ems/1/Ne/mw.sr10.s340=4/Product/1/Shelf/1/Board/1/E1Port/mw.sr10.s340.e1=3;
+    connection: cli1
+    result: {result: 0}
+  - command: get /Ems/1/PhysicalLink/5
+    connection: cli1
+    result: {result: 0}
+  - {command: 'MW_CM.TOPO_NELINK_TABLE[NAME]{OID=e1 link=5}', connection: db, result: e1link_5_changed}
+  - {command: 'MW_CM.TOPO_NELINK_TABLE[APORTID]{OID=e1 link=5}', connection: db, result: 6}
+  - {command: 'MW_CM.TOPO_NELINK_TABLE[ZPORTID]{OID=e1 link=5}', connection: db, result: 3}
+- name: test_modify_e1_link_oem_with_oem_6
+  steps:
+  - command: set /Ems/1/PhysicalLink/6 userLabel e1link_6_changed aEnd / Ems/1/Ne/mw.sr10.s340=5/Product/1/Shelf/1/Board/1/E1Port/mw.sr10.s340.e1=2  zEnd
+      Ems/1/Ne/mw.sr10.s340=4/Product/1/Shelf/1/Board/1/E1Port/mw.sr10.s340.e1=4;
+    connection: cli1
+    result: {result: 0}
+  - command: get /Ems/1/PhysicalLink/6
+    connection: cli1
+    result: {result: 0}
+  - {command: 'MW_CM.TOPO_NELINK_TABLE[NAME]{OID=e1 link=6}', connection: db, result: e1link_6_changed}
+  - {command: 'MW_CM.TOPO_NELINK_TABLE[APORTID]{OID=e1 link=6}', connection: db, result: 2}
+  - {command: 'MW_CM.TOPO_NELINK_TABLE[ZPORTID]{OID=e1 link=6}', connection: db, result: 4}
+- name: test_delete_radiolink_7
+  steps:
+  - command: del /Ems/1/PhysicalLink/4;
+    connection: cli1
+    result: {result: 0}
+- name: test_delete_stm4link_8
+  steps:
+  - command: del /Ems/1/PhysicalLink/3;
+    connection: cli1
+    result: {result: 0}
+- name: test_delete_stm1link_9
+  steps:
+  - command: del /Ems/1/PhysicalLink/2;
+    connection: cli1
+    result: {result: 0}
+- name: test_delete_e1link_10
+  steps:
+  - command: del /Ems/1/PhysicalLink/1;
+    connection: cli1
+    result: {result: 0}
+- name: test_delete_e1link_with_oem_10
+  steps:
+  - command: del /Ems/1/PhysicalLink/5;
+    connection: cli1
+    result: {result: 0}
+- name: test_delete_e1link_oem_with_oem_10
+  steps:
+  - command: del /Ems/1/PhysicalLink/6;
+    connection: cli1
+    result: {result: 0}
+- name: teardown_delete_resources_11
+  steps:
+  - command: del /Ems/1/Ne/1;
+    connection: cli1
+    result: {result: 0}
+  - command: del /Ems/1/Ne/2;
+    connection: cli1
+    result: {result: 0}

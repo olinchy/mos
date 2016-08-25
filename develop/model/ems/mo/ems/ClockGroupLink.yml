@@ -1,0 +1,10 @@
+className: ClockGroupLink
+tid: 667
+reference:
+   - name: aEnd
+     type: String
+   - name: zEnd
+     type: String
+   - name: childrenLink
+     type: ClockLink
+     isMulti: true

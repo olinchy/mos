@@ -1,0 +1,66 @@
+className: CmPolicy
+tid: 322
+attributes:
+  - name: redDropValue
+    attrId: 0
+    type: Array
+    maxItems: 8
+    items:      
+      type: BYTE
+    mutable: true
+  - name: yellowDropValue
+    attrId: 1
+    type: Array
+    maxItems: 8
+    items:      
+      type: BYTE
+    mutable: true
+  - name: greenDropValue
+    attrId: 2
+    type: Array
+    maxItems: 8
+    items:      
+      type: BYTE
+    mutable: true
+  - name: redDropRate
+    attrId: 3
+    type: Array
+    maxItems: 8
+    items:      
+      type: BYTE
+    mutable: true
+  - name: yellowDropRate
+    attrId: 4
+    type: Array
+    maxItems: 8
+    items:      
+      type: BYTE
+    mutable: true
+  - name: greenDropRate
+    attrId: 5
+    type: Array
+    maxItems: 8
+    items:      
+      type: BYTE
+    mutable: true
+  - name: redDropSlop
+    attrId: 6
+    type: Array
+    maxItems: 8
+    items:      
+      type: BYTE
+    mutable: true
+  - name: yellowDropSlop
+    attrId: 7
+    type: Array
+    maxItems: 8
+    items:      
+      type: BYTE
+    mutable: true
+  - name: greenDropSlop
+    attrId: 8
+    type: Array
+    maxItems: 8
+    items:      
+      type: BYTE
+    mutable: true

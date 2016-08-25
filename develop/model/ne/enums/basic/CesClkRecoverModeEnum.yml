@@ -1,0 +1,7 @@
+name: CesClkRecoverModeEnum
+type: BYTE
+default: ACR
+enum:
+  ACR: 0
+  DCR: 1
+  Retime: 4

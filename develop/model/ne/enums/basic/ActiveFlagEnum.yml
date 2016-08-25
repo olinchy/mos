@@ -1,0 +1,6 @@
+name: ActiveFlagEnum
+type: BYTE
+default: inactive
+enum:
+  inactive: 0
+  active: 1 

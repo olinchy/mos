@@ -1,0 +1,347 @@
+className: Ems
+tid: 1
+attributes:
+  - name: qinqIdCounter
+    attrId: 1
+    type: WORD32
+    default: 0
+    mutable: false
+  - name: evcIdCounter
+    attrId: 2
+    type: WORD32
+    default: 0
+    mutable: false
+  - name: cesIdCounter
+    attrId: 3
+    type: WORD32
+    default: 0
+    mutable: false
+  - name: dsIdCounter
+    attrId: 4
+    type: WORD32
+    default: 0
+    mutable: false
+children:
+   - name : Ne
+     id : 1
+     count : 100000
+     autoCreate: false
+   - name : CesService
+     id : 2
+     count : 3000000
+     autoCreate: false
+   - name : PhysicalLink
+     id : 3
+     count : 30000000
+     autoCreate: false
+   - name : IpV4
+     id : 4
+     count : 100000
+     autoCreate: false
+   - name : VersionModule
+     id : 5
+     count : 1
+     autoCreate: true
+   - name : GroupNode
+     id : 6
+     count : 100000
+     autoCreate: false
+   - name : SyncConfig
+     id : 7
+     autoCreate: {"fm8120" :NR8120FmSyncConfig,"fm8150" :NR8150FmSyncConfig,"fm8250" :NR8250FmSyncConfig,"fm8950" :NR8950FmSyncConfig,"fm8960" :NR8960FmSyncConfig,"fm8000tr" :NR8000TRFmSyncConfig,"im8120" :NR8120ImSyncConfig,"im8150" :NR8150ImSyncConfig,"im8250" :NR8250ImSyncConfig,"im8950" :NR8950ImSyncConfig,"im8960" :NR8960ImSyncConfig,"im8000tr" :NR8000TRImSyncConfig}
+   - name : LogicalNode
+     id : 8
+     count : 100000
+     autoCreate: false
+   - name : LogicalLink
+     id : 9
+     count : 100000
+     autoCreate: false
+   - name : GroupLink
+     id : 10
+     count : 100000
+     autoCreate: false
+   - name : CmModule
+     id : 11
+     count : 1
+     autoCreate: true
+   - name : QinQ
+     id : 12
+     count : 100000
+     autoCreate: false
+   - name : EVC
+     id : 13
+     count : 100000
+     autoCreate: false
+   - name : ClockLink
+     id : 14
+     count : 100000
+     autoCreate: false
+   - name : SwitchTransNode
+     id : 15
+     count : 100000
+     autoCreate: false
+   - name : MplsTransNode
+     id : 16
+     count : 100000
+     autoCreate: false
+   - name : NeinModule
+     id : 17
+     count : 1
+     autoCreate: true
+   - name: EmsNode
+     id: 18
+     count: 1
+     autoCreate: false
+   - name : DSDomain
+     id : 19
+     count : 100000
+     autoCreate: false
+   - name : TopoModule
+     id : 20
+     count : 1
+     autoCreate: true
+   - name : InventoryModule
+     id : 21
+     count : 1
+     autoCreate: true
+   - name : SiteReportModule
+     id : 22
+     count : 1
+     autoCreate: true
+   - name : BatchTaskModule
+     id : 23
+     count : 1
+     autoCreate: true
+   - name : LLDPLogicalLink
+     id : 24
+     count : 30000
+     autoCreate: false
+   - name : ClockGroupLink
+     id : 24
+     count : 100000
+     autoCreate: false
+actions:
+  customs:
+    - name: allocNeId
+      actionId: 1
+    - name: allocNeIdRsp
+      actionId: 101
+      attributes:
+        - name: neid 
+          attrId: 0 
+          type: WORD32         
+          mutable: true    
+    - name: allocLinkId
+      actionId: 2
+    - name: allocLinkIdRsp
+      actionId: 102
+      attributes:
+        - name: linkid 
+          attrId: 0 
+          type: WORD32         
+          mutable: true
+    - name: allocQinQId
+      actionId: 3
+    - name: allocQinQIdRsp
+      actionId: 103
+      attributes:
+        - name: qinqid 
+          attrId: 0 
+          type: WORD32         
+          mutable: true
+    - name: setQinQId
+      actionId: 4
+      attributes:
+        - name: qinqid 
+          attrId: 0 
+          type: WORD32         
+          mutable: true
+    - name: setQinQIdRsp
+      actionId: 104
+    - name: getAllJob
+      actionId: 5
+    - name: getAllJobRsp
+      actionId: 105
+      attributes:
+        - name: jobInfo 
+          attrId: 0 
+          type: String         
+          mutable: true    
+    - name: getTaskByJobId
+      actionId: 6
+    - name: getTaskByJobIdRsp
+      actionId: 106
+      attributes:
+        - name: taskInfo 
+          attrId: 0 
+          type: String         
+          mutable: true
+    - name: allocSwitchTransId
+      actionId: 7
+    - name: allocSwitchTransIdRsp
+      actionId: 107
+      attributes:
+        - name: transNodeId 
+          attrId: 0 
+          type: WORD32         
+          mutable: true
+    - name: allocMplsTransId
+      actionId: 8
+    - name: allocMplsTransIdRsp
+      actionId: 108
+      attributes:
+        - name: transNodeId 
+          attrId: 0 
+          type: WORD32         
+          mutable: true
+    - name: authEmsSwitchLicense
+      actionId: 9
+      attributes:
+        - name: licenseName 
+          attrId: 0 
+          type: SwitchLicenseReq
+          mutable: true
+    - name: authEmsSwitchLicenseRsp
+      actionId: 109
+      attributes:
+        - name: authResult 
+          attrId: 0 
+          type: LicenseRsp         
+          mutable: true
+    - name: authEmsNumLicense
+      actionId: 10
+      attributes:
+        - name: licenseName 
+          attrId: 0 
+          type: NumLicenseReq  
+          mutable: true
+    - name: authEmsNumLicenseRsp
+      actionId: 110
+      attributes:
+        - name: authResult 
+          attrId: 0 
+          type: LicenseRsp         
+          mutable: true
+    - name: checkIpExistence
+      actionId: 11
+      attributes:
+        - name: ipAddress 
+          attrId: 0 
+          type: String
+          mutable: true
+    - name: checkIpExistenceRsp
+      actionId: 111
+      attributes:
+        - name: checkResult 
+          attrId: 0 
+          type: bool         
+          mutable: true
+    - name: allocEvcId
+      actionId: 12
+    - name: allocEvcIdRsp
+      actionId: 112
+      attributes:
+        - name: evcid 
+          attrId: 0 
+          type: WORD32         
+          mutable: true
+    - name: setEvcId
+      actionId: 13
+      attributes:
+        - name: evcid 
+          attrId: 0 
+          type: WORD32         
+          mutable: true
+    - name: setEvcIdRsp
+      actionId: 113
+    - name: allocCesId
+      actionId: 14
+    - name: allocCesIdRsp
+      actionId: 114
+      attributes:
+        - name: cesid
+          attrId: 0
+          type: WORD32
+          mutable: true
+    - name: setCesId
+      actionId: 15
+      attributes:
+        - name: cesid
+          attrId: 0
+          type: WORD32
+          mutable: true
+    - name: setCesIdRsp
+      actionId: 115
+    - name: allocLogicalLinkId
+      actionId: 16
+    - name: allocLogicalLinkIdRsp
+      actionId: 116
+      attributes:
+         - name: linkid
+           attrId: 0
+           type: WORD32
+           mutable: true
+    - name: endZclCollect
+      actionId: 17
+    - name: endZclCollectRsp
+      actionId: 117
+    - name: queryZclCollectItems
+      actionId: 18
+    - name: queryZclCollectItemsRsp
+      actionId: 118
+    - name: startZclColletion
+      actionId: 19
+    - name: startZclColletionRsp
+      actionId: 119
+    - name: allocDsId
+      actionId: 20
+    - name: allocDsIdRsp
+      actionId: 120
+      attributes:
+        - name: dsid
+          attrId: 0
+          type: WORD32
+          mutable: true
+    - name: createLink
+      actionId: 21
+    - name: createLinkRsp
+      actionId: 121
+    - name: modifyLink
+      actionId: 22
+    - name: modifyLinkRsp
+      actionId: 122
+    - name: deleteLink
+      actionId: 23
+    - name: deleteLinkRsp
+      actionId: 123
+    - name: getGuideDlgFlag
+      actionId: 24
+      attributes:
+        - name: user
+          attrId: 0
+          type: String
+          mutable: true
+    - name: getGuideDlgFlagRsp
+      actionId: 124
+      attributes:
+        - name: flag 
+          attrId: 0 
+          type: WORD32         
+          mutable: true
+    - name: getNeCount
+      actionId: 25
+    - name: getNeCountRsp
+      actionId: 125
+      attributes:
+        - name: count 
+          attrId: 0 
+          type: WORD32         
+          mutable: true
+
+
+
+    
+
+
+

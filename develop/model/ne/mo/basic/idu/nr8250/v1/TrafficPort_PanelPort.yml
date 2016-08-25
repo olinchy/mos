@@ -1,0 +1,29 @@
+className: TrafficPort_PanelPort
+tid: 297
+triggers: [beforeAdd, recover]
+baseClass: TrafficPort
+reference:
+  - name: sourcePort
+    type: PhyPort
+    isMulti: false
+    under: DependencyPolicy
+children:
+  - name: EtmAttribute
+    id: 1
+    autoCreate: true
+  - name: MacLearn
+    id: 2
+    autoCreate: true
+  - name: L2Frame
+    id: 3
+    autoCreate: true
+  - name: Vlan
+    type: PortVlan
+    id: 4
+    autoCreate: true
+  - name: PortPriority
+    id: 5
+    autoCreate: true
+  - name: XstpPort
+    id: 7
+    autoCreate: true

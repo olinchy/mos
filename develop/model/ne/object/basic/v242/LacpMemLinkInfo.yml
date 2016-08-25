@@ -1,0 +1,12 @@
+className: LacpMemLinkInfo
+attributes:
+  - name: activeState
+    attrId: 0
+    type: BYTE
+    mutable: false
+reference:
+  - name: portId
+    type: PhyPort
+    isMulti: false
+    under: DependencyPolicy
+

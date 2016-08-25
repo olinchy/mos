@@ -1,0 +1,36 @@
+className: PortMode_OE_1G
+baseClass: PortMode
+tid: 562
+#triggers: [constraintSet]
+attributes:
+  - name: portEnable
+    attrId: 0
+    type: BYTE
+    enum:
+      disable: 0
+      enable: 2
+      enableWithAls: 1
+    default: enable
+    mutable: true
+  - name: speed
+    attrId: 1
+    type: BYTE
+    enum:
+      10M: 1
+      100M: 2
+      1000M: 3
+    default: 1000M
+    mutable: true
+  - name: type
+    attrId: 2
+    type: BYTE
+    enum:
+      mixedE: 0
+      mixedO: 1
+    default: mixedE
+    mutable: true
+  - name: autoNegotiationStatus
+    attrId: 3
+    type: StateEnum
+    default: disable
+    mutable: true

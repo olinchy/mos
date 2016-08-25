@@ -1,0 +1,19 @@
+className: MAouRdi
+baseClass: Rdi
+tid: 514
+attributes:
+  - name: enableState
+    attrId: 0
+    type: StateEnum
+    default: enable
+    mutable: true
+  - name: delayState
+    attrId: 1
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: delayTime
+    attrId: 2
+    type: WORD32
+    default: 0
+    mutable: true

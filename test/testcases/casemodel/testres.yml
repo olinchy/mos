@@ -1,0 +1,84 @@
+- name: test_add_set_ne_expect_success_1
+  steps:
+  - command: add /Ems/1/Ne/1 netype nr8250 neName abcde12345;
+    connection: cli1
+    result: {result: 0}
+  - {command: 'MW_CM.TOPO_NE_TABLE[OID]{NAME=abcde12345}', connection: db, result: mw.nr8250=1}
+  - {command: 'UEP4X.RES_TREENODE_TABLE[OID]{NAME=abcde12345}', connection: db, result: mw.nr8250=1}
+  - command: get /Ems/1/Ne/1
+    connection: cli1
+    result: {result: 0}
+  - command: get /Ems/1/Ne/1
+    connection: cli2
+    result: {result: 0}
+  - command: set /Ems/1/Ne/1 neName abcde67890;
+    connection: cli1
+    result: {result: 0}
+  - {command: 'MW_CM.TOPO_NE_TABLE[NAME]{NAME=abcde67890}', connection: db, result: abcde67890}
+  - {command: 'UEP4X.RES_TREENODE_TABLE[NAME]{NAME=abcde67890}', connection: db, result: abcde67890}
+- name: test_add_configset_expect_success_1
+  steps:
+  - command: add /Ems/1/Ne/1/ConfigSet/1;
+    connection: cli1
+    result: {result: 0}
+  - command: get /Ems/1/Ne/1/ConfigSet/1
+    connection: cli1
+    result: {result: 0}
+  - command: get /Ems/1/Ne/1/ConfigSet/1
+    connection: cli2
+    result: {result: 0}
+  - command: get /Ems/1/Ne/1/ConfigSet/1/Shelf/1
+    connection: cli1
+    result: {result: 0}
+  - command: get /Ems/1/Ne/1/ConfigSet/1/Shelf/2
+    connection: cli1
+    result: {result: 0}
+- name: test_add_board_expect_success_1
+  steps:
+  - command: add /Ems/1/Ne/1/ConfigSet/1/Shelf/1/Board/1 Rtua;
+    connection: cli1
+    result: {result: 0}
+  - {command: get /Ems/1/Ne/1/ConfigSet/1/Shelf/1/Board/1, connection: cli1, result: Rtua}
+  - command: get /Ems/1/Ne/1/ConfigSet/1/Shelf/1/Board/1/E1Port/1
+    connection: cli1
+    result: {result: 0}
+  - command: get /Ems/1/Ne/1/ConfigSet/1/Shelf/1/Board/1/E1Port/16
+    connection: cli2
+    result: {result: 0}
+  - {command: 'UEP4X.RES_TREECOMPONENT_TABLE[OID]{moc=mw.nr8250.board}', connection: db,
+    result: 'mw.nr8250=1,mw.nr8250.board=1'}
+  - {command: 'UEP4X.RES_TREECOMPONENT_TABLE[DISPLAYNAME]{oid=mw.nr8250=1,mw.nr8250.board=1,mw.nr8250.env=1}',
+    connection: db, result: Env Info Port(slot=1)}
+  - {command: 'UEP4X.RES_TREECOMPONENT_TABLE[DISPLAYNAME]{oid=mw.nr8250=1,mw.nr8250.board=1,mw.nr8250.e1ber=1}',
+    connection: db, result: E1 BER Port 1(slot=1)}
+  - {command: 'UEP4X.RES_TREECOMPONENT_TABLE[DISPLAYNAME]{oid=mw.nr8250=1,mw.nr8250.board=1,mw.nr8250.e1=1}',
+    connection: db, result: E1 Port 1(slot=1)}
+- name: test_del_board_expect_success_1
+  steps:
+  - command: del /Ems/1/Ne/1/ConfigSet/1/Shelf/1/Board/1
+    connection: cli1
+    result: {result: 0}
+  - command: get /Ems/1/Ne/1/ConfigSet/1/Shelf/1/Board/1
+    connection: cli1
+    result: {result: 1}
+  - command: get /Ems/1/Ne/1/ConfigSet/1/Shelf/1/Board/1/E1Port/1
+    connection: cli1
+    result: {result: 1}
+  - command: get /Ems/1/Ne/1/ConfigSet/1/Shelf/1/Board/1/E1Port/16
+    connection: cli2
+    result: {result: 1}
+  - {command: 'UEP4X.RES_TREECOMPONENT_TABLE[OID]{moc=mw.nr8250.board}', connection: db,
+    result: }
+  - {command: 'UEP4X.RES_TREECOMPONENT_TABLE[DISPLAYNAME]{oid=mw.nr8250=1,mw.nr8250.board=1,mw.nr8250.env=1}',
+    connection: db, result: }
+  - {command: 'UEP4X.RES_TREECOMPONENT_TABLE[DISPLAYNAME]{oid=mw.nr8250=1,mw.nr8250.board=1,mw.nr8250.e1ber=1}',
+    connection: db, result: }
+  - {command: 'UEP4X.RES_TREECOMPONENT_TABLE[DISPLAYNAME]{oid=mw.nr8250=1,mw.nr8250.board=1,mw.nr8250.e1=1}',
+    connection: db, result: }
+- name: test_del_ne_expect_success_1
+  steps:
+  - command: del /Ems/1/Ne/1
+    connection: cli1
+    result: {result: 0}
+  - {command: 'MW_CM.TOPO_NE_TABLE[NAME]{NAME=abcde67890}', connection: db, result: }
+  - {command: 'UEP4X.RES_TREENODE_TABLE[NAME]{NAME=abcde67890}', connection: db, result: }

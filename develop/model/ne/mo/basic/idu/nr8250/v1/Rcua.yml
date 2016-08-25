@@ -1,0 +1,20 @@
+className: Rcua
+baseClass: Board
+tid: 616
+attributes:
+  - name: boardType
+    attrId: 0
+    type: BoardTypeEnum
+    default: rcua
+    mutable: false
+children:
+  - name : LmtPort
+    id : 1
+    count : 1
+    autoCreate: true
+  - name : HDInfo
+    id : 2
+    count : 1
+    autoCreate: true
+
+

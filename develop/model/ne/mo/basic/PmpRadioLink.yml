@@ -1,0 +1,61 @@
+className: PmpRadioLink
+tid: 373
+triggers: [afterGet]
+persistence: None
+attributes:
+  - name: date
+    attrId: 0
+    type: Date
+    maxLength: 50
+    mutable: false
+  - name: validFlag
+    attrId: 1 
+    type : PmpValidFlagEnum
+    default: valid
+    mutable: false
+  - name: bbe
+    attrId: 2 
+    type : WORD32
+    mutable: false
+  - name: eb
+    attrId: 3 
+    type : WORD32
+    mutable: false
+  - name: ses
+    attrId: 4 
+    type : WORD32
+    mutable: false
+  - name: es
+    attrId: 5 
+    type : WORD32
+    mutable: false
+  - name: uas
+    attrId: 6 
+    type : WORD32
+    mutable: false
+  - name: efs
+    attrId: 7 
+    type : WORD32
+    mutable: false
+  - name: sysAvail
+    attrId: 8 
+    type : FLOAT
+    mutable: false
+  - name: maxMSE
+    attrId: 9 
+    type : FLOAT
+    mutable: false
+  - name: minMSE
+    attrId: 10 
+    type : FLOAT
+    mutable: false
+  - name: avgMSE
+    attrId: 11 
+    type : FLOAT
+    mutable: false
+actions:
+  customs:
+    - name: Clear
+      actionId: 1
+    - name: ClearRsp
+      actionId: 101

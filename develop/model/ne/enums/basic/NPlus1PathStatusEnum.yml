@@ -1,0 +1,9 @@
+name: NPlus1PathStatusEnum
+type: BYTE
+default: Disconnection
+enum:
+  Connection: 0
+  Disconnection: 1
+  HoldOn: 2
+  Invalid: 0xFF
+

@@ -1,0 +1,44 @@
+className: LacpGlobal
+tid: 442
+triggers: [afterSet]
+attributes:
+  - name: state
+    attrId: 0
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: fastPerTime
+    attrId: 1
+    type: BYTE
+    range: [[1,255]]
+    default: 1
+    mutable: true
+  - name: slowPerTime
+    attrId: 2
+    type: BYTE
+    range: [[1,255]]
+    default: 30
+    mutable: true
+  - name: shortTimeOut
+    attrId: 3
+    type: BYTE
+    range: [[1,255]]
+    default: 3
+    mutable: true
+  - name: longTimeOut
+    attrId: 4
+    type: BYTE
+    range: [[1,255]]
+    default: 90
+    mutable: true
+  - name: aggDelay
+    attrId: 5
+    type: BYTE
+    range: [[1,255]]
+    default: 2
+    mutable: true
+  - name: timeOutMode
+    attrId: 6
+    type: LacpTimeoutModeEnum
+    default: long
+    mutable: true

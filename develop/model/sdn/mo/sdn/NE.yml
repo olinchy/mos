@@ -1,0 +1,7 @@
+className: NE
+tid: 1
+children:
+   - name : AirInterface
+     id : 1
+     count : 20
+     autoCreate: false

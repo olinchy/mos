@@ -1,0 +1,61 @@
+className: NR8150Shelf
+baseClass: Shelf
+tid: 300
+persistence: None
+children:
+  - name: Board
+    id: 1
+    groupType : map
+    count: 28
+  - name: TrafficUnit
+    id: 2
+    groupType : map
+    count: 28
+  - name : CesAlarmThreshold
+    id: 3
+    count: 1
+    autoCreate: true
+  - name: PLA
+    id: 4
+    groupType : map
+    count: 13
+    autoCreate: false
+  - name: XPIC
+    type: NR8250XPIC
+    id: 5
+    count: 10
+    autoCreate: false
+  - name: LACP
+    id: 6
+    count: 4
+    autoCreate: false
+  - name: Cascade
+    id: 7
+    count: 4
+    autoCreate: false
+  - name: Antenna
+    id: 8
+    count: 6
+    autoCreate: false
+  - name: TrafficPort
+    type: TrafficPort
+    id: 9
+    count: 24 
+    autoCreate: false
+  - name: PmpEnvInfo
+    id: 10
+    count: 1
+    autoCreate: true
+  - name: LACPCascadePTP
+    id: 11
+    count: 1
+    autoCreate: true
+  - name: ChipPort
+    type: ChipPort
+    id: 12
+    count: 30
+    autoCreate: false
+  - name: ProtoIF
+    id: 13
+    count: 32
+    autoCreate: false

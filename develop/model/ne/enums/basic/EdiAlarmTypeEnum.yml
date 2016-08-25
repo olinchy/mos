@@ -1,0 +1,9 @@
+name: EdiAlarmTypeEnum
+type: BYTE
+default: None
+enum:
+  Manual: 0
+  Temperature: 1
+  RadioLink: 2
+
+

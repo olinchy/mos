@@ -1,0 +1,97 @@
+className: CmSuperTask
+tid: 10051
+attributes:
+  - name: taskcount
+    attrId: 1
+    type: WORD16
+    default: 0
+    mutable: true
+
+  - name: successcount
+    attrId: 2
+    type: WORD16
+    default: 0
+    mutable: true
+
+  - name: failedcount
+    attrId: 3
+    type: WORD16
+    default: 0
+    mutable: true
+
+  - name: timeoutcount
+    attrId: 4
+    type: WORD16
+    default: 0
+    mutable: true
+
+  - name: stoppedcount
+    attrId: 5
+    type: WORD16
+    default: 0
+    mutable: true
+
+  - name: status
+    attrId: 6
+    type: BYTE
+    enum:
+      ready: 0
+      running: 1      
+      finish: 2
+      suspended: 3
+    default: ready
+    mutable: true
+
+  - name: result
+    attrId: 7
+    type: CmTaskResultEnum
+    default: success
+    mutable: true
+
+  - name: errormessage
+    attrId: 8
+    type: String
+    maxLength: 52
+    mutable: true
+
+  - name: createtime
+    attrId: 9
+    type: WORD32
+    default: 0
+    mutable: true
+
+  - name: starttime
+    attrId: 10
+    type: WORD32
+    default: 0
+    mutable: true
+
+  - name: finishtime
+    attrId: 11
+    type: WORD32
+    default: 0
+    mutable: true
+
+  - name: username
+    attrId: 12
+    type: String
+    maxLength: 50
+    mutable: true
+
+  - name: userip
+    attrId: 13
+    type: String
+    maxLength: 50
+    mutable: true
+
+  - name: type
+    attrId: 14
+    type: CmTaskTypeEnum
+    default: batchExport
+    mutable: false
+
+children:
+   - name : CmSubTask
+     id : 1
+     count : 100000
+     autoCreate: false

@@ -1,0 +1,63 @@
+className: XstpPort
+tid: 533
+triggers: [beforeSet, recover]
+attributes:
+  - name: state
+    attrId: 0
+    type: StateEnum
+    default: enable
+    mutable: true
+  - name: edgePort
+    attrId: 1
+    type: BYTE
+    enum:
+        Non_Edge: 0
+        Edge: 1
+    default: Non_Edge
+    mutable: true
+  - name: bpduGuardState
+    attrId: 2
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: linkType
+    attrId: 3
+    type: BYTE
+    enum:
+        Non_P2P: 0
+        P2P: 1
+        AUTO: 2
+    default: AUTO
+    mutable: true
+  - name: bpduPacketType
+    attrId: 4
+    type: BYTE
+    enum:
+        IEEE_TYPE: 0
+        CISCO_TYPE: 1
+        HAMMER_TYPE: 2
+        HUAWEI_TYPE: 3
+    default: IEEE_TYPE
+    mutable: true
+  - name: bpduTunnelEnable
+    attrId: 5
+    type: StateEnum
+    default: disable
+    mutable: false
+children:
+    - name: PortInstance
+      type: XstpPortInstance
+      id: 1
+      count: 64
+      autoCreate: false
+    - name: PortProtect
+      type: XstpPortProtect
+      id: 2
+      count: 64
+      autoCreate: false
+actions:
+  customs:
+    - name: XstpCheck
+      actionId: 1
+    - name: XstpCheckRsp
+      actionId: 101

@@ -1,0 +1,17 @@
+name: ModulationCodingEnum
+type: BYTE
+default: invalidNum
+enum:
+  initNum: 0
+  qpsk: 1
+  qam16: 2
+  qam32: 3
+  qam64: 4
+  qam128: 5
+  qam256: 6
+  qam512: 7
+  qam1024: 8
+  qam1024_light: 9
+  qam2048: 10
+  invalidNum: 255
+  

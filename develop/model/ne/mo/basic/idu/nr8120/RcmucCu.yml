@@ -1,0 +1,18 @@
+className: RcmucCu
+baseClass: Board
+tid: 474
+attributes:
+   - name: boardType
+     attrId: 0
+     type: BoardTypeEnum
+     default: rcuad
+     mutable: false
+children:
+  - name : LmtPort
+    id : 1
+    count : 1
+    autoCreate: true
+  - name : ClkMonPort
+    id : 2
+    count : 1
+    autoCreate: true

@@ -1,0 +1,14 @@
+className: Rtuno
+baseClass: Board
+tid: 454
+attributes:
+  - name: boardType
+    attrId: 0
+    type: BoardTypeEnum
+    default: rtuno
+    mutable: false
+children:
+   - name : HDInfo
+     id : 1
+     count : 1
+     autoCreate: true

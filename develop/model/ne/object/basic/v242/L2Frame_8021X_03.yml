@@ -1,0 +1,30 @@
+className: L2Frame_8021X_03
+attributes:
+  - name: mac
+    attrId: 0
+    type: MacAddr
+    default: "01:80:C2:00:00:03"
+    mutable: false
+  - name: prococol
+    attrId: 1
+    type: String
+    maxLength: 39
+    default: "802.1x"
+    mutable: false
+  - name: subType
+    attrId: 2
+    type: String
+    maxLength: 19
+    default: "0x888E"
+    mutable: false
+  - name: passThrough
+    attrId: 3
+    type: StateEnum
+    default: enable
+    mutable: true
+  - name: force
+    attrId: 4
+    type: StateEnum
+    default: enable
+    mutable: false
+

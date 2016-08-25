@@ -1,0 +1,136 @@
+className: NR8950
+tid : 476
+derivedFrom: Product
+derivedBy: "NR8950"
+msgMode: Multi
+imagedProtocol: RPC
+mosVersion: 1.1f
+children:
+  - name : Shelf
+    type : NR8950Shelf
+    id : 1
+    count : 1
+    autoCreate : True
+  - name : NEAlarm
+    id : 11
+    count : 1
+    autoCreate: True
+  - name : SysPara
+    id : 15
+    count : 1
+    autoCreate : True
+  - name : Security
+    id : 16
+    count : 1
+    autoCreate : True
+  - name : Neighbor
+    id : 17
+    count : 1
+    autoCreate : True
+  - name : Maintain
+    id : 2
+    count : 1
+    autoCreate : True
+  - name : License
+    id : 3
+    count : 1
+    autoCreate : True
+  - name : Vmp
+    id : 13
+    count : 1
+    autoCreate: True
+  - name : VmpAdvancedCheck
+    id : 14
+    count : 1
+    autoCreate : True
+  - name : Configuration
+    id : 25
+    count : 1
+    autoCreate : True
+  - name : EthProtocol
+    id : 19
+    autoCreate : True
+  - name : ProtocolVlan
+    id : 17
+    count : 9
+    autoCreate : False
+  - name: ACL
+    id : 22
+    count : 100
+    autoCreate : False
+  - name: CAR
+    id : 21
+    count : 20
+    autoCreate : False
+  - name : Clock
+    id : 24
+    autoCreate : True
+  - name : Userdefine_EgTransAct
+    id : 27
+    count : 32
+    autoCreate : False
+  - name : Userdefine_EgTransRule
+    id : 28
+    count : 32
+    autoCreate : False
+  - name : Userdefine_InTransAct
+    id : 29
+    count : 32
+    autoCreate : False
+  - name : Userdefine_InTransRule
+    id : 30
+    count : 32
+  - name : EowGlobal
+    id : 31
+    count : 1
+    autoCreate : False
+  - name : EowTU
+    id : 32
+    count : 1
+    autoCreate : False
+  - name : Inventory
+    id : 33
+    count : 1
+    autoCreate : True
+  - name : Pmp
+    id : 31
+    count : 1
+    autoCreate : True
+  - name : EtmGlobal
+    id : 13
+    autoCreate : true
+  - name : MacVlan
+    id : 34
+    count : 1
+    autoCreate : False
+  - name : Mirror
+    id : 35
+    count : 1
+    autoCreate : False
+  - name : StaticMacIVL
+    id : 32
+    count : 32
+    autoCreate : False
+  - name : StaticMacSVL
+    id : 33
+    count : 32
+    autoCreate : False
+  - name : LOG
+    id : 34
+    count : 1
+    autoCreate : True
+actions:
+  customs:
+  - name: traverseMos
+    actionId: 1
+  - name: Logout
+    actionId: 2
+  - name: LogoutRsp
+    actionId: 102
+  - name: LogoutConfirm
+    actionId: 3
+  - name: LogoutConfirmRsp
+    actionId: 103
+  - name: getDynamicnMo
+    actionId: 5
+

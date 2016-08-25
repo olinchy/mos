@@ -1,0 +1,16 @@
+className: ChipPort_PanelPort
+tid: 572
+persistence: None
+baseClass: ChipPort
+attributes:
+  - name: featureList
+    attrId: 0
+    type: FeatureList
+    mutable: false
+children:
+  - name: LldpPort
+    type: LldpPort
+    id: 1
+  - name: RateLimit
+    id: 2
+

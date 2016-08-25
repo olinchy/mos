@@ -1,0 +1,11 @@
+className: TarBbxPath
+tid: 565
+persistence: None
+triggers: [afterGet]
+attributes:
+  - name: path
+    attrId: 0
+    type: String
+    maxLength: 32
+    default: "/mnt/flash/BBX"
+    mutable: true

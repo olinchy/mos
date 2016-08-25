@@ -1,0 +1,15 @@
+className: MulPort
+tid: 586
+triggers: [beforeSet,recover]
+attributes:
+  - name: type
+    attrId: 0
+    type: BYTE
+    enum:
+      TRAFFIC: 0
+      PROTECT: 1
+      PLA    : 2
+      LAG    : 3
+    default: TRAFFIC
+    mutable: false
+

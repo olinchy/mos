@@ -1,0 +1,6 @@
+name: TdmCascadeFlagEnum
+type: BYTE
+default: nocascade
+enum:
+  nocascade: 0
+  cascade: 1

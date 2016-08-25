@@ -1,0 +1,33 @@
+className: TrafficPort_LACP_PanelPort
+tid: 303
+triggers: [beforeAdd]
+baseClass: TrafficPort
+reference:
+  - name: sourcePort
+    type: LACP
+    isMulti: false
+    under: DependencyPolicy
+children:
+  - name: EtmAttribute
+    id: 1
+    autoCreate: true
+  - name: MacLearn
+    id: 2
+    autoCreate: true
+  - name: L2Frame
+    id: 3
+    autoCreate: true
+  - name: Vlan
+    type: PortVlan
+    id: 4
+    autoCreate: true
+  - name: PortPriority
+    id: 5
+    autoCreate: true
+  - name: HQOS
+    type: HQOSPortNode_aboutPanel
+    id: 6
+    autoCreate: true
+  - name: XstpPort
+    id: 7
+    autoCreate: true

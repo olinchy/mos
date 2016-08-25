@@ -1,0 +1,40 @@
+className: ScanFrequence
+tid: 601
+triggers: [afterGet]
+persistence: None
+attributes:
+  - name: ScanFlag
+    attrId: 0  
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: ScanTotalNum
+    attrId: 1 
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: ReportNum
+    attrId: 2 
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: StartFreq
+    attrId: 3  
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: EndFreq
+    attrId: 4  
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: ScanFreqInfo
+    attrId: 5
+    type: Set
+    maxItems: 10000
+    items:
+      type: ScanFreqData 
+    mutable: true
+
+
+

@@ -1,0 +1,10 @@
+name: ProtectTypeEnum
+type: BYTE
+default: NONE
+enum:
+    NONE: 0   
+    HSB: 1
+    FD: 2
+    SD: 3
+
+

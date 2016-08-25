@@ -1,0 +1,8 @@
+name: ScDataWidthEnum
+type: BYTE
+enum:
+  8bit: 0
+  7bit: 1
+  6bit: 2
+  5bit: 3
+

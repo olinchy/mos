@@ -1,0 +1,62 @@
+className: Stm155Port
+tid: 156
+persistence: Update
+attributes:
+  - name: state
+    attrId: 0
+    type: BYTE
+    enum:
+      disable: 0
+      ALS: 1
+      enable: 2
+    default: disable
+    mutable: true
+  - name: loopbackType
+    attrId: 1
+    type: TdmLoopbackTypeEnum
+    default: close
+    mutable: true
+  - name: loopbackTime
+    attrId: 2
+    type: WORD32
+    minimum: 10
+    maximum: 864000
+    default: 600
+    mutable: true
+  - name: desc
+    attrId: 3
+    type: String
+    maxLength: 256
+    mutable: true
+  - name: sfpStatus
+    attrId: 4
+    type: SfpStatusEnum
+    default: close
+    mutable: true
+children:
+   - name : PmpTdm    
+     id : 1
+     count : 1
+     autoCreate: true
+   - name : SsmSwitch
+     id : 2
+     count : 1
+actions:
+  customs:
+    - name: Loopback
+      actionId: 1   
+      attributes:
+        - name: loopbackType
+          attrId: 0
+          type: TdmLoopbackTypeEnum
+          default: close
+          mutable: true
+        - name: loopbackTime
+          attrId: 1
+          type: WORD32
+          minimum: 10
+          maximum: 864000
+          default: 600
+          mutable: true
+    - name: LoopbackRsp
+      actionId: 101 

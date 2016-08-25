@@ -1,0 +1,17 @@
+className: SnmpCfg
+tid: 186
+persistence: None
+children:
+  - name : TrapCfg
+    id : 1
+    count : 10
+    groupType: map
+  - name : CommunityCfg
+    id : 2
+    count : 1
+    groupType: map
+    autoCreate : {"0" : CommunityCfg}
+  - name : MgrCfg
+    id : 3
+    count : 10
+    groupType: map

@@ -1,0 +1,23 @@
+className: AouBNCVolTest
+tid: 546
+triggers: [constraintSet]
+attributes:
+  - name: interfaceType
+    attrId: 0
+    type: InterfaceTypeEnum
+    default: RSSI
+    mutable: true
+  - name: interfaceMode
+    attrId: 1
+    type: InterfaceModeEnum
+    default: Dynamically
+    mutable: true
+  - name: alternateTime
+    attrId: 2
+    type: BYTE
+    minimum: 5
+    maximum: 30
+    default: 5
+    mutable: true
+
+

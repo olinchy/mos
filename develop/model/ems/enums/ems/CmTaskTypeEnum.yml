@@ -1,0 +1,5 @@
+name: CmTaskTypeEnum
+type: BYTE
+enum:
+   batchExport: 0
+   batchModify: 1

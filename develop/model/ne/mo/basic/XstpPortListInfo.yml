@@ -1,0 +1,17 @@
+className: XstpPortListInfo
+tid: 538
+triggers: [afterGet]
+persistence: None
+attributes:
+  - name: nodeNumber
+    attrId: 0
+    type: BYTE
+    default: 0
+    mutable: false
+  - name: portInfo
+    attrId: 1
+    type: Set 
+    maxItems: 32 
+    items:
+        type: XstpPortInfo 
+    mutable: false  

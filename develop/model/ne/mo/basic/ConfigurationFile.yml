@@ -1,0 +1,14 @@
+className: ConfigurationFile
+tid: 227
+persistence: None
+attributes:
+  - name: saveDate
+    attrId: 0
+    type: Date
+    mutable: true
+actions:
+  customs:
+    - name: Load
+      actionId: 1
+    - name: LoadRsp
+      actionId: 101

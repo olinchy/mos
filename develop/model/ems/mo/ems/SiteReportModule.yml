@@ -1,0 +1,20 @@
+className: SiteReportModule
+tid: 1004
+attributes:
+  - name: taskgroupcount
+    attrId: 1
+    type: WORD16
+    default: 0
+    mutable: true
+
+children:
+   - name : SiteReportSuperTask
+     id : 1
+     count : 1000
+     autoCreate: false
+
+actions:
+  customs:
+    - name: getSystemTime
+      actionId: 1
+

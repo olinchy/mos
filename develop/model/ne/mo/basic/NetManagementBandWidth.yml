@@ -1,0 +1,9 @@
+className: NetManagementBandWidth
+tid: 183
+#triggers: [afterSet, constraintSet]
+attributes:
+  - name: netManagementBandWidth
+    attrId: 0
+    type: NetManagementBandWidthEnum
+    default: 2M
+    mutable: true

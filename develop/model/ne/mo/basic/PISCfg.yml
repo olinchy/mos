@@ -1,0 +1,18 @@
+className: PISCfg
+tid: 179
+triggers: [constraintSet]
+attributes:
+  - name: pisEnable
+    attrId: 0
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: queuePriority
+    attrId: 1
+    type: Array
+    maxItems: 8
+    items:
+      type: QueuePriorityEnum 
+    default: [lowPriority,lowPriority,lowPriority,lowPriority,highPriority,highPriority,highPriority,highPriority]
+    mutable: true
+    

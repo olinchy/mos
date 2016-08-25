@@ -1,0 +1,6 @@
+className: PortVlan_Access
+baseClass: PortVlan_Details
+persistence: None
+tid: 263
+triggers: [afterAdd, constraintAdd, constraintSet]
+

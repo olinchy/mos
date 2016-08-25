@@ -1,0 +1,7 @@
+name: CesE1TypeEnum
+type: BYTE
+default: Unframe
+enum:
+    Unframe: 0
+    Multiframe: 1
+    Frame: 2 

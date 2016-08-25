@@ -1,0 +1,7 @@
+className: Root
+tid: 0
+children:
+   - name : NE
+     id : 1
+     count : 100000
+     autoCreate: false

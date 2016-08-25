@@ -1,0 +1,11 @@
+className: RtunpTrafficUnit
+baseClass: TrafficUnit
+tid: 457
+triggers: [afterAdd, afterSet, afterDel, recover]
+children:
+   - name : EthPort
+     type : PhyPort
+     id : 1
+     count : 2
+     groupType : map
+     autoCreate: {"E-1": [EthPort_E_1G, {displayName: "GbE1"}], "E-2": [EthPort_E_1G, {displayName: "GbE2"}]}

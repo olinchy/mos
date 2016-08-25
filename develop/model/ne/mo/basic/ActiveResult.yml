@@ -1,0 +1,20 @@
+className: ActiveResult
+tid: 213
+persistence: None
+dynamic: true
+triggers: [afterGet]
+attributes: 
+  - name: status
+    attrId: 0  
+    type: BYTE
+    enum:
+      init: 0
+      activing: 1
+      finish: 2
+    default: init
+    mutable: true
+  - name: result
+    attrId: 1
+    type: WORD32
+    default: 0
+    mutable: true

@@ -1,0 +1,32 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>sdn-model</artifactId>
+    <parent>
+        <groupId>com.zte.mos.model</groupId>
+        <artifactId>model-parent</artifactId>
+        <version>1.2</version>
+    </parent>
+    <dependencies>
+        <dependency>
+            <groupId>com.zte.mos.framework</groupId>
+            <artifactId>mos</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.zte.mos.tools</groupId>
+            <artifactId>mos_java_util</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.zte.mos.model</groupId>
+            <artifactId>reference-support</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+</project>
+

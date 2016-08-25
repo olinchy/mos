@@ -1,0 +1,6 @@
+name: ErpsPortTypeEnum
+type: BYTE
+default: eastPort
+enum: 
+  eastPort: 0
+  westPort: 1

@@ -1,0 +1,9 @@
+className: Rpea
+baseClass: Board
+tid: 446
+attributes:
+  - name: boardType
+    attrId: 0
+    type: BoardTypeEnum
+    default: rpea
+    mutable: false

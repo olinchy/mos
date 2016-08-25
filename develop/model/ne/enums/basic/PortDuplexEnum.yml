@@ -1,0 +1,6 @@
+name: PortDuplexEnum
+type: BYTE
+default: halfDuplex
+enum:
+  halfDuplex: 0
+  fullDuplex: 1

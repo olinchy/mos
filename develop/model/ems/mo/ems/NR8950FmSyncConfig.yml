@@ -1,0 +1,16 @@
+className: NR8950FmSyncConfig
+baseClass: FmSyncConfig
+tid: 1
+override_attributes:
+  - name: neType
+    attrId: 2
+    type: String
+    default: mw.nr8950
+    maxLength: 64
+    mutable: true
+  - name: pollTaskName
+    attrId: 5
+    type: String
+    maxLength: 128
+    default: ZXMW 8950
+    mutable: false

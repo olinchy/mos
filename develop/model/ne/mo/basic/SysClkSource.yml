@@ -1,0 +1,33 @@
+className: SysClkSource
+tid: 397
+triggers: [afterGet]
+persistence: None
+attributes:
+  - name: clkIndex
+    attrId: 0
+    type: BYTE
+    default: 23
+    mutable: true
+  - name: pllStat
+    attrId: 1
+    type: PllStatEnum
+    default: Heat
+    mutable: true
+  - name: ssmQl
+    attrId: 2
+    type: QlLevelEnum
+    default: G_811
+    mutable: true
+  - name: shelf
+    attrId: 3
+    type: BYTE
+    mutable: true
+  - name: slot
+    attrId: 4
+    type: BYTE
+    mutable: true
+  - name: portId
+    attrId: 5
+    type: WORD32
+
+    

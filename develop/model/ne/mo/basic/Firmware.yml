@@ -1,0 +1,34 @@
+className: Firmware
+baseClass: Package
+tid: 211
+attributes: 
+  - name: status
+    attrId: 0  
+    type: PackageStatusEnum
+    default: backup
+    mutable: true
+  - name: isMainCtrlFWSame
+    attrId: 1  
+    type: BYTE
+    enum:
+      diff: 0
+      same: 1
+    default: same
+    mutable: true
+actions:
+  customs:   
+    - name: Active
+      actionId: 2
+    - name: ActiveRsp
+      actionId: 102
+children:
+   - name : PackageFile
+     id : 1
+     groupType : map
+     count : 125
+   - name : ActiveResult
+     id : 3
+     count : 1
+     autoCreate: True
+
+

@@ -1,0 +1,9 @@
+className: DebugIp
+tid: 220
+persistence: None
+triggers: [constraintSet]
+attributes:
+  - name: ip
+    attrId: 0
+    type: IPv4Addr
+    mutable: true

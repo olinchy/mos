@@ -1,0 +1,192 @@
+{
+  "moClass":"RmeaAcm",
+  "dn":"/Shelf/1/TrafficUnit/6/LogicAirPort/1/Acm/1",
+  "mo":{
+    "rxModulation":"QPSK",
+    "state":"disable",
+    "enableLog":"disable",
+    "classType":null,
+    "endCodingType":"normal",
+    "syncToRemote":"disable",
+    "txCodingType":"normal",
+    "rxCodingType":"normal",
+    "startCodingType":"normal",
+    "standbyMse":0,
+    "startModulation":"QPSK",
+    "endModulation":"QPSK",
+    "txModulation":"QPSK",
+    "mse":0
+  }
+}
+
+{
+  "moClass":"RmeaWorkmode",
+  "dn":"/Shelf/1/TrafficUnit/6/LogicAirPort/1/Workmode/1",
+  "mo":{
+    "codingType":"normal",
+    "modulation":"QPSK",
+    "capacity":1,
+    "classType":null,
+    "syncToRemote":"disable",
+    "bandwidth":"ETSI_7M"
+  }
+}
+
+{
+  "moClass":"XstpInstanceReportEms",
+  "dn":"/EthProtocol/EthL2Protocol/MstpGlobal/Instance/0/XstpInstanceReportEms",
+  "mo":{
+    "PortState":[
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "PortNum":0,
+    "classType":null,
+    "VlanMap":null
+  }
+}
+
+{
+  "moClass":"XstpInstanceReportEms",
+  "dn":"/EthProtocol/EthL2Protocol/Xstp/Instance/0/XstpInstanceReportEms",
+  "mo":{
+    "PortState":[
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "PortNum":0,
+    "classType":null,
+    "VlanMap":null
+  }
+}
+
+{
+  "moClass":"SysLog",
+  "dn":"/LOG/1/SysLog/1",
+  "mo":{
+    "status":"disable",
+    "serverIp":"0.0.0.0",
+    "classType":null
+  }
+}
+
+{
+  "moClass":"Radius",
+  "dn":"/Security/1/Radius/1",
+  "mo":{
+    "privateip":0,
+    "serverip":0,
+    "enable":0,
+    "serverport":1812,
+    "classType":null,
+    "retry":2,
+    "timeout":3,
+    "secretkey":"0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0"
+  }
+}
+
+{
+  "moClass":"RcmuaCu",
+  "dn":"/Shelf/1/Board/1",
+  "mo":{
+    "_function":0,
+    "boardType":"8120rcu",
+    "state":1,
+    "classType":null
+  }
+}
+
+{
+  "moClass":"DevicePara",
+  "dn":"/SysPara/1/DevicePara/1",
+  "mo":{
+    "neName":"zte",
+    "mibVersion":"8120V2.04.01.08",
+    "siteId":"",
+    "neId":41,
+    "neType":"NR8120",
+    "classType":null,
+    "mac":"90-1D-27-F0-54-64",
+    "health":"None",
+    "netMask":"255.255.255.0",
+    "defaultGw":"0.0.0.0",
+    "ip":"108.28.170.157"
+  }
+}
+

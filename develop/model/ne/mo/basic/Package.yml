@@ -1,0 +1,33 @@
+className: Package
+tid: 205
+isAbstract: True
+attributes: 
+  - name: pkgIndex
+    attrId: 0  
+    type: BYTE
+    default: 1
+    mutable: true
+  - name: pkgName
+    attrId: 1  
+    type: String
+    maxLength: 44
+    mutable: true
+  - name: pkgFatherName
+    attrId: 2  
+    type: String
+    maxLength: 44
+    mutable: true
+  - name: pkgType
+    attrId: 3  
+    type: PkgTypeEnum
+    default: software
+    mutable: true
+  - name: downloadDate
+    attrId: 5  
+    type: Date
+    mutable: true
+  - name: pathFlag
+    attrId: 6  
+    type: PathFlagEnum
+    default: sw1
+    mutable: true

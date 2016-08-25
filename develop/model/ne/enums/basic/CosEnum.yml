@@ -1,0 +1,12 @@
+name: CosEnum
+type: BYTE
+default: BE
+enum:
+  BE: 0
+  AF1: 1
+  AF2: 2
+  AF3: 3
+  AF4: 4
+  EF: 5
+  CS6: 6
+  CS7: 7 

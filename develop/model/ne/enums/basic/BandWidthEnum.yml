@@ -1,0 +1,18 @@
+name: BandWidthEnum
+type: BYTE
+default: ETSI_7M
+enum:
+    CW: 0
+    ETSI_7M: 1
+    ETSI_14M: 2
+    ETSI_28M: 3
+    ETSI_56M: 4
+    FCC_10M: 5
+    FCC_20M: 6
+    FCC_30M: 7
+    FCC_40M: 8
+    FCC_50M: 9
+    ETSI_40M: 10
+    ETSI_50M: 11
+    ETSI_112M: 12
+    invalidNum: 255

@@ -1,0 +1,166 @@
+className: AirPort
+tid: 502
+triggers: [beforeAdd,afterGet]
+persistence: None
+attributes:
+  - name: logicAirPortNo
+    attrId: 0 
+    type : BYTE
+    mutable: true
+  - name: xpiValue
+    attrId: 1
+    type: BYTE
+    default: 255
+    mutable: true
+  - name: lockStatus
+    attrId: 2
+    type: BYTE
+    enum:
+      lock: 1
+      unlock: 0 
+    default: unlock
+    mutable: true
+  - name: xpicStatus
+    attrId: 3
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: portStatus
+    attrId: 4
+    type: BYTE 
+    enum:
+      usable: 1
+      unusable: 0 
+    default: usable
+    mutable: true
+  - name: MSStatus
+    attrId: 5
+    type: BYTE 
+    enum:
+      MASTER: 0
+      SLAVE: 1 
+    default: MASTER
+    mutable: true
+children:
+   - name : OduAttribute
+     id : 1
+     count : 1
+     autoCreate: true
+   - name : RfStatus
+     id : 2
+     count : 1
+     autoCreate: true
+   - name : ModemStatus
+     id : 3 
+     count : 1
+     autoCreate: true
+   - name : PmpAcm
+     id : 4 
+     count : 1
+     autoCreate: true
+   - name : PmpRf
+     id : 5
+     count : 1
+     autoCreate: true
+   - name : PmpWleth
+     id : 6
+     count : 1
+     autoCreate: true
+   - name : PmpXpic
+     id : 7 
+     count : 1
+     autoCreate: true
+   - name : PmpRadioLink
+     id : 8
+     count : 1
+     autoCreate: true
+   - name : PmpThresh
+     id : 9
+     count : 1
+     autoCreate: true
+   - name : FadeMarginInfo
+     id : 10
+     count : 1
+     autoCreate: true
+   - name : PmpRmon
+     id : 11
+     count : 1
+     autoCreate: true
+   - name : ScanFrequence
+     id : 12
+     count : 1
+     autoCreate: true
+actions:
+  customs:
+    - name: RfLoopback
+      actionId: 1
+      attributes:
+        - name: state
+          attrId: 0  
+          type: StateEnum
+          default: disable
+          mutable: true
+        - name: time
+          attrId: 1 
+          type: WORD32
+          default: 10
+          mutable: true
+    - name: ModemTone
+      actionId: 2
+      attributes:
+        - name: state
+          attrId: 0  
+          type: StateEnum
+          default: disable
+          mutable: true
+        - name: time
+          attrId: 1 
+          type: WORD32
+          default: 10
+          mutable: true
+    - name: RfMute
+      actionId: 3
+      attributes:
+        - name: state
+          attrId: 0  
+          type: StateEnum
+          default: disable
+          mutable: true
+        - name: time
+          attrId: 1 
+          type: WORD32
+          default: 10
+          mutable: true
+    - name: SetScanFreq
+      actionId: 4
+      attributes:
+        - name: SetState
+          attrId: 0  
+          type: StateEnum
+          default: disable
+          mutable: true
+        - name: StartFreq
+          attrId: 1 
+          type: WORD32
+          default: 0
+          mutable: true
+        - name: EndFreq
+          attrId: 2 
+          type: WORD32
+          default: 0
+          mutable: true
+        - name: StepScanFreq
+          attrId: 3 
+          type: WORD32
+          default: 0
+          mutable: true
+    - name: RfLoopbackRsp
+      actionId: 101
+    - name: ModemToneRsp
+      actionId: 102
+    - name: RfMuteRsp
+      actionId: 103
+    - name: SetScanFreqRsp
+      actionId: 104
+ 
+        

@@ -1,0 +1,13 @@
+className: SlowProtocol
+tid: 441
+persistence: None
+children:
+   - name: LacpGlobal
+     id: 1     
+     autoCreate: true
+   - name: LacpRtag
+     id: 2     
+     autoCreate: true
+   - name: LagInfo
+     id: 3
+     autoCreate: true

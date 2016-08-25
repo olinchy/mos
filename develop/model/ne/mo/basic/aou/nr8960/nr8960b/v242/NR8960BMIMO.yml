@@ -1,0 +1,27 @@
+className: NR8960BMIMO
+baseClass: MIMO
+tid: 585
+triggers: [recover, beforeSet, afterSet]
+attributes:
+  - name: PrimaryAirPort
+    attrId: 0
+    type: BYTE
+    default: 1
+    mutable: true
+  - name: SecondaryAirPort
+    attrId: 1
+    type: BYTE
+    default: 9
+    mutable: true
+  - name: SpatPrimaryAirPort
+    attrId: 2
+    type: BYTE
+    default: 255
+    mutable: true
+  - name: SpatSecondaryAirPort
+    attrId: 3
+    type: BYTE
+    default: 255
+    mutable: true
+
+

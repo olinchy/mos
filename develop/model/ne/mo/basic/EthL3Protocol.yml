@@ -1,0 +1,8 @@
+className: EthL3Protocol
+tid: 422
+persistence: None
+children:
+   - name : StaticRoute
+     id : 1     
+     count : 200
+     autoCreate: false

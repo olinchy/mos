@@ -1,0 +1,25 @@
+className: LacpRtag
+tid: 443
+attributes:
+  - name: mplsMask
+    attrId: 0
+    type: Set
+    maxItems: 5
+    items:
+        type: RtagMplsEnum
+    mutable: true
+  - name: l2Mask
+    attrId: 1
+    type: Set
+    maxItems: 4
+    items:
+        type: RtagL2Enum
+    default: [outerVlan, etherType, dstMac, srcMac]
+    mutable: true
+  - name: l3Mask
+    attrId: 2
+    type: Set
+    maxItems: 6
+    items:
+        type: RtagL3Enum
+    mutable: true

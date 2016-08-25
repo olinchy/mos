@@ -1,0 +1,15 @@
+name: OduTypeEnum
+type: BYTE
+default: none
+enum:
+    none: 0
+    NEC_5C: 1
+    NEC_7C: 2
+    SRU: 3
+    NEC_8C: 4
+    ODM: 5
+    AOU_TRX: 6
+    AOU_ODM: 7
+    ODM_HRU: 8
+    ZTE_HRU: 9
+    

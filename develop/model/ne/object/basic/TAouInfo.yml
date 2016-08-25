@@ -1,0 +1,47 @@
+className: TAouInfo
+attributes:
+  - name: rack
+    attrId: 0 
+    type : BYTE
+    default: 1
+    mutable: true
+  - name: shelf
+    attrId: 1 
+    type : BYTE
+    default: 1
+    mutable: true
+  - name: slot
+    attrId: 2 
+    type : BYTE
+    default: 1
+    mutable: true
+  - name: port
+    attrId: 3 
+    type : BYTE
+    default: 1
+    mutable: true
+  - name: linkStatus
+    attrId: 4 
+    type : BYTE
+    enum:
+      linkon: 0
+      linkdown: 1
+    default: linkdown
+    mutable: true
+  - name: runVersion
+    attrId: 5 
+    type : String
+    default: ""
+    maxLength: 44
+    mutable: true
+  - name: bakVersion
+    attrId: 6 
+    type : String
+    default: ""
+    maxLength: 44
+    mutable: true
+  - name: progress
+    attrId: 7 
+    type : BYTE
+    default: 0
+    mutable: true

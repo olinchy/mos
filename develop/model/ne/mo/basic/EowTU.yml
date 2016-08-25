@@ -1,0 +1,11 @@
+className: EowTU
+tid: 1
+triggers: [constraintSet]
+persistence: 
+attributes:
+  - name: ucEnable
+    attrId: 0
+    type: StateEnum
+    default: disable
+    mutable: true
+    

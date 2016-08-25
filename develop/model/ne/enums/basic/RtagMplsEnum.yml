@@ -1,0 +1,10 @@
+name: RtagMplsEnum
+type: WORD32
+default: mplsNull
+enum:
+    mplsNull: 0
+    dstIp: 0x10
+    srcIp: 0x20
+    topLabel: 0x40
+    middleLabel: 0x80
+    bottomLabel: 0x100

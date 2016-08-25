@@ -1,0 +1,87 @@
+className: PortPriority
+tid: 322
+triggers: [recover]
+attributes:
+  - name: modeSelect
+    attrId: 0
+    type: BYTE
+    enum:
+      8021P: 0
+      DSCP: 1
+      8021AD: 2
+    default: 8021P
+    mutable: true
+  - name: dscpQue
+    attrId: 1
+    type: Array
+    maxItems: 64
+    items:      
+      type: CosEnum
+    default: [BE,BE,BE,BE,BE,BE,BE,BE,AF1,BE,AF1,BE,AF1,BE,AF1,BE,AF2,BE,AF2,BE,AF2,BE,AF2,BE,AF3,BE,AF3,BE,AF3,BE,AF3,BE,AF4,BE,AF4,BE,AF4,BE,AF4,BE,EF,BE,BE,BE,BE,BE,EF,BE,CS6,BE,BE,BE,BE,BE,BE,BE,CS7,BE,BE,BE,BE,BE,BE,BE]
+    mutable: true
+  - name: dscpColor
+    attrId: 2
+    type: Array
+    maxItems: 64
+    items:      
+      type: PriorityColorEnum
+    default: [yellow,yellow,yellow,yellow,yellow,yellow,yellow,yellow,green,yellow,green,yellow,yellow,yellow,yellow,yellow,green,yellow,green,yellow,yellow,yellow,yellow,yellow,green,yellow,green,yellow,yellow,yellow,yellow,yellow,green,yellow,green,yellow,yellow,yellow,yellow,yellow,green,yellow,yellow,yellow,yellow,yellow,green,yellow,green,yellow,yellow,yellow,yellow,yellow,yellow,yellow,green,yellow,yellow,yellow,yellow,yellow,yellow,yellow]
+    mutable: true
+  - name: ieee8021pQueue
+    attrId: 3
+    type: Array
+    maxItems: 8
+    items:      
+      type: CosEnum
+    default: [BE,AF1,AF2,AF3,AF4,EF,CS6,CS7]
+    mutable: true
+  - name: ieee8021adCFI0Que
+    attrId: 4
+    type: Array
+    maxItems: 8
+    items:      
+      type: CosEnum
+    default: [BE,AF1,AF2,AF3,AF4,EF,CS6,CS7]
+    mutable: true
+  - name: ieee8021adCFI1Que
+    attrId: 5
+    type: Array
+    maxItems: 8
+    items:      
+      type: CosEnum
+    default: [BE,AF1,AF2,AF3,AF4,EF,CS6,CS7]
+    mutable: true
+  - name: ieee8021adCFI0Color
+    attrId: 6
+    type: Array
+    maxItems: 8
+    items:      
+      type: PriorityColorEnum
+      default: green
+    mutable: true
+  - name: ieee8021adCFI1Color
+    attrId: 7
+    type: Array
+    maxItems: 8
+    items:
+      type: PriorityColorEnum
+      default: green
+    mutable: true
+  - name: deiOutFlag
+    attrId: 8
+    type: BYTE
+    enum:
+      disable: 0
+      enable: 1
+      na: 255
+    default: na
+    mutable: true
+  - name: priorityOutFlag
+    attrId: 9
+    type: BYTE
+    enum:
+      disable: 0
+      enable: 1
+      na: 255
+    default: na
+    mutable: true

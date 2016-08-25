@@ -1,0 +1,95 @@
+className: PDHSNCPCFG
+tid: 107
+triggers: [afterGet]
+attributes:
+  - name: ucRackNo
+    attrId: 0
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: ucSourceShelfNo
+    attrId: 1
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: ucSourceProtUnitNo
+    attrId: 2
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: dwSourceProtPortID
+    attrId: 3
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: ucSourceVC4
+    attrId: 4
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: ucSourceProtIndex
+    attrId: 5
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: ucDestShelfNo
+    attrId: 6
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: ucDestUnitNo
+    attrId: 7
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: dwDestPortID
+    attrId: 8
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: ucDestVC4
+    attrId: 9
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: ucDestIndex
+    attrId: 10
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: ucDirection
+    attrId: 11
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: ucProtMode
+    attrId: 12
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: ucForcedChannel
+    attrId: 13
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: wWTR
+    attrId: 14
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: wHoldOffTime
+    attrId: 15
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: ucIsReceiveEnd
+    attrId: 16
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: ucActiveFlag
+    attrId: 17
+    type: WORD32
+    default: 0
+    mutable: true
+    

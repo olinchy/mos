@@ -1,0 +1,20 @@
+className: ClockLink
+tid: 666
+attributes:
+  - name: clkIndex
+    attrId: 1
+    type: String
+    maxLength: 20
+    mutable: true
+  - name: linkType
+    attrId: 1
+    type: String
+    maxLength: 20
+    mutable: true
+reference:
+  - name: aEnd
+    type: PhyPort
+    isMulti: false
+  - name: zEnd
+    type: PhyPort
+    isMulti: false

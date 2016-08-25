@@ -1,0 +1,13 @@
+name: PllStatEnum
+type: WORD32
+default: Heat
+enum:
+  Heat: 0
+  FastCapture: 1
+  Lock: 2
+  Holdover: 5
+  FreeRun: 8 
+  UnLock: 9 
+
+  
+

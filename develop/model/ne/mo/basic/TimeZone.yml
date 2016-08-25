@@ -1,0 +1,17 @@
+className: TimeZone
+tid: 3001
+attributes:
+  - name: zoneId
+    attrId: 0
+    type: SWORD16
+    minimum: -720
+    maximum: 780
+    default: 480
+    mutable: true
+  - name: city
+    attrId: 1
+    type: BYTE
+    minimum: 0
+    maximum: 6
+    default: 0
+    mutable: true

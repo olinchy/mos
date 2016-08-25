@@ -1,0 +1,9 @@
+name: PtpTypeEnum
+type: BYTE
+default: Ptp_Oc 
+enum:
+  Ptp_Oc: 1
+  Ptp_Bc: 2
+  Ptp_E2e_Tc: 4
+  Ptp_E2e_TcOc: 9
+

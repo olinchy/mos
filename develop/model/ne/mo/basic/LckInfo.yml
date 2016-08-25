@@ -1,0 +1,30 @@
+className: LckInfo
+tid: 352
+triggers: [afterGet]
+persistence: None
+attributes:
+  - name: maName
+    attrId: 0 
+    type: String
+    maxLength: 10
+    mutable: true
+  - name: mdLevel
+    attrId: 1 
+    type: BYTE
+    minimum: 0
+    maximum: 7
+    default: 0
+    mutable: true
+  - name: aisLckIntv
+    attrId: 2
+    type: BYTE
+    enum:
+        1s: 0
+        1min: 1
+    default: 1s
+    mutable: true
+  - name: failInfo
+    attrId: 3 
+    type: WORD32
+    default: 0
+    mutable: true

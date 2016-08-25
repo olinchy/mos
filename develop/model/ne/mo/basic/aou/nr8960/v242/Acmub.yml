@@ -1,0 +1,25 @@
+className: Acmub
+baseClass: Board
+tid: 223
+triggers: [afterGet]
+persistence: None
+attributes:    
+  - name: boardType
+    attrId: 0
+    type: BoardTypeEnum
+    default: acmub
+    mutable: false
+children:
+   - name : AirPort
+     id : 1
+     count : 2
+     autoCreate: true
+   - name : HDInfo
+     id : 2
+     count : 1
+     autoCreate: true
+   - name : EnvironmentInfo
+     id : 3
+     count : 1
+     autoCreate: true
+

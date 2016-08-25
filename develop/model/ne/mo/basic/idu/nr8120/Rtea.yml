@@ -1,0 +1,15 @@
+className: Rtea
+baseClass: Rte
+tid: 118
+persistence: None
+attributes:
+   - name: boardType
+     attrId: 0
+     type: BoardTypeEnum
+     default: rtea
+     mutable: false
+children:
+   - name : E1Port
+     id : 1
+     count : 16
+     autoCreate: true

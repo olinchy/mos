@@ -1,0 +1,87 @@
+className: HQOSL1Node
+tid: 319
+triggers: [constraintAdd, constraintSet, constraintDel, beforeAdd, afterDel]
+attributes:
+  - name: name
+    attrId: 0
+    type: String
+    maxLength: 29
+    default: L1Default
+    mutable: false
+  - name: keyType
+    attrId: 1
+    type: WORD32
+    enum:
+      DSCP: 0
+      Outer_VLAN_Priority: 1
+      Inner_VLAN_Priority: 2
+      TCPUDP_Source_Port: 3
+      TCPUDP_Destination_Port: 4
+      Source_IP: 5
+      Destination_IP: 6
+      Source_MAC: 7
+      Destination_MAC: 8
+      IPV6TC: 9
+      Outer_VLAN_ID: 10
+      Inner_VLAN_ID: 11
+      Ethernet_Type: 12
+      MPLS_EXP: 13
+      DEFAULT: 255
+    default: DEFAULT
+    mutable: true
+  - name: keyValue
+    attrId: 2
+    type: Array
+    maxItems: 6
+    items:
+      type: BYTE
+    mutable: true
+  - name: keyMask
+    attrId: 3
+    type: Array
+    maxItems: 6
+    items:
+      type: BYTE
+    mutable: true
+  - name: serviceCOS
+    attrId: 4
+    type: CosEnum
+    default: BE
+    mutable: true
+  - name: scheduleType
+    attrId: 5
+    type: BYTE
+    enum:
+      SP: 1
+      DWRR: 2
+      WRR: 3
+      WFQ: 4
+    default: SP
+    mutable: true
+  - name: weight
+    attrId: 6
+    type: BYTE
+    minimum: 1
+    maximum: 127
+    default: 10
+    mutable: true
+  - name: CIR
+    attrId: 7
+    type: WORD32
+    minimum: 0
+    maximum: 10000000
+    default: 0
+    mutable: true
+  - name: PIR
+    attrId: 8
+    type: WORD32
+    minimum: 0
+    maximum: 10000000
+    default: 0
+    mutable: true
+children:
+  - name: L2
+    type: HQOSL2Node
+    id: 1
+    count: 1
+    autoCreate: true

@@ -1,0 +1,36 @@
+className: SecurityProtocolMode
+tid: 198
+triggers: [beforeSet, constraintSet]
+attributes: 
+  - name: http
+    attrId: 0
+    type: BYTE
+    enum:
+      http: 0
+      https: 1
+    default: http
+    mutable: true
+  - name: ftp
+    attrId: 1
+    type: BYTE
+    enum:
+      ftp: 0
+      sftp: 1
+    default: ftp
+    mutable: true
+  - name: telnet
+    attrId: 2
+    type: BYTE
+    enum:
+      telnet: 0
+      ssh: 1
+    default: telnet
+    mutable: true
+  - name: version
+    attrId: 3
+    type: BYTE
+    enum:
+      SNMP_V2: 1
+      SNMP_V3: 3
+    default: SNMP_V2
+    mutable: true

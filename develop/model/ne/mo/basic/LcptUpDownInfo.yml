@@ -1,0 +1,65 @@
+className: LcptUpDownInfo
+tid: 419
+persistence: None
+triggers: [afterGet]
+attributes:
+  - name: multiGroupId
+    attrId: 0
+    type: IPv4Addr
+    mutable: false
+  - name: upPortBw
+    attrId: 1
+    type: WORD32
+    mutable: false
+  - name: neLevel
+    attrId: 2
+    type: WORD32
+    mutable: false
+  - name: totalBwRequire
+    attrId: 3
+    type: WORD32
+    mutable: false
+  - name: upNodeId 
+    attrId: 4
+    type: IPv4Addr
+    mutable: false
+  - name: upNodeAllocBw
+    attrId: 5
+    type: WORD32
+    mutable: false
+  - name: bwChgNodeId 
+    attrId: 6
+    type: IPv4Addr
+    mutable: false
+  - name: bwChgNeLevel
+    attrId: 7
+    type: WORD32
+    mutable: false
+  - name: actualAllocBw
+    attrId: 8
+    type: WORD32
+    mutable: false
+  - name: bwAllocReason
+    attrId: 9
+    type: WORD32
+    mutable: false
+  - name: bwChgType
+    attrId: 10
+    type: WORD32
+    mutable: false
+  - name: reallocTime
+    attrId: 11
+    type: LcptAllocTime
+    mutable: false
+  - name: downStreamInfo
+    attrId: 12
+    type: Set
+    maxItems: 20
+    items:
+      type: LcptDownStreamInfo
+    mutable: false
+  - name: monitorPort
+    attrId: 13
+    type: String
+    maxLength: 60
+    mutable: false

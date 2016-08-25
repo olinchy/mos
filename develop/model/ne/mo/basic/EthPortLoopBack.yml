@@ -1,0 +1,41 @@
+className: EthPortLoopBack
+tid: 545
+triggers: [afterGet]
+persistence: None
+attributes:
+  - name: loopBackType
+    attrId: 0
+    type : EthPortLBTypeEnum
+    default: noLoopBack
+    mutable: true
+  - name: loopBackTime
+    attrId: 0
+    type : WORD32
+    minimum: 60
+    maximum: 600
+    default: 60
+    mutable: true
+  - name: RemainingTime
+    attrId: 0
+    type : WORD32
+    default: 0
+    mutable: true
+actions:
+  customs:
+    - name: SetEthPortLoopBack
+      actionId: 1
+      attributes:
+        - name: loopBackType
+          attrId: 0
+          type: EthPortLBTypeEnum
+          default: noLoopBack
+          mutable: true
+        - name: loopBackTime
+          attrId: 1
+          type: WORD32
+          minimum: 60
+          maximum: 600
+          default: 60
+          mutable: true
+    - name: SetEthPortLoopBackRsp
+      actionId: 101

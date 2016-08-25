@@ -1,0 +1,10 @@
+name: ErpsV2ProtoStateEnum
+type: BYTE
+default: init
+enum:
+  init: 0
+  pending: 1
+  idle: 2
+  manualSwitch: 3
+  protection: 4
+  forceSwitch: 5

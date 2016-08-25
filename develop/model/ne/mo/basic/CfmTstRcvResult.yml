@@ -1,0 +1,49 @@
+className: CfmTstRcvResult
+tid: 351
+triggers: [afterGet]
+persistence: None
+attributes:
+  - name: validResult
+    attrId: 0 
+    type: BYTE
+    minimum: 0
+    maximum: 1
+    default: 0
+    mutable: false
+  - name: sourceMPID
+    attrId: 1 
+    type: WORD16
+    default: 0
+    mutable: false
+  - name: destinationMac
+    attrId: 2
+    type: MacAddr    
+    mutable: false
+  - name: bandWidth
+    attrId: 3 
+    type: WORD32
+    default: 0
+    mutable: false
+  - name: throughPut
+    attrId: 4 
+    type: WORD32
+    default: 0
+    mutable: false  
+  - name: lostFrameNum
+    attrId: 5 
+    type: WORD32
+    default: 0
+    mutable: false
+  - name: startTime
+    attrId: 6 
+    type: Date
+    mutable: false
+  - name: endTime
+    attrId: 7 
+    type: Date
+    mutable: false
+  - name: failInfo
+    attrId: 8
+    type: WORD32
+    default: 0
+    mutable: false

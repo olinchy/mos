@@ -1,0 +1,25 @@
+className: Cfm
+tid: 347 
+triggers: [constraintSet]
+attributes:
+  - name: adminState
+    attrId: 0
+    type: StateEnum
+    default: disable
+    mutable: true 
+  - name: version
+    attrId: 1
+    type: BYTE
+    default: 0
+    mutable: false
+children:
+   - name: MD
+     type: CfmMD
+     id: 1
+     count: 16
+     groupType: map
+     autoCreate: false
+   - name: RunningStateInfo
+     type: CfmRunningStateInfo
+     id: 2
+     autoCreate: true

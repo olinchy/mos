@@ -1,0 +1,18 @@
+className: NR8120ImSyncConfig
+baseClass: ImSyncConfig
+tid: 333
+persistence: None
+override_attributes:
+  - name: neType
+    attrId: 2
+    type: String
+    default: mw.nr8120
+    maxLength: 64
+    mutable: true
+  - name: pollTaskName
+    attrId: 5
+    type: String
+    maxLength: 128
+    default: ZXMW 8120
+    mutable: false
+

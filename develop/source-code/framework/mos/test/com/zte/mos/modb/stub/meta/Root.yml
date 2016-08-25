@@ -1,0 +1,6 @@
+className: Root
+children:
+   - name : Ems
+     id : 1
+     count : 1
+     autoCreate: false

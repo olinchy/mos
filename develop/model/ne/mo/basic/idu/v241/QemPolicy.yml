@@ -1,0 +1,33 @@
+className: QemPolicy
+tid: 322
+attributes:
+  - name: scheduleType
+    attrId: 0
+    type: BYTE
+    enum:
+      SP: 1
+      WRR: 2
+      DRR: 3
+      SPWRR: 4
+      SPDRR: 5
+      WFQ: 6
+      SPWFQ: 7
+    default: SP
+    mutable: true
+  - name: weight
+    attrId: 1
+    type: Array
+    maxItems: 8
+    items:      
+      type: BYTE
+    mutable: true
+  - name: spQueueStart
+    attrId: 2
+    type: BYTE
+    default: 0
+    mutable: true
+  - name: spQueueEnd
+    attrId: 3
+    type: BYTE
+    default: 0
+    mutable: true

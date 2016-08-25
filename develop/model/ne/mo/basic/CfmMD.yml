@@ -1,0 +1,28 @@
+className: CfmMD
+tid: 348
+#maxCount: 16
+triggers: [constraintAdd,afterSet,constraintSet,constraintDel]
+attributes:
+  - name: level
+    attrId: 0
+    type: BYTE
+    minimum: 0
+    maximum: 7
+    default: 0
+    mutable: true
+  - name: nameFormat
+    attrId: 1
+    type: BYTE
+    enum:
+        no_maintenance_domain_name: 1
+        domain_name_based_string: 2
+        character_string: 4
+    default: no_maintenance_domain_name
+    mutable: true
+children:
+   - name: MA
+     type: CfmMA
+     id: 1
+     count: 512
+     groupType: map
+     autoCreate: false

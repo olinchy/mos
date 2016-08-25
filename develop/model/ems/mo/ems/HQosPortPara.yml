@@ -1,0 +1,7 @@
+className: HQosPortPara
+baseClass: DSAttrTemplate
+tid: 7002
+children:
+  - name: HQosL0Para
+    id: 0
+    count: 8

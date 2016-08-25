@@ -1,0 +1,22 @@
+className: VoltageThreshold
+tid: 256
+attributes:
+  - name: powerType
+    attrId: 1
+    type: BYTE
+    enum:
+       dc: 0
+       poe: 1
+       unknown: 255
+    default: dc
+    mutable: true
+  - name: upLimit
+    attrId: 2
+    type: WORD16
+    default: 570
+    mutable: true
+  - name: downLimit
+    attrId: 3
+    type: WORD16
+    default: 380
+    mutable: true

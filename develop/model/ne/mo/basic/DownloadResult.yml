@@ -1,0 +1,34 @@
+className: DownloadResult
+tid: 212
+persistence: None
+dynamic: true
+triggers: [afterGet]
+attributes: 
+  - name: status
+    attrId: 0  
+    type: BYTE
+    enum:
+      init: 0
+      checking: 1
+      checkFail: 2
+      downloading: 3
+      finish: 4
+    default: init
+    mutable: true
+  - name: checkResult
+    attrId: 1
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: progress
+    attrId: 2
+    type: BYTE
+    minimum: 0
+    maximum: 100
+    default: 0
+    mutable: true
+  - name: downloadResult
+    attrId: 3
+    type: WORD32
+    default: 0
+    mutable: true

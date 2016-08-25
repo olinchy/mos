@@ -1,0 +1,6 @@
+name: ErpsV1PortStatusEnum
+type: BYTE
+enum:
+  linkup: 0
+  linkdown: 1
+default: linkup

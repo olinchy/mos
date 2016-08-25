@@ -1,0 +1,12 @@
+className: TdmCascadePort
+tid: 539
+triggers: [afterAdd, atfterDel]
+attributes:
+  - name: cascadePort
+    attrId: 0
+    type: String
+    maxLength: 80
+    mutable: true
+
+
+    

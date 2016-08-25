@@ -1,0 +1,82 @@
+className: RfStatus
+tid: 559
+persistence: None
+triggers: [afterGet]
+attributes: 
+  - name: link
+    attrId: 0
+    type: LinkStatusEnum
+    default: down
+    mutable: true
+  - name: bandWidth
+    attrId: 1
+    type: BandWidthEnum
+    default: ETSI_7M
+    mutable: true
+  - name: modulation
+    attrId: 2
+    type: ModulationEnum
+    default: QPSK
+    mutable: true
+  - name: txPower
+    attrId: 3
+    type: SWORD16   
+    default: -990 
+    mutable: true
+  - name: rxLevel
+    attrId: 4
+    type: SWORD16  
+    default: -1000  
+    mutable: true
+  - name: temp
+    attrId: 5
+    type: BYTE   
+    default: 0   
+    mutable: true
+  - name: mute
+    attrId: 6
+    type: MuteEnum 
+    default: Mute   
+    mutable: true
+  - name: status
+    attrId: 7
+    type: OduStatusEnum 
+    default: fine   
+    mutable: true
+  - name: txFreq
+    attrId: 8
+    type: WORD32 
+    default: 0    
+    mutable: true
+  - name: rxFreq
+    attrId: 9
+    type: WORD32
+    default: 0           
+    mutable: true
+  - name: loopback
+    attrId: 10
+    type: StateEnum
+    default: disable       
+    mutable: true
+  - name: muteTime
+    attrId: 11
+    type: WORD32 
+    default: 10
+    mutable: true
+  - name: loopbackTime
+    attrId: 12
+    type: WORD32 
+    default: 10
+    mutable: true
+  - name: muteRemainingTime
+    attrId: 13
+    type: WORD32 
+    default: 0
+    mutable: true
+  - name: loopbackRemainingTime
+    attrId: 14
+    type: WORD32 
+    default: 0
+    mutable: true
+
+

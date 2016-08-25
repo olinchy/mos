@@ -1,0 +1,23 @@
+className: MacVlan
+tid: 269
+triggers: [constraintAdd]
+attributes:
+  - name: mac
+    attrId: 0
+    type: MacAddr
+    default: "00-11-22-33-0E-03"
+    mutable: true
+  - name: vlanId
+    attrId: 1
+    type: WORD16
+    minimum: 1
+    maximum: 4094
+    default: 100
+    mutable: true
+  - name: priority
+    attrId: 2
+    type: BYTE
+    minimum: 0
+    maximum: 7
+    default: 0
+    mutable: true

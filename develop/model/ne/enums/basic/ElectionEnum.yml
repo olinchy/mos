@@ -1,0 +1,6 @@
+name: ElectionEnum
+type: BYTE
+default: BasedSsm
+enum:
+  BasedPriority: 0
+  BasedSsm: 1

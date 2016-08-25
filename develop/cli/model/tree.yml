@@ -1,0 +1,4 @@
+name: tree
+params:
+  - name : dn
+    type : Dn

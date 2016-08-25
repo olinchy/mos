@@ -1,0 +1,12 @@
+className: TopoModule
+tid: 1015
+attributes:
+  - name: importLinkTaskMutex
+    attrId: 1
+    type: bool
+    default: false
+    mutable: true
+actions:
+  customs:
+    - name: importLinks
+      actionId: 1

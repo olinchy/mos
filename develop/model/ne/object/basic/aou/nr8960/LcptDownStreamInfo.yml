@@ -1,0 +1,23 @@
+className: LcptDownStreamInfo
+attributes:
+  - name: neId
+    attrId: 0
+    type: IPv4Addr
+    mutable: false
+  - name: bwRequire
+    attrId: 1
+    type: WORD32
+    mutable: false
+  - name: allocBw
+    attrId: 2
+    type: WORD32
+    mutable: false
+  - name: isDirectPort
+    attrId: 3
+    type: DirPortEnum
+    mutable: false
+reference:
+  - name: downStreamPortId
+    type: TrafficPort
+    isMulti: false
+    under: DependencyPolicy

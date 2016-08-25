@@ -1,0 +1,24 @@
+className: MAouTrafficUnit
+baseClass: TrafficUnit
+tid: 515
+triggers: [afterAdd, afterSet, recover]
+persistence: None
+attributes:
+  - name: featureList
+    attrId: 0
+    type: FeatureList
+    default: [xpic, xpic2_2, xpic7_14M, airport]
+    mutable: false
+children:
+   - name : LogicAirPort
+     type : MAouLogicAirPort
+     id : 1
+     count : 1
+     autoCreate: true
+
+   - name : EthPort
+     type : PhyPort
+     id : 4
+     count : 1
+     groupType : map
+     autoCreate: {"AIR-0": EthPort_Air}

@@ -1,0 +1,96 @@
+className: BlackWhiteList
+tid: 620
+persistence: None
+#triggers: [beforeAdd, beforeSet, constraintAdd, constraintSet]
+attributes:
+  - name: priority
+    attrId: 0
+    type: WORD16
+    minimum: 1
+    maximum: 32
+    default: 1
+    mutable: true
+  - name: blackWhiteListName
+    attrId: 1
+    type: String
+    maxLength: 10
+    mutable: true
+  - name: listAction
+    attrId: 2
+    type: BlackWhiteListActionEnum
+    default: Permit
+    mutable: true
+  - name: sourceMac
+    attrId: 3
+    type: MacAddr
+    default: "22-22-22-22-22-22"
+    mutable: true 
+  - name: sourceMacMask
+    attrId: 4
+    type: MacAddr
+    default: "FF-FF-FF-FF-FF-FF"
+    mutable: true 
+  - name: sourceMacEnable
+    attrId: 5
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: destinationMac
+    attrId: 6
+    type: MacAddr
+    default: "22-22-22-22-22-22"
+    mutable: true 
+  - name: destinationMacMask
+    attrId: 7
+    type: MacAddr
+    default: "FF-FF-FF-FF-FF-FF"
+    mutable: true 
+  - name: destinationMacEnable
+    attrId: 8
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: vlanId
+    attrId: 9
+    type: WORD16
+    minimum: 1
+    maximum: 4094
+    default: 1
+    mutable: true 
+  - name: vlanIdMask
+    attrId: 10
+    type: WORD16
+    minimum: 0
+    maximum: 4095
+    default: 4095
+    mutable: true 
+  - name: vlanIdEnable
+    attrId: 11
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: etherType
+    attrId: 12
+    type: WORD16
+    minimum: 1
+    maximum: 65535
+    default: 1
+    mutable: true 
+  - name: etherTypeMask
+    attrId: 13
+    type: WORD16
+    minimum: 1
+    maximum: 65535
+    default: 65535
+    mutable: true 
+  - name: etherTypeEnable
+    attrId: 14
+    type: StateEnum
+    default: disable
+    mutable: true
+reference:
+  - name: portId
+    type: TrafficPort
+    isMulti: true
+    maxItems: 24
+    under: ResetPolicyInList

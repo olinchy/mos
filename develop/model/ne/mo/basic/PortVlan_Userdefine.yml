@@ -1,0 +1,53 @@
+className: PortVlan_Userdefine
+baseClass: PortVlan_Details
+tid: 268
+triggers: [afterAdd, constraintAdd, constraintSet,afterSet]
+attributes:
+  - name: vlanTag
+    attrId: 0
+    type: Range
+    default: [[0]]
+    maxItems: 4094
+    mutable: true
+  - name: innerPVID
+    attrId: 1
+    type: WORD16
+    minimum: 1
+    maximum: 4094
+    default: 1
+    mutable: true
+  - name: macVlan
+    attrId: 2
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: TPID
+    attrId: 3
+    type: WORD32
+    enum:
+      8100: 33024
+      88a8: 34984
+      9100: 37120
+      9200: 37376
+    default: 88a8
+    mutable: true
+  - name: vlanFilter
+    attrId: 4
+    type: StateEnum
+    default: enable
+    mutable: true
+  - name: ingressPacketDiscard
+    attrId: 5
+    type: BYTE
+    enum:
+      notDiscard: 0
+      discardUntagPacket: 1
+      discardtagPacket: 2      
+    default: notDiscard
+    mutable: true
+reference:
+  - name: protocolVlan
+    type: ProtocolVlan
+    isMulti: true
+    maxItems: 9
+    under: ConstraintPolicyInList

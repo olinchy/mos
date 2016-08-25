@@ -1,0 +1,12 @@
+className: VlanGroup
+tid: 363
+triggers: [ constraintAdd,constraintDel,constraintSet]
+attributes:
+  - name: vlan
+    attrId: 0
+    type: Range
+    maxItems: 4094
+    items: 
+      type: BYTE   
+    default: [[1]]
+    mutable: true 

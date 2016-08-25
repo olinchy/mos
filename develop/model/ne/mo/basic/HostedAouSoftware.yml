@@ -1,0 +1,15 @@
+className: HostedAouSoftware
+baseClass: Package
+tid: 210
+attributes: 
+  - name: status
+    attrId: 0  
+    type: PackageStatusEnum
+    default: taouCopy
+    mutable: true
+children:
+   - name : PackageFile
+     id : 1
+     groupType : map
+     count : 125
+

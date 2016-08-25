@@ -1,0 +1,53 @@
+className: PmpCes
+tid: 380
+triggers: [afterGet]
+persistence: None
+attributes:
+  - name: date
+    attrId: 0
+    type: Date
+    maxLength: 50
+    mutable: false
+  - name: validFlag
+    attrId: 1 
+    type : PmpValidFlagEnum
+    default: valid
+    mutable: false
+  - name: txCesToEthFrm
+    attrId: 2 
+    type : WORD32
+    mutable: false
+  - name: txPayLoadOcts
+    attrId: 3 
+    type : WORD64
+    mutable: false
+  - name: rxCesToEthFrm
+    attrId: 4 
+    type : WORD32
+    mutable: false
+  - name: rxPayLoadOcts
+    attrId: 5 
+    type : WORD64
+    mutable: false
+  - name: lostFrames
+    attrId: 6 
+    type : WORD32
+    mutable: false
+  - name: rxOutOrderFrm
+    attrId: 7 
+    type : WORD32
+    mutable: false
+  - name: rxFrmMalformed
+    attrId: 8 
+    type : WORD32
+    mutable: false
+  - name: jitterBufOver
+    attrId: 9 
+    type : WORD32
+    mutable: false
+actions:
+  customs:
+    - name: Clear
+      actionId: 1
+    - name: ClearRsp
+      actionId: 101

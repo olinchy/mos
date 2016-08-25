@@ -1,0 +1,12 @@
+className: GroupLink
+baseClass: LVlink
+tid: 50
+reference:
+   - name: aEnd
+     type: String
+   - name: zEnd
+     type: String
+   - name: childrenLink
+     type: LogicalLink
+     isMulti: true
+ 

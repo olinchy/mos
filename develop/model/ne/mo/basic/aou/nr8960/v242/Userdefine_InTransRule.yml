@@ -1,0 +1,48 @@
+className: Userdefine_InTransRule
+tid: 309
+triggers: [constraintAdd, constraintDel]
+attributes:
+  - name: ruleName
+    attrId: 0
+    type: String
+    maxLength: 9
+    mutable: true
+  - name: layer
+    attrId: 1
+    type: BYTE
+    enum:
+      inner: 0
+      outer: 1
+    default: inner
+    mutable: true
+  - name: oldVlan
+    attrId: 2
+    type: WORD16
+    minimum: 1
+    maximum: 4094
+    default: 1
+    mutable: true
+  - name: newSVlan
+    attrId: 3
+    type: WORD16
+    minimum: 1
+    maximum: 4094
+    default: 1
+    mutable: true
+  - name: newCVlan
+    attrId: 4
+    type: WORD16
+    minimum: 1
+    maximum: 4094
+    default: 1
+    mutable: true
+reference:
+  - name: transActId
+    type: Userdefine_InTransAct
+    isMulti: false
+    under: DependencyPolicy
+  - name: portId
+    type: PortVlan_Details
+    isMulti: true
+    maxItems: 30
+    under: ResetPolicyInList

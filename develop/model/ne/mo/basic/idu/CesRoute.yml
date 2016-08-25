@@ -1,0 +1,154 @@
+className: CesRoute
+triggers: [afterGet]
+tid: 103
+attributes:
+  - name: srcPortType
+    attrId: 0
+    type: PortTypeEnum   
+    default: E1    
+    mutable: true
+  - name: srcPortNo
+    attrId: 1
+    type: WORD16
+    minimum: 1
+    maximum: 16 
+    mutable: true
+  - name: dstPortType
+    attrId: 2
+    type: PortTypeEnum
+    default: E1   
+    mutable: true
+  - name: dstPortNo
+    attrId: 3
+    type: WORD16
+    minimum: 1
+    maximum: 16 
+    mutable: true
+  - name: srcRack
+    attrId: 4
+    type: BYTE
+    minimum: 1
+    maximum: 1
+    default: 1
+    mutable: true
+  - name: srcShelf
+    attrId: 5
+    type: BYTE
+    minimum: 1
+    maximum: 2
+    default: 1
+    mutable: true
+  - name: srcTraffUnit
+    attrId: 6
+    type: BYTE
+    minimum: 2
+    maximum: 8
+    mutable: true
+  - name: srcSlotIndex
+    attrId: 7
+    type: BYTE
+    minimum: 0
+    maximum: 63
+    default: 0
+    mutable: true
+  - name: dstSlotIndex
+    attrId: 8
+    type: BYTE
+    minimum: 0
+    maximum: 63
+    default: 0
+    mutable: true
+  - name: dstMacAddr
+    attrId: 9
+    type: Array
+    maxItems: 6
+    items:
+      type: BYTE
+      default: 0
+    mutable: true
+  - name: e1Type
+    attrId: 10
+    type: CesE1TypeEnum
+    default: Unframe
+    mutable: true
+  - name: encapType
+    attrId: 11
+    type: CesEncapTypeEnum
+    default: StructureAgnostic
+    mutable: true
+  - name: clkRecoverMode
+    attrId: 12
+    type: CesClkRecoverModeEnum
+    default: ACR
+    mutable: true
+  - name: rtpEnable
+    attrId: 13
+    type: BYTE
+    enum:
+      Disable: 0
+      Enable: 1 
+    default: Disable
+    mutable: true
+  - name: activeFlag
+    attrId: 14
+    type: ActiveFlagEnum
+    default: inactive
+    mutable: true
+  - name: packetLatency
+    attrId: 15
+    type: WORD16
+    minimum: 125
+    maximum: 8000
+    step: 125
+    default: 125
+    mutable: true
+  - name: jitterBufferSize
+    attrId: 16
+    type: WORD16
+    minimum: 500
+    maximum: 32000
+    step: 250
+    default: 500
+    mutable: true
+  - name: cVlanId
+    attrId: 17
+    type: WORD16
+    minimum: 1
+    maximum: 2047
+    default: 1
+    mutable: true
+  - name: e1TimeSlotMap
+    attrId: 18
+    type: WORD32
+    minimum: 0
+    maximum: 0xFFFFFFFF
+    default: 0xFFFFFFFE
+    mutable: true
+  - name: desc
+    attrId: 19
+    type: String
+    maxLength: 52
+    mutable: true
+  - name: dstMode
+    attrId: 20
+    type: CesDstModeEnum    
+    default: ipMode
+    mutable: true
+  - name: dstIpAddr
+    attrId: 21
+    type: WORD32
+    minimum: 0
+    maximum: 4294967295
+    default: 0
+    mutable: true
+  - name: dstTraffUnit
+    attrId: 22
+    type: BYTE
+    minimum: 0
+    maximum: 8
+    mutable: true
+children:
+   - name : PmpCes
+     id : 1
+     count : 1
+     autoCreate: true    

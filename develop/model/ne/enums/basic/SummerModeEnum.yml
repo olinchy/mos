@@ -1,0 +1,6 @@
+name: SummerModeEnum
+type: BYTE
+default: Ordinary_Mode
+enum:
+  Ordinary_Mode: 1
+  Euro_Mode: 2 

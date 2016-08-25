@@ -1,0 +1,11 @@
+className: OduType
+tid: 553
+attributes:
+  - name: oduType
+    attrId: 0
+    type: BYTE
+    minimum: 0
+    maximum: 3
+    default: 0
+    mutable: false
+

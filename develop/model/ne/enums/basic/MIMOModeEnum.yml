@@ -1,0 +1,7 @@
+name: MIMOModeEnum
+type: BYTE
+default: auto
+enum:
+    auto: 0
+    manual: 1
+    force: 2

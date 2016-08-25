@@ -1,0 +1,26 @@
+className: Tunnel
+isAbstract: True
+tid: 6002
+attributes: 
+  - name: creator
+    attrId: 1
+    type: String
+    mutable: true
+    maxLength: 30
+  - name: createDate
+    attrId: 2
+    type: Date
+    mutable: false
+  - name: userLabel
+    attrId: 3
+    type: String
+    mutable: true
+    maxLength: 255
+  - name: consistentState
+    attrId: 4
+    type: ConsistentStateEnum
+    default: consistent
+    mutable: true
+
+
+

@@ -1,0 +1,9 @@
+name: SncpPathStatusEnum
+type: BYTE
+default: na
+enum:
+  connection: 0
+  disconnection: 1
+  holdoff: 2
+  holdon: 3
+  na: 4

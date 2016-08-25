@@ -1,0 +1,23 @@
+className: Inventory
+tid: 191
+persistence: None
+children:
+  - name : MultiMacAddr
+    id : 1
+    count : 1
+    autoCreate: true
+  - name : BoardInventory
+    id : 2
+    count : 1
+    autoCreate : true
+  - name: OptInventory
+    id: 3
+    count: 1
+    autoCreate: true
+actions:
+  customs:
+    - name: queryInventory
+      actionId: 1
+    - name: queryInventoryRsp
+      actionId: 101
+

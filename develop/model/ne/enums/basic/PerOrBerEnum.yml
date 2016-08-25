@@ -1,0 +1,6 @@
+name: PerOrBerEnum
+type: BYTE
+default: perv
+enum:
+  berv: 0
+  perv: 1

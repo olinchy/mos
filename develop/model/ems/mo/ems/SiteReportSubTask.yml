@@ -1,0 +1,118 @@
+className: SiteReportSubTask
+tid: 100410
+attributes:
+  - name: type
+    attrId: 1
+    type: String
+    maxLength: 52
+    default: subTask
+    mutable: true
+
+  - name: neid
+    attrId: 2
+    type: WORD32
+    default: 0
+    mutable: true
+
+  - name: createtime
+    attrId: 3
+    type: WORD32
+    default: 0
+    mutable: true
+
+  - name: starttime
+    attrId: 4
+    type: WORD32
+    default: 0
+    mutable: true
+
+  - name: finishtime
+    attrId: 5
+    type: WORD32
+    default: 0
+    mutable: true
+
+  - name: status
+    attrId: 6
+    type: BYTE
+    enum:
+      Ready: 0
+      Running: 1      
+      Finish: 2
+      Block: 3
+    default: Ready
+    mutable: true
+
+  - name: result
+    attrId: 7
+    type: BYTE
+    enum:
+      Success: 1      
+      Failed: 2
+      Timeout: 3
+      Canceled: 4
+      Executing: 5
+    default: Executing
+    mutable: true
+
+  - name: errorcode
+    attrId: 8
+    type: String
+    maxLength: 52
+    mutable: true
+
+  - name: errormessage
+    attrId: 9
+    type: String
+    maxLength: 52
+    mutable: true
+
+  - name: timeout
+    attrId: 10
+    type: WORD16
+    default: 0
+    mutable: true
+
+  - name: priority
+    attrId: 11
+    type: BYTE
+    default: 0
+    mutable: true
+
+  - name: progress
+    attrId: 12
+    type: BYTE
+    default: 0
+    mutable: true
+
+  - name: tasktype
+    attrId: 13
+    type: String
+    maxLength: 50
+    default: SiteReport
+    mutable: true
+
+  - name: neip
+    attrId: 14
+    type: IPv4Addr
+    default: 127.0.0.1
+    mutable: true
+
+  - name: nename
+    attrId: 15
+    type: String
+    maxLength: 50
+    mutable: true
+
+reference:
+  - name: parentTask
+    type: SiteReportSuperTask
+    isMulti: false
+
+  - name: taskPara
+    type: SiteReportTaskPara
+    isMulti: false
+
+
+
+

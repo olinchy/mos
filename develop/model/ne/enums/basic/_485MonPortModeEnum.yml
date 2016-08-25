@@ -1,0 +1,6 @@
+name: _485MonPortModeEnum
+type: BYTE
+default: Duplex
+enum:
+  Duplex: 0
+  HalfDuplex: 1

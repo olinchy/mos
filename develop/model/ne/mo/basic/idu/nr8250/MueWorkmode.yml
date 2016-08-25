@@ -1,0 +1,35 @@
+className: MueWorkmode
+baseClass: Workmode
+tid: 536
+triggers: [constraintSet, afterSet]
+attributes:
+  - name: bandwidth
+    attrId: 0
+    type: ETSIBandWidthEnum
+    default: ETSI_7M
+    mutable: true
+  - name: modulation
+    attrId: 1
+    type: Qam256ModulationEnum
+    default: QPSK
+    mutable: true
+  - name: codingType
+    attrId: 2
+    type: CodingTypeEnum
+    default: normal
+    mutable: false
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

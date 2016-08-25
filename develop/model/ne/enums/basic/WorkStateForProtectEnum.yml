@@ -1,0 +1,6 @@
+name: WorkStateForProtectEnum
+type: BYTE
+default: MASTER
+enum:
+    MASTER: 0
+    SLAVE: 1

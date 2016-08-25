@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<project>
+  <modules root="testcases">   
+    <!--module name="Persistence" filePath="persistence/Persistence.py"/-->
+    <module name="transTest" filePath="casemodel/testcase.yml"/>
+  
+  </modules>
+  <config>
+    <devices>
+      <device id="1" type="NE" port="8080"/>
+    </devices>
+    <clis>
+      <cli name="cli1" address="http://127.0.0.1:8080" dnPrefix=""/>   
+      <cli name="cli2" address="http://127.0.0.1:8080" dnPrefix=""/>  
+    </clis>
+    <failureconfig failurePolicy="stopOnFailure"/>
+    <logconfig stdLevel="INFO" fileLevel="INFO" />
+    <pressureconfig ispressure="yes" repetition="1" /> 
+  </config>
+</project>

@@ -1,0 +1,140 @@
+className: NEAlarm
+tid: 257
+persistence: None
+children:
+  - name : FilterRule
+    id : 1
+    count : 100
+    autoCreate: false
+  - name : VoltageThreshold
+    id : 2
+    count : 1
+    autoCreate: true
+  - name : CpuThreshold
+    id : 3
+    count : 1
+    autoCreate: True
+actions:
+  customs:
+    - name: Query
+      actionId: 1
+      attributes:
+        - name: type
+          attrId: 0
+          type: BYTE
+          enum:
+            history: 1
+            event: 2
+            current: 3
+          default: current
+          mutable: true
+    - name: QueryRsp
+      actionId: 101
+      attributes:
+        - name: fileName
+          attrId: 1
+          type: String
+          maxLength: 100
+          mutable: true
+    - name: Clear
+      actionId: 2
+      attributes:
+        - name: type
+          attrId: 1
+          type: BYTE
+          enum:
+            history: 1
+            event: 2
+          default: history
+          mutable: true
+    - name: ClearRsp
+      actionId: 102
+    - name: SyncAlarmFile
+      actionId: 3
+      attributes:
+        - name: serverAddr
+          attrId: 1  
+          type: String
+          maxLength: 128
+          mutable: true
+        - name: userName
+          attrId: 2  
+          type: String
+          maxLength: 128
+          mutable: true
+        - name: passWord
+          attrId: 3  
+          type: String
+          maxLength: 128
+          mutable: true
+        - name: fileName
+          attrId: 4  
+          type: String
+          maxLength: 128
+          mutable: true
+        - name: port
+          attrId: 5  
+          type: WORD32
+          mutable: true
+        - name: type
+          attrId: 6  
+          type: BYTE
+          enum:
+            history: 1
+            current: 3
+          default: current
+          mutable: true
+        - name: seq
+          attrId: 7  
+          type: WORD16
+          mutable: true
+    - name: SyncAlarmFileRsp
+      actionId: 103
+      attributes:
+        - name: result
+          attrId: 0  
+          type: WORD32
+          mutable: true
+    - name: QueryAlarmLevel
+      actionId: 4
+      attributes:
+        - name: alarmCode
+          attrId: 0  
+          type: WORD32
+          mutable: true
+    - name: QueryAlarmLevelRsp
+      actionId: 104
+      attributes:
+        - name: alarmLevel
+          attrId: 0  
+          type: AlarmLevelEnum
+          default: Critical
+          mutable: true
+    - name: QueryAlarmNum
+      actionId: 5
+      attributes:
+        - name: slot
+          attrId: 0  
+          type: BYTE
+          mutable: true
+    - name: QueryAlarmNumRsp
+      actionId: 105
+      attributes:
+        - name: alarmNum
+          attrId: 0  
+          type: Array
+          maxItems: 4
+          items:
+            type: WORD16
+            default: 0
+          mutable: true
+    - name: GetFilterRules
+      actionId: 6
+    - name: GetFilterRulesRsp
+      actionId: 106
+      attributes:
+        - name: result
+          attrId: 0  
+          type: WORD32
+          mutable: true
+

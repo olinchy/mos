@@ -1,0 +1,75 @@
+className: ClkGlobal
+tid: 391
+triggers: [constraintSet]
+attributes:
+  - name: globalSyncMode
+    attrId: 0
+    type: ClkSyncModeEnum
+    default: FreqSync
+    mutable: true
+  - name: ppsSyncMode
+    attrId: 1
+    type: ClkSyncModeEnum
+    default: FreqSync
+    mutable: true
+  - name: ptpSyncMode
+    attrId: 2
+    type: ClkSyncModeEnum
+    default: FreqSync
+    mutable: true
+  - name: airSyncMode
+    attrId: 3
+    type: ClkSyncModeEnum
+    default: FreqSync
+    mutable: false
+  - name: selectSchem
+    attrId: 4
+    type: ElectionEnum
+    default: BasedPriority
+    mutable: true
+  - name: protectMode
+    attrId: 5
+    type: ClkProtModeEnum
+    default: Optimal
+    mutable: true
+  - name: wtr
+    attrId: 6
+    type: BYTE
+    minimum: 1
+    maximum: 12
+    default: 5
+    mutable: true
+  - name: bitsOutState
+    attrId: 7
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: bitsWorkMode
+    attrId: 8
+    type: BitsWorkModeEnum
+    default: 2Mbps
+    mutable: true
+  - name: ppsOutState
+    attrId: 9
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: todProtocol
+    attrId: 10
+    type: TodProtocolEnum
+    default: China_Mobile
+    mutable: true
+  - name: holdoffTime
+    attrId: 11
+    type: BYTE
+    minimum: 5
+    maximum: 20
+    default: 10
+    mutable: true
+children:
+  - name: ClkSource
+    id: 1
+    count: 11
+    autoCreate: false
+
+    

@@ -1,0 +1,120 @@
+className: CAR
+tid: 258
+#triggers: [constraintAdd]
+attributes:
+  - name: carName
+    attrId: 0
+    type: String
+    maxLength: 10
+    mutable: true
+  - name: colorMode
+    attrId: 1
+    type: BYTE
+    enum:
+      colorBlind: 1
+      colorAware: 2
+    default: colorBlind
+    mutable: true
+  - name: cir
+    attrId: 2
+    type: WORD32
+    minimum: 0
+    maximum: 10000000
+    default: 0
+    mutable: true
+  - name: pir
+    attrId: 3
+    type: WORD32
+    minimum: 0
+    maximum: 10000000
+    default: 0
+    mutable: true
+  - name: cbs
+    attrId: 4
+    type: WORD32
+    minimum: 0
+    maximum: 1000000
+    default: 1000
+    mutable: true
+  - name: pbs
+    attrId: 5
+    type: WORD32
+    minimum: 0
+    maximum: 1000000
+    default: 1000
+    mutable: true
+  - name: redPacketProcessMethod
+    attrId: 6
+    type: BYTE
+    enum:
+      forward: 1
+      remark: 2
+      discard: 3
+    default: forward
+    mutable: true
+  - name: yellowPacketProcessMethod
+    attrId: 7
+    type: BYTE
+    enum:
+      forward: 1
+      remark: 2
+      discard: 3
+    default: forward
+    mutable: true
+  - name: greenPacketProcessMethod
+    attrId: 8
+    type: BYTE
+    enum:
+      forward: 1
+      remark: 2
+      discard: 3
+    default: forward
+    mutable: true
+  - name: redRmkCos
+    attrId: 9
+    type: CosEnum
+    default: BE
+    mutable: true
+  - name: redRmkClr
+    attrId: 10
+    type: BYTE
+    enum:
+      green: 0
+      yellow: 1
+      red: 2
+    default: green
+    mutable: true
+  - name: yellowRmkCos
+    attrId: 11
+    type: CosEnum
+    default: BE
+    mutable: true
+  - name: yellowRmkClr
+    attrId: 12
+    type: BYTE
+    enum:
+      green: 0
+      yellow: 1
+      red: 2
+    default: green
+    mutable: true
+  - name: greenRmkCos
+    attrId: 13
+    type: CosEnum
+    default: BE
+    mutable: true
+  - name: greenRmkClr
+    attrId: 14
+    type: BYTE
+    enum:
+      green: 0
+      yellow: 1
+      red: 2
+    default: green
+    mutable: true
+  - name: coupleFlag
+    attrId: 15
+    type: BYTE
+    mutable: true
+
+

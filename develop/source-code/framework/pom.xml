@@ -1,0 +1,31 @@
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.zte.mos.framework</groupId>
+    <artifactId>framework-parent</artifactId>
+    <packaging>pom</packaging>
+    <parent>
+        <groupId>com.zte.mos</groupId>
+        <artifactId>parent</artifactId>
+        <version>1.2</version>
+    </parent>
+    <name>framework-parent</name>
+
+    <modules>
+        <module>mos</module>
+        <module>mos_daemon</module>
+        <module>mos_domain</module>
+        <module>mos_container</module>
+        <module>msg-framework</module>
+        <module>rpc-http</module>
+        <module>restful-http</module>
+        <module>snmp</module>
+        <module>concept_model</module>
+        <module>ems_domain</module>
+        <module>debugenv_in_ems</module>
+        <module>debugenv_in_simulator</module>
+        <module>task-framework</module>
+        <module>services-access</module>
+    </modules>
+</project>

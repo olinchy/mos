@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.zte.mos.tools</groupId>
+    <artifactId>tools-parent</artifactId>
+    <packaging>pom</packaging>
+    <parent>
+        <groupId>com.zte.mos</groupId>
+        <artifactId>parent</artifactId>
+        <version>1.2</version>
+    </parent>
+    <name>tools-parent</name>
+    <modules>
+        <module>expressions</module>
+        <module>jsonrpc4j-master</module>
+        <module>mos_java_util</module>
+        <module>mos_persistent</module>
+        <module>odb_java</module>
+        <module>swing-lib</module>
+        <module>mos_inf</module>
+        <module>message-shower</module>
+        <module>mos-process-daemon</module>
+        <module>ems-process-daemon</module>
+        <module>smart_link</module>
+        <module>daemon</module>
+        <module>ueplogger</module>
+        <module>standalone_logger</module>
+        <module>mo_binder</module>
+        <module>monitor</module>
+        <module>logging_service</module>
+    </modules>
+</project>

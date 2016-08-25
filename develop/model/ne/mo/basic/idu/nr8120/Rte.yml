@@ -1,0 +1,6 @@
+className: Rte
+baseClass: Board
+tid: 301
+isAbstract: True
+persistence: None
+

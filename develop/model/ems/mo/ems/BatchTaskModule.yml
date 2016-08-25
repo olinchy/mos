@@ -1,0 +1,15 @@
+className: BatchTaskModule
+tid: 1004
+attributes:
+  - name: taskgroupcount
+    attrId: 1
+    type: WORD16
+    default: 1
+    mutable: true
+children:
+   - name : CmTaskGroup
+     id : 1
+     count : 1000
+     autoCreate: false
+  
+

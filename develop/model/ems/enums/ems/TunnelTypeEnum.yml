@@ -1,0 +1,5 @@
+name: TunnelTypeEnum
+type: BYTE
+enum:
+   QinQ: 0
+

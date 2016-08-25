@@ -1,0 +1,10 @@
+name: VlanTypeEnum
+type: BYTE
+default: ACCESS
+enum:
+  ACCESS: 0
+  TRUNK: 1
+  HYBRID: 2
+  CUSTOMER: 3
+  PROVIDER: 4
+  USERDEFINE: 5

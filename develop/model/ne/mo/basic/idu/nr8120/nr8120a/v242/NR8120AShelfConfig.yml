@@ -1,0 +1,13 @@
+className: NR8120AShelfConfig
+baseClass: ShelfConfig
+tid: 168
+triggers: [afterGet,afterSet]
+attributes:
+  - name: CurCfgScene
+    attrId: 0
+    type: BYTE
+    enum:
+      OneAirPort: 0
+    default: OneAirPort
+    mutable: false
+

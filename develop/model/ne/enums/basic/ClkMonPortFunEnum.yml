@@ -1,0 +1,6 @@
+name: ClkMonPortFunEnum
+type: BYTE
+default: Clk
+enum:
+  Clk: 0
+  Mon: 1

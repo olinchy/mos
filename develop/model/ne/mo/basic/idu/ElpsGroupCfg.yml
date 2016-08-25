@@ -1,0 +1,97 @@
+className: ElpsGroupCfg
+tid: 606
+#triggers: [constraintAdd,constraintDel]
+persistence: All
+attributes:
+  - name: tunnelVlanID
+    attrId: 0
+    type: WORD16
+    minimum: 1
+    maximum: 4094
+    default: 1
+    mutable: true
+  - name: revertType
+    attrId: 1
+    type: BYTE
+    enum:
+        NonRevertive: 0
+        Revertive: 1
+    default: Revertive
+    mutable: true
+  - name: holdoffTimer
+    attrId: 2
+    type: WORD16
+    minimum: 0
+    maximum: 100
+    default: 0
+    mutable: true
+  - name: WTRTimer
+    attrId: 3
+    type: WORD16
+    minimum: 5
+    maximum: 12
+    default: 5
+    mutable: true
+  - name: workMPID
+    attrId: 4
+    type: WORD16
+    minimum: 1
+    maximum: 8191
+    default: 1
+    mutable: true
+  - name: protectMPID
+    attrId: 5
+    type: WORD16
+    minimum: 1
+    maximum: 8190
+    default: 1
+    mutable: true
+  - name: workMDName
+    attrId: 6
+    type: String
+    maxLength: 7
+    mutable: false
+  - name: protectMDName
+    attrId: 7
+    type: String
+    maxLength: 7
+    mutable: false
+  - name: workMAName
+    attrId: 8
+    type: String
+    maxLength: 10
+    mutable: false
+  - name: protectMAName
+    attrId: 9
+    type: String
+    maxLength: 10
+    mutable: false
+reference:
+  - name: workPortID
+    type: TrafficPort
+    isMulti: false
+    under: DependencyPolicy
+  - name: protectPortID
+    type: TrafficPort
+    isMulti: false
+    under: DependencyPolicy
+child:
+  - name: GroupStateInfo
+    type: ElpsGroupStateInfo
+    id: 1
+    autoCreate: true
+  - name: ElpsDI
+    id: 1
+    autoCreate: true
+actions:
+  customs:
+    - name: GroupCtrlCmd
+      actionId: 1
+      attributes:
+        - name: cmd
+          attrId: 0
+          type: ElpsMaintenceCmdEnum
+          default: Clear
+          mutable: true
+    - name: GroupCtrlCmdRsp
+      actionId: 101

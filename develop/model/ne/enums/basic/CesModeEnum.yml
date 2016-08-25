@@ -1,0 +1,6 @@
+name: CesModeEnum
+type: BYTE
+default: ces
+enum:
+  ces: 0
+  native: 1

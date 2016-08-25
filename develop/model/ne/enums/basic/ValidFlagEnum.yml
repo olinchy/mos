@@ -1,0 +1,6 @@
+name: ValidFlagEnum
+type: BYTE
+default: invalid
+enum:
+  invalid: 0
+  valid: 1

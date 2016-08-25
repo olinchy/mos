@@ -1,0 +1,44 @@
+className: HQOSL2Object
+attributes:
+  - name: scheduleType
+    attrId: 0      
+    type: BYTE
+    enum:
+      SP: 1
+      DWRR: 2
+      WRR: 3
+      WFQ: 4
+    default: SP
+    mutable: true
+  - name: weight
+    attrId: 1
+    type: BYTE
+    minimum: 1
+    maximum: 127
+    default: 10
+    mutable: true
+  - name: CIR
+    attrId: 2
+    type: WORD32
+    minimum: 0
+    maximum: 10000000
+    default: 0
+    mutable: true
+  - name: PIR
+    attrId: 3
+    type: WORD32
+    minimum: 0
+    maximum: 10000000
+    default: 0
+    mutable: true
+  - name: queueLen
+    attrId: 4
+    type: WORD16
+    default: 1100
+    mutable: false
+reference:
+  - name: dropProfileID
+    type: DropProfile
+    under: ConstraintPolicy
+    default: /DropProfile/1
+    isMulti: false

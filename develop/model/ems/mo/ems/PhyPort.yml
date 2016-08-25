@@ -1,0 +1,9 @@
+className: PhyPort
+tid: 2430000
+attributes:    
+  - name: id
+    attrId: 0
+    type: String
+    maxLength: 100
+    mutable: false
+

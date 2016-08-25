@@ -1,0 +1,44 @@
+className: LogicalNode
+tid: 2
+attributes:
+  - name: displayName
+    attrId: 1
+    type: String
+    maxLength: 256
+    mutable: true
+  - name: nodeType
+    attrId: 2
+    type: BYTE
+    enum:
+      ems: 0      
+      ne: 1
+      aougroup: 2
+      trunk: 3      
+      pla88back: 4
+      mimo: 5
+      mimopla: 6
+      transparent: 10
+    default: ne
+    mutable: true
+  - name: aouProtLinkNormal
+    attrId: 1
+    type: String
+    maxLength: 256
+    mutable: true
+  - name: aouMaster
+    attrId: 1
+    type: String
+    maxLength: 256
+    mutable: true
+reference:
+  - name: nes
+    type: Ne
+    isMulti: true
+    under: LVDependencyPolicy
+  - name: belongTo
+    type: GroupNode
+children:
+  - name: ports
+    id: 1
+    count: 50
+    type: LogicalPort

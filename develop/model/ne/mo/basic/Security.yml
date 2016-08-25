@@ -1,0 +1,20 @@
+className: Security
+tid: 184
+persistence: None
+children:
+  - name : UserCfg
+    id : 1
+    count : 1
+    autoCreate : True
+  - name : SnmpCfg
+    id : 2
+    count : 1
+    autoCreate : True
+  - name : SecurityCfg
+    id : 3
+    count : 1
+    autoCreate : True
+  - name: Radius
+    id: 4
+    count: 1
+    autoCreate: True

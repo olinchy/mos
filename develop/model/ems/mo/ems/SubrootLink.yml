@@ -1,0 +1,8 @@
+className: SubrootLink
+baseClass: PhysicalLink
+tid: 53
+reference:
+  - name: aEnd
+    type: PhyPort
+  - name: zEnd
+    type: PhyPort

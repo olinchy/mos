@@ -1,0 +1,34 @@
+className: HQOSPortNode
+tid: 315
+isAbstract : True
+attributes:
+  - name: qosMode
+    attrId: 1
+    type: BYTE
+    enum:
+      vlan: 0
+      sVlan: 1
+      userDefine: 2
+      default: 3
+    default: default
+    mutable: true
+  - name: attached
+    attrId: 2
+    type: BYTE
+    enum:
+      detach: 0
+      attach: 1
+    default: attach
+    mutable: true
+  - name: scheduleType
+    attrId: 3
+    type: BYTE
+    enum:
+      SPDWRR: 1
+      SPWRR: 2
+      SPWFQ: 3
+    default: SPWRR
+    mutable: true
+  - name: nodeId
+    attrId: 4
+    type: WORD32

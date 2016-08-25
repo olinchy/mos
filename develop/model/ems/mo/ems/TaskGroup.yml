@@ -1,0 +1,132 @@
+className: TaskGroup
+tid: 10041
+attributes:
+  - name: taskcount
+    attrId: 1
+    type: WORD16
+    default: 0
+    mutable: true
+
+  - name: successcount
+    attrId: 2
+    type: WORD16
+    default: 0
+    mutable: true
+
+  - name: failedcount
+    attrId: 3
+    type: WORD16
+    default: 0
+    mutable: true
+
+  - name: timeoutcount
+    attrId: 4
+    type: WORD16
+    default: 0
+    mutable: true
+
+  - name: canceledcount
+    attrId: 5
+    type: WORD16
+    default: 0
+    mutable: true
+
+  - name: status
+    attrId: 6
+    type: BYTE
+    enum:
+      ready: 0
+      running: 1      
+      finish: 2
+    default: ready
+    mutable: true
+
+  - name: result
+    attrId: 7
+    type: BYTE
+    enum:
+      success: 1      
+      failed: 2
+      timeout: 3
+      canceled: 4
+    default: success
+    mutable: true
+
+  - name: errormessage
+    attrId: 8
+    type: String
+    maxLength: 52
+    mutable: true
+
+  - name: createtime
+    attrId: 9
+    type: WORD32
+    default: 0
+    mutable: true
+
+  - name: starttime
+    attrId: 10
+    type: WORD32
+    default: 0
+    mutable: true
+
+  - name: finishtime
+    attrId: 11
+    type: WORD32
+    default: 0
+    mutable: true
+
+  - name: username
+    attrId: 12
+    type: String
+    maxLength: 50
+    mutable: true
+
+  - name: userip
+    attrId: 13
+    type: String
+    maxLength: 50
+    mutable: true
+
+  - name: type
+    attrId: 14
+    type: BYTE
+    enum:
+      download: 1      
+      activate: 2
+      rollback: 3
+      delete: 4
+      switch: 5
+      deactivate: 6
+    default: download
+    mutable: false
+
+  - name: packagetype
+    attrId: 15
+    type: VersionPkgTypeEnum
+    default: SOFTWARE
+    mutable: true
+
+  - name: rootmode
+    attrId: 16
+    type: bool
+    default: false
+    mutable: true
+
+  - name: reversible
+    attrId: 17
+    type: bool
+    default: false
+    mutable: true
+
+reference:
+  - name: relativeTaskGroup
+    type: TaskGroup
+    isMulti: false
+
+children:
+   - name : Task
+     id : 1
+     count : 1000
+     autoCreate: false
+

@@ -1,0 +1,7 @@
+name: ScStopBitEnum
+type: BYTE
+enum:
+  1_bit: 0
+  1_half_bit: 1
+  2_bit: 2
+

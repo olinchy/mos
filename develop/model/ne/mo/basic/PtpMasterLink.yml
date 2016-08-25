@@ -1,0 +1,93 @@
+className: PtpMasterLink
+tid: 395
+triggers: [afterGet]
+persistence: None
+attributes:
+  - name: inUse
+    attrId: 0
+    type: bool
+    mutable: true
+  - name: localPortNo
+    attrId: 1
+    type: WORD32
+    minimum: 1
+    maximum: 16
+    mutable: true
+  - name: remoteNodeClockId
+    attrId: 2
+    type: Array
+    maxItems: 8
+    items:
+      type: BYTE
+    mutable: true
+  - name: gmClockId
+    attrId: 3
+    type: Array
+    maxItems: 8
+    items:
+      type: BYTE
+    mutable: true
+  - name: gmPriority1
+    attrId: 4
+    type: BYTE
+    minimum: 0
+    maximum: 255
+    mutable: true
+  - name: gmPriority2
+    attrId: 5
+    type: WORD16
+    minimum: 0
+    maximum: 255
+    mutable: true
+  - name: gmClkAccuracy
+    attrId: 6
+    type: BYTE
+    minimum: 0
+    maximum: 255
+    mutable: true
+  - name: gmClkClass
+    attrId: 7
+    type: BYTE
+    minimum: 0
+    maximum: 255
+    mutable: true
+  - name: offsetScaledLogVariance
+    attrId: 8
+    type: WORD16
+    minimum: 0
+    maximum: 65535
+    mutable: true
+  - name: freqTraceable
+    attrId: 9
+    type: BYTE
+    minimum: 0
+    maximum: 255
+    mutable: true
+  - name: timeTraceable
+    attrId: 10
+    type: BYTE
+    minimum: 0
+    maximum: 255
+    mutable: true
+  - name: stepsRemoved
+    attrId: 11
+    type: WORD16
+    minimum: 0
+    maximum: 65535
+    mutable: true
+  - name: recvPortNum
+    attrId: 12
+    type: WORD32
+    mutable: true
+  - name: recvMasterInfoFlag
+    attrId: 13
+    type: ValidFlagEnum   
+    default: invalid
+    mutable: true
+  - name: remoteNodePortNo
+    attrId: 14
+    type: WORD32
+    minimum: 1
+    maximum: 16
+    mutable: true
+    

@@ -1,0 +1,10 @@
+name: ETSI112MBandWidthEnum
+type: BYTE
+default: ETSI_7M
+enum:
+    ETSI_7M: 1
+    ETSI_14M: 2
+    ETSI_28M: 3
+    ETSI_56M: 4
+    ETSI_40M: 10
+    ETSI_112M: 12

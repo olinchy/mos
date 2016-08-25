@@ -1,0 +1,57 @@
+className: PmpEnvInfo
+tid: 379
+triggers: [afterGet]
+persistence: None
+attributes: 
+  - name: date
+    attrId: 0
+    type: Date
+    maxLength: 50
+    mutable: false
+  - name: validFlag
+    attrId: 1
+    type: PmpValidFlagEnum
+    default: valid
+    mutable: false
+  - name: maxTemperature
+    attrId: 2
+    type: SWORD32
+    mutable: false
+  - name: minTemperature
+    attrId: 3
+    type: SWORD32
+    mutable: false
+  - name: avgTemperature
+    attrId: 4
+    type: SWORD32
+    mutable: false
+  - name: maxCpuCost
+    attrId: 5
+    type: WORD32
+    mutable: false
+  - name: minCpuCost
+    attrId: 6
+    type: WORD32
+    mutable: false
+  - name: avgCpuCost
+    attrId: 7
+    type: WORD32
+    mutable: false
+  - name: maxMemCost
+    attrId: 8
+    type: WORD32
+    mutable: false
+  - name: minMemCost
+    attrId: 9
+    type: WORD32
+    mutable: false
+  - name: avgMemCost
+    attrId: 10
+    type: WORD32
+    mutable: false
+actions:
+  customs:
+    - name: Clear
+      actionId: 1
+    - name: ClearRsp
+      actionId: 101

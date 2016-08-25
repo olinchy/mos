@@ -1,0 +1,10 @@
+className: Lcpt
+tid: 416
+persistence: None
+children:
+   - name: LcptCoreNode
+     id: 1
+     autoCreate: true
+   - name: LcptUpDownInfo
+     id: 2
+     autoCreate: true

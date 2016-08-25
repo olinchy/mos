@@ -1,0 +1,11 @@
+className: PortVlan_Trunk
+baseClass: PortVlan_Details
+tid: 264
+triggers: [afterAdd, constraintAdd, constraintSet, afterSet]
+attributes:
+  - name: vlanTag
+    attrId: 0
+    type: Range
+    default: [[0]]
+    maxItems: 4094
+    mutable: true

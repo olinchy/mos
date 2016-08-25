@@ -1,0 +1,10 @@
+name: TdmLoopbackTypeEnum
+type: BYTE
+default: close
+enum:
+  close: 0
+  outer: 1
+  inner: 2
+  liu_e1_liu: 4
+  gmii_outer: 5
+  sgmii: 6

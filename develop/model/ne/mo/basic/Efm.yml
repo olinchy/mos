@@ -1,0 +1,54 @@
+className: Efm
+tid: 345
+triggers: [constraintSet, afterSet]
+attributes:
+  - name: globalEnable
+    attrId: 0
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: loopbackSupport
+    attrId: 1
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: lbTimeout
+    attrId: 2
+    type: BYTE
+    minimum: 1
+    maximum: 10
+    default: 1
+    mutable: true
+  - name: linkMonitor
+    attrId: 3
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: OUI
+    attrId: 4
+    type: String
+    maxLength: 4
+    default: "ZTE"
+    mutable: false
+  - name: venderSpecInfo
+    attrId: 5
+    type: WORD32
+    minimum: 0
+    maximum: 255
+    default: 1
+    mutable: true
+  - name: mibRetrieval
+    attrId: 6
+    type: StateEnum
+    default: "disable"
+    mutable: true
+  - name: specOgr
+    attrId: 7
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: unidirection
+    attrId: 8
+    type: StateEnum
+    default: disable
+    mutable: true

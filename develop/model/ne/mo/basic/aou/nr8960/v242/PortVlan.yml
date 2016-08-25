@@ -1,0 +1,28 @@
+className: PortVlan
+tid: 262
+triggers: [beforeAdd, afterAdd, afterSet, recover, constraintSet]
+attributes:
+  - name: vlanType
+    attrId: 0
+    type: VlanTypeEnum
+    default: ACCESS
+    mutable: true
+  - name: outerPVID
+    attrId: 1
+    type: WORD16
+    minimum: 1
+    maximum: 4094
+    default: 1
+    mutable: true
+  - name: defaultPriority
+    attrId: 2
+    type: BYTE
+    minimum: 0
+    maximum: 7
+    default: 7
+    mutable: true
+children:
+  - name: Details
+    type: PortVlan_Details
+    id: 1
+    autoCreate: false

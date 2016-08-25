@@ -1,0 +1,36 @@
+className: CommunityCfg
+tid: 188
+attributes:
+  - name: read
+    attrId: 0
+    type: String
+    maxLength: 64
+    default: "public"
+    mutable: true
+  - name: write
+    attrId: 1
+    type: String
+    maxLength: 64
+    default: "private"
+    mutable: true
+  - name: trap
+    attrId: 2
+    type: String
+    maxLength: 64
+    default: "public"
+    mutable: true
+  - name: communitySwitch
+    attrId: 3
+    type: SwitchEnum
+    default: switchOff
+    mutable: true
+  - name: TrapSwitch
+    attrId: 4
+    type: SwitchEnum
+    default: switchOn
+    mutable: true
+  - name: snmpManagerAllEnable
+    attrId: 5
+    type: SwitchEnum
+    default: switchOn
+    mutable: true

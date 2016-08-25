@@ -1,0 +1,8 @@
+className: BpduTunnel
+tid: 633
+attributes:
+  - name: tunnelEnable
+    attrId: 0
+    type: StateEnum
+    default: enable
+    mutable: true

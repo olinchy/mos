@@ -1,0 +1,25 @@
+className: LldpLocalInfo
+tid: 429
+persistence: None
+triggers: [afterGet]
+attributes:
+  - name: neighborNum
+    attrId: 0
+    type: BYTE
+    mutable: false
+  - name: localTlvFlag
+    attrId: 1
+    type: BYTE
+    mutable: false
+  - name: basicTlv
+    attrId: 2
+    type: BasicTlv
+    mutable: false
+  - name: dot1Tlv
+    attrId: 3
+    type: Dot1Tlv
+    mutable: false
+  - name: dot3Tlv
+    attrId: 4
+    type: Dot3Tlv
+    mutable: false    

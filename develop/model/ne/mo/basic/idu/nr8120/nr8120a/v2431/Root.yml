@@ -1,0 +1,153 @@
+className: Root
+tid : 2
+derivedFrom: Product
+derivedBy: "NR8120A"
+msgMode: Multi
+imagedProtocol: RPC
+mosVersion: 1.1f
+children:
+  - name : Shelf
+    type : NR8120AShelf
+    id : 1
+    count : 1
+    autoCreate : True
+  - name : P2pRoute
+    id : 4
+    count : 300
+  - name : SncpRoute
+    id : 5
+    count : 300
+  - name : CesRoute
+    id : 8
+    count : 378
+  - name : SysPara
+    id : 9
+    count : 1
+    autoCreate: True
+  - name : Vmp
+    id : 10
+    count : 1
+    autoCreate: True
+  - name : VmpAdvancedCheck
+    id : 11
+    count : 1
+    autoCreate : True
+  - name : NEAlarm
+    id : 12
+    count : 1
+    autoCreate: True
+  - name : License
+    id : 13
+    count : 1
+    autoCreate : True
+  - name : Security
+    id : 14
+    count : 1
+    autoCreate : True
+  - name : Maintain
+    id : 15
+    count : 1
+    autoCreate : True
+  - name : EthProtocol
+    id : 16
+    autoCreate : True
+  - name : Configuration
+    id : 25
+    count : 1
+    autoCreate : True
+  - name : ProtocolVlan
+    id : 17
+    count : 9
+    autoCreate : False
+  - name : Userdefine_EgTransAct
+    id : 27
+    count : 32
+    autoCreate : False
+  - name : Userdefine_EgTransRule
+    id : 28
+    count : 32
+    autoCreate : False
+  - name : Userdefine_InTransAct
+    id : 29
+    count : 32
+    autoCreate : False
+  - name : Userdefine_InTransRule
+    id : 30
+    count : 32
+    autoCreate : False
+  - name : EowGlobal
+    id : 31
+    count : 1
+    autoCreate : False
+  - name : EowTU
+    id : 32
+    count : 1
+    autoCreate : False
+  - name : Inventory
+    id : 33
+    count : 1
+    autoCreate : True
+  - name : MacVlan
+    id : 34
+    count : 1
+    autoCreate : False
+  - name : Mirror
+    id : 35
+    count : 1
+    autoCreate : False
+  - name : Pmp
+    id : 36
+    count : 1
+    autoCreate : True
+  - name : StaticMacIVL
+    id : 37
+    count : 32
+    autoCreate : False
+  - name : StaticMacSVL
+    id : 38
+    count : 32
+    autoCreate : False
+  - name : LOG
+    id : 39
+    count : 1
+    autoCreate : True
+  - name : DropProfile
+    id : 40
+    count : 128
+    autoCreate : {"1":DropProfile}
+  - name: CAR
+    id : 41
+    count : 20
+    autoCreate : False
+  - name: ACL
+    id : 42
+    count : 100
+    autoCreate : False
+  - name : EtmGlobal
+    id : 43
+    autoCreate : true
+  - name : Clock
+    id : 44
+    autoCreate : True
+  - name : Neighbor
+    id : 45
+    count : 1
+    autoCreate : True
+  - name : BlackWhiteList
+    id : 46
+    count : 32
+    autoCreate : False
+actions:
+  customs:    
+    - name: Logout
+      actionId: 1
+    - name: LogoutRsp
+      actionId: 101
+    - name: LogoutConfirm
+      actionId: 2
+    - name: LogoutConfirmRsp
+      actionId: 102
+    - name: traverseMos
+      actionId: 3
+    - name: getDynamicnMo
+      actionId: 5

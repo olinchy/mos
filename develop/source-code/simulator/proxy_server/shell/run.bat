@@ -1,0 +1,1 @@
+java -Djava.ext.dirs=./ -cp ./webapp-1.2.jar  com.zte.mos.webapp.Main

@@ -1,0 +1,38 @@
+className: HeadCompress
+tid: 177
+isAbstract : True
+attributes:
+  - name: hcEnable
+    attrId: 0
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: l2HcEnable
+    attrId: 1
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: mplsHcEnable
+    attrId: 2
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: l3HcEnable
+    attrId: 3
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: l4HcEnable
+    attrId: 4
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: priorityQueue
+    attrId: 5
+    type: BYTE
+    enum:
+      lowPriorityQueue: 0
+      highPriorityQueue: 1
+    default: lowPriorityQueue
+    mutable: true
+    

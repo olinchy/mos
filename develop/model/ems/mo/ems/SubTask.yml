@@ -1,0 +1,10 @@
+className: SubTask
+baseClass: TaskBase
+tid: 100412
+
+reference:
+  - name: parentTask
+    type: SubTask
+    isMulti: false
+
+

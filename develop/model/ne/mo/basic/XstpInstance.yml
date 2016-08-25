@@ -1,0 +1,42 @@
+className: XstpInstance
+tid: 499
+triggers: [constraintAdd,constraintSet,constraintDel,beforeDel]
+attributes:
+  - name: priority
+    attrId: 0
+    type: WORD16
+    enum:
+        0X0: 0
+        0X1000: 4096
+        0X2000: 8192
+        0X3000: 12288
+        0X4000: 16384
+        0X5000: 20480
+        0X6000: 24576
+        0X7000: 28672
+        0X8000: 32768
+        0X9000: 36864
+        0XA000: 40960
+        0XB000: 45056
+        0XC000: 49152
+        0XD000: 53248
+        0XE000: 57344
+        0XF000: 61440
+    default: 0X8000
+    mutable: true
+  - name: vlan
+    attrId: 1
+    type: Range
+    maxItems: 4094
+    default: [[0]]
+    mutable: true
+children:
+    - name: XstpInstanceInfo
+      id: 1
+      autoCreate: true
+    - name: XstpPortListInfo
+      id: 2
+      autoCreate: true
+    - name: XstpInstanceReportEms
+      id: 3
+      autoCreate: true

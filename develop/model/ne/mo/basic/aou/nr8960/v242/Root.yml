@@ -1,0 +1,38 @@
+className: Root
+tid : 2
+persistence: None
+children:
+  - name : Vmp
+    id : 1
+    count : 1
+    autoCreate : True
+  - name : VmpAdvancedCheck
+    id : 2
+    count : 1
+    autoCreate : True
+  - name : Inventory
+    id : 3
+    count : 1
+    autoCreate : True
+  - name : SysPara
+    id : 4
+    count : 1
+    autoCreate : True
+  - name : Neighbor
+    id : 5
+    count : 40
+    autoCreate : False
+  - name : Security
+    id : 6
+    count : 1
+    autoCreate : True
+  - name : License
+    id : 7
+    count : 1
+    autoCreate : True
+actions:
+  customs:    
+    - name: Logout
+      actionId: 1
+    - name: LogoutRsp
+      actionId: 101

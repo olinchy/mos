@@ -1,0 +1,6 @@
+name: TodProtocolEnum
+type: BYTE
+default: China_Mobile
+enum:
+  China_Mobile: 0
+  GPS_NMEA    : 1

@@ -1,0 +1,12 @@
+className: MudModemCfgType
+baseClass: ModemCfgType
+tid: 529
+triggers: [recover, afterAdd]
+attributes:
+  - name: cfgType
+    attrId: 0
+    type: BYTE
+    enum:
+      typical: 0
+    default: typical
+    mutable: false

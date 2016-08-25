@@ -1,0 +1,25 @@
+className: CfmStateNodeObject
+attributes:
+  - name: mdName
+    attrId: 0 
+    type: String
+    maxLength: 7
+    mutable: false
+  - name: maName
+    attrId: 1
+    type: String
+    maxLength: 10
+    mutable: false
+  - name: mepId
+    attrId: 2
+    type: WORD16
+    mutable: false
+  - name: funcStat
+    attrId: 3
+    type: WORD16
+    mutable: false
+  - name: locatePort
+    attrId: 4
+    type: String
+    maxLength: 20
+    mutable: false

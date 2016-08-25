@@ -1,0 +1,6 @@
+name: DirPortEnum
+type: WORD32
+default: direct
+enum:
+  direct: 0
+  common: 1 

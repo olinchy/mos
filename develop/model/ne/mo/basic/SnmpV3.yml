@@ -1,0 +1,47 @@
+className: SnmpV3
+tid: 189
+triggers: [constraintSet]
+attributes:
+  - name: userName
+    attrId: 0
+    type: String
+    minLength: 3
+    maxLength: 32
+    default: "zte"
+    mutable: true
+  - name: securityLevel
+    attrId: 1
+    type: BYTE
+    enum:
+      authNotEncrypt: 1
+      authAndEncrpyt: 3
+    default: authAndEncrpyt
+    mutable: true
+  - name: authAlgorithm
+    attrId: 2
+    type: BYTE
+    enum:
+      MD5: 0
+    default: MD5
+    mutable: true
+  - name: encryptAlgorithm
+    attrId: 3
+    type: BYTE
+    enum:
+      DES: 0
+    default: DES
+    mutable: true
+  - name: authPassword
+    attrId: 4
+    type: String
+    minLength: 8
+    maxLength: 48
+    default: "780e21c76bd58c0850363cc6e3034d9a"
+    mutable: true
+  - name: encryptPassword
+    attrId: 5
+    type: String
+    minLength: 8
+    maxLength: 48
+    default: "780e21c76bd58c0850363cc6e3034d9a"
+    mutable: true

@@ -1,0 +1,12 @@
+className: LagInfo
+tid: 561
+persistence: None
+triggers: [afterGet]
+attributes:
+  - name: lagInfo
+    attrId: 0
+    type: Set
+    maxItems: 2
+    items:
+      type: LacpLagInfo
+    mutable: false

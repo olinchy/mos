@@ -1,0 +1,29 @@
+className: AcmubMuTrafficUnit
+baseClass: TrafficUnit
+tid: 225
+triggers: [beforeDel, afterGet, afterAdd, afterSet, recover]
+attributes:
+#  - name: BoardType
+#    attrId: 0
+#    type: BoardTypeEnum
+#    default: acmub
+#    mutable: false
+  - name: featureList
+    attrId: 0
+    type: FeatureList
+    default: [xpic, xpic2_2, xpic7_14M, airport]
+    mutable: false
+children:
+   - name : EthPort
+     type : PhyPort
+     id : 1
+     count : 1
+     groupType : map
+     autoCreate: {"AIR-0": EthPort_Air}
+   - name : LogicAirPort
+     type : AcmubLogicAirPort
+     id : 2
+     count : 1
+     autoCreate: true
+
+

@@ -1,0 +1,30 @@
+className: PLACascadePTP
+tid: 526
+attributes:
+  - name: radioPortNum
+    attrId: 0
+    type: BYTE
+    minimum: 1
+    maximum: 8
+    mutable: true
+  - name: isPlaCascadePort
+    attrId: 1
+    type: BYTE
+    default: 1
+    mutable: false
+  - name: radioPortBlock
+    attrId: 2
+    type: Array
+    maxItems: 8
+    items:
+      type: StateEnum
+      default: disable
+    mutable: true
+reference:
+  - name: cascadeRadioPort
+    type: EthPort_Air
+    isMulti: true
+    maxItems: 8
+    under: ConstraintPolicyInList
+
+

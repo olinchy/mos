@@ -1,0 +1,9 @@
+className: Rsua
+baseClass: Board
+tid: 448
+attributes:
+  - name: boardType
+    attrId: 0
+    type: BoardTypeEnum
+    default: rsua
+    mutable: false

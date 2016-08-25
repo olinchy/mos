@@ -1,0 +1,42 @@
+className: ErpsV2DI
+tid: 367
+triggers: [afterGet]
+persistence: None
+attributes:
+  - name: ringId
+    attrId: 0
+    type: BYTE
+    range: [[1,10]]
+    mutable: true
+  - name: eastPortStatus
+    attrId: 1
+    type: ErpsV2PortStatusEnum
+    default: normalUnblock
+    mutable: true
+  - name: westPortStatus
+    attrId: 2
+    type: ErpsV2PortStatusEnum
+    default: normalUnblock
+    mutable: true
+  - name: protocolStatus
+    attrId: 3
+    type: ErpsV2ProtoStateEnum
+    default: init
+    mutable: true
+  - name: vlanBitMap    
+    attrId: 4    
+    type: Range   
+    maxItems: 4094    
+    items:       
+      type: BYTE       
+    default: [[1]]
+    mutable: true  
+reference:
+  - name: eastPortID
+    type: TrafficPort
+    isMulti: false
+    under: ResetPolicy
+  - name: westPortID
+    type: TrafficPort
+    isMulti: false
+    under: ResetPolicy

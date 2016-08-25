@@ -1,0 +1,12 @@
+className: PVlanCar
+tid: 310
+#triggers: [beforeSet, constraintSet]
+attributes:
+  - name: cos
+    attrId: 7
+    type: Array
+    maxItems: 8
+    items:      
+      type: CosEnum
+    mutable: true
+

@@ -1,0 +1,11 @@
+className: CesVE1Port
+baseClass: VE1Port
+tid: 106
+persistence: None
+attributes:
+  - name: featureList
+    attrId: 0
+    type: FeatureList
+    default: [ces]
+    mutable: false
+

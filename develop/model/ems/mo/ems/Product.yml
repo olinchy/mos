@@ -1,0 +1,22 @@
+className: Product
+tid: 3
+derived: true
+
+actions:
+  customs:
+    - name: modelChange
+      actionId: 1
+      attributes:
+        - name: modelName 
+          attrId: 0 
+          type: String
+          maxLength: 32
+          mutable: false
+        - name: modelVersion 
+          attrId: 1 
+          type: String
+          maxLength: 32       
+          mutable: false
+    - name: reverseCfg
+      actionId: 2
+      

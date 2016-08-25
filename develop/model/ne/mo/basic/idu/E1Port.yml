@@ -1,0 +1,52 @@
+className: E1Port
+triggers: [afterGet]
+tid: 104
+persistence: Update
+attributes:
+  - name: state
+    attrId: 0
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: loopbackType
+    attrId: 1
+    type: TdmLoopbackTypeEnum
+    default: close
+    mutable: true
+  - name: loopbackTime
+    attrId: 2
+    type: WORD32
+    minimum: 10
+    maximum: 864000
+    default: 600
+    mutable: true
+  - name: desc
+    attrId: 3
+    type: String
+    maxLength: 256
+    mutable: true
+children:
+   - name : PmpE1Ber    
+     id : 1
+     count : 1
+     autoCreate: true
+actions:
+  customs:
+    - name: Loopback
+      actionId: 1   
+      attributes:
+        - name: loopbackType
+          attrId: 0
+          type: TdmLoopbackTypeEnum
+          default: close
+          mutable: true
+        - name: loopbackTime
+          attrId: 1
+          type: WORD32
+          minimum: 10
+          maximum: 864000
+          default: 600
+          mutable: true
+    - name: LoopbackRsp
+      actionId: 101 
+

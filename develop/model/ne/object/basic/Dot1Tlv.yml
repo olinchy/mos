@@ -1,0 +1,47 @@
+className: Dot1Tlv
+attributes:
+  - name: dot1TlvFlag
+    attrId: 0
+    type: BYTE
+    mutable: false
+  - name: vlanId
+    attrId: 1
+    type: WORD16
+    mutable: false
+  - name: vlanSupport
+    attrId: 2
+    type: BYTE
+    mutable: false
+  - name: vlanEnable
+    attrId: 3
+    type: BYTE
+    mutable: false
+  - name: proVidFlag
+    attrId: 4
+    type: WORD16
+    mutable: false
+  - name: vlanName
+    attrId: 5
+    type: String
+    maxLength: 39
+    mutable: false
+  - name: proIdLen
+    attrId: 6
+    type: BYTE
+    mutable: false
+  - name: proVid
+    attrId: 7
+    type: Array
+    maxItems: 16
+    items:
+      type: WORD16
+    default: 0
+    mutable: false
+  - name: proId
+    attrId: 8
+    type: Array
+    maxItems: 255
+    items:
+      type: BYTE
+    mutable: false
+

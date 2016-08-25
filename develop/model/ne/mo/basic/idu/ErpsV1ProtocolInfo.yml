@@ -1,0 +1,24 @@
+className: ErpsV1ProtocolInfo
+tid: 609
+#triggers: [ afterGet]
+persistence: None
+attributes:
+  - name: state
+    attrId: 0
+    type: BYTE
+    enum:
+        INIT: 1
+        IDLE: 2
+        PROTECTION: 3
+    default: INIT
+    mutable: false
+  - name: eastPortState
+    attrId: 0
+    type: ErpsV1PortStatusEnum
+    default: linkup
+    mutable: false
+  - name: westPortState
+    attrId: 0
+    type: ErpsV1PortStatusEnum
+    default: linkup
+    mutable: false

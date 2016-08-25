@@ -1,0 +1,51 @@
+className: Maintain
+tid: 532
+persistence: None
+actions:
+  customs:
+    - name: Reboot
+      actionId: 1
+      attributes: 
+        - name: type
+          attrId: 0
+          type: WORD32
+          enum:
+            soft: 1
+            hard: 11
+          default: soft
+          mutable: true
+        - name: range
+          attrId: 1
+          type: WORD32
+          enum:
+            board: 1
+            shelf: 2
+          default: board
+          mutable: true
+        - name: rack
+          attrId: 2
+          type: BYTE
+          default: 1
+          mutable: true
+        - name: shelf
+          attrId: 3
+          type: BYTE
+          default: 1
+          mutable: true 
+        - name: slot
+          attrId: 4
+          type: BYTE
+          default: 1
+          mutable: true
+        - name: opkey
+          attrId: 5
+          type: WORD32
+          default: 0
+          mutable: true
+        - name: opresev
+          attrId: 6
+          type: WORD32
+          default: 0
+          mutable: true  
+    - name: RebootRsp
+      actionId: 101

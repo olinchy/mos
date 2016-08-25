@@ -1,0 +1,22 @@
+className: ClkMon
+baseClass: PhyPort
+tid: 2 
+triggers: [constraintSet]
+persistence: 
+attributes:
+  - name: portFunction
+    attrId: 0
+    type: ClkMonPortFunEnum
+    default: Clk
+    mutable: true
+  - name: cabinet
+    attrId: 1
+    type: _485CabinetEnum
+    default: DEVICE_8906
+    mutable: true
+  - name: portMode
+    attrId: 3
+    type: _485MonPortModeEnum
+    default: Duplex
+    mutable: true
+    

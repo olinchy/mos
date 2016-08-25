@@ -1,0 +1,78 @@
+className: NR8960BShelf
+baseClass: Shelf
+tid: 219
+persistence: None
+children:
+  - name: Board
+    type: Acmub
+    id: 1
+    count: 1
+    groupType: map
+    autoCreate: {"1": Acmub}
+  - name: TrafficUnit
+    id: 2
+    count: 3
+    groupType: map
+    autoCreate: {"0": AcmubTuTrafficUnit, "1": AcmubMuTrafficUnit, "9": AcmubMuTrafficUnit}
+  - name: ShelfConfig
+    type: NR8960BShelfConfig
+    id: 3
+    count: 1
+    autoCreate: true
+  - name: ChipPort
+    id: 4
+    count: 6
+    groupType: map
+    autoCreate: {"GbE1(PoE)": ChipPort_PanelPort, "GbE4-EXT": ChipPort_PanelPort, "GbE2": ChipPort_PanelPort, "GbE3-10GbE": ChipPort_PanelPort}
+  - name: ProtoIF
+    id: 5
+    groupType: map
+    count: 8
+    autoCreate: {"50397186": ProtoIF, "50397187": ProtoIF, "50397188": ProtoIF, "67174401": ProtoIF}
+  - name: PLA
+    id: 6
+    groupType : map
+    count: 1
+    autoCreate: {"1": PLA}
+  - name: LACP
+    id: 7
+    count: 2
+    autoCreate: false
+  - name: TrafficPort
+    id: 8
+    count: 6
+    groupType: map
+    autoCreate: {"GbE1(PoE)": TrafficPort_PanelPort, "MODEM-PLA": TrafficPort_PLA, "GbE4-EXT": TrafficPort_PanelPort, "GbE2": TrafficPort_PanelPort, "GbE3-10GbE": TrafficPort_PanelPort}
+  - name: XPIC
+    type: NR8960BXPIC
+    id: 9
+    count: 1
+    autoCreate: true
+  - name: Antenna
+    id: 10
+    count: 6
+    autoCreate: false
+  - name: PmpEnvInfo
+    id: 11
+    count: 1
+    autoCreate: true
+  - name: AouBNCVolTest
+    id: 12
+    count: 1
+    autoCreate: true
+  - name: MIMO
+    type: NR8960BMIMO
+    id: 13
+    count: 1
+    autoCreate: true
+
+actions:
+  customs:
+    - name: SoftReboot
+      actionId: 1
+    - name: HardReboot
+      actionId: 2
+    - name: SoftRebootRsp
+      actionId: 101
+    - name: HardRebootRsp
+      actionId: 102

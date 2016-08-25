@@ -1,0 +1,9 @@
+name: PatchStatusEnum
+type: BYTE
+default: backup
+enum:
+  backup: 0
+  patchActive: 1
+  corrupted: 251
+  downloading: 252
+  beReady: 255

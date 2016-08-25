@@ -1,0 +1,4 @@
+className: ChipPort
+tid: 520
+isAbstract : True
+persistence: None

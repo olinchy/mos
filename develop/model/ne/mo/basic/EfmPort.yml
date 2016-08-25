@@ -1,0 +1,102 @@
+className: EfmPort
+tid: 344
+triggers: [constraintAdd, constraintSet]
+attributes:
+  - name: efmPortEnable
+    attrId: 0
+    type: StateEnum
+    default: enable
+    mutable: true
+  - name: efmPortMode
+    attrId: 1
+    type: BYTE
+    enum:
+      Active: 1
+      Passive: 0
+    default: Active
+    mutable: true
+  - name: linkMonitorEnable
+    attrId: 2
+    type: StateEnum
+    default: enable
+    mutable: true
+  - name: linkFaultThre
+    attrId: 3
+    type: BYTE
+    minimum: 2
+    maximum: 20
+    default: 5
+    mutable: true
+  - name: errSymbolThre
+    attrId: 4
+    type: WORD32
+    minimum: 0
+    maximum: 65535
+    default: 1
+    mutable: true
+  - name: errSymbolWin
+    attrId: 5
+    type: WORD32
+    minimum: 1
+    maximum: 60
+    default: 1
+    mutable: true
+  - name: errFrameThre
+    attrId: 6
+    type: WORD32
+    minimum: 0
+    maximum: 65535
+    default: 1
+    mutable: true
+  - name: errFrameWin
+    attrId: 7
+    type: WORD32
+    minimum: 1
+    maximum: 60
+    default: 1
+    mutable: true
+  - name: errFramePerThre
+    attrId: 8
+    type: WORD32
+    minimum: 0
+    maximum: 65535
+    default: 1
+    mutable: true
+  - name: errFramePerWin
+    attrId: 9
+    type: WORD32
+    minimum: 100
+    maximum: 60000
+    default: 1000
+    mutable: true
+  - name: errFrameSecThre
+    attrId: 10
+    type: WORD32
+    minimum: 0
+    maximum: 900
+    default: 1
+    mutable: true
+  - name: errFrameSecWin
+    attrId: 11
+    type: WORD32
+    minimum: 10
+    maximum: 900
+    default: 60
+    mutable: true
+actions:
+  customs:
+    - name: StartLoopBack
+      actionId: 1
+    - name: StopLoopBack
+      actionId: 2
+    - name: StartLoopBackRsp
+      actionId: 101
+    - name: StopLoopBackRsp
+      actionId: 102
+children:
+  - name: EfmLoopbackResult
+    id: 1
+    autoCreate: true
+  - name: EfmProtocalStatus
+    id: 2
+    autoCreate: true

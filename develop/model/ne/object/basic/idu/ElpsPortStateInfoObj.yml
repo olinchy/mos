@@ -1,0 +1,15 @@
+className: ElpsPortStateInfoObj
+attributes:
+  - name: portId  
+    attrId: 0 
+    type: TrafficPort
+    mutable: true
+  - name: vlanId
+    attrId: 1 
+    type: WORD16 
+    mutable: true 
+  - name: state
+    attrId: 2 
+    type: ElpsPortStateEnum
+    default: active
+    mutable: true 

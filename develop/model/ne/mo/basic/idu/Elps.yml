@@ -1,0 +1,9 @@
+className: Elps
+tid: 362
+persistence: None
+children:
+   - name: GroupCfg
+     type: ElpsGroupCfg
+     id: 1
+     count: 12
+     autoCreate: false

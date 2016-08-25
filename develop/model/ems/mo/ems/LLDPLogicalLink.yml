@@ -1,0 +1,23 @@
+className: LLDPLogicalLink
+tid: 501111
+attributes:
+  - name: aEnd
+    attrId: 1
+    type: String
+    maxLength: 200
+    mutable: true
+  - name: zEnd
+    attrId: 2
+    type: String
+    maxLength: 200
+    mutable: true
+  - name: linkState
+    attrId: 3
+    type: String
+    maxLength: 200
+    mutable: true
+reference:
+  - name: physicalLink
+    type: PhysicalLink
+    isMulti: false
+  

@@ -1,0 +1,115 @@
+className: Xstp
+tid: 498
+triggers: [afterSet,constraintSet]
+attributes:
+  - name: state
+    attrId: 0
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: forceVersion
+    attrId: 1
+    type: BYTE
+    enum:
+        STPCompMode: 0
+        RSTP: 2
+        MSTP: 3
+    default: MSTP
+    mutable: true
+  - name: workMode
+    attrId: 2
+    type: BYTE
+    enum:
+        UserMode: 0
+        OperatorMode: 1
+    default: UserMode
+    mutable: true
+  - name: helloTime
+    attrId: 3
+    type: BYTE
+    minimum: 1
+    maximum: 10
+    default: 2
+    mutable: true
+  - name: maxAge
+    attrId: 4
+    type: BYTE
+    minimum: 6
+    maximum: 40
+    default: 20
+    mutable: true
+  - name: maxHops
+    attrId: 5
+    type: BYTE
+    minimum: 6
+    maximum: 40
+    default: 20
+    mutable: true
+  - name: forwardDelay
+    attrId: 6
+    type: BYTE
+    minimum: 4
+    maximum: 30
+    default: 15
+    mutable: true
+  - name: mstpName
+    attrId: 7
+    type: String
+    maxLength: 32
+    mutable: true
+  - name: mstpRevision
+    attrId: 8
+    type: WORD16
+    minimum: 0
+    maximum: 65535
+    default: 0
+    mutable: true
+  - name: cisHMD5Key
+    attrId: 9
+    type: String
+    maxLength: 16
+    mutable: true
+  - name: cisHMD5Digest
+    attrId: 10
+    type: String
+    maxLength: 16
+    mutable: true
+  - name: hwHMD5Key
+    attrId: 11
+    type: String
+    maxLength: 16
+    mutable: true
+  - name: hwHMD5Digest
+    attrId: 12
+    type: String
+    maxLength: 16
+    mutable: true
+  - name: factor
+    attrId: 13
+    type: WORD16
+    minimum: 1
+    maximum: 10
+    default: 2
+    mutable: true
+  - name: txHoldCount
+    attrId: 14
+    type: WORD16
+    default: 10
+    mutable: false
+  - name: diameter
+    attrId: 15
+    type: WORD16
+    default: 0
+    mutable: false
+  - name: bpduTunnelDMac
+    attrId: 16
+    type: MacAddr
+    default: "01-0F-E2-00-00-03"
+    mutable: false
+children:
+    - name: Instance
+      type: XstpInstance
+      id: 1
+      count: 64
+      groupType: map
+      autoCreate: {"0" : [XstpInstance, {"priority": '0X8000', "vlan": [[0]]}]}

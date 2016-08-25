@@ -1,0 +1,11 @@
+className: RsuaTrafficUnit
+baseClass: TrafficUnit
+tid: 449
+triggers: [afterAdd, afterSet, afterDel, recover]
+children:
+   - name : EthPort
+     type : PhyPort
+     id : 1
+     count : 4
+     groupType : map
+     autoCreate: {"EIN-1": [EdiInPort, {displayName: "EDI1"}], "EOUT-1": [EdiOutPort, {displayName: "EDI2"}], "SC-1": [Sc11Port, {displayName: "SC1"}], "SC-2": [Sc28Port, {displayName: "SC2"}]}

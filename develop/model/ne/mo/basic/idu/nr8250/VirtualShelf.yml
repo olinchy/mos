@@ -1,0 +1,18 @@
+className: VirtualShelf
+tid: 199
+persistence: None
+attributes:
+  - name: ShelfNo
+    attrId: 0
+    type: BYTE 
+    default: 0   
+    mutable: true
+  - name: neIp
+    attrId: 1
+    type: IPv4Addr
+    mutable: true
+  - name: neType
+    attrId: 2
+    type: String
+    maxLength: 10
+    mutable: false

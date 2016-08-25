@@ -1,0 +1,4 @@
+className: PortVlan_Trunk
+baseClass: PortVlan_Details
+tid: 264
+triggers: [afterAdd, constraintAdd, constraintSet, afterSet]

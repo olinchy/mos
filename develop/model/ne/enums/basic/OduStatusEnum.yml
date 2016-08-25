@@ -1,0 +1,7 @@
+name: OduStatusEnum
+type: BYTE
+default: fine
+enum:
+    fine: 0   
+    fault: 1
+    alarm: 2

@@ -1,0 +1,47 @@
+className: LacpSGInfo
+tid: 566
+persistence: None
+triggers: [afterGet]
+attributes:
+  - name: totalPortNum
+    attrId: 0
+    type: BYTE
+    mutable: false
+  - name: activePortNum
+    attrId: 1
+    type: BYTE
+    mutable: false
+  - name: aggPolicy
+    attrId: 2
+    type: BYTE
+    mutable: false
+  - name: loadStrategy
+    attrId: 3
+    type: BYTE
+    mutable: false
+  - name: sgName
+    attrId: 4
+    type: String
+    maxLength: 32
+    mutable: false 
+  - name: pktSendNum
+    attrId: 5
+    type: WORD32
+    mutable: false 
+  - name: pktRcvNum
+    attrId: 6
+    type: WORD32
+    mutable: false 
+  - name: protectFlag
+    attrId: 7
+    type: BYTE
+    mutable: false
+reference:
+  - name: activePort
+    type: PhyPort
+    isMulti: true
+    maxItems: 8
+    under: ConstraintPolicyInList
+
+
+   

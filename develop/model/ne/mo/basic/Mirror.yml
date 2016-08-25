@@ -1,0 +1,22 @@
+className: Mirror
+tid: 290
+triggers: [constraintAdd]
+attributes:
+  - name: mask
+    attrId: 0
+    type: BYTE
+    enum:
+      mirror_Port_Transmit_Data: 1
+      mirror_Port_Receive_Data: 2
+      mirror_Port_Trans_Rev_Data: 3
+    default: mirror_Port_Transmit_Data
+    mutable: true
+reference:
+  - name: sourcePortID
+    type: TrafficPort
+    isMulti: false
+    under: DependencyPolicy
+  - name: destinationPortID
+    type: TrafficPort
+    isMulti: false
+    under: DependencyPolicy

@@ -1,0 +1,85 @@
+className: ClkSource
+tid: 392
+triggers: [constraintAdd, beforeAdd, beforeDel, afterGet]
+persistence: All
+attributes:
+  - name: clkType
+    attrId: 0
+    type: ClkTypeEnum
+    default: InnerClk
+    mutable: true
+  - name: ssmQlMode
+    attrId: 1
+    type: QlModeEnum
+    default: Manual
+    mutable: true
+  - name: ssmQlLevel
+    attrId: 2
+    type: QlLevelEnum
+    default: G_811
+    mutable: true
+  - name: priority
+    attrId: 3
+    type: BYTE
+    minimum: 1
+    maximum: 11
+    mutable: true
+  - name: ppsDelay
+    attrId: 4
+    type: WORD32
+    minimum: 0
+    maximum: 1000000000
+    default: 0
+    mutable: true
+  - name: ppsDelaySign
+    attrId: 5
+    type: SignEnum
+    default: Positive
+    mutable: true
+  - name: channelId
+    attrId: 6
+    type: ClkChannelEnum
+    default: Channel_0
+    mutable: false
+  - name: bitsQlSa
+    attrId: 7
+    type: BYTE
+    minimum: 4
+    maximum: 8
+    default: 4
+    mutable: true
+  - name: exist
+    attrId: 8
+    type: ClkStatEnum
+    default: Init
+    mutable: true
+  - name: wtr
+    attrId: 9
+    type: BYTE
+    default: 5
+    mutable: true
+  - name: ssmQl
+    attrId: 10
+    type: QlLevelEnum
+    default: G_811
+    mutable: true
+  - name: nodeNum
+    attrId: 11
+    type: BYTE
+    default: 2
+    mutable: true
+  - name: stationId
+    attrId: 12
+    type: BYTE
+    mutable: true
+  - name: ptpStat
+    attrId: 13
+    type: ClkStatEnum
+    default: Init
+    mutable: true
+reference:
+  - name: refPort
+    type: PhyPort
+    isMulti: false
+    under: DependencyPolicy
+  

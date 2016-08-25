@@ -1,0 +1,18 @@
+className: L2Frame
+tid: 411
+triggers: [recover]
+attributes:
+  - name: policy
+    attrId: 0
+    type: Array
+    maxItems: 21
+    items:      
+      type: BYTE
+    mutable: true
+  - name: protocolEnable
+    attrId: 1
+    type: Array
+    maxItems: 21
+    items:      
+      type: BYTE
+    mutable: true

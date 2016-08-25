@@ -1,0 +1,11 @@
+className: ErpsV1PortStateInfoObj
+attributes:
+  - name: portId  
+    attrId: 0
+    type: TrafficPort
+    mutable: true
+  - name: state
+    attrId: 1
+    type: ErpsV1PortStatusEnum
+    default: linkup
+    mutable: true

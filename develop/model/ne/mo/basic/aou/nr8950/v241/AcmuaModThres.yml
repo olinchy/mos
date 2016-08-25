@@ -1,0 +1,16 @@
+className: AcmuaModThres
+baseClass: ModThres
+tid: 241
+triggers: [constraintSet, recover, afterAdd]
+attributes:
+  - name: modulation
+    attrId: 0
+    type: Qam2048ModulationEnum
+    default: QPSK
+    mutable: true
+  - name: codingType
+    attrId: 1
+    type: CodingTypeEnum
+    default: normal      
+    mutable: true
+

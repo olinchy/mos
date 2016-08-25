@@ -1,0 +1,12 @@
+className: Neighbor
+tid: 192
+persistence: None
+triggers: [afterGet]
+attributes:
+  - name: neighborInfos
+    attrId: 0
+    type: Set
+    maxItems: 4
+    items:
+      type: NeighborInfo
+    mutable: true

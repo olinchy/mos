@@ -1,0 +1,7 @@
+name: RplRoleEnum
+type: BYTE
+default: rplOther
+enum: 
+  rplOwner: 0
+  rplNeighber: 1
+  rplOther: 2

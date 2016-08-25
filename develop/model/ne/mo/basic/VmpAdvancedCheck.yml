@@ -1,0 +1,66 @@
+className: VmpAdvancedCheck
+tid: 247
+persistence: None
+actions:
+  customs:
+    - name: AdvancedCheck
+      actionId: 2
+      attributes:
+        - name: queryType
+          attrId: 1  
+          type: BYTE
+          enum:
+            pre_download: 0
+            after_download: 1
+            pre_active: 2
+            after_active: 3
+            pre_switch: 4
+            pre_download_fw: 5
+            pre_active_fw: 6
+            pre_download_hp: 7
+            pre_active_hp: 8
+            pre_deactive_hp: 9
+          default: pre_download
+          mutable: true
+        - name: activeType
+          attrId: 2  
+          type: BYTE
+          enum:
+            upgrade: 0
+            roolback: 1
+            default: 2
+          default: upgrade
+          mutable: true
+        - name: pkgNum
+          attrId: 3  
+          type: WORD32
+          default: 0
+          mutable: true
+        - name: pkgSize
+          attrId: 4  
+          type: WORD32
+          default: 0
+          mutable: true
+        - name: pkgName
+          attrId: 5  
+          type: String
+          maxLength: 44
+          default: ""
+          mutable: true
+        - name: aoupkgSize
+          attrId: 6  
+          type: WORD32
+          default: 0
+          mutable: true
+        - name: pkgFatherName
+          attrId: 7  
+          type: String
+          maxLength: 44
+          default: ""
+          mutable: true
+        - name: isLastCheck
+          attrId: 8  
+          type: bool
+          mutable: true
+    - name: AdvancedCheckRsp
+      actionId: 102

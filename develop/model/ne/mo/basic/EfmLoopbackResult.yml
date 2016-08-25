@@ -1,0 +1,15 @@
+className: EfmLoopbackResult
+tid: 491
+triggers: [afterGet]
+persistence: None
+attributes:
+  - name: sendPacket
+    attrId: 0 
+    type: WORD64
+    default: 0
+    mutable: false
+  - name: rcvPacket
+    attrId: 1 
+    type: WORD64
+    default: 0
+    mutable: false

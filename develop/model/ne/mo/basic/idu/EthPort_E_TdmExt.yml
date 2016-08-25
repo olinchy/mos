@@ -1,0 +1,41 @@
+className: EthPort_E_TdmExt
+baseClass: PhyPort
+tid: 467
+attributes:
+  - name: portType
+    attrId: 0
+    type: PortTypeEnum
+    default: electric
+    mutable: false
+  - name: featureList
+    attrId: 1
+    type: FeatureList
+    default: [clock]
+    mutable: false
+children:
+  - name: PortMode
+    type: PortMode_E_1G
+    id: 1
+    autoCreate: false
+  - name: PmpRmon
+    id: 2
+    count : 1
+    autoCreate: true
+  - name: PmpLinkEth
+    id: 3
+    count : 1
+    autoCreate: true
+  - name: RmQryEthPort
+    id: 4
+    autoCreate: true
+  - name: LldpPort
+    id: 5
+    autoCreate: false
+  - name: ssmSwitch
+    type: SsmSwitch
+    id: 6
+    count : 1
+    autoCreate: false
+  - name: LcptEndNode
+    id: 7
+    autoCreate: false

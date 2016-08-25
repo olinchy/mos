@@ -1,0 +1,24 @@
+className: Rtue
+baseClass: Board
+tid: 148
+persistence: None
+attributes:
+   - name: boardType
+     attrId: 0
+     type: BoardTypeEnum
+     default: rtue
+     mutable: false
+children:
+   - name : Stm155Port
+     id : 1
+     count : 2
+     autoCreate: true
+   - name : Stm1OverHead
+     id : 2
+     count : 2
+     autoCreate: true
+   - name : HDInfo
+     id : 3
+     count : 1
+     autoCreate: true
+

@@ -1,0 +1,47 @@
+className: Software
+baseClass: Package
+tid: 207
+triggers: [constraintDel]
+attributes: 
+  - name: cfgVersion
+    attrId: 0
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: status
+    attrId: 1  
+    type: PackageStatusEnum
+    default: backup
+    mutable: true
+actions:
+  customs:    
+    - name: Switch
+      actionId: 1
+      attributes:
+        - name: switchType
+          attrId: 1  
+          type: SwitchTypeEnum
+          default: currentCfg
+          mutable: true
+    - name: SwitchRsp
+      actionId: 101
+children:
+   - name : PackageFile
+     id : 1
+     groupType : map
+     count : 125
+   - name : HotPatch
+     id : 2
+     groupType : map
+     count : 1
+   - name : Patch
+     id : 3
+     groupType : map
+     count : 2
+   - name : ActiveResult
+     id : 4
+     count : 1
+     autoCreate: True
+
+
+

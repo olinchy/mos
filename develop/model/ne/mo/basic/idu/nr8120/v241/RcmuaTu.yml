@@ -1,0 +1,9 @@
+className: RcmuaTu
+baseClass: Board
+tid: 487
+attributes:
+   - name: boardType
+     attrId: 0
+     type: BoardTypeEnum
+     default: 8120rtu
+     mutable: false

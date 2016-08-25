@@ -1,0 +1,6 @@
+name: ClkSyncModeEnum
+type: BYTE
+default: FreqSync
+enum:
+  FreqSync: 0
+  FreqTimeSync: 1

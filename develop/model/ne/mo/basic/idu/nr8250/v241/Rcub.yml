@@ -1,0 +1,20 @@
+className: Rcub
+baseClass: Board
+tid: 481
+attributes:
+  - name: boardType
+    attrId: 0
+    type: BoardTypeEnum
+    default: rcub
+    mutable: false
+children:
+  - name : LmtPort
+    id : 1
+    count : 1
+    autoCreate: true
+  - name : HDInfo
+    id : 2
+    count : 1
+    autoCreate: true
+
+

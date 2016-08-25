@@ -1,0 +1,43 @@
+className: VersionPackage
+tid: 1004001
+attributes:
+  - name: filePath
+    attrId: 1
+    type: String
+    maxLength: 300
+    mutable: true
+
+  - name: mainVersion
+    attrId: 2
+    type: String
+    maxLength: 50
+    mutable: true
+
+  - name: version
+    attrId: 3
+    type: String
+    maxLength: 50
+    mutable: true
+
+  - name: neType
+    attrId: 4
+    type: String
+    maxLength: 20
+    mutable: true
+
+  - name: pkgType
+    attrId: 5
+    type: VersionPkgTypeEnum
+    default: SOFTWARE
+    mutable: true
+
+  - name: pkgNum
+    attrId: 6
+    type: WORD16
+    mutable: true
+
+  - name: totalSize
+    attrId: 7
+    type: WORD16
+    mutable: true
+

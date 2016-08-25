@@ -1,0 +1,11 @@
+className: RteaTrafficUnit
+baseClass: TrafficUnit
+tid: 119
+persistence: None
+children:
+   - name : VE1Port
+     type : NativeVE1Port
+     id : 1
+     count : 16
+     autoCreate: true
+

@@ -1,0 +1,67 @@
+className: MAouLogicAirPort
+baseClass: LogicAirPort
+tid: 512
+persistence: None
+triggers: [afterGet, beforeDel]
+children:
+   - name : Workmode
+     type : MAouWorkmode
+     id : 1
+     count : 1
+     autoCreate: true
+   - name : Acm
+     type : MAouAcm
+     id : 2
+     count : 1
+     autoCreate: true
+   - name : Protect
+     id : 3
+     count : 1
+     autoCreate: true
+   - name : Atpc
+     id : 4
+     count : 1
+     autoCreate: true
+   - name : Rf
+     id : 5
+     count : 1
+     autoCreate: true
+   - name : Desc
+     id : 6
+     count : 1
+     autoCreate: true
+   - name : Rdi
+     type : MAouRdi
+     id : 7
+     count : 1
+     autoCreate: true
+   - name : ModemCfgType
+     type : MAouModemCfgType
+     id : 8
+     count : 1
+     autoCreate: true
+   - name : LinkWorkPath
+     id : 9
+     count : 1
+     autoCreate: true
+   - name : LinkId
+     id : 10
+     count : 1
+     autoCreate: true
+   - name : ModThres
+     type : MAouModThres
+     id : 11
+     count : 1
+     autoCreate: true
+   - name : RemoteRadioLinkInfo
+     id : 12
+     count : 2
+     autoCreate: true
+   - name : ErrRate
+     id : 13
+     count : 1
+     autoCreate: true
+   - name : PmpRadioLink
+     id : 14
+     count : 1
+     autoCreate: true

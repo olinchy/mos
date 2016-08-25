@@ -1,0 +1,7 @@
+name: LacpReverModeEnum
+type: BYTE
+default: revertive
+enum:
+  revertive: 1
+  normal: 0
+   

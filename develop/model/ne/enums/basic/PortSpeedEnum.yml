@@ -1,0 +1,8 @@
+name: PortSpeedEnum
+type: BYTE
+default: 1000M
+enum:
+  10M: 0
+  100M: 1
+  1000M: 2
+  10000M: 3 

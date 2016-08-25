@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<project>
+    <modules root="testcases">
+        <!--module name="Persistence" filePath="persistence/Persistence.py"/-->
+        <module name="transTest" filePath="casemodel/app_topo.yml"/>
+    </modules>
+    <config>
+        <devices>
+            <!--device id="1" type="EMS" version="02.04.04" port="8080"/-->
+        </devices>
+        <clis>
+            <cli name="cli1" address="http://10.86.94.103:54321" dnPrefix=""/>
+	    <!--cli name="cli2" address="http://10.86.38.13:54321" dnPrefix=""/-->
+        </clis>
+        <db connection="sa/omc!2012@10.86.94.103:1433" type="sqlserver"/>
+        <failureconfig failurePolicy="Pass"/>
+        <logconfig stdLevel="INFO" fileLevel="INFO"/>
+        <pressureconfig ispressure="yes" repetition="1"/>
+    </config>
+</project>

@@ -1,0 +1,107 @@
+className: Rf
+tid: 558
+triggers: [constraintSet, beforeAdd, beforeSet, recover]
+attributes:
+  - name: masterSlot
+    attrId: 0
+    type: BYTE
+    minimum: 1
+    maximum: 253
+    default: 1
+    mutable: true
+  - name: masterTxPower
+    attrId: 1
+    type: SWORD16
+    minimum: -200
+    maximum: 400
+    default: 0
+    mutable: true
+  - name: masterRslHighThreshold
+    attrId: 2
+    type: CHAR
+    minimum: -100
+    maximum: 0
+    default: -40
+    mutable: true
+  - name: masterRslLowThreshold
+    attrId: 3
+    type: CHAR
+    minimum: -100
+    maximum: 0
+    default: -60
+    mutable: true
+  - name: masterTxFreq
+    attrId: 4
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: masterRxFreq
+    attrId: 5
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: slaveSlot
+    attrId: 6
+    type: BYTE
+    range: [[2,253],[255]]
+    default: 255
+    mutable: true
+  - name: slaveTxPower
+    attrId: 7
+    type: SWORD16
+    minimum: -200
+    maximum: 400
+    default: 0
+    mutable: true
+  - name: slaveRslHighThreshold
+    attrId: 8
+    type: CHAR
+    minimum: -100
+    maximum: 0
+    default: -40
+    mutable: true
+  - name: slaveRslLowThreshold
+    attrId: 9
+    type: CHAR
+    minimum: -100
+    maximum: 0
+    default: -60
+    mutable: true
+  - name: slaveTxFreq
+    attrId: 10
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: slaveRxFreq
+    attrId: 11
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: syncToRemote
+    attrId: 12
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: masterPortNo
+    attrId: 13
+    type: BYTE
+    minimum: 1
+    maximum: 255
+    default: 1    
+    mutable: true
+  - name: slaverPortNo
+    attrId: 14
+    type: BYTE
+    minimum: 1
+    maximum: 255
+    default: 255 
+    mutable: true
+  - name: standByShelfNo
+    attrId: 15
+    type: BYTE
+    minimum: 1
+    maximum: 255
+    default: 255 
+    mutable: true
+
+

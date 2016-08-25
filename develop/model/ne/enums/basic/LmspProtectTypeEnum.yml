@@ -1,0 +1,6 @@
+name: LmspProtectTypeEnum
+type: BYTE
+default: unbinary
+enum:
+  unbinary: 0
+  binary: 1

@@ -1,0 +1,30 @@
+className: TdmCascade
+tid: 544
+attributes:
+  - name: remoteShelfIp
+    attrId: 0
+    type: IPv4Addr
+    mutable: true
+  - name: remoteShelfNo
+    attrId: 1
+    type: BYTE
+    minimum: 1
+    maximum: 2
+    default: 1
+    mutable: true
+  - name: remoteShelfType
+    attrId: 2
+    type: BYTE
+    enum:
+      8250Type: 0
+      8150Type: 1
+    default: 8250Type
+    mutable: true
+children:
+   - name : Port
+     type : TdmCascadePort
+     id : 1
+     count : 1
+
+
+    

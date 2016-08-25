@@ -1,0 +1,6 @@
+name: BitsWorkModeEnum
+type: BYTE
+default: 2Mbps
+enum:
+  2MHz: 0
+  2Mbps: 1

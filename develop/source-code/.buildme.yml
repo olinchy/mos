@@ -1,0 +1,10 @@
+module: mosjava
+dependency:
+  - maven
+script: |
+  cmake -DCMAKE_INSTALL_PREFIX:PATH=$INSTALL_PREFIX $CURRENT_DIR
+  make -j $NUMBER_OF_CPU
+  export MOS_JAVA_OUTPUT=$(pwd)
+  echo -e '            \e[0;31;3mMaking MOS in Quiet mode, don`t panic\e[0m'
+  mkdir -p $MOS_HOME/maven_out/
+  mvn -q clean install package -Dmaven.test.skip=true -DoutputDirectory=$MOS_HOME/maven_out/ -f $CURRENT_DIR

@@ -1,0 +1,46 @@
+className: Task
+baseClass: TaskBase
+tid: 100411
+attributes:
+  - name: taskcount
+    attrId: 18
+    type: WORD16
+    default: 0
+    mutable: true
+
+  - name: successcount
+    attrId: 19
+    type: WORD16
+    default: 0
+    mutable: true
+
+  - name: failedcount
+    attrId: 20
+    type: WORD16
+    default: 0
+    mutable: true
+
+  - name: timeoutcount
+    attrId: 21
+    type: WORD16
+    default: 0
+    mutable: true
+
+  - name: canceledcount
+    attrId: 22
+    type: WORD16
+    default: 0
+    mutable: true
+
+
+reference:
+  - name: parentTask
+    type: Task
+    isMulti: false
+
+children:
+   - name : SubTask
+     id : 1
+     count : 100
+     autoCreate: false
+

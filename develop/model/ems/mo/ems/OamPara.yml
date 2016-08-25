@@ -1,0 +1,28 @@
+className: OamPara
+tid: 6008
+attributes:
+  - name: configOam
+    attrId: 0
+    type: bool
+    default: false
+    mutable: true
+  - name: sendCC
+    attrId: 1
+    type: bool
+    default: false
+    mutable: true
+  - name: ccmInterval
+    attrId: 2
+    type: BYTE
+    minimum: 1
+    maximum: 7
+    default: 1
+    mutable: true
+  - name: mpPriority
+    attrId: 3
+    type: BYTE
+    minimum: 0
+    maximum: 7
+    default: 7
+    mutable: true
+ 

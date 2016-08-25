@@ -1,0 +1,54 @@
+className: FilterRule
+tid: 255
+attributes:
+  - name: rack
+    attrId: 1
+    type: BYTE
+    default: 1
+    mutable: false
+  - name: shelf
+    attrId: 2
+    type: BYTE
+    default: 1
+    mutable: false
+  - name: slot
+    attrId: 3
+    type: BYTE
+    default: 1
+    mutable: true
+  - name: ruleType
+    attrId: 4
+    type: BYTE
+    enum:
+      Rule1_Rack_Shelf_Slot: 1
+      Rule2_Slot_AlarmLevel: 2
+      Rule3_Slot_AlarmCode_Product: 3
+      Rule4_AlarmLevel: 4      
+      Rule5_Product_AlarmCode: 5
+      Rule6_Product: 6
+      Rule7_Slot_AlarmCode_Product_AlarmSubCode: 7
+    default: Rule1_Rack_Shelf_Slot
+    mutable: true
+  - name: alarmLevel
+    attrId: 5
+    type: AlarmLevelEnum    
+    default: Critical
+    mutable: true
+  - name: product
+    attrId: 6
+    type: BYTE
+    enum:
+       Plat: 1
+       Microwave: 9
+    default: Microwave
+    mutable: true
+  - name: alarmCode
+    attrId: 7
+    type: WORD32
+    default: 0
+    mutable: false
+  - name: alarmSubCode
+    attrId: 8
+    type: WORD32
+    default: 0
+    mutable: false

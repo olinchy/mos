@@ -1,0 +1,58 @@
+className: ScV28
+baseClass: PhyPort
+tid: 1 
+triggers: [constraintSet]
+persistence: 
+attributes:
+  - name: deviceType
+    attrId: 1
+    type: AuxDeviceTypeEnum
+    default: AUX_DTE_DEVICE
+    mutable: true
+  - name: rate
+    attrId: 2
+    type: BaudRateEnum
+    default: 9600
+    mutable: true 
+  - name: dataWidth
+    attrId: 3
+    type: ScDataWidthEnum
+    default: 8bit
+    mutable: true
+  - name: check
+    attrId: 4
+    type: DataCheckModeEnum
+    default: NoneCheck
+    mutable: true 
+  - name: stopBit
+    attrId: 5
+    type: ScStopBitEnum
+    default: 1_bit
+    mutable: true
+  - name: aucSrcMac
+    attrId: 6
+    type: Array
+    maxItems: 8
+    items:
+      type: BYTE
+    mutable: true
+  - name: aucDstMac
+    attrId: 7
+    type: Array
+    maxItems: 8
+    items:
+      type: BYTE
+    mutable: true
+  - name: trafficUnitNo
+    attrId: 8
+    type: BYTE
+    mutable: true 
+  - name: vlanID
+    attrId: 9
+    type: BYTE
+    mutable: true
+  - name: sVlanID
+    attrId: 10
+    type: BYTE
+    mutable: true
+    

@@ -1,0 +1,8 @@
+className: E1Link
+baseClass: PhysicalLink
+tid: 51
+reference:
+  - name: aEnd
+    type: E1Port
+  - name: zEnd
+    type: E1Port

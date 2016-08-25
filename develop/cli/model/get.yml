@@ -1,0 +1,5 @@
+name: get
+params:
+  - name : dn
+    type : Dn
+msgType: method  

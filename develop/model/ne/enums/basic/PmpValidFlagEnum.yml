@@ -1,0 +1,7 @@
+name: PmpValidFlagEnum
+type: BYTE
+default: valid
+enum:
+  nodata: 0
+  invalid: 1
+  valid: 2

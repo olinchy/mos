@@ -1,0 +1,15 @@
+className: TubVStm622Port
+baseClass: VStm622Port
+tid: 127
+persistence: None
+attributes:
+  - name: featureList
+    attrId: 0
+    type: FeatureList
+    default: [native,lmsp]
+    mutable: false
+  - name: isProtectEnable
+    attrId: 1
+    type: StateEnum    
+    default: disable
+    mutable: true

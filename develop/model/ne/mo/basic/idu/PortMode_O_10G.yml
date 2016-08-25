@@ -1,0 +1,35 @@
+className: PortMode_O_10G
+baseClass: PortMode
+tid: 294
+#triggers: [constraintSet]
+attributes:
+  - name: portEnable
+    attrId: 0
+    type: BYTE
+    enum:
+      disable: 0
+      enable: 2
+      enableWithAls: 1
+    default: disable
+    mutable: true
+  - name: speed
+    attrId: 1
+    type: BYTE
+    enum:
+      100M: 2
+      1000M: 3
+      10000M: 4
+    default: 10000M
+    mutable: true
+  - name: type
+    attrId: 2
+    type: BYTE
+    enum:
+      optical: 3
+    default: optical
+    mutable: false
+  - name: autoNegotiationStatus
+    attrId: 3
+    type: StateEnum
+    default: disable
+    mutable: true

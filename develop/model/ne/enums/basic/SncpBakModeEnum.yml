@@ -1,0 +1,6 @@
+name: SncpBakModeEnum
+type: BYTE
+default: nonrevertive
+enum:
+  nonrevertive: 0
+  revertive: 1

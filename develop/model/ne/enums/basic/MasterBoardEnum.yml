@@ -1,0 +1,6 @@
+name: MasterBoardEnum
+type: BYTE
+default: master
+enum:
+    slave: 0
+    master: 1

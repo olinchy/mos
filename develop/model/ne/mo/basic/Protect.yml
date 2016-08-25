@@ -1,0 +1,40 @@
+className: Protect
+tid: 556
+triggers: [beforeAdd, constraintSet]
+attributes:
+  - name: protType
+    attrId: 0
+    type: ProtectTypeEnum
+    default: NONE
+    mutable: true
+  - name: protMode
+    attrId: 1
+    type: ProtectModeEnum
+    default: AUTO
+    mutable: true
+  - name: ifRxPath
+    attrId: 2
+    type: WorkStateForProtectEnum
+    default: MASTER
+    mutable: true
+  - name: rfTxPath
+    attrId: 3
+    type: WorkStateForProtectEnum
+    default: MASTER
+    mutable: true
+  - name: recoverTime
+    attrId: 4
+    type: WORD32
+    minimum: 300
+    maximum: 800
+    default: 300
+    mutable: true
+  - name: linkId
+    attrId: 5
+    type: WORD32
+    minimum: 0
+    maximum: 255
+    default: 5
+    mutable: true
+
+

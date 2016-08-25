@@ -1,0 +1,9 @@
+className: Fa
+baseClass: Board
+tid: 469
+attributes:
+  - name: boardType
+    attrId: 0
+    type: BoardTypeEnum
+    default: fa
+    mutable: false

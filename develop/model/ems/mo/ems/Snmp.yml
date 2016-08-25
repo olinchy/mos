@@ -1,0 +1,57 @@
+className: Snmp
+tid: 2502
+persistence: None
+isAbstract: True
+attributes:
+  - name: version
+    attrId: 1
+    type: BYTE
+    enum:
+      v1: 0      
+      v2c: 1
+      v3: 3
+    default: v2c
+    mutable: true
+
+  - name: port
+    attrId: 2
+    type: WORD16
+    default: 161
+    mutable: true
+
+  - name: readcommunity
+    attrId: 3
+    type: String
+    maxLength: 52
+    default: "public"
+    mutable: true
+
+  - name: writecommunity
+    attrId: 4
+    type: String
+    maxLength: 52
+    default: "private"
+    mutable: true
+
+  - name: retry_timeout
+    attrId: 5
+    type: WORD32
+    default: 5000
+    mutable: true
+
+  - name: retry_times
+    attrId: 6
+    type: WORD32
+    default: 3
+    mutable: true
+
+  - name: trapcommunity
+    attrId: 7
+    type: String
+    maxLength: 52
+    default: "public"
+    mutable: true
+
+  
+
+

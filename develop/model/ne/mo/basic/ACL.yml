@@ -1,0 +1,344 @@
+className: ACL
+tid: 259
+triggers: [beforeAdd, beforeSet, constraintAdd, constraintSet]
+attributes:
+  - name: aclName
+    attrId: 0
+    type: String
+    maxLength: 10
+    mutable: true
+  - name: aclAction
+    attrId: 1
+    type: BYTE
+    enum:
+      forbidden: 0
+      allow: 1
+    default: allow
+    mutable: true
+  - name: timeType
+    attrId: 2
+    type: BYTE
+    enum:
+      unlimited: 1
+      relativeTime: 2
+      absoluteTime: 3
+    default: unlimited
+    mutable: true
+  - name: weekStart
+    attrId: 3
+    type: BYTE
+    enum:
+      Monday: 1
+      Tuesday: 2
+      Wednesday: 3
+      Thursday: 4
+      Friday: 5
+      Saturday: 6
+      Sunday: 7
+    default: Monday
+    mutable: true
+  - name: weekEnd
+    attrId: 4
+    type: BYTE
+    enum:
+      Monday: 1
+      Tuesday: 2
+      Wednesday: 3
+      Thursday: 4
+      Friday: 5
+      Saturday: 6
+      Sunday: 7
+    default: Monday
+    mutable: true
+  - name: timeStart
+    attrId: 5
+    type: Date
+    default: "2011-1-1 00:00:00"
+    mutable: true
+  - name: timeEnd
+    attrId: 6
+    type: Date
+    default: "2011-1-30 23:59:59"
+    mutable: true
+  - name: dscp
+    attrId: 7
+    type: BYTE
+    minimum: 0
+    maximum: 63
+    default: 0
+    mutable: true 
+  - name: dscpMask
+    attrId: 8
+    type: BYTE
+    minimum: 0
+    maximum: 63
+    default: 0
+    mutable: true 
+  - name: dscpEnable
+    attrId: 9
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: outerVlanPriority
+    attrId: 10
+    type: BYTE
+    minimum: 0
+    maximum: 7
+    default: 0
+    mutable: true 
+  - name: outerVlanPriorityMask
+    attrId: 11
+    type: BYTE
+    minimum: 0
+    maximum: 7
+    default: 0
+    mutable: true 
+  - name: outerVlanPriorityEnable
+    attrId: 12
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: innerVlanPriority
+    attrId: 13
+    type: BYTE
+    minimum: 0
+    maximum: 7
+    default: 0
+    mutable: true 
+  - name: innerVlanPriorityMask
+    attrId: 14
+    type: BYTE
+    minimum: 0
+    maximum: 7
+    default: 0
+    mutable: true 
+  - name: innerVlanPriorityEnable
+    attrId: 15
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: TCPSourcePort
+    attrId: 16
+    type: WORD16
+    minimum: 1
+    maximum: 65535
+    default: 1
+    mutable: true 
+  - name: TCPSourcePortMask
+    attrId: 17
+    type: WORD16
+    minimum: 1
+    maximum: 65535
+    default: 1
+    mutable: true 
+  - name: TCPSourcePortEnable
+    attrId: 18
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: TCPDestinationPort
+    attrId: 19
+    type: WORD16
+    minimum: 1
+    maximum: 65535
+    default: 1
+    mutable: true 
+  - name: TCPDestinationPortMask
+    attrId: 20
+    type: WORD16
+    minimum: 1
+    maximum: 65535
+    default: 1
+    mutable: true 
+  - name: TCPDestinationPortEnable
+    attrId: 21
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: sourceIP
+    attrId: 22
+    type: IPv4Addr
+    default: "10.10.10.10"
+    mutable: true 
+  - name: sourceIPMask
+    attrId: 23
+    type: IPv4Addr
+    default: "255.0.0.0"
+    mutable: true 
+  - name: sourceIPEnable
+    attrId: 24
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: destinationIP
+    attrId: 25
+    type: IPv4Addr
+    default: "10.10.10.10"
+    mutable: true 
+  - name: destinationIPMask
+    attrId: 26
+    type: IPv4Addr
+    default: "255.0.0.0"
+    mutable: true 
+  - name: destinationIPEnable
+    attrId: 27
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: sourceMac
+    attrId: 28
+    type: MacAddr
+    default: "22-22-22-22-22-22"
+    mutable: true 
+  - name: sourceMacMask
+    attrId: 29
+    type: MacAddr
+    default: "FF-FF-FF-FF-FF-FF"
+    mutable: true 
+  - name: sourceMacEnable
+    attrId: 30
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: destinationMac
+    attrId: 31
+    type: MacAddr
+    default: "22-22-22-22-22-22"
+    mutable: true 
+  - name: destinationMacMask
+    attrId: 32
+    type: MacAddr
+    default: "FF-FF-FF-FF-FF-FF"
+    mutable: true 
+  - name: destinationMacEnable
+    attrId: 33
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: IPV6TC
+    attrId: 34
+    type: BYTE
+    minimum: 0
+    maximum: 255
+    default: 1
+    mutable: true 
+  - name: IPV6TCMask
+    attrId: 35
+    type: BYTE
+    minimum: 0
+    maximum: 255
+    default: 1
+    mutable: true 
+  - name: IPV6TCEnable
+    attrId: 36
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: outerVlanId
+    attrId: 37
+    type: WORD16
+    minimum: 1
+    maximum: 4094
+    default: 1
+    mutable: true 
+  - name: outerVlanIdMask
+    attrId: 38
+    type: WORD16
+    minimum: 1
+    maximum: 4095
+    default: 1
+    mutable: true 
+  - name: outerVlanIdEnable
+    attrId: 39
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: innerVlanId
+    attrId: 40
+    type: WORD16
+    minimum: 1
+    maximum: 4094
+    default: 1
+    mutable: true 
+  - name: innerVlanIdMask
+    attrId: 41
+    type: WORD16
+    minimum: 1
+    maximum: 4095
+    default: 1
+    mutable: true 
+  - name: innerVlanIdEnable
+    attrId: 42
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: ethernetType
+    attrId: 43
+    type: WORD16
+    minimum: 1
+    maximum: 65535
+    default: 1
+    mutable: true 
+  - name: ethernetTypeMask
+    attrId: 44
+    type: WORD16
+    minimum: 1
+    maximum: 65535
+    default: 1
+    mutable: true 
+  - name: ethernetTypeEnable
+    attrId: 45
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: MPLSExp
+    attrId: 46
+    type: BYTE
+    minimum: 0
+    maximum: 7
+    default: 0
+    mutable: true 
+  - name: MPLSExpMask
+    attrId: 47
+    type: BYTE
+    minimum: 0
+    maximum: 7
+    default: 0
+    mutable: true 
+  - name: MPLSExpEnable
+    attrId: 48
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: mapQueueState
+    attrId: 49
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: mapQueue
+    attrId: 50
+    type: CosEnum
+    default: BE
+    mutable: true
+  - name: newDSCPState
+    attrId: 51
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: newDSCPValue
+    attrId: 52
+    type: BYTE
+    minimum: 0
+    maximum: 63
+    default: 0
+    mutable: true 
+reference:
+  - name: carId
+    type: CAR
+    isMulti: false
+    under: ResetPolicy
+  - name: portId
+    type: TrafficPort
+    isMulti: true
+    maxItems: 24
+    under: ResetPolicyInList

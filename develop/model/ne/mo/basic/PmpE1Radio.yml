@@ -1,0 +1,33 @@
+className: PmpE1Radio
+tid: 382
+triggers: [afterGet]
+persistence: None
+attributes:
+  - name: date
+    attrId: 0
+    type: Date
+    maxLength: 50
+    mutable: false
+  - name: validFlag
+    attrId: 1 
+    type : PmpValidFlagEnum
+    default: valid
+    mutable: false
+  - name: maxNum
+    attrId: 2 
+    type : WORD32
+    mutable: false
+  - name: minNum
+    attrId: 3 
+    type : WORD32
+    mutable: false
+  - name: avgNum
+    attrId: 4 
+    type : WORD32
+    mutable: false
+actions:
+  customs:
+    - name: Clear
+      actionId: 1
+    - name: ClearRsp
+      actionId: 101

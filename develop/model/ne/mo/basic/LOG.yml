@@ -1,0 +1,30 @@
+className: LOG
+tid: 244
+persistence: None
+attributes:
+  - name: path
+    attrId: 0
+    type: String
+    maxLength: 50
+    default: "/mnt/flash/LOG"
+    mutable: true
+children:
+  - name : SysLog
+    id : 1
+    count : 1
+    autoCreate: true
+  - name : LOGStatus
+    id : 2
+    count : 1
+    autoCreate: true
+actions:
+  customs:
+    - name: Clear
+      actionId: 1
+    - name: Compress
+      actionId: 2
+    - name: ClearRsp
+      actionId: 101
+    - name: CompressRsp
+      actionId: 102
+

@@ -1,0 +1,16 @@
+className: RtucTrafficUnit
+baseClass: TrafficUnit
+tid: 146
+persistence: None
+attributes:
+  - name: Impedance
+    attrId: 0
+    type: ImpedanceEnum
+    default: 120ohm
+    mutable: true
+children:
+   - name : VE1Port
+     type : NativeVE1Port
+     id : 1
+     count : 32
+     autoCreate: true

@@ -1,0 +1,117 @@
+className: PmpAcm
+tid: 370
+triggers: [afterGet]
+persistence: None
+attributes:
+  - name: date
+    attrId: 0
+    type: Date
+    maxLength: 50
+    mutable: false
+  - name: validFlag
+    attrId: 1 
+    type : PmpValidFlagEnum
+    default: valid
+    mutable: false
+  - name: rxQPSK
+    attrId: 2 
+    type : WORD32
+    mutable: false
+  - name: rx16Qam
+    attrId: 3 
+    type : WORD32
+    mutable: false
+  - name: rx32Qam
+    attrId: 4 
+    type : WORD32
+    mutable: false
+  - name: rx64Qam
+    attrId: 5 
+    type : WORD32
+    mutable: false
+  - name: rx128Qam
+    attrId: 6 
+    type : WORD32
+    mutable: false
+  - name: rx256Qam
+    attrId: 7 
+    type : WORD32
+    mutable: false
+  - name: txQPSK
+    attrId: 8 
+    type : WORD32
+    mutable: false
+  - name: tx16Qam
+    attrId: 9 
+    type : WORD32
+    mutable: false
+  - name: tx32Qam
+    attrId: 10 
+    type : WORD32
+    mutable: false
+  - name: tx64Qam
+    attrId: 11 
+    type : WORD32
+    mutable: false
+  - name: tx128Qam
+    attrId: 12 
+    type : WORD32
+    mutable: false
+  - name: tx256Qam
+    attrId: 13 
+    type : WORD32
+    mutable: false
+  - name: txSwitch
+    attrId: 14 
+    type : WORD32
+    mutable: false
+  - name: rxSwitch
+    attrId: 15 
+    type : WORD32
+    mutable: false
+  - name: rx512Qam
+    attrId: 16 
+    type : WORD32
+    mutable: false
+  - name: rx1024Qam
+    attrId: 17 
+    type : WORD32
+    mutable: false
+  - name: tx512Qam
+    attrId: 18 
+    type : WORD32
+    mutable: false
+  - name: tx1024Qam
+    attrId: 19 
+    type : WORD32
+    mutable: false
+  - name: rxDownShift
+    attrId: 20 
+    type : WORD32
+    mutable: false
+  - name: rxUpShift
+    attrId: 21 
+    type : WORD32
+    mutable: false
+  - name: rx2048Qam
+    attrId: 22 
+    type : WORD32
+    mutable: false
+  - name: tx2048Qam
+    attrId: 23 
+    type : WORD32
+    mutable: false
+  - name: rx1024Light
+    attrId: 24 
+    type : WORD32
+    mutable: false
+  - name: tx1024Light
+    attrId: 25 
+    type : WORD32
+    mutable: false
+actions:
+  customs:
+    - name: Clear
+      actionId: 1
+    - name: ClearRsp
+      actionId: 101

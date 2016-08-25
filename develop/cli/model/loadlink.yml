@@ -1,0 +1,5 @@
+name: loadlink
+params:
+  - name : name
+    type : String
+msgType: method  

@@ -1,0 +1,23 @@
+name: PortTypeEnum
+type: BYTE
+default: E1
+enum:
+  electric: 0
+  optical:  1
+  FE:      1
+  E1:      2
+  T1:      3
+  Stm1:    4
+  Stm4:    5
+  Uart:    6
+  Eow:     7
+  MF:      8
+  air:     9
+  clk:    10
+  tdmCon: 11
+  ediIn:  12
+  ediOut: 13
+  SC:     15
+  oeMix:  16
+
+  

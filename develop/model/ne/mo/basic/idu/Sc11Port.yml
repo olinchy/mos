@@ -1,0 +1,19 @@
+className: Sc11Port
+baseClass: PhyPort
+tid: 463
+attributes:
+  - name: portType
+    attrId: 0
+    type: PortTypeEnum
+    default: SC
+    mutable: false
+  - name: featureList
+    attrId: 1
+    type: FeatureList
+    default: [clock]
+    mutable: false
+children:
+  - name: ScMode
+    type: ScV11
+    id: 1
+    autoCreate: true

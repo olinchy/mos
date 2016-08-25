@@ -1,0 +1,13 @@
+className: EthLacpCascade
+tid: 526
+reference:
+  - name: cascadePort
+    type: PhyPort
+    isMulti: true
+    under: ConstraintPolicyInList
+  - name: cascadeRPort
+    type: PhyPort
+    isMulti: true
+    under: ConstraintPolicyInList
+
+

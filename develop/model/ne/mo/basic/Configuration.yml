@@ -1,0 +1,52 @@
+className: Configuration
+tid: 226
+persistence: None
+attributes:
+  - name: emsConfigFile
+    attrId: 0
+    type: String
+    maxLength: 60
+    default: "/mnt/flash/Cfg_Ems/configFile.xml"
+    mutable: true
+actions:
+  customs:
+    - name: RestoreDefaultCfg
+      actionId: 1
+    - name: RestoreDefaultCfgRsp
+      actionId: 101
+    - name: SaveCfgFile
+      actionId: 2
+      attributes:
+        - name: fileName
+          attrId: 0
+          type: String
+          maxLength: 100
+          mutable: false
+    - name: SaveCfgFileRsp
+      actionId: 102
+    - name: UploadCfgFile
+      actionId: 3
+      attributes:
+        - name: fileName
+          attrId: 0
+          type: String
+          maxLength: 100
+          mutable: false
+    - name: UploadCfgFileRsp
+      actionId: 103
+    - name: EmsSave
+      actionId: 4
+    - name: EmsSaveRsp
+      actionId: 104
+    - name: EmsLoad
+      actionId: 5
+    - name: EmsLoadRsp
+      actionId: 105
+children:
+    - name: ConfigurationFile
+      id: 1
+      count: 10
+      groupType: map
+      autoCreate: false
+      
+

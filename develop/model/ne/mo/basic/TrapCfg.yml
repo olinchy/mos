@@ -1,0 +1,12 @@
+className: TrapCfg
+tid: 187
+attributes:
+  - name: ip
+    attrId: 0
+    type: IPv4Addr
+    mutable: true
+  - name: state
+    attrId: 1
+    type: StateEnum
+    default: disable
+    mutable: true

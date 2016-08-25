@@ -1,0 +1,61 @@
+className: PmpDscp
+tid: 384
+triggers: [afterGet]
+persistence: None
+attributes:
+  - name: date
+    attrId: 0
+    type: Date
+    maxLength: 50
+    mutable: false
+  - name: validFlag
+    attrId: 1 
+    type : PmpValidFlagEnum
+    default: valid
+    mutable: false
+  - name: txFrames
+    attrId: 2 
+    type : WORD64
+    mutable: false
+  - name: txBytes
+    attrId: 3 
+    type : WORD64
+    mutable: false
+  - name: rxFrames
+    attrId: 4 
+    type : WORD64
+    mutable: false
+  - name: rxBytes
+    attrId: 5 
+    type : WORD64
+    mutable: false
+  - name: maxThroughput
+    attrId: 6 
+    type : FLOAT
+    mutable: false
+  - name: minThroughput
+    attrId: 7 
+    type : FLOAT
+    mutable: false
+  - name: avgThroughput
+    attrId: 8 
+    type : FLOAT
+    mutable: false
+  - name: maxUtilize
+    attrId: 9 
+    type : WORD32
+    mutable: false
+  - name: minUtilize
+    attrId: 10 
+    type : WORD32
+    mutable: false
+  - name: avgUtilize
+    attrId: 11 
+    type : WORD32
+    mutable: false
+actions:
+  customs:
+    - name: Clear
+      actionId: 1
+    - name: ClearRsp
+      actionId: 101

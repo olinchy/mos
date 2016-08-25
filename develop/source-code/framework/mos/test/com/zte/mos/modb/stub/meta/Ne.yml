@@ -1,0 +1,10 @@
+className: Ne
+children:
+   - name : Shelf
+     id : 1
+     count : 15000
+     autoCreate: false
+   - name : P2pRoute
+     id : 1
+     count : 15000
+     autoCreate: false

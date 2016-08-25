@@ -1,0 +1,32 @@
+className: SyncConfig
+tid: 1
+attributes:
+  - name: enable
+    attrId: 1
+    type: BYTE
+    default: 0
+    mutable: true
+  - name: neType
+    attrId: 2
+    type: String
+    maxLength: 128
+    mutable: true
+  - name: modelType
+    attrId: 3
+    type: String
+    maxLength: 64
+    mutable: true
+  - name: interval
+    attrId: 4
+    type: WORD32
+    mutable: true
+  - name: pollTaskName
+    attrId: 5
+    type: String
+    maxLength: 128
+    mutable: false
+  - name: queueSize
+    attrId: 6
+    type: WORD32
+    default: 15000
+    mutable: true

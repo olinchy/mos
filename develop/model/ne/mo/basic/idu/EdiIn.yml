@@ -1,0 +1,28 @@
+className: EdiIn
+baseClass: PhyPort
+tid: 1
+triggers: [constraintSet]
+persistence: 
+attributes:
+  - name: enable
+    attrId: 1
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: alarmName
+    attrId: 2
+    type: Array
+    maxItems: 40
+    items:
+      type: CHAR
+    mutable: true
+  - name: alarmMode
+    attrId: 3
+    type: EdiAlarmModeEnum
+    default: Energized
+    mutable: true
+  - name: alarmLevel
+    attrId: 4
+    type: AlarmLevelEnum
+    default: Minor
+    mutable: true

@@ -1,0 +1,10 @@
+className: XstpBridgeIdObj
+attributes:
+  - name: priority
+    attrId: 0 
+    type: WORD16
+    mutable: false
+  - name: bridgeMac
+    attrId: 1 
+    type: MacAddr 
+    mutable: false 

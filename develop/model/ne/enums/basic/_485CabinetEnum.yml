@@ -1,0 +1,6 @@
+name: _485CabinetEnum
+type: BYTE
+default: DEVICE_8906
+enum:
+  DEVICE_8906: 0
+  DEVICE_8900A: 1

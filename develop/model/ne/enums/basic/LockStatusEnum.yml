@@ -1,0 +1,7 @@
+name: LockStatusEnum
+type: BYTE
+default: unLock
+enum:
+    unLock: 0   
+    lock: 1
+

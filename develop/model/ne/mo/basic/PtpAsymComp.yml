@@ -1,0 +1,10 @@
+className: PtpAsymComp
+tid: 393
+attributes:
+  - name: asymValue
+    attrId: 0
+    type: SWORD32
+    minimum: -100000
+    maximum: 100000
+    default: 0
+    mutable: true

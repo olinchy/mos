@@ -1,0 +1,15 @@
+className: Encript
+tid: 427
+attributes:
+  - name: state
+    attrId: 0
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: type
+    attrId: 1
+    type: AESTypeEnum
+    default: AES128
+    mutable: true
+
+

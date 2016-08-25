@@ -1,0 +1,22 @@
+className: RtueTrafficUnit
+baseClass: TrafficUnit
+tid: 149
+persistence: None
+attributes:
+  - name: featureList
+    attrId: 0
+    type: FeatureList
+    default: [ces]
+    mutable: false
+children:
+   - name : VStm155Port
+     type : CesVStm155Port
+     id : 1
+     count : 2
+     autoCreate: true
+   - name : EthPort
+     type : PhyPort
+     id : 2
+     count : 1
+     groupType : map
+     autoCreate: {"E-1": [EthPort_E_CES, {displayName: "GbE1"}]}

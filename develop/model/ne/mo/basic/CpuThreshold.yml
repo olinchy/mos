@@ -1,0 +1,10 @@
+className: CpuThreshold
+tid: 250
+attributes:
+  - name: threshold
+    attrId: 0
+    type: BYTE
+    range: [[1,100]]
+    default: 80
+    mutable: false
+    autoCreate : True

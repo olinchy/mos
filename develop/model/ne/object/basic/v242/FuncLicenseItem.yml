@@ -1,0 +1,30 @@
+className: FuncLicenseItem
+attributes: 
+  - name: type
+    attrId: 0
+    type: LicenseTypeEnum
+    default: invalidType
+    mutable: true
+  - name: state
+    attrId: 1
+    type: WORD32
+    default: 0
+    mutable: false
+    mutable: true
+  - name: itemState
+    attrId: 2
+    type: WORD32
+    enum:
+      disable: 1
+      island: 2
+      fail: 3
+      success: 4
+      freeze: 5
+      unauth: 6
+    default: unauth
+    mutable: true
+  - name: leftDays
+    attrId: 3
+    type: WORD32
+    default: 0
+    mutable: true

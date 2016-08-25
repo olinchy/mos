@@ -1,0 +1,9 @@
+className: LcptCoreNode
+tid: 414
+reference:
+  - name: portId  
+    type: PhyPort
+    isMulti: false
+    under: DependencyPolicy
+
+

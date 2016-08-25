@@ -1,0 +1,68 @@
+className: ErpsV1
+tid: 325
+#triggers: [constraintSet]
+persistence: All
+attributes:
+  - name: state
+    attrId: 0
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: rplRole
+    attrId: 1
+    type: BYTE
+    enum:
+        Non_Owner: 0
+        Owner: 1
+    default: Non_Owner
+    mutable: true
+  - name: rplPort
+    attrId: 2
+    type: ErpsPortTypeEnum
+    default: eastPort
+    mutable: true
+  - name: holdoffTimerLen
+    attrId: 3
+    type: WORD16
+    range: [[0,10000]]
+    default: 0
+    mutable: true 
+  - name: wtrTimerLen
+    attrId: 4
+    type: BYTE
+    range: [[5,12]]
+    default: 5
+    mutable: true 
+  - name: guardTimerLen
+    attrId: 5
+    type: WORD16
+    range: [[10,2000]]
+    default: 500
+    mutable: true 
+  - name: rapsChVid
+    attrId: 6
+    type: WORD16
+    default: 0
+    mutable: true 
+  - name: ringMel
+    attrId: 7
+    type: WORD16
+    default: 0
+    mutable: true 
+reference:
+  - name: eastPort
+    type: TrafficPort
+    isMulti: false
+    under: ConstraintPolicy
+  - name: westPort
+    type: TrafficPort
+    isMulti: false 
+    under: ConstraintPolicy
+children:   
+   - name: ProtocolInfo
+     type: ErpsV1ProtocolInfo
+     id : 1     
+     autoCreate: true
+   - name: ErpsV2DI
+     id : 2 
+     autoCreate: true

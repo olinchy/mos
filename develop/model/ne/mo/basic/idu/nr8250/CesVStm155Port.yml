@@ -1,0 +1,11 @@
+className: CesVStm155Port
+baseClass: VStm155Port
+tid: 122
+persistence: None
+attributes:
+  - name: featureList
+    attrId: 0
+    type: FeatureList
+    default: [ces]
+    mutable: false
+

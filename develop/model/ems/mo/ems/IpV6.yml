@@ -1,0 +1,10 @@
+className: IpV6
+tid: 2504
+attributes:
+  - name: ip_addr
+    attrId: 1
+    type: Array
+    maxItems: 16
+    items:
+      type: BYTE
+    mutable: true

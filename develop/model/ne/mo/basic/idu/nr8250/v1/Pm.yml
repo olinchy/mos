@@ -1,0 +1,30 @@
+className: Pm
+baseClass: Board
+tid: 470
+triggers: [afterGet]
+attributes:
+  - name: boardType
+    attrId: 0
+    type: BoardTypeEnum
+    default: pm_v1
+    mutable: false
+  - name: slot
+    attrId: 1
+    type: BYTE
+    default: 0
+    mutable: true
+  - name: msstate
+    attrId: 2
+    type: BYTE
+    default: 0
+    mutable: true
+  - name: workmode
+    attrId: 3
+    type: BYTE
+    default: 0
+    mutable: true
+  - name: workstate
+    attrId: 4
+    type: BYTE
+    default: 0
+    mutable: true

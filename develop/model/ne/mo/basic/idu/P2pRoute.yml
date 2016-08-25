@@ -1,0 +1,190 @@
+className: P2pRoute
+tid: 107
+triggers: [afterGet]
+attributes:
+  - name: acrossLevel
+    attrId: 0
+    type: AcrossLevelEnum
+    default: vc12
+    mutable: true
+  - name: rack
+    attrId: 1
+    type: BYTE
+    minimum: 1
+    maximum: 1
+    default: 1
+    mutable: true
+  - name: srcShelf
+    attrId: 2
+    type: BYTE
+    minimum: 1
+    maximum: 2
+    default: 1
+    mutable: true
+  - name: srcTraffUnit
+    attrId: 3
+    type: BYTE
+    minimum: 2
+    maximum: 255
+    mutable: true
+  - name: srcPortType
+    attrId: 4
+    type: PortTypeEnum
+    default: E1
+    mutable: true
+  - name: srcPortNo
+    attrId: 5
+    type: WORD16
+    minimum: 1
+    maximum: 75 
+    mutable: true
+  - name: srcVC4
+    attrId: 6
+    type: BYTE
+    minimum: 0
+    maximum: 4
+    default: 0
+    mutable: true
+  - name: srcSlotIndex
+    attrId: 7
+    type: BYTE
+    minimum: 0
+    maximum: 63
+    default: 0
+    mutable: true
+  - name: dstShelf
+    attrId: 8
+    type: BYTE
+    minimum: 1
+    maximum: 2
+    default: 1
+    mutable: true
+  - name: dstTraffUnit
+    attrId: 9
+    type: BYTE
+    minimum: 2
+    maximum: 255
+    mutable: true
+  - name: dstPortType
+    attrId: 10
+    type: PortTypeEnum
+    default: E1
+    mutable: true
+  - name: dstPortNo
+    attrId: 11
+    type: WORD16
+    minimum: 1
+    maximum: 75
+    mutable: true
+  - name: dstVC4
+    attrId: 12
+    type: BYTE
+    minimum: 0
+    maximum: 4
+    default: 0
+    mutable: true
+  - name: dstSlotIndex
+    attrId: 13
+    type: BYTE
+    minimum: 0
+    maximum: 63
+    default: 0
+    mutable: true
+  - name: direction
+    attrId: 14
+    type: BYTE
+    enum:
+      bidirection: 1
+    default: bidirection
+    mutable: true
+  - name: activeFlag
+    attrId: 15
+    type: ActiveFlagEnum
+    default: inactive
+    mutable: true
+  - name: routLevel
+    attrId: 16
+    type: BYTE
+    minimum: 1
+    maximum: 6
+    default: 1
+    mutable: true
+  - name: desc
+    attrId: 17
+    type: String
+    maxLength: 52
+    mutable: true
+  - name: creator
+    attrId: 18
+    type: String
+    maxLength: 255
+    mutable: true
+  - name: creatorTime
+    attrId: 19
+    type: String
+    maxLength: 255
+    mutable: true
+  - name: creatorDesc
+    attrId: 20
+    type: String
+    maxLength: 255
+    mutable: true
+  - name: lmspGroupId
+    attrId: 21
+    type: WORD32
+    minimum: 0
+    maximum: 2
+    default: 0
+    mutable: true
+  - name: cascadeFlag
+    attrId: 22
+    type: TdmCascadeFlagEnum
+    default: nocascade
+    mutable: true
+  - name: linkId
+    attrId: 23
+    type: WORD32
+    minimum: 0
+    maximum: 16
+    default: 0
+    mutable: true
+  - name: msStatus
+    attrId: 24
+    type: BYTE
+    enum:
+      workmode: 0
+      protectmode: 1
+    default: workmode
+    mutable: true
+  - name: srcValidFlag
+    attrId: 25
+    type: ValidFlagEnum
+    default: invalid
+    mutable: true
+  - name: srcValidCondition
+    attrId: 26
+    type: ModulationCodingEnum
+    default: invalidNum
+    mutable: true
+  - name: srcModulation
+    attrId: 27
+    type: ModulationCodingEnum
+    default: invalidNum
+    mutable: true
+  - name: dstValidFlag
+    attrId: 28
+    type: ValidFlagEnum
+    default: invalid
+    mutable: true
+  - name: dstValidCondition
+    attrId: 29
+    type: ModulationCodingEnum
+    default: invalidNum
+    mutable: true
+  - name: dstModulation
+    attrId: 30
+    type: ModulationCodingEnum
+    default: invalidNum
+    mutable: true
+
+    

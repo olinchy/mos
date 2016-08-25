@@ -1,0 +1,589 @@
+{
+  "moClass":"CfmLtResult",
+  "dn":"/EthProtocol/EthL2Protocol/Cfm/MD/service/MA/10/MP/1/CfmLtResult",
+  "mo":{
+    "startTime":"2016-07-13 19:36:18",
+    "failInfo":0,
+    "destinationMac":null,
+    "ltNode":[
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      }
+    ],
+    "classType":null,
+    "nodeNumber":0,
+    "sourceMPID":0,
+    "endTime":"2016-07-13 19:36:18",
+    "validResult":0
+  }
+}
+
+{
+  "moClass":"PmpThresh",
+  "dn":"/Shelf/1/Board/1/AirPort/1/PmpThresh/1",
+  "mo":{
+    "rslLow":600,
+    "rlt1":350,
+    "xpiHigh":35,
+    "radioUtilizeHigh":null,
+    "rslHigh":250,
+    "classType":null,
+    "rslHigh_uc":25,
+    "rlt2":600,
+    "rslLow_uc":60,
+    "tlt":1250
+  }
+}
+
+{
+  "moClass":"XstpInstanceReportEms",
+  "dn":"/EthProtocol/EthL2Protocol/MstpGlobal/Instance/0/XstpInstanceReportEms",
+  "mo":{
+    "PortState":[
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      }
+    ],
+    "PortNum":0,
+    "classType":null,
+    "VlanMap":null
+  }
+}
+
+{
+  "moClass":"XstpInstanceReportEms",
+  "dn":"/EthProtocol/EthL2Protocol/Xstp/Instance/0/XstpInstanceReportEms",
+  "mo":{
+    "PortState":[
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      },
+      {
+        "moClass":null,
+        "dn":"",
+        "mo":{
+          
+        }
+      }
+    ],
+    "PortNum":0,
+    "classType":null,
+    "VlanMap":null
+  }
+}
+
+/Pmp/1/Vlan/AIR-0-0_1/VlanPerfData/1
+
+/Pmp/1/Vlan/AIR-0-0_1/VlanPerfData
+
+{
+  "moClass":"SysLog",
+  "dn":"/LOG/1/SysLog/1",
+  "mo":{
+    "status":"disable",
+    "serverIp":"192.168.1.1",
+    "classType":null
+  }
+}
+
+/Pmp/1/Vlan/AIR-0-0_1
+
+{
+  "moClass":"Radius",
+  "dn":"/Security/1/Radius/1",
+  "mo":{
+    "privateip":0,
+    "serverip":0,
+    "enable":0,
+    "serverport":1812,
+    "classType":null,
+    "retry":2,
+    "timeout":3,
+    "secretkey":null
+  }
+}
+
+{
+  "moClass":"DevicePara",
+  "dn":"/SysPara/1/DevicePara/1",
+  "mo":{
+    "neName":"8950-86--23310P04",
+    "mibVersion":"8950V2.03.03.10",
+    "siteId":"",
+    "neId":15,
+    "neType":"NR8950",
+    "classType":null,
+    "mac":"90-1D-27-F0-A6-22",
+    "health":"None",
+    "netMask":"255.255.255.0",
+    "defaultGw":"108.28.170.1",
+    "ip":"108.28.170.86"
+  }
+}
+
+
+
+
+
+
+

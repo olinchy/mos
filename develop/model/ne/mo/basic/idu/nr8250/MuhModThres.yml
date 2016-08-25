@@ -1,0 +1,15 @@
+className: MuhModThres
+baseClass: ModThres
+tid: 596
+triggers: [constraintSet, recover, beforeAdd]
+attributes:
+  - name: modulation
+    attrId: 0
+    type: Qam1024ModulationEnum
+    default: QPSK
+    mutable: true
+  - name: codingType
+    attrId: 1
+    type: CodingTypeEnum
+    default: normal      
+    mutable: true

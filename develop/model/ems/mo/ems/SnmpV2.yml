@@ -1,0 +1,6 @@
+className: SnmpV2
+baseClass: Snmp
+tid: 250002
+
+
+

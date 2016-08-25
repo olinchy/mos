@@ -1,0 +1,15 @@
+className: LacpMemPortInfo
+tid: 493
+persistence: None
+triggers: [afterGet]
+attributes:
+  - name: lagMemPortInfo
+    attrId: 0
+    type: Set
+    maxItems: 8
+    items:
+      type: LagMemPortInfo
+    mutable: false
+
+
+   

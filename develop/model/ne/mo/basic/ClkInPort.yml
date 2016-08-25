@@ -1,0 +1,21 @@
+className: ClkInPort
+baseClass: PhyPort
+tid: 460
+attributes:
+  - name: portType
+    attrId: 0
+    type: PortTypeEnum
+    default: clk
+    mutable: false
+  - name: featureList
+    attrId: 1
+    type: FeatureList
+    default: [clock]
+    mutable: false
+children:
+  - name: ClkMonMode
+    type: ClkMon
+    id: 1
+    autoCreate: true
+
+

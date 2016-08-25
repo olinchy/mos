@@ -1,0 +1,9 @@
+name: NPlus1CurProtectEnum
+type: BYTE
+default: propath
+enum:
+  propath: 0 
+  path1: 1  
+  path2: 2
+  path3: 3
+

@@ -1,0 +1,10 @@
+className: NativeVE1Port
+baseClass: VE1Port
+tid: 105
+persistence: None
+attributes:
+  - name: featureList
+    attrId: 0
+    type: FeatureList
+    default: [native]
+    mutable: false

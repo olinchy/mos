@@ -1,0 +1,25 @@
+className: ManageCmd
+tid: 368
+actions:
+  customs:
+    - name: TriggeCmd
+      actionId: 1
+      attributes:
+        - name: ringId
+          attrId: 0
+          type: BYTE
+          mutable: true
+        - name: cmd
+          attrId: 1
+          type: ManualCmdEum
+          mutable: true
+        - name: portDirection  
+          attrId: 2
+          type: BYTE
+          enum:
+            eastPort: 0
+            westPort: 1
+          default: eastPort
+          mutable: true
+    - name: TriggeCmdRsp
+      actionId: 101

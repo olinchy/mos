@@ -1,0 +1,28 @@
+className: Http
+tid: 2505
+attributes:
+  - name: user_name
+    attrId: 1
+    type: String
+    maxLength: 200
+    default: "ztesh"
+    mutable: false
+
+  - name: passwd
+    attrId: 2
+    type: String
+    maxLength: 256
+    default: "ztesh"
+    mutable: true
+
+  - name: port
+    attrId: 3
+    type: WORD32
+    default: 80
+    mutable: true
+
+  - name: status
+    attrId: 4
+    type: BYTE
+    default: 1
+    mutable: true

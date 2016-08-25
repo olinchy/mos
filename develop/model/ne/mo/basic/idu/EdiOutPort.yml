@@ -1,0 +1,19 @@
+className: EdiOutPort
+baseClass: PhyPort
+tid: 462
+attributes:
+  - name: portType
+    attrId: 0
+    type: PortTypeEnum
+    default: ediOut
+    mutable: false
+  - name: featureList
+    attrId: 1
+    type: FeatureList
+    default: [clock]
+    mutable: false
+children:
+  - name: EdiMode
+    type: EdiOut
+    id: 1
+    autoCreate: true

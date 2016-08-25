@@ -1,0 +1,25 @@
+className: NR8250XPIC
+baseClass: XPIC
+tid: 170
+triggers: [constraintAdd, constraintSet, constraintDel, afterAdd, afterDel, afterSet, recover]
+attributes:
+  - name: xpicHAirPort
+    attrId: 0
+    type: BYTE
+    default: 0
+    mutable: true
+  - name: xpicVAirPort
+    attrId: 1
+    type: BYTE
+    default: 0
+    mutable: true
+  - name: xpicHShelfNo
+    attrId: 2
+    type: BYTE
+    default: 1
+    mutable: true
+  - name: xpicVShelfNo
+    attrId: 3
+    type: BYTE
+    default: 1
+    mutable: true

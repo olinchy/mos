@@ -1,0 +1,6 @@
+className: HQosL2Para
+baseClass: DSAttrTemplate
+tid: 7005
+reference:
+  - name: dropProfile
+    type: DropProfilePara

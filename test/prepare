@@ -1,0 +1,12 @@
+#!/bin/bash
+
+rm -rf /var/lib/mos/*
+rm -rf $MOS_HOME/build/mos-ne/02.04.04/store/*
+rm -rf $MOS_HOME/build/mos-ems/store/*
+ems_app stop
+ems_model mos-ne 02.04.04 stop
+ems stop
+test $(ps -ef | grep demo_ne.bin | grep -v grep | wc -l) -ne 0 && killall demo_ne.bin
+test $(ps -ef | grep cli | grep -v grep | wc -l) -ne 0 && killall cli
+cp -fr $MOS_HOME/testnew/prepares/mos-ne/store/ $MOS_HOME/build/mos-ne/02.04.04/
+cp -fr $MOS_HOME/testnew/prepares/mos-ems/store/ $MOS_HOME/build/mos-ems/

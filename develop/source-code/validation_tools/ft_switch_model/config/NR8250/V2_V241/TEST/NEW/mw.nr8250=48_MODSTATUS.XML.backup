@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<DBTABLE name="NR8250_R_8000_MODSTATUS">
+  <DBRECORD>
+    <FIELD name="ucRackNo" value="1"/>
+    <FIELD name="ucShelfNo" value="1"/>
+    <FIELD name="ucTrafficUnitNo" value="5"/>
+    <FIELD name="ucSlotNo" value="5"/>
+    <FIELD name="ucLockStatus" value="0"/>
+    <FIELD name="ucAcmEnable" value="0"/>
+    <FIELD name="ucTxModulation" value="0"/>
+    <FIELD name="ucRxModulation" value="0"/>
+  </DBRECORD>
+  <DBRECORD>
+    <FIELD name="ucRackNo" value="1"/>
+    <FIELD name="ucShelfNo" value="1"/>
+    <FIELD name="ucTrafficUnitNo" value="5"/>
+    <FIELD name="ucSlotNo" value="6"/>
+    <FIELD name="ucLockStatus" value="0"/>
+    <FIELD name="ucAcmEnable" value="0"/>
+    <FIELD name="ucTxModulation" value="0"/>
+    <FIELD name="ucRxModulation" value="0"/>
+  </DBRECORD>
+</DBTABLE>

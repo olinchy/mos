@@ -1,0 +1,14 @@
+name: PathFlagEnum
+type: BYTE
+default: sw1
+enum:
+  sw1: 1
+  sw2: 2
+  fw: 5
+  sw1p1: 11
+  sw1p2: 12
+  sw1hp: 13
+  sw2p1: 21
+  sw2p2: 22
+  sw2hp: 23
+  taou: 254

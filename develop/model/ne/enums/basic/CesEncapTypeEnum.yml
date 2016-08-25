@@ -1,0 +1,7 @@
+name: CesEncapTypeEnum
+type: BYTE
+default: StructureAgnostic
+enum:
+    StructureAgnostic: 0
+    StructureAwareWithCAS: 1
+    StructureAware: 2 

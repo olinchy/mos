@@ -1,0 +1,8 @@
+name: UpdateResultEnum
+type: BYTE
+enum:
+  failed: 0
+  succeed: 1
+  inProgress: 2
+  noUpdate: 200
+  invalid: 255

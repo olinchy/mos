@@ -1,0 +1,22 @@
+className: RtebTrafficUnit
+baseClass: TrafficUnit
+tid: 112
+triggers: [beforeAdd, afterAdd, beforeSet]
+attributes:
+  - name: featureList
+    attrId: 0
+    type: FeatureList
+    default: [ces]
+    mutable: true
+
+children:
+   - name : VE1Port
+     id : 1
+     count : 16
+
+   - name : EthPort
+     type : PhyPort
+     id : 2
+     count : 1
+     groupType : map
+     autoCreate: {"E-1": [EthPort_E_CES, {displayName: "GbE1"}]}

@@ -1,0 +1,6 @@
+name: BlackWhiteListActionEnum
+type: BYTE
+default: Permit
+enum:
+  Permit: 0
+  Deny:  1  

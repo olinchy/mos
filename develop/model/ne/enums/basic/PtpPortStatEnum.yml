@@ -1,0 +1,13 @@
+name: PtpPortStatEnum
+type: BYTE
+default: Passive
+enum:
+  Initializing  : 1
+  Faulty        : 2
+  Disabled      : 3
+  Listening     : 4
+  Pre_Master    : 5
+  Master        : 6
+  Passive       : 7
+  Uncalibrated  : 8
+  Slave         : 9

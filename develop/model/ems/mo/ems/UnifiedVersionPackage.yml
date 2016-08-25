@@ -1,0 +1,36 @@
+className: UnifiedVersionPackage
+tid: 100402
+attributes:
+  - name: UnifyVersion
+    attrId: 1
+    type: String
+    maxLength: 50
+    mutable: true
+
+  - name: pkgType
+    attrId: 2
+    type: VersionPkgTypeEnum
+    default: SOFTWARE
+    mutable: true
+
+  - name: neType
+    attrId: 3
+    type: String
+    maxLength: 50
+    mutable: true
+
+  - name: support203
+    attrId: 4
+    type: bool
+    default: false
+    mutable: true
+
+children:
+   - name : SoftwarePackage
+     id : 1
+     count : 1
+     autoCreate: false
+   - name : FirmwarePackage
+     id : 2
+     count : 1
+     autoCreate: false

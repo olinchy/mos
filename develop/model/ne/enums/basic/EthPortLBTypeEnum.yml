@@ -1,0 +1,7 @@
+name: EthPortLBTypeEnum
+type: BYTE
+default: noLoopBack
+enum:
+   noLoopBack: 0
+   remote: 1
+   local: 2

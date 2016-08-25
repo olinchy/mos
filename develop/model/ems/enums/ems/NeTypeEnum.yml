@@ -1,0 +1,9 @@
+name: NeTypeEnum
+type: BYTE
+enum:
+      nr8250: 1      
+      nr8120: 2
+      nr8950: 3
+      nr8150: 4
+      nr8960: 5
+      nr8000tr: 6

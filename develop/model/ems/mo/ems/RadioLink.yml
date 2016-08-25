@@ -1,0 +1,8 @@
+className: RadioLink
+baseClass: PhysicalLink
+tid: 53
+reference:
+  - name: aEnd
+    type: AirPort
+  - name: zEnd
+    type: AirPort

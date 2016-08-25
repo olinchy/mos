@@ -1,0 +1,70 @@
+className: LogicAirPort
+className: LogicAirPort
+tid: 507
+isAbstract : True
+attributes:  
+  - name: airPortStatus
+    attrId: 0
+    type: BYTE
+    enum:
+      down: 0
+      up: 1
+    default: down
+    mutable: true
+    dynamic: true
+  - name: xpicStatus
+    attrId: 1
+    type : StateEnum
+    default: disable
+    mutable: true
+    dynamic: true
+  - name: xpicId
+    attrId: 2
+    type : BYTE
+    default: 0
+    mutable: true
+    dynamic: true
+  - name: plaStatus
+    attrId: 3
+    type : StateEnum
+    default: disable
+    mutable: true
+    dynamic: true
+  - name: plaId
+    attrId: 4
+    type : WORD32
+    default: 0
+    mutable: true
+    dynamic: true
+  - name: lacpId
+    attrId: 5
+    type : WORD32
+    default: 0
+    mutable: true
+    dynamic: true
+  - name: cascadeId
+    attrId: 6
+    type : WORD32
+    default: 0
+    mutable: true
+    dynamic: true
+  - name: workBandLimit
+    attrId: 7
+    type: Array
+    maxItems: 12
+    items:
+      type: BYTE
+      default: 0
+    mutable: true
+  - name: mimoStatus
+    attrId: 8
+    type : StateEnum
+    default: disable
+    mutable: true
+    dynamic: true
+  - name: mimoId
+    attrId: 9
+    type : BYTE
+    default: 0
+    mutable: true
+    dynamic: true

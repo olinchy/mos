@@ -1,0 +1,56 @@
+className: EthPort_O_3in1
+baseClass: PhyPort
+tid: 232
+attributes:
+  - name: portType
+    attrId: 0
+    type: PortTypeEnum
+    default: optical
+    mutable: false
+  - name: featureList
+    attrId: 1
+    type: FeatureList
+    default: [clock,ssmSwitch,ptpAsym]
+    mutable: false
+children:
+  - name: PortMode
+    type: PortMode_O_3in1
+    id: 1
+    autoCreate: true
+  - name: PmpRmon
+    id: 2
+    count : 1
+    autoCreate: true
+  - name: PmpLinkEth
+    id: 3
+    count : 1
+    autoCreate: true
+  - name: RmQryEthPort
+    id: 4
+    autoCreate: true
+#  - name: LldpPort
+#    id: 5
+#    autoCreate: true
+  - name: ssmSwitch
+    type: SsmSwitch
+    id: 5
+    autoCreate: true 
+  - name: LcptEndNode
+    id: 6
+    autoCreate: false
+  - name: EfmPort
+    id: 7
+    autoCreate: false
+  - name: ptpAsymComp
+    type: PtpAsymComp
+    id: 8
+    autoCreate: true
+  - name: LacpPort
+    id: 9
+    autoCreate: false
+  - name: EthPortLoopBack
+    id: 10
+    autoCreate: true
+  - name: MulPort
+    id: 11
+    autoCreate: true

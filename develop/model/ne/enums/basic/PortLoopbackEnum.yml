@@ -1,0 +1,6 @@
+name: PortLoopbackEnum
+type: BYTE
+default: unloopBack
+enum:
+  unloopBack: 0
+  loopBack: 1

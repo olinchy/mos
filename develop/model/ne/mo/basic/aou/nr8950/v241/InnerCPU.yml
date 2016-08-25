@@ -1,0 +1,10 @@
+className: InnerCPU
+tid: 505
+persistence: None
+children:
+   - name : PmpRmon
+     id : 1
+     count : 1
+     autoCreate: true
+ 
+        

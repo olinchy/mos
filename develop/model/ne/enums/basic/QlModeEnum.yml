@@ -1,0 +1,6 @@
+name: QlModeEnum
+type: BYTE
+default: Manual
+enum:
+  Auto      : 0
+  Manual    : 1

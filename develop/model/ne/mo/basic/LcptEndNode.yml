@@ -1,0 +1,18 @@
+className: LcptEndNode
+tid: 417
+attributes:
+  - name: bsName  
+    attrId: 0
+    type: String
+    maxLength: 40
+    default: "BS"
+    mutable: true
+  - name: bwRequire  
+    attrId: 1
+    type: WORD32
+    minimum: 1
+    maximum: 1000
+    default: 10
+    mutable: true
+
+

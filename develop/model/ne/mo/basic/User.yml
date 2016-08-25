@@ -1,0 +1,54 @@
+className: User
+tid: 185
+triggers: [constraintSet, beforeSet, afterGet, action, recover]
+attributes:
+  - name: passwordMd
+    attrId: 0
+    type: String
+    maxLength: 48
+    mutable: true
+    default: "21232f297a57a5a743894a0e4a801fc3"
+  - name: permissionLevel
+    attrId: 1
+    type: BYTE
+    enum:
+      administrator: 0
+      operator: 1
+      browser: 2
+    default: operator
+    mutable: true
+  - name: state
+    attrId: 2
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: passwordAge
+    attrId: 3
+    type: WORD32
+    range: [[0,360]]
+    mutable: true
+  - name: lockState
+    attrId: 4
+    type: BYTE
+    enum:
+      unlock: 0
+      lock: 1
+    default: unlock
+    mutable: true
+actions:
+  customs:
+    - name: SetPassword
+      actionId: 1
+      attributes:
+        - name: newPassword
+          attrId: 0  
+          type: String
+          maxLength: 48
+          mutable: true
+        - name: oldPassword
+          attrId: 1  
+          type: String
+          maxLength: 48
+          mutable: true
+    - name: SetPasswordRsp
+      actionId: 101

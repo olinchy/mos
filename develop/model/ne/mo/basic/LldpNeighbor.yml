@@ -1,0 +1,12 @@
+className: LldpNeighbor
+tid: 425
+persistence: None
+triggers: [afterGet]
+attributes:
+  - name: neighborInfo
+    attrId: 0
+    type: Set
+    maxItems: 128
+    items:
+      type: LldpEthNeighbor
+    mutable: false

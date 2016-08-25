@@ -1,0 +1,96 @@
+className: AcmuaLogicAirPort
+baseClass: LogicAirPort
+persistence: None
+tid: 239
+triggers: [afterGet, beforeDel]
+children:
+   - name : Workmode
+     type : AcmuaWorkmode
+     id : 1
+     count : 1
+     autoCreate: true
+   - name : Acm
+     type : AcmuaAcm
+     id : 2
+     count : 1
+     autoCreate: true
+   - name : Protect
+     id : 3
+     count : 1
+     autoCreate: true
+   - name : Atpc
+     id : 4
+     count : 1
+     autoCreate: true
+   - name : Rf
+     id : 5
+     count : 1
+     autoCreate: true
+   - name : Desc
+     id : 6
+     count : 1
+     autoCreate: true
+   - name : Rdi
+     type : AouRdi
+     id : 7
+     count : 1
+     autoCreate: true
+   - name : ModemCfgType
+     type : AcmuaModemCfgType
+     id : 8
+     count : 1
+     autoCreate: true
+   - name : LinkWorkPath
+     id : 9
+     count : 1
+     autoCreate: true
+   - name : LinkId
+     id : 10
+     count : 1
+     autoCreate: true
+   - name : ModThres
+     type : AcmuaModThres
+     id : 11
+     count : 1
+     autoCreate: true
+   - name : PmpRadioLink
+     id : 12
+     count : 1
+     autoCreate: true
+   - name : RemoteRadioLinkInfo
+     id : 13
+     count : 2
+     autoCreate: true
+   - name : ErrRate
+     id : 14
+     count : 1
+     autoCreate: true
+   - name : Encript
+     id : 15
+     count : 1
+     autoCreate: true
+actions:
+  customs:
+    - name: ErrRateReset
+      actionId: 1
+    - name: ErrRateResetRsp
+      actionId: 101
+      attributes:
+        - name: validFlag
+          attrId: 0
+          type: StateEnum
+          default: disable
+          mutable: true
+        - name: perOrBer
+          attrId: 1
+          type: PerOrBerEnum
+          default: perv
+          mutable: true
+        - name: value
+          attrId: 2
+          type: FLOAT
+          mutable: true
+        - name: startTime
+          attrId: 3
+          type: Date
+          mutable: true

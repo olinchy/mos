@@ -1,0 +1,67 @@
+className: Dot3Tlv
+attributes:
+  - name: dot3TlvFlag
+    attrId: 0
+    type: BYTE
+    mutable: false
+  - name: negoSupport
+    attrId: 1
+    type: BYTE
+    mutable: false
+  - name: negoEnable
+    attrId: 2
+    type: BYTE
+    mutable: false
+  - name: portSpeed
+    attrId: 3
+    type: WORD16
+    mutable: false
+  - name: portDuplex
+    attrId: 4
+    type: String
+    maxLength: 20
+    mutable: false
+  - name: aggSupport
+    attrId: 5
+    type: BYTE
+    mutable: false
+  - name: aggEnable
+    attrId: 6
+    type: BYTE
+    mutable: false
+  - name: maxFrameSize
+    attrId: 7
+    type: WORD16
+    mutable: false
+  - name: psePowSupport
+    attrId: 8
+    type: BYTE
+    mutable: false
+  - name: psePowEnable
+    attrId: 9
+    type: BYTE
+    mutable: false
+  - name: psePairCtrl
+    attrId: 10
+    type: BYTE
+    mutable: false
+  - name: pesPowPair
+    attrId: 11
+    type: String
+    maxLength: 20
+    mutable: false
+  - name: powPortClass
+    attrId: 12
+    type: String
+    maxLength: 4
+    mutable: false
+  - name: powClass
+    attrId: 13
+    type: String
+    maxLength: 8
+    mutable: false
+  - name: aggId
+    attrId: 14
+    type: WORD32
+    mutable: false
+

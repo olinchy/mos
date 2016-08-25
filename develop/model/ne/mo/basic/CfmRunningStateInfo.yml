@@ -1,0 +1,17 @@
+className: CfmRunningStateInfo
+tid: 495 
+triggers: [afterGet]
+persistence: None
+attributes:
+  - name: nodeNumber
+    attrId: 0
+    type: BYTE
+    default: 0
+    mutable: false
+  - name: StateNode
+    attrId: 1
+    type: Set 
+    maxItems: 512 
+    items:
+        type: CfmStateNodeObject 
+    mutable: false  

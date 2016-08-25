@@ -1,0 +1,40 @@
+name: LicenseTypeEnum
+type: BYTE
+default: invalidType
+enum:
+   invalidType: 0
+   1588v2: 1
+   ACL: 2
+   ACM: 3
+   CESoETH: 4
+   ERP_G8032: 5
+   FrameCompression: 6
+   LACP: 7
+   MSP: 8
+   OAM: 9
+   PLA: 10
+   XPIC: 11
+   AOUasOdu: 12
+   512_1024QAM: 13
+   2048_4096QAM: 14
+   112M: 15
+   MIMO: 16
+   TxCombining: 17
+   RxCombining: 18
+   SyncE: 19
+   SNCP: 20
+   QinQ: 21
+   STP_SFTP_MSTP: 22
+   LCPT: 23
+   NPlus1: 24
+   Capacity: 25
+   10GEPort: 26
+   STM_1_4Port: 27
+   RadioChannel: 28
+   HQos: 29
+   PFC: 30
+   SecondCore: 31
+   2048QAM: 32
+   4096QAM: 33
+
+

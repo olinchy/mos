@@ -1,0 +1,275 @@
+className: LmspGroup
+tid: 124
+triggers: [afterGet]
+attributes:
+  - name: protocalType
+    attrId: 0
+    type: BYTE
+    minimum: 0
+    maximum: 0
+    default: 0
+    mutable: true
+  - name: protectMode
+    attrId: 1
+    type: LmspProtectModeEnum
+    default: unrevertive
+    mutable: true
+  - name: protectType
+    attrId: 2
+    type: LmspProtectTypeEnum
+    default: unbinary
+    mutable: true
+  - name: workShelf
+    attrId: 3
+    type: BYTE
+    minimum: 1
+    maximum: 2
+    default: 1
+    mutable: true
+  - name: workTraffUnit
+    attrId: 4
+    type: BYTE
+    minimum: 2
+    maximum: 8
+    mutable: true
+  - name: workPortType
+    attrId: 5
+    type: BYTE
+    enum:      
+      Stm1: 4
+      Stm4: 5
+    default: Stm1
+    mutable: true
+  - name: workPortNo
+    attrId: 6
+    type: WORD16
+    minimum: 1
+    maximum: 2
+    mutable: true
+  - name: proShelf
+    attrId: 7
+    type: BYTE
+    minimum: 1
+    maximum: 2
+    default: 1
+    mutable: true
+  - name: proTraffUnit
+    attrId: 8
+    type: BYTE
+    minimum: 2
+    maximum: 8
+    mutable: true
+  - name: proPortType
+    attrId: 9
+    type: BYTE
+    enum:      
+      Stm1: 4
+      Stm4: 5
+    default: Stm1
+    mutable: true
+  - name: proPortNo
+    attrId: 10
+    type: WORD16
+    minimum: 1
+    maximum: 2
+    mutable: true
+  - name: wtr
+    attrId: 11
+    type: WORD16
+    minimum: 30
+    maximum: 720
+    default: 600
+    mutable: true
+  - name: b2SdSwitch
+    attrId: 12
+    type: BYTE
+    enum:      
+      "off": 0
+      "on": 1
+    default: "off"
+    mutable: true
+  - name: workstatus
+    attrId: 13
+    type: BYTE
+    enum:
+      Connection: 0
+      Disconnection: 1 
+    default: Disconnection
+    mutable: true
+  - name: protstatus
+    attrId: 14
+    type: BYTE
+    enum:
+      Connection: 0
+      Disconnection: 1 
+    default: Disconnection
+    mutable: true
+  - name: currentchannel
+    attrId: 15
+    type: BYTE
+    enum:
+      protectionGroup: 0
+      workingGroup: 1 
+    default: workingGroup 
+    mutable: true
+  - name: currstatus
+    attrId: 16
+    type: LmspSwitchStatusEnum
+    default: noRequest
+    mutable: true
+actions:
+  customs:
+    - name: Excersize
+      actionId: 1
+      attributes:
+        - name: signalNo  
+          attrId: 0
+          type: BYTE
+          minimum: 0
+          maximum: 1
+          default: 0
+          mutable: true
+    - name: ExcersizeRsp
+      actionId: 101
+      attributes:
+        - name: groupId 
+          attrId: 0 
+          type: WORD32         
+          mutable: true    
+        - name: workstatus 
+          attrId: 1 
+          type: BYTE         
+          mutable: true
+        - name: protstatus 
+          attrId: 2 
+          type: BYTE         
+          mutable: true
+        - name: currChannel 
+          attrId: 3 
+          type: BYTE         
+          mutable: true
+        - name: currstatus 
+          attrId: 4 
+          type: LmspSwitchStatusEnum 
+          default: noRequest
+          mutable: true
+    - name: Manual
+      actionId: 2
+      attributes:
+        - name: signalNo  
+          attrId: 0
+          type: BYTE
+          minimum: 0
+          maximum: 1
+          default: 0
+          mutable: true
+    - name: ManualRsp
+      actionId: 102
+      attributes:
+        - name: groupId 
+          attrId: 0 
+          type: WORD32         
+          mutable: true    
+        - name: workstatus 
+          attrId: 1 
+          type: BYTE         
+          mutable: true
+        - name: protstatus 
+          attrId: 2 
+          type: BYTE         
+          mutable: true
+        - name: currChannel 
+          attrId: 3 
+          type: BYTE         
+          mutable: true
+        - name: currstatus 
+          attrId: 4 
+          type: LmspSwitchStatusEnum 
+          default: noRequest
+          mutable: true
+    - name: Force
+      actionId: 3
+      attributes:
+        - name: signalNo 
+          attrId: 0 
+          type: BYTE
+          minimum: 0
+          maximum: 1
+          default: 0
+          mutable: true
+    - name: ForceRsp
+      actionId: 103
+      attributes:
+        - name: groupId 
+          attrId: 0 
+          type: WORD32         
+          mutable: true    
+        - name: workstatus 
+          attrId: 1 
+          type: BYTE         
+          mutable: true
+        - name: protstatus 
+          attrId: 2 
+          type: BYTE         
+          mutable: true
+        - name: currChannel 
+          attrId: 3 
+          type: BYTE         
+          mutable: true
+        - name: currstatus 
+          attrId: 4 
+          type: LmspSwitchStatusEnum 
+          default: noRequest
+          mutable: true
+    - name: LockOut
+      actionId: 4
+    - name: LockOutRsp
+      actionId: 104
+      attributes:
+        - name: groupId 
+          attrId: 0 
+          type: WORD32         
+          mutable: true    
+        - name: workstatus 
+          attrId: 1 
+          type: BYTE         
+          mutable: true
+        - name: protstatus 
+          attrId: 2 
+          type: BYTE         
+          mutable: true
+        - name: currChannel 
+          attrId: 3 
+          type: BYTE         
+          mutable: true
+        - name: currstatus 
+          attrId: 4 
+          type: LmspSwitchStatusEnum 
+          default: noRequest
+          mutable: true
+    - name: Clear
+      actionId: 5
+    - name: ClearRsp
+      actionId: 105
+      attributes:
+        - name: groupId 
+          attrId: 0 
+          type: WORD32         
+          mutable: true    
+        - name: workstatus 
+          attrId: 1 
+          type: BYTE         
+          mutable: true
+        - name: protstatus 
+          attrId: 2 
+          type: BYTE         
+          mutable: true
+        - name: currChannel 
+          attrId: 3 
+          type: BYTE         
+          mutable: true
+        - name: currstatus 
+          attrId: 4 
+          type: LmspSwitchStatusEnum 
+          default: noRequest
+          mutable: true

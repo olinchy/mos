@@ -1,0 +1,15 @@
+className: Rteb
+baseClass: Rte
+tid: 120
+persistence: None
+attributes:
+   - name: boardType
+     attrId: 0
+     type: BoardTypeEnum
+     default: rteb
+     mutable: false
+children:
+   - name : E1Port
+     id : 1
+     count : 16
+     autoCreate: true

@@ -1,0 +1,13 @@
+name: Qam256ModulationEnum
+type: BYTE
+default: QPSK
+enum:
+    QPSK: 0   
+    16QAM: 1
+    32QAM: 2
+    64QAM: 3
+    128QAM: 4
+    256QAM: 5
+
+
+

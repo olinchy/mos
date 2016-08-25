@@ -1,0 +1,12 @@
+className: InventoryModule
+tid: 1005
+actions:
+  customs:
+    - name: syncNeInventory
+      actionId: 1
+    - name: queryNeInventory
+      actionId: 2
+    - name: getAndSetMaxInventoryUnitID
+      actionId: 3
+
+

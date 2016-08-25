@@ -1,0 +1,9 @@
+name: CtrlMaskEnum
+type: BYTE
+default: broadcast
+enum:
+    broadcast: 0x01
+    unknownUnicast: 0x02
+    ipMulticast: 0x04
+    unknownMACMulticast: 0x08
+    macMulticast: 0x10

@@ -1,0 +1,11 @@
+className: PortVlan_Hybrid
+baseClass: PortVlan_Details
+tid: 265
+triggers: [afterAdd, constraintAdd, constraintSet,afterSet]
+attributes:
+  - name: vlanTag
+    attrId: 0
+    type: Range
+    default: [[0]]
+    maxItems: 4094
+    mutable: true

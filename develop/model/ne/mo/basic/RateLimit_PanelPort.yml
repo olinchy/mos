@@ -1,0 +1,23 @@
+className: RateLimit_PanelPort
+tid: 312
+triggers: [constraintSet]
+baseClass: RateLimit
+attributes:
+  - name: flowControl
+    attrId: 0
+    type: BYTE
+    enum:
+      disable: 0
+      enable: 1
+    default: disable
+    mutable: true
+  - name: stage
+    attrId: 1
+    type: WORD32
+    enum:
+      TXRX: 0
+      TX: 1
+      RX: 2
+    default: TXRX
+    mutable: true
+

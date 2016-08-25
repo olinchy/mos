@@ -1,0 +1,6 @@
+name: PtpAlgorithmEnum
+type: BYTE
+default: Manual  
+enum:
+  Manual  : 1
+  Bmc     : 2

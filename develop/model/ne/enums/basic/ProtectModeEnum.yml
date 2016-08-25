@@ -1,0 +1,9 @@
+name: ProtectModeEnum
+type: BYTE
+default: AUTO
+enum:
+    REV: 1
+    AUTO: 2
+    FORCED: 3
+
+

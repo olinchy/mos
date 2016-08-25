@@ -1,0 +1,59 @@
+className: NeighborInfo
+attributes:
+  - name: trafficNo
+    attrId: 0
+    type: BYTE 
+    default: 0   
+    mutable: true
+  - name: localSlot
+    attrId: 1
+    type: BYTE 
+    default: 0   
+    mutable: true
+  - name: remoteSlot
+    attrId: 2
+    type: BYTE 
+    default: 0   
+    mutable: true
+  - name: localPort
+    attrId: 3
+    type: BYTE 
+    default: 0   
+    mutable: true
+  - name: remotePort
+    attrId: 4
+    type: BYTE 
+    default: 0   
+    mutable: true
+  - name: neId
+    attrId: 5
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: neName
+    attrId: 6
+    type: String
+    maxLength: 31
+    mutable: true
+  - name: neType
+    attrId: 7
+    type: String
+    maxLength: 10
+    mutable: false
+  - name: neIp
+    attrId: 8
+    type: IPv4Addr
+    mutable: true
+  - name: linkStatus
+    attrId: 9
+    type: BYTE
+    enum:
+      linkDown: 0
+      linkUp: 1
+    default: linkDown
+    mutable: true
+  - name: health
+    attrId: 10
+    type: AlarmLevelEnum
+    default: None
+    mutable: true

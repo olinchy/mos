@@ -1,0 +1,7 @@
+name: OduBankEnum
+type: BYTE
+default: High
+enum:
+  Low: 0
+  High: 1
+

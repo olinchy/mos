@@ -1,0 +1,6 @@
+name: IndicatorEnum
+type: BYTE
+default: NoOccur
+enum:
+  NoOccur: 0
+  Occur: 1

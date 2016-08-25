@@ -1,0 +1,6 @@
+name: BaudRateEnum
+type: BYTE
+enum:
+  9600: 0
+  19200: 1
+

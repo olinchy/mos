@@ -1,0 +1,22 @@
+className: EthPort_E_FE
+baseClass: PhyPort
+tid: 614
+attributes:
+  - name: portType
+    attrId: 0
+    type: PortTypeEnum
+    default: FE
+    mutable: false
+  - name: featureList
+    attrId: 1
+    type: FeatureList
+    default: [clock]
+    mutable: false
+children:
+  - name: PortMode
+    type: PortMode_E_1G
+    id: 1
+    autoCreate: true
+  - name: RmQryEthPort
+    id: 2
+    autoCreate: true

@@ -1,0 +1,20 @@
+className: MAou
+baseClass: Board
+tid: 508
+persistence: None
+attributes:
+   - name: boardType
+     attrId: 0
+     type: BoardTypeEnum
+     default: acmua
+     mutable: false
+children:
+   - name : AirPort
+     type : MAouAirPort    
+     id : 1
+     count : 1
+     autoCreate: true
+   - name: PmpEnvInfo
+     id: 2
+     count: 1
+     autoCreate: true

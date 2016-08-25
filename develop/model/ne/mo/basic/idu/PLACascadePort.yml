@@ -1,0 +1,9 @@
+className: PLACascadePort
+tid: 604
+attributes:
+  - name: subPortNum
+    attrId: 0
+    type: BYTE
+    minimum: 1
+    maximum: 8
+    mutable: true

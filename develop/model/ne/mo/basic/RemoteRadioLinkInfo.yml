@@ -1,0 +1,109 @@
+className: RemoteRadioLinkInfo
+tid: 407
+triggers: [afterGet]
+persistence: None
+attributes:
+  - name: bandwidth
+    attrId: 0
+    type: BandWidthEnum
+    default: invalidNum
+    mutable: true
+  - name: txModulation
+    attrId: 1
+    type: ModulationEnum
+    default: invalidNum
+    mutable: true
+  - name: txCodingType
+    attrId: 2
+    type: CodingTypeEnum
+    default: normal      
+    mutable: true
+  - name: rxModulation
+    attrId: 3
+    type: ModulationEnum
+    default: invalidNum
+    mutable: true
+  - name: rxCodingType
+    attrId: 4
+    type: CodingTypeEnum
+    default: normal      
+    mutable: true
+  - name: acmEnable
+    attrId: 5
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: startModulation
+    attrId: 6
+    type: ModulationEnum
+    default: invalidNum
+    mutable: true
+  - name: startCodingType
+    attrId: 7
+    type: CodingTypeEnum
+    default: normal      
+    mutable: true
+  - name: endModulation
+    attrId: 8
+    type: ModulationEnum
+    default: invalidNum
+    mutable: true
+  - name: endCodingType
+    attrId: 9
+    type: CodingTypeEnum
+    default: normal      
+    mutable: true
+  - name: xpiValue
+    attrId: 10
+    type: BYTE
+    default: 0xFF
+    mutable: true
+  - name: workStatus
+    attrId: 11
+    type: MsStatusEnum
+    default: Master
+    mutable: true
+  - name: mse
+    attrId: 12
+    type: SWORD16  
+    default: -100  
+    mutable: true
+  - name: txPower
+    attrId: 13
+    type: SWORD16
+    default: -200
+    mutable: true
+  - name: rsl
+    attrId: 14
+    type: SWORD16  
+    default: -99
+    mutable: true
+  - name: txFreq
+    attrId: 15
+    type: WORD32 
+    default: 0
+    mutable: true
+  - name: rxFreq
+    attrId: 16
+    type: WORD32 
+    default: 0
+    mutable: true
+  - name: modCfgType
+    attrId: 17
+    type: BYTE
+    enum:
+      typical: 0
+      enhance: 1 
+    default: typical
+    mutable: true
+  - name: atpcEnable
+    attrId: 18
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: linkStatus
+    attrId: 19
+    type: StateEnum
+    default: disable
+    mutable: true
+

@@ -1,0 +1,12 @@
+className: XstpPortProtect
+tid: 510
+#triggers: [constraintAdd,constraintSet,constraintDel]
+attributes:
+  - name: guardType
+    attrId: 0
+    type: BYTE
+    enum:
+        LoopProtect: 1
+        RootProtect: 2
+    default: LoopProtect
+    mutable: true

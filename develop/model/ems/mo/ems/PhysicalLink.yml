@@ -1,0 +1,30 @@
+className: PhysicalLink
+tid: 50
+isAbstract: True
+attributes:
+  - name: userLabel
+    attrId: 1
+    type: String
+    maxLength: 100
+    mutable: true
+  - name: linkmanageState
+    attrId: 2
+    type: BYTE
+    enum:
+      normal: 0      
+      inactivate: 1  
+    default: normal
+    mutable: true
+  - name: linkState
+    attrId: 8
+    type: BYTE
+    enum:
+      up: 0      
+      down: 1
+    default: up
+    mutable: true
+  - name: description
+    attrId: 9
+    type: String
+    maxLength: 200
+    mutable: true

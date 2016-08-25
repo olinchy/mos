@@ -1,0 +1,6 @@
+name: RtubLogicModeEnum
+type: BYTE
+default: adm
+enum:
+  adm: 0
+  Transparent: 1

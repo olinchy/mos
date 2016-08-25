@@ -1,0 +1,35 @@
+className: LogicalLink
+baseClass: LVlink
+tid: 50
+attributes:
+  - name: isBroke
+    attrId: 1
+    type: String
+    maxLength: 20
+    mutable: true
+  - name: state
+    attrId: 2
+    type: String
+    maxLength: 900
+    mutable: true
+  - name: runE2E
+    attrId: 3
+    type: String
+    maxLength: 900
+    mutable: true
+  - name: runVersion
+    attrId: 4
+    type: String
+    maxLength: 900
+    mutable: true
+  - name: childrenLink
+    type: Array
+    maxItems: 88
+    items:
+      type: String
+    mutable: true
+reference:
+  - name: aEnd
+    type: LogicalPort
+  - name: zEnd
+    type: LogicalPort

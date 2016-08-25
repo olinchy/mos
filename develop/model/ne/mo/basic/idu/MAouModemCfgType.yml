@@ -1,0 +1,14 @@
+className: MAouModemCfgType
+baseClass: ModemCfgType
+tid: 513
+triggers: [afterSet, afterAdd, recover, beforeSet]
+attributes:
+  - name: cfgType
+    attrId: 0
+    type: BYTE
+    enum:
+      typical: 0
+      enhanced: 1
+    default: typical
+    mutable: true
+

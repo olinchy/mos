@@ -1,0 +1,27 @@
+className: LacpPort
+tid: 339
+#triggers: [constraintAdd, constraintSet, constraintDel, afterDel]
+triggers: [constraintAdd, constraintSet, constraintDel]
+attributes:
+  - name: priority
+    attrId: 0
+    type: WORD16
+    range: [[1,65535]]
+    default: 32768
+    mutable: true
+  - name: workMode
+    attrId: 1
+    type: LacpWorkModeEnum
+    default: active
+    mutable: true
+  - name: aggMode
+    attrId: 2
+    type: BYTE
+    default: 0
+    mutable: true
+  - name: ethTraffic
+    attrId: 3
+    type: LacpEthEnum
+    default: open
+    mutable: true
+   

@@ -1,0 +1,9 @@
+name: Dot1Enum
+type: BYTE
+default: Dot1Null
+enum:
+        Dot1Null: 0
+        PVID: 1
+        PPVID: 2
+        VlanName: 4
+        ProId: 8

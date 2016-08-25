@@ -1,0 +1,50 @@
+name: BoardTypeEnum
+type: WORD16
+default: rtua
+enum:
+  rtua: 37120
+  rtub: 37121
+  rtuc: 37122
+  rtud: 37123
+  rtue: 37124
+  rtuhe: 37127
+  rtuho: 37159
+  rtune: 37133
+  rtuno: 37165
+  rtunp: 37197
+  rtuio: 37128
+  rsua: 37888
+  rpea: 38400
+  rpua: 65280
+  rpub: 65281
+  rpuc: 65282
+  rpud: 65283
+  fa: 14339
+  pm: 14083
+  pm_1: 14081
+  8120rcu: 12529
+  8120rtu: 37361
+  8120rmu: 37617
+  rcuad: 12530
+  rtuad: 37369
+  rmuad: 37619
+  rcub: 12289
+  rcuc: 12290
+  rmuc: 37378
+  rmud: 37379
+  rmue: 37380
+  rmuf: 37381
+  rmuh: 37383
+  rmum: 37384
+  rtea: 37362
+  rteb: 37363
+  rmea: 37618
+  acmua: 12293
+  acmua_b: 12296
+  acmub: 12298
+  rtum: 37132
+  rcua: 12288
+  rmub: 37377
+  pm_v1: 14080
+  fa_v1: 65530
+  rpu_v1: 65535

@@ -1,0 +1,27 @@
+className: AcmubHeadCompress
+baseClass: HeadCompress
+tid: 178
+triggers: [constraintSet]
+attributes:
+  - name: hcModel
+    attrId: 0
+    type: BYTE
+    enum:
+      modelFix: 0
+      modelAuto: 1
+    default: modelAuto
+    mutable: true
+  - name: dynamicTarget
+    attrId: 1
+    type: BYTE
+    minimum: 50
+    maximum: 95
+    default: 90
+    mutable: true
+  - name: fixThresh
+    attrId: 2
+    type: WORD32
+    minimum: 100
+    maximum: 83886080
+    default: 1024
+    mutable: true   

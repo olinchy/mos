@@ -1,0 +1,21 @@
+name: starttrans
+prompt: "<trans>$"
+subCmd:
+  - add
+  - del
+  - get
+  - getConfig
+  - set
+  - ls
+  - find
+  - findConfig
+  - commit
+  - rollback
+  - cd
+  - tree
+  - py
+inTrans : True
+exitWhenEmptyLine: False
+exitAfterSubCmd:
+  - commit
+  - rollback

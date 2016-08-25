@@ -1,0 +1,177 @@
+- name: test_add_set_del_not_exist_data_expect_success_1
+  steps:
+  - command: add /Ems/1/Ne/1;
+    connection: cli1
+    result: {result: 0}
+  - command: get /Ems/1/Ne/1
+    connection: cli1
+    result: {result: 0}
+  - command: get /Ems/1/Ne/1
+    connection: cli2
+    result: {result: 0}
+  - command: set /Ems/1/Ne/1 neName test;
+    connection: cli1
+    result: {result: 0}
+  - command: del /Ems/1/Ne/1
+    connection: cli1
+    result: {result: 0}
+- name: test_add_exist_data_expect_failure_2
+  steps:
+  - command: add /Ems/1/Ne/1;
+    connection: cli1
+    result: {result: 0}
+  - command: add /Ems/1/Ne/1;
+    connection: cli1
+    result: {result: 1}
+  - command: add /Ems/1/Ne/1;
+    connection: cli2
+    result: {result: 1}
+  - command: del /Ems/1/Ne/1
+    connection: cli1
+    result: {result: 0}
+- name: test_add_del_child_expect_success_3
+  steps:
+  - command: add /Ems/1/Ne/1;
+    connection: cli1
+    result: {result: 0}
+  - command: get /Ems/1/Ne/1
+    connection: cli1
+    result: {result: 0}
+  - command: ls /Ems/1/Ne/
+    connection: cli2
+    result:
+      children: ['1']
+      result: 0
+  - command: del /Ems/1/Ne/1
+    connection: cli1
+    result: {result: 0}
+  - command: ls /Ems/1/Ne/
+    connection: cli2
+    result:
+      children: []
+      result: 0
+- name: test_add_set_del_remote_not_exist_data_expect_success_4
+  steps:
+  - command: add /Ems/1/Ne/1;
+    connection: cli1
+    result: {result: 0}
+  - command: get /Ems/1/Ne/1
+    connection: cli1
+    result: {result: 0}
+  - command: add /Ems/1/Ne/1/Product/1;
+    connection: cli2
+    result: {result: 0}
+  - command: get /Ems/1/Ne/1/Product/1/Shelf/1
+    connection: cli1
+    result: {result: 0}
+  - command: add /Ems/1/Ne/1/Product/1/Shelf/1/Board/4 Rtua;
+    connection: cli1
+    result: {result: 0}
+  - command: get /Ems/1/Ne/1/Product/1/Shelf/1/Board/4
+    connection: cli2
+    result: {result: 0}
+  - command: del /Ems/1/Ne/1
+    connection: cli1
+    result: {result: 0}
+  - command: get /Ems/1/Ne/1/Product/1/Shelf/1/Board/4
+    connection: cli2
+    result: {result: 1}
+- name: test_add_set_del_not_exist_data_intrans_commit_expect_success_5
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - command: add /Ems/1/Ne/1;
+    connection: cli1
+    result: {result: 0}
+  - command: get /Ems/1/Ne/1
+    connection: cli2
+    result: {result: 1}
+  - command: add /Ems/1/Ne/1;
+    connection: cli2
+    result: {result: 1}
+  - command: get /Ems/1/Ne/1
+    connection: cli1
+    result: {result: 0}
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Ems/1/Ne/1
+    connection: cli1
+    result: {result: 0}
+  - command: get /Ems/1/Ne/1
+    connection: cli2
+    result: {result: 0}
+  - command: del /Ems/1/Ne/1
+    connection: cli1
+    result: {result: 0}
+- name: test_add_set_del_not_exist_data_intrans_rollback_expect_success_6
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - command: add /Ems/1/Ne/1;
+    connection: cli1
+    result: {result: 0}
+  - command: get /Ems/1/Ne/1
+    connection: cli2
+    result: {result: 1}
+  - command: get /Ems/1/Ne/1
+    connection: cli1
+    result: {result: 0}
+  - {command: rollback, connection: cli1, result: null}
+  - command: get /Ems/1/Ne/1
+    connection: cli2
+    result: {result: 1}
+- name: test_2_client_2_remotetrans_expect_success_7
+  steps:
+  - command: add /Ems/1/Ne/1;
+    connection: cli1
+    result: {result: 0}
+  - command: add /Ems/1/Ne/2;
+    connection: cli1
+    result: {result: 0}
+  - {command: starttrans, connection: cli1, result: null}
+  - command: add /Ems/1/Ne/2/Product/1;
+    connection: cli1
+    result: {result: 0}
+  - command: add /Ems/1/Ne/1/Product/1;
+    connection: cli1
+    result: {result: 0}
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Ems/1/Ne/2/Product/1
+    connection: cli1
+    result: {result: 0}
+  - command: get /Ems/1/Ne/1/Product/1
+    connection: cli2
+    result: {result: 0}
+  - command: del /Ems/1/Ne/1
+    connection: cli1
+    result: {result: 0}
+  - command: del /Ems/1/Ne/2
+    connection: cli1
+    result: {result: 0}
+- name: test_ls_in_trans_expect_success_8
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - command: add /Ems/1/Ne/1;
+    connection: cli1
+    result: {result: 0}
+  - command: ls /Ems/1/Ne/
+    connection: cli1
+    result:
+      children: ['1']
+      result: 0
+  - command: ls /Ems/1/Ne/
+    connection: cli2
+    result:
+      children: []
+      result: 0
+  - {command: commit, connection: cli1, result: null}
+  - command: ls /Ems/1/Ne/
+    connection: cli1
+    result:
+      children: ['1']
+      result: 0
+  - command: ls /Ems/1/Ne/
+    connection: cli2
+    result:
+      children: ['1']
+      result: 0
+  - command: del /Ems/1/Ne/1
+    connection: cli1
+    result: {result: 0}

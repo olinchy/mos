@@ -1,0 +1,69 @@
+className: LogicalPort
+tid: 2
+attributes:
+  - name: displayName
+    attrId: 0
+    type: String
+    maxLength: 256
+    mutable: true
+  - name: portType
+    attrId: 1
+    type: VlanTypeEnum
+    default: ACCESS
+    mutable: true
+  - name: activeVlanId
+    attrId: 2
+    type: Range
+    maxItems: 4094
+    default: [[1]]
+    mutable: true
+  - name: inactiveVlanId
+    attrId: 3
+    type: Range
+    maxItems: 4094   
+    mutable: true
+  - name: outerPVID
+    attrId: 4
+    type: WORD16
+    minimum: 1
+    maximum: 4094
+    mutable: true
+  - name: state
+    attrId: 5
+    type: String
+    maxLength: 256
+    default: UP
+    mutable: true
+  - name: portMac
+    attrId: 6
+    type: MacAddr 
+    mutable: true
+  - name: runE2E
+    attrId: 7
+    type: String
+    maxLength: 50
+    mutable: true
+
+children:
+  - name: CToS
+    type: Customer_CToS
+    id: 1
+    count: 8
+    autoCreate: false
+  - name: portsBlockedVlan
+    id: 2
+    count: 50
+    type: BlockedVlan
+reference:
+  - name: childrenPorts
+    type: TrafficPort
+    isMulti: true
+    under: LVDependencyPolicy
+  - name: mainPort
+    type: TrafficPort
+    isMulti: false
+    under: LVDependencyPolicy
+  - name: trunkEthPorts
+    type: PhyPort
+    isMulti: true
+    under: LVDependencyPolicy

@@ -1,0 +1,25 @@
+className: XstpInstanceReportEms
+tid: 527
+#triggers: [afterGet]
+persistence: None
+dynamic: true
+attributes:
+    - name: VlanMap   
+      attrId: 0 
+      type: Range
+      maxItems: 4094
+      mutable: false
+    - name: PortNum
+      attrId: 1
+      type: BYTE
+      minimum: 0
+      maximum: 24
+      default: 0
+      mutable: false
+    - name: PortState
+      attrId: 2
+      type: Array
+      maxItems: 24
+      items:
+          type: XstpPortStateObj
+      mutable: false

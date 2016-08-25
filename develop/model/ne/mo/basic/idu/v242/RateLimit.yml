@@ -1,0 +1,133 @@
+className: RateLimit
+tid: 311
+isAbstract : True
+attributes:
+  - name: ingressEnable
+    attrId: 0
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: stormRate
+    attrId: 1
+    type: WORD32
+    minimum: 64
+    maximum: 10000000
+    default: 64
+    mutable: true
+  - name: ingressMaxRate
+    attrId: 2
+    type: WORD32
+    minimum: 64
+    maximum: 10000000
+    default: 64
+    mutable: true
+  - name: ingressBurstSize
+    attrId: 3
+    type: WORD32
+    minimum: 64
+    maximum: 10000000
+    default: 64
+    mutable: true
+  - name: egressEnable
+    attrId: 4
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: portMinRate
+    attrId: 6
+    type: WORD32
+    minimum: 64
+    maximum: 10000000
+    default: 100
+    mutable: true
+  - name: portBurstSize
+    attrId: 7
+    type: WORD32
+    minimum: 4
+    maximum: 15000000
+    default: 100
+    mutable: true
+  - name: que1ShapeRate
+    attrId: 8
+    type: Array
+    maxItems: 3
+    items:      
+      type: WORD32
+      default: 64
+    mutable: true
+  - name: que2ShapeRate
+    attrId: 9
+    type: Array
+    maxItems: 3
+    items:      
+      type: WORD32
+      default: 64
+    mutable: true
+  - name: que3ShapeRate
+    attrId: 10
+    type: Array
+    maxItems: 3
+    items:      
+      type: WORD32
+      default: 64
+    mutable: true
+  - name: que4ShapeRate
+    attrId: 11
+    type: Array
+    maxItems: 3
+    items:      
+      type: WORD32
+      default: 64
+    mutable: true
+  - name: que5ShapeRate
+    attrId: 12
+    type: Array
+    maxItems: 3
+    items:      
+      type: WORD32
+      default: 64
+    mutable: true
+  - name: que6ShapeRate
+    attrId: 13
+    type: Array
+    maxItems: 3
+    items:      
+      type: WORD32
+      default: 64
+    mutable: true
+  - name: que7ShapeRate
+    attrId: 14
+    type: Array
+    maxItems: 3
+    items:      
+      type: WORD32
+      default: 64
+    mutable: true
+  - name: que8ShapeRate
+    attrId: 15
+    type: Array
+    maxItems: 3
+    items:      
+      type: WORD32
+      default: 64
+    mutable: true
+  - name: ctrlType
+    attrId: 16
+    type: BYTE
+    default: 0
+    mutable: true
+  - name: release
+    attrId: 17
+    type: BYTE
+    default: 0
+    mutable: true
+  - name: pisEnable
+    attrId: 18
+    type: BYTE
+    default: 0
+    mutable: true
+  - name: pfcAvailable
+    attrId: 19
+    type: BYTE
+    default: 1
+    mutable: true

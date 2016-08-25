@@ -1,0 +1,21 @@
+className: Shelf
+tid: 108
+isAbstract: True
+persistence: None
+attributes:
+  - name: shelf
+    attrId: 0
+    type: BYTE
+    minimum: 1
+    maximum: 2
+    default: 1
+    mutable: true
+  - name: refShelf
+    attrId: 1
+    type: BYTE
+    minimum: 1
+    maximum: 2
+    default: 1
+    mutable: true
+
+

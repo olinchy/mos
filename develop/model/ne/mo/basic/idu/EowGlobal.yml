@@ -1,0 +1,15 @@
+className: EowGlobal
+tid: 1
+triggers: [constraintSet]
+persistence: Update
+attributes:
+  - name: ucEnable
+    attrId: 0
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: ucEowType
+    attrId: 1
+    type: EowTypeEnum
+    default: AUX_DTE_DEVICE
+    mutable: true

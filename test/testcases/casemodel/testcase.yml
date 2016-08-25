@@ -1,0 +1,1475 @@
+- name: test_add_an_unexisted_data_should_success_1
+  steps:
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - command: get /Shelf/1
+    connection: cli1
+    result:
+      mo: { data: {refShelf: 1}}
+  - command: get /Shelf/1
+    connection: cli2
+    result:
+      mo: { data : {refShelf: 1}}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+- name: test_add_an_existed_data_should_fail_2
+  steps:
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: add /Shelf/1 refShelf 2, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 1}
+  - command: get /Shelf/1
+    connection: cli1
+    result:
+      mo: { data: {refShelf: 1}}
+  - command: get /Shelf/1
+    connection: cli2
+    result:
+      mo: { data: {refShelf: 1}}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+- name: test_set_an_unexisted_data_should_fail_3
+  steps:
+  - {command: set /Shelf/1 refShelf 2, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 1}
+- name: test_set_an_existed_data_should_success_4
+  steps:
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: set /Shelf/1 refShelf 2, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - command: get /Shelf/1 
+    connection: cli1
+    result:
+      mo: { data : {refShelf: 2}}
+  - command: get /Shelf/1 
+    connection: cli2
+    result:
+      mo: { data : {refShelf: 2}}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+- name: test_del_an_error_oid_should_fail_5
+  steps:
+  - command: del /refShelf/1
+    connection: cli1
+    result: {result: 1}
+- name: test_del_an_unexisted_data_should_fail_6
+  steps:
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 1}
+- name: test_del_an_existed_data_should_success_7
+  steps:
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+  - command: get /Shelf/1 
+    connection: cli1
+    result: {result: 1}
+  - command: get /Shelf/1 
+    connection: cli2
+    result: {result: 1}
+- name: test_relative_del_an_existed_data_should_success_8
+  steps:
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: add /Shelf/1/Board/1 Rtua, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: add /Shelf/1/Board/2 Rtua, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+  - command: get /Shelf/1 
+    connection: cli1
+    result: {result: 1}
+  - command: get /Shelf/1 
+    connection: cli2
+    result: {result: 1}
+  - command: get /Shelf/1/Board/1
+    connection: cli1
+    result: {result: 1}
+  - command: get /Shelf/1/Board/2 
+    connection: cli1
+    result: {result: 1}
+  - command: get /Shelf/1/Board/1
+    connection: cli2
+    result: {result: 1}
+  - command: get /Shelf/1/Board/2 
+    connection: cli2
+    result: {result: 1}
+- name: test_get_an_error_oid_should_fail_9
+  steps:
+  - command: get /refShelf/1
+    connection: cli1
+    result: {result: 1}
+- name: test_add_diff_shelf_in_one_trans_should_success_10
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: add /Shelf/2, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - command: get /Shelf/1
+    connection: cli1
+    result: {result: 0}
+  - command: get /Shelf/2
+    connection: cli1
+    result: {result: 0}
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result: {result: 0}
+  - command: get /Shelf/2
+    connection: cli1
+    result: {result: 0}
+  - command: get /Shelf/1
+    connection: cli2
+    result: {result: 0}
+  - command: get /Shelf/2
+    connection: cli2
+    result: {result: 0}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+  - command: del /Shelf/2
+    connection: cli1
+    result: {result: 0}
+- name: test_add_two_diff_shelf_then_remove_one_in_one_trans_should_success_11
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: add /Shelf/2, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - command: del /Shelf/2
+    connection: cli1
+    result: {result: 0}
+  - command: get /Shelf/1
+    connection: cli1
+    result: {result: 0}
+  - command: get /Shelf/2
+    connection: cli1
+    result: {result: 1}
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result: {result: 0}
+  - command: get /Shelf/2
+    connection: cli1
+    result: {result: 1}
+  - command: get /Shelf/1
+    connection: cli2
+    result: {result: 0}
+  - command: get /Shelf/2
+    connection: cli2
+    result: {result: 1}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+  - command: del /Shelf/2
+    connection: cli1
+    result: {result: 1}
+- name: test_add_unexisted_data_then_commit_should_success_12
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - command: get /Shelf/1
+    connection: cli1
+    result: {result: 0}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+  - {command: commit, connection: cli1, result: null}
+- name: test_first_add_then_add_same_key_data_then_commit_should_success_13
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 1}
+  - command: get /Shelf/1
+    connection: cli1
+    result: {result: 0}
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result: {result: 0}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+- name: test_set_and_get_unexisted_data_should_fail_14
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: set /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 1}
+  - command: get /Shelf/1
+    connection: cli1
+    result: {result: 1}
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result: {result: 1}
+  - command: get /Shelf/1
+    connection: cli2
+    result: {result: 1}
+- name: test_add_set_unexisted_data_then_commit_should_success_15
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: set /Shelf/1 refShelf 2, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - command: get /Shelf/1
+    connection: cli1
+    result:
+      mo: { data : {refShelf: 2}}
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result:
+      mo: { data : {refShelf: 2}}
+  - command: get /Shelf/1
+    connection: cli2
+    result:
+      mo: { data : {refShelf: 2}}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+- name: test_first_add_then_del_unexisted_data_then_commit_should_failed_16
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+  - command: get /Shelf/1
+    connection: cli1
+    result: {result: 1}
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result: {result: 1}
+  - command: get /Shelf/1
+    connection: cli2
+    result: {result: 1}
+- name: test_del_and_get_unexisted_data_should_fail_17
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 1}
+  - command: get /Shelf/1
+    connection: cli1
+    result: {result: 1}
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result: {result: 1}
+  - command: get /Shelf/1
+    connection: cli2
+    result: {result: 1}
+- name: test_add_del_add_unexisted_data_then_commit_should_success_18
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+  - {command: add /Shelf/1 refShelf 2, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result:
+      mo: { data : {refShelf: 2}}
+  - command: get /Shelf/1
+    connection: cli2
+    result:
+      mo: { data : {refShelf: 2}}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+- name: test_add_del_set_unexisted_data_then_commit_should_fail_19
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+  - {command: set /Shelf/1 refShelf 2, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 1}
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result: {result: 1}
+  - command: get /Shelf/1
+    connection: cli2
+    result: {result: 1}
+- name: test_add_del_del_unexisted_data_then_commit_should_fail_20
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 1}
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result: {result: 1}
+  - command: get /Shelf/1
+    connection: cli2
+    result: {result: 1}
+- name: test_add_set_set_unexisted_data_then_commit_should_success_21
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: set /Shelf/1 refShelf 1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: set /Shelf/1 refShelf 2, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - command: get /Shelf/1
+    connection: cli1
+    result:
+      mo: { data : {refShelf: 2}}
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result:
+      mo: { data : {refShelf: 2}}
+  - command: get /Shelf/1
+    connection: cli2
+    result:
+      mo: { data : {refShelf: 2}}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+- name: test_add_set_del_unexisted_data_then_commit_should_success_22
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: set /Shelf/1 refShelf 2, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+  - command: get /Shelf/1
+    connection: cli1
+    result: {result: 1}
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result: {result: 1}
+  - command: get /Shelf/1
+    connection: cli2
+    result: {result: 1}
+- name: test_add_set_add_unexisted_data_then_commit_should_success_23
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: set /Shelf/1 refShelf 2, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 1}
+  - command: get /Shelf/1
+    connection: cli1
+    result:
+      mo: { data : {refShelf: 2}}
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result:
+      mo: { data : {refShelf: 2}}
+  - command: get /Shelf/1
+    connection: cli2
+    result:
+      mo: { data : {refShelf: 2}}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+- name: test_add_del_add_set_unexisted_data_then_commit_should_success_24
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+  - {command: add /Shelf/1 refShelf 1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: set /Shelf/1 refShelf 2, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result:
+      mo: { data : {refShelf: 2}}
+  - command: get /Shelf/1
+    connection: cli2
+    result:
+      mo: { data : {refShelf: 2}}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+- name: test_add_del_add_del_unexisted_data_then_ commit _should_success_25
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+  - {command: add /Shelf/1 refShelf 2, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result: {result: 1}
+  - command: get /Shelf/1
+    connection: cli2
+    result: {result: 1}
+- name: test_add_del_add_add_unexisted_data_then_commit_should_success_26
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+  - {command: add /Shelf/1 refShelf 2, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: add /Shelf/1 refShelf 2, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 1}
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result:
+      mo: { data : {refShelf: 2}}
+  - command: get /Shelf/1
+    connection: cli2
+    result:
+      mo: { data : {refShelf: 2}}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+- name: test_add_an_exited_data_should_failed_27
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result:
+      mo: { data : {refShelf: 1}}
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add /Shelf/1 refShelf 2, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 1}
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result:
+      mo: { data : {refShelf: 1}}
+  - command: get /Shelf/1
+    connection: cli2
+    result:
+      mo: { data : {refShelf: 1}}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+- name: test_set_an_exited_data_should_success_28
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result:
+      mo: { data : {refShelf: 1}}
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: set /Shelf/1 refShelf 2, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result:
+      mo: { data : {refShelf: 2}}
+  - command: get /Shelf/1
+    connection: cli2
+    result:
+      mo: { data : {refShelf: 2}}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+- name: test_del_an_exited_data_should_success_29
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result:
+      mo: { data : {refShelf: 1}}
+  - {command: starttrans, connection: cli1, result: null}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result: {result: 1}
+  - command: get /Shelf/1
+    connection: cli2
+    result: {result: 1}
+- name: test_del_add_an_exited_data_should_success_30
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result:
+      mo: { data : {refShelf: 1}}
+  - {command: starttrans, connection: cli1, result: null}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+  - {command: add /Shelf/1 refShelf 2, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result:
+      mo: { data : {refShelf: 2}}
+  - command: get /Shelf/1
+    connection: cli2
+    result:
+      mo: { data : {refShelf: 2}}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+- name: test_del_set_an_exited_data_should_fail_31
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result:
+      mo: { data : {refShelf: 1}}
+  - {command: starttrans, connection: cli1, result: null}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+  - {command: set /Shelf/1 refShelf 2, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 1}
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result: {result: 1}
+  - command: get /Shelf/1
+    connection: cli2
+    result: {result: 1}
+- name: test_del_del_an_exited_data_should_fail_32
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result:
+      mo: { data : {refShelf: 1}}
+  - {command: starttrans, connection: cli1, result: null}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 1}
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result: {result: 1}
+- name: test_set_add_an_exited_data_should_fail_33
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result:
+      mo: { data : {refShelf: 1}}
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: set /Shelf/1 refShelf 2, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 1}
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result:
+      mo: { data : {refShelf: 2}}
+  - command: get /Shelf/1
+    connection: cli2
+    result:
+      mo: { data : {refShelf: 2}}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+- name: test_set_set_an_exited_data_should_fail_34
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result:
+      mo: { data : {refShelf: 1}}
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: set /Shelf/1 refShelf 1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: set /Shelf/1 refShelf 2, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result:
+      mo: { data : {refShelf: 2}}
+  - command: get /Shelf/1
+    connection: cli2
+    result:
+      mo: { data : {refShelf: 2}}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+- name: test_set_del_an_exited_data_should_fail_35
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result:
+      mo: { data : {refShelf: 1}}
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: set /Shelf/1 refShelf 2, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result: {result: 1}
+  - command: get /Shelf/1
+    connection: cli2
+    result: {result: 1}
+- name: test_should_not_get_any_data_after_add_add_rollback_36
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: add /Shelf/2, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - command: get /Shelf/1
+    connection: cli1
+    result: {result: 0}
+  - command: get /Shelf/2
+    connection: cli1
+    result: {result: 0}
+  - {command: rollback, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result: {result: 1}
+  - command: get /Shelf/2
+    connection: cli1
+    result: {result: 1}
+  - command: get /Shelf/1
+    connection: cli2
+    result: {result: 1}
+  - command: get /Shelf/2
+    connection: cli2
+    result: {result: 1}
+- name: test_should_not_get_any_data_after_add_set_rollback_37
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: set /Shelf/1 refShelf 2, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - command: get /Shelf/1
+    connection: cli1
+    result:
+      mo: { data : {refShelf: 2}}
+  - {command: rollback, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result: {result: 1}
+  - command: get /Shelf/1
+    connection: cli2
+    result: {result: 1}
+- name: test_should_not_get_any_data_after_add_del_rollback_38
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+  - command: get /Shelf/1
+    connection: cli1
+    result: {result: 1}
+  - {command: rollback, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result: {result: 1}
+  - command: get /Shelf/1
+    connection: cli2
+    result: {result: 1}
+- name: test_should_get_old_data_after_set_rollback_39
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result:
+      mo: { data : {refShelf: 1}}
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: set /Shelf/1 refShelf 2, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: rollback, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result:
+      mo: { data : {refShelf: 1}}
+  - command: get /Shelf/1
+    connection: cli2
+    result:
+      mo: { data : {refShelf: 1}}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+- name: test_should_get_old_data_after_del_rollback_40
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result:
+      mo: { data : {refShelf: 1}}
+  - {command: starttrans, connection: cli1, result: null}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+  - {command: rollback, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result:
+      mo: { data : {refShelf: 1}}
+  - command: get /Shelf/1
+    connection: cli2
+    result:
+      mo: { data : {refShelf: 1}}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+- name: test_should_get_old_data_after_del_add_rollback_41
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result:
+      mo: { data : {refShelf: 1}}
+  - {command: starttrans, connection: cli1, result: null}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+  - {command: add /Shelf/1 refShelf 2, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: rollback, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result:
+      mo: { data : {refShelf: 1}}
+  - command: get /Shelf/1
+    connection: cli2
+    result:
+      mo: { data : {refShelf: 1}}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+- name: test_should_get_the_old_data_after_rollback_add_another_42
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result:
+      mo: { data : {refShelf: 1}}
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add /Shelf/2, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: rollback, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result:
+      mo: { data : {refShelf: 1}}
+  - command: get /Shelf/2
+    connection: cli2
+    result: {result: 1}
+  - command: get /Shelf/1
+    connection: cli2
+    result:
+      mo: { data : {refShelf: 1}}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+- name: test_add_two_diff_data_with_diff_transactionId_one_commit_one_rollback_43
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: starttrans, connection: cli2, result: null}
+  - {command: add /Shelf/2, connection: cli2, result: null}
+  - command: ''
+    connection: cli2
+    result: {result: 0}
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result:
+      mo: { data : {refShelf: 1}}
+  - {command: rollback, connection: cli2, result: null}
+  - command: get /Shelf/2
+    connection: cli2
+    result: {result: 1}
+  - command: get /Shelf/2
+    connection: cli1
+    result: {result: 1}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+
+
+- name: test_add_two_diff_data_with_diff_transactionId_both_commit_46
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - command: get /Shelf/1
+    connection: cli1
+    result:
+      mo: { data : {refShelf: 1}}
+  - {command: starttrans, connection: cli2, result: null}
+  - {command: add /Shelf/2, connection: cli2, result: null}
+  - command: ''
+    connection: cli2
+    result: {result: 0}
+  - command: get /Shelf/2
+    connection: cli2
+    result: {result: 0}
+  - command: get /Shelf/1
+    connection: cli2
+    result: {result: 1}
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result:
+      mo: { data : {refShelf: 1}}
+  - command: get /Shelf/2
+    connection: cli1
+    result: {result: 1}
+  - {command: commit, connection: cli2, result: null}
+  - command: get /Shelf/2
+    connection: cli2
+    result:
+      mo: { data : {refShelf: 1}}
+  - command: get /Shelf/1
+    connection: cli2
+    result:
+      mo: { data : {refShelf: 1}}
+  - command: get /Shelf/2
+    connection: cli1
+    result:
+      mo: { data : {refShelf: 1}}
+  - command: get /Shelf/1
+    connection: cli1
+    result:
+      mo: { data : {refShelf: 1}}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+  - command: del /Shelf/2
+    connection: cli2
+    result: {result: 0}
+
+- name: test_add_set_same_key_data_with_diff_transactionId_both_commit_48
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - command: get /Shelf/1
+    connection: cli1
+    result:
+      mo: { data : {refShelf: 1}}
+  - {command: starttrans, connection: cli2, result: null}
+  - {command: set /Shelf/1 refShelf 2, connection: cli2, result: null}
+  - command: ''
+    connection: cli2
+    result: {result: 1}
+  - command: get /Shelf/1
+    connection: cli2
+    result: {result: 1}
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Shelf/1
+    connection: cli1
+    result:
+      mo: { data : {refShelf: 1}}
+  - command: get /Shelf/1
+    connection: cli2
+    result:
+      mo: { data : {refShelf: 1}}
+  - {command: set /Shelf/1 refShelf 2, connection: cli2, result: null}
+  - command: ''
+    connection: cli2
+    result: {result: 0}
+  - {command: commit, connection: cli2, result: null}
+  - command: get /Shelf/1
+    connection: cli2
+    result:
+      mo: { data : {refShelf: 2}}
+  - command: get /Shelf/1
+    connection: cli1
+    result:
+      mo: { data : {refShelf: 2}}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+
+- name: test_modify_father_should_success_if_child_is_modify_in_other_trans_49
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: add  /Shelf/1/Board/1 Rtua, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: commit, connection: cli1, result: null}
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: set /Shelf/1/Board/1 state 2, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: starttrans, connection: cli2, result: null}
+  - {command: set  /Shelf/1 refShelf 2, connection: cli2, result: null}
+  - command: ''
+    connection: cli2
+    result: {result: 0}
+  - {command: commit, connection: cli1, result: null}
+  - {command: commit, connection: cli2, result: null}
+  - command: get  /Shelf/1
+    connection: cli1
+    result:
+      mo: { data : {refShelf: 2}}
+  - command: get  /Shelf/1/Board/1
+    connection: cli1
+    result:
+      mo: { data : {state: 2}}
+  - command: get  /Shelf/1
+    connection: cli2
+    result:
+      mo: { data : {refShelf: 2}}
+  - command: get  /Shelf/1/Board/1
+    connection: cli2
+    result:
+      mo: { data : {state: 2}}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+
+
+- name: test_modify_child_should_success_if_father_is_modify_in_other_trans_53
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: add  /Shelf/1/Board/1 Rtua, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: commit, connection: cli1, result: null}
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: set  /Shelf/1 refShelf 2, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: starttrans, connection: cli2, result: null}
+  - {command: set /Shelf/1/Board/1 state 2, connection: cli2, result: null}
+  - command: ''
+    connection: cli2
+    result: {result: 0}
+  - {command: commit, connection: cli1, result: null}
+  - {command: commit, connection: cli2, result: null}
+  - command: get  /Shelf/1
+    connection: cli1
+    result: {result: 0}
+  - command: get  /Shelf/1
+    connection: cli2
+    result: {result: 0}
+  - command: del  /Shelf/1
+    connection: cli1
+    result: {result: 0}
+- name: test_del_child_should_success_if_father_is_modify_in_other_trans_54
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: add  /Shelf/1/Board/1 Rtua, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: commit, connection: cli1, result: null}
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: set  /Shelf/1 refShelf 1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: starttrans, connection: cli2, result: null}
+  - command: del /Shelf/1/Board/1
+    connection: cli2
+    result: {result: 0}
+  - {command: commit, connection: cli1, result: null}
+  - {command: commit, connection: cli2, result: null}
+  - command: get  /Shelf/1
+    connection: cli1
+    result: {result: 0}
+  - command: get  /Shelf/1/Board/1
+    connection: cli1
+    result: {result: 1}
+  - command: get  /Shelf/1
+    connection: cli2
+    result: {result: 0}
+  - command: get  /Shelf/1/Board/1
+    connection: cli2
+    result: {result: 1}
+  - command: del  /Shelf/1
+    connection: cli1
+    result: {result: 0}
+
+- name: test_modify_father_should_success_if_child_is_deleting_in_other_trans_56
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: add  /Shelf/1/Board/1 Rtua, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: commit, connection: cli1, result: null}
+  - {command: starttrans, connection: cli1, result: null}
+  - command: del /Shelf/1/Board/1
+    connection: cli1
+    result: {result: 0}
+  - {command: starttrans, connection: cli2, result: null}
+  - {command: set  /Shelf/1 refShelf 2, connection: cli2, result: null}
+  - command: ''
+    connection: cli2
+    result: {result: 0}
+  - {command: commit, connection: cli1, result: null}
+  - {command: commit, connection: cli2, result: null}
+  - command: get  /Shelf/1
+    connection: cli1
+    result:
+      mo: { data : {refShelf: 2}}
+  - command: get  /Shelf/1/Board/1
+    connection: cli1
+    result: {result: 1}
+  - command: get  /Shelf/1
+    connection: cli2
+    result:
+      mo: { data : {refShelf: 2}}
+  - command: get  /Shelf/1/Board/1
+    connection: cli2
+    result: {result: 1}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+- name: test_modify_father_should_success_if_child_is_adding_in_other_trans_57
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: commit, connection: cli1, result: null}
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add  /Shelf/1/Board/1 Rtua, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: starttrans, connection: cli2, result: null}
+  - {command: set  /Shelf/1 refShelf 0, connection: cli2, result: null}
+  - command: ''
+    connection: cli2
+    result: {result: 0}
+  - {command: commit, connection: cli1, result: null}
+  - {command: commit, connection: cli2, result: null}
+  - command: get  /Shelf/1
+    connection: cli1
+    result:
+      mo: { data : {refShelf: 1}}
+  - command: get  /Shelf/1/Board/1
+    connection: cli1
+    result: {result: 0}
+  - command: get  /Shelf/1
+    connection: cli2
+    result:
+      mo: { data : {refShelf: 1}}
+  - command: get  /Shelf/1/Board/1
+    connection: cli2
+    result: {result: 0}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+
+- name: test_add_children_success_if_father_is_modifying_in_other_trans_59
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: commit, connection: cli1, result: null}
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: set /Shelf/1 refShelf 2, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: starttrans, connection: cli2, result: null}
+  - {command: add  /Shelf/1/Board/1 Rtua, connection: cli2, result: null}
+  - command: ''
+    connection: cli2
+    result: {result: 0}
+  - {command: commit, connection: cli1, result: null}
+  - {command: commit, connection: cli2, result: null}
+  - command: get  /Shelf/1
+    connection: cli1
+    result: {result: 0}
+  - command: get  /Shelf/1/Board/1
+    connection: cli1
+    result: {result: 0}
+  - command: get  /Shelf/1
+    connection: cli2
+    result: {result: 0}
+  - command: get  /Shelf/1/Board/1
+    connection: cli2
+    result: {result: 0}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+- name: test_add_child_should_success_if_another_child is_adding_in_other_trans_60
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: commit, connection: cli1, result: null}
+  - {command: starttrans, connection: cli1, result: null}
+  - {command: add  /Shelf/1/Board/1 Rtua, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: add  /Shelf/1/Board/2 Rtuc, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: starttrans, connection: cli2, result: null}
+  - {command: add  /Shelf/1/Board/3 Rtua, connection: cli2, result: null}
+  - command: ''
+    connection: cli2
+    result: {result: 0}
+  - {command: commit, connection: cli1, result: null}
+  - {command: commit, connection: cli2, result: null}
+  - command: get  /Shelf/1
+    connection: cli1
+    result: {result: 0}
+  - command: get  /Shelf/1/Board/1
+    connection: cli1
+    result: {result: 0}
+  - command: get  /Shelf/1/Board/2
+    connection: cli1
+    result: {result: 0}
+  - command: get  /Shelf/1/Board/3
+    connection: cli1
+    result: {result: 0}
+  - command: get  /Shelf/1/Board/1
+    connection: cli2
+    result: {result: 0}
+  - command: get  /Shelf/1/Board/2
+    connection: cli2
+    result: {result: 0}
+  - command: get  /Shelf/1/Board/3
+    connection: cli2
+    result: {result: 0}
+  - command: del  /Shelf/1
+    connection: cli1
+    result: {result: 0}
+- name: test_add_mo_first_then_del_in_trans_should_get_fail_61
+  steps:
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: starttrans, connection: cli1, result: null}
+  - command: del  /Shelf/1
+    connection: cli1
+    result: {result: 0}
+  - command: get  /Shelf/1
+    connection: cli1
+    result: {result: 1}
+  - {command: commit, connection: cli1, result: null}
+  - command: get  /Shelf/1
+    connection: cli1
+    result: {result: 1}
+- name: test_del_rtua_first_then_add_rtub_in_trans_should_success_62
+  steps:
+  - {command: add /Shelf/1, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - {command: add /Shelf/1/Board/1 Rtua, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - command: get /Shelf/1/Board/1/E1Port/16
+    connection: cli1
+    result: {result: 0}
+  - command: get /Shelf/1/Board/1/E1Port/17
+    connection: cli1
+    result: {result: 1}
+  - {command: starttrans, connection: cli1, result: null}
+  - command: del /Shelf/1/Board/1
+    connection: cli1
+    result: {result: 0}
+  - command: get /Shelf/1/Board/1/E1Port/16
+    connection: cli1
+    result: {result: 1}
+  - command: get /Shelf/1/Board/1
+    connection: cli1
+    result: {result: 1}
+  - {command: add /Shelf/1/Board/1 Rtuc, connection: cli1, result: null}
+  - command: ''
+    connection: cli1
+    result: {result: 0}
+  - command: get  /Shelf/1/Board/1/E1Port/17
+    connection: cli1
+    result: {result: 0}
+  - command: get  /Shelf/1/Board/1/E1Port/1
+    connection: cli1
+    result: {result: 0}
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Shelf/1/Board/1/E1Port/17
+    connection: cli1
+    result: {result: 0}
+  - command: del /Shelf/1
+    connection: cli1
+    result: {result: 0}
+  - command: get  /Shelf/1/Board/1
+    connection: cli1
+    result: {result: 1}

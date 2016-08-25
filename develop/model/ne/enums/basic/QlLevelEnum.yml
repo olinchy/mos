@@ -1,0 +1,11 @@
+name: QlLevelEnum
+type: BYTE
+default: G_811
+enum:
+  Unknown: 0
+  G_811: 2
+  SSU_A: 4
+  SSU_B: 8
+  G_813: 11
+  DNU: 15
+  INIT: 255

@@ -1,0 +1,479 @@
+className: SncpRoute
+tid: 109
+triggers: [afterGet]
+attributes:
+  - name: acrossLevel
+    attrId: 0
+    type: AcrossLevelEnum
+    default: vc12
+    mutable: true
+  - name: rack
+    attrId: 1
+    type: BYTE
+    minimum: 1
+    maximum: 1
+    default: 1
+    mutable: true
+  - name: srcShelf
+    attrId: 2
+    type: BYTE
+    minimum: 1
+    maximum: 2
+    default: 1
+    mutable: true
+  - name: srcTraffUnit
+    attrId: 3
+    type: BYTE
+    minimum: 2
+    maximum: 255
+    mutable: true
+  - name: srcPortType
+    attrId: 4
+    type: PortTypeEnum
+    default: E1
+    mutable: true
+  - name: srcPortNo
+    attrId: 5
+    type: WORD16
+    minimum: 1
+    maximum: 75 
+    mutable: true
+  - name: srcVC4
+    attrId: 6
+    type: BYTE
+    minimum: 0
+    maximum: 4
+    default: 0
+    mutable: true
+  - name: srcSlotIndex
+    attrId: 7
+    type: BYTE
+    minimum: 0
+    maximum: 63
+    default: 0
+    mutable: true
+  - name: bakSrcShelf
+    attrId: 8
+    type: BYTE
+    minimum: 1
+    maximum: 2
+    default: 1
+    mutable: true
+  - name: bakSrcTraffUnit
+    attrId: 9
+    type: BYTE
+    minimum: 2
+    maximum: 255
+    mutable: true
+  - name: bakSrcPortType
+    attrId: 10
+    type: PortTypeEnum
+    default: E1
+    mutable: true
+  - name: bakSrcPortNo
+    attrId: 11
+    type: WORD16
+    minimum: 1
+    maximum: 75
+    mutable: true
+  - name: bakSrcVC4
+    attrId: 12
+    type: BYTE
+    minimum: 0
+    maximum: 4
+    default: 0
+    mutable: true
+  - name: bakSrcSlotIndex
+    attrId: 13
+    type: BYTE
+    minimum: 0
+    maximum: 63
+    default: 0
+    mutable: true
+  - name: dstShelf
+    attrId: 14
+    type: BYTE
+    minimum: 1
+    maximum: 2
+    default: 1
+    mutable: true
+  - name: dstTraffUnit
+    attrId: 15
+    type: BYTE
+    minimum: 2
+    maximum: 255
+    mutable: true
+  - name: dstPortType
+    attrId: 16
+    type: PortTypeEnum
+    default: E1
+    mutable: true
+  - name: dstPortNo
+    attrId: 17
+    type: WORD16
+    minimum: 1
+    maximum: 75
+    mutable: true
+  - name: dstVC4
+    attrId: 18
+    type: BYTE
+    minimum: 0
+    maximum: 4
+    default: 0
+    mutable: true
+  - name: dstSlotIndex
+    attrId: 19
+    type: BYTE
+    minimum: 0
+    maximum: 63
+    default: 0
+    mutable: true
+  - name: direction
+    attrId: 20
+    type: BYTE
+    enum:
+      bidirection: 1
+    default: bidirection
+    mutable: true
+  - name: activeFlag
+    attrId: 21
+    type: ActiveFlagEnum
+    default: inactive
+    mutable: true
+  - name: bakMode
+    attrId: 22
+    type: SncpBakModeEnum
+    default: nonrevertive
+    mutable: true
+  - name: wtr
+    attrId: 23
+    type: WORD16
+    minimum: 300
+    maximum: 720
+    default: 600
+    mutable: true
+  - name: holdOffTime
+    attrId: 24
+    type: WORD16
+    minimum: 0
+    maximum: 30
+    default: 10
+    mutable: true
+  - name: routLevel
+    attrId: 25
+    type: BYTE
+    minimum: 1
+    maximum: 6
+    default: 1
+    mutable: true
+  - name: desc
+    attrId: 26
+    type: String
+    maxLength: 52
+    mutable: true
+  - name: creator
+    attrId: 27
+    type: String
+    maxLength: 255
+    mutable: true
+  - name: creatorTime
+    attrId: 28
+    type: String
+    maxLength: 255
+    mutable: true
+  - name: creatorDesc
+    attrId: 29
+    type: String
+    maxLength: 255
+    mutable: true
+  - name: lmspGroupId
+    attrId: 30
+    type: WORD32
+    minimum: 0
+    maximum: 2
+    default: 0
+    mutable: true
+  - name: cascadeFlag
+    attrId: 31
+    type: TdmCascadeFlagEnum
+    default: nocascade
+    mutable: true
+  - name: linkId
+    attrId: 32
+    type: WORD32
+    minimum: 0
+    maximum: 16
+    default: 0
+    mutable: true
+  - name: ctrlStatus
+    attrId: 33
+    type: BYTE
+    enum:
+      mainctrl: 0
+      underctrl: 1
+    default: mainctrl
+    mutable: true
+  - name: workstatus
+    attrId: 34
+    type: SncpPathStatusEnum
+    default: na 
+    mutable: true
+  - name: protstatus
+    attrId: 35
+    type: SncpPathStatusEnum
+    default: na
+    mutable: true
+  - name: currentchannel
+    attrId: 36
+    type: BYTE
+    enum:
+      workingChannel: 0
+      protectionChannel: 1 
+    default:  workingChannel
+    mutable: true
+  - name: currstatus
+    attrId: 37
+    type: SncpCurrentSwitchStatusEnum
+    default:  noRequest
+    mutable: true
+  - name: reasonstatus
+    attrId: 38
+    type: BYTE
+    enum:
+      auto: 0
+      clearCommand: 7
+      protectionLockout: 6
+      forceToMaster: 4
+      forceToSlave: 5
+      manualToMaster: 2
+      manualToSlave: 3
+      Super: 8
+    default: auto
+    mutable: true
+  - name: switchCmd
+    attrId: 39
+    type: BYTE
+    enum:
+      auto: 0
+      clearCommand: 7
+      protectionLockout: 6
+      forceToMaster: 4
+      forceToSlave: 5
+      manualToMaster: 2
+      manualToSlave: 3
+    default: auto
+    mutable: true
+  - name: validFlag
+    attrId: 40
+    type: ValidFlagEnum
+    default: invalid
+    mutable: true
+  - name: srcValidFlag
+    attrId: 41
+    type: ValidFlagEnum
+    default: invalid
+    mutable: true
+  - name: srcValidCondition
+    attrId: 42
+    type: ModulationCodingEnum
+    default: invalidNum
+    mutable: true
+  - name: srcModulation
+    attrId: 43
+    type: ModulationCodingEnum
+    default: invalidNum
+    mutable: true
+  - name: baksrcValidFlag
+    attrId: 44
+    type: ValidFlagEnum
+    default: invalid
+    mutable: true
+  - name: baksrcValidCondition
+    attrId: 45
+    type: ModulationCodingEnum
+    default: invalidNum
+    mutable: true
+  - name: baksrcModulation
+    attrId: 46
+    type: ModulationCodingEnum
+    default: invalidNum
+    mutable: true
+  - name: dstValidFlag
+    attrId: 47
+    type: ValidFlagEnum
+    default: invalid
+    mutable: true
+  - name: dstValidCondition
+    attrId: 48
+    type: ModulationCodingEnum
+    default: invalidNum
+    mutable: true
+  - name: dstModulation
+    attrId: 49
+    type: ModulationCodingEnum
+    default: invalidNum
+    mutable: true
+actions:
+  customs:
+    - name: Auto
+      actionId: 1
+    - name: LockOut
+      actionId: 2
+    - name: Clear
+      actionId: 3
+    - name: Manual
+      actionId: 4
+      attributes:
+        - name: signalNo
+          attrId: 0  
+          type: BYTE
+          minimum: 0
+          maximum: 1
+          default: 0
+          mutable: true
+    - name: Force
+      actionId: 5
+      attributes:
+        - name: signalNo 
+          attrId: 0 
+          type: BYTE
+          minimum: 0
+          maximum: 1
+          default: 0
+          mutable: true
+    - name: AutoRsp
+      actionId: 101
+      attributes:
+        - name: index 
+          attrId: 0 
+          type: WORD32         
+          mutable: true    
+        - name: workstatus 
+          attrId: 1 
+          type: BYTE         
+          mutable: true
+        - name: protstatus 
+          attrId: 2 
+          type: BYTE         
+          mutable: true
+        - name: currChannel 
+          attrId: 3 
+          type: BYTE         
+          mutable: true
+        - name: linkId 
+          attrId: 4 
+          type: WORD32         
+          mutable: true
+        - name: contrlStatus 
+          attrId: 5 
+          type: BYTE         
+          mutable: true
+    - name: LockOutRsp
+      actionId: 102
+      attributes:
+        - name: index 
+          attrId: 0 
+          type: WORD32         
+          mutable: true    
+        - name: workstatus 
+          attrId: 1 
+          type: BYTE         
+          mutable: true
+        - name: protstatus 
+          attrId: 2 
+          type: BYTE         
+          mutable: true
+        - name: currChannel 
+          attrId: 3 
+          type: BYTE         
+          mutable: true
+        - name: linkId 
+          attrId: 4 
+          type: WORD32         
+          mutable: true
+        - name: contrlStatus 
+          attrId: 5 
+          type: BYTE         
+          mutable: true
+    - name: ClearRsp
+      actionId: 103
+      attributes:
+        - name: index 
+          attrId: 0 
+          type: WORD32         
+          mutable: true    
+        - name: workstatus 
+          attrId: 1 
+          type: BYTE         
+          mutable: true
+        - name: protstatus 
+          attrId: 2 
+          type: BYTE         
+          mutable: true
+        - name: currChannel 
+          attrId: 3 
+          type: BYTE         
+          mutable: true
+        - name: linkId 
+          attrId: 4 
+          type: WORD32         
+          mutable: true
+        - name: contrlStatus 
+          attrId: 5 
+          type: BYTE         
+          mutable: true
+    - name: ManualRsp
+      actionId: 104
+      attributes:
+        - name: index 
+          attrId: 0 
+          type: WORD32         
+          mutable: true    
+        - name: workstatus 
+          attrId: 1 
+          type: BYTE         
+          mutable: true
+        - name: protstatus 
+          attrId: 2 
+          type: BYTE         
+          mutable: true
+        - name: currChannel 
+          attrId: 3 
+          type: BYTE         
+          mutable: true
+        - name: linkId 
+          attrId: 4 
+          type: WORD32         
+          mutable: true
+        - name: contrlStatus 
+          attrId: 5 
+          type: BYTE         
+          mutable: true
+    - name: ForceRsp
+      actionId: 105
+      attributes:
+        - name: index 
+          attrId: 0 
+          type: WORD32         
+          mutable: true    
+        - name: workstatus 
+          attrId: 1 
+          type: BYTE         
+          mutable: true
+        - name: protstatus 
+          attrId: 2 
+          type: BYTE         
+          mutable: true
+        - name: currChannel 
+          attrId: 3 
+          type: BYTE         
+          mutable: true
+        - name: linkId 
+          attrId: 4 
+          type: WORD32         
+          mutable: true
+        - name: contrlStatus 
+          attrId: 5 
+          type: BYTE         
+          mutable: true
+

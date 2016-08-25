@@ -1,0 +1,34 @@
+className: Rtub
+baseClass: Board
+tid: 333
+persistence: None
+attributes:
+   - name: boardType
+     attrId: 0
+     type: BoardTypeEnum
+     default: rtub
+     mutable: false
+children:
+   - name : E1Port
+     id : 1
+     count : 8
+     autoCreate: true
+   - name : Stm155Port
+     id : 2
+     count : 2
+   - name : Stm1OverHead
+     id : 3
+     count : 2
+   - name : Stm622Port
+     id : 4
+     count : 2
+   - name : Stm4OverHead
+     id : 5
+     count : 2
+   - name : HDInfo
+     id : 6
+     count : 1
+     autoCreate: true
+
+   
+   

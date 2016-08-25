@@ -1,0 +1,18 @@
+className: SecurityCfg
+tid: 197
+persistence: None
+children:
+  - name : SecurityProtocolMode
+    id : 1
+    count : 1
+    autoCreate : True
+  - name : SnmpV3
+    id : 2
+    groupType : map
+    count : 1
+    autoCreate : {"zte": SnmpV3}
+  - name : SecurityPassword
+    id : 3
+    count : 1
+    autoCreate : True
+

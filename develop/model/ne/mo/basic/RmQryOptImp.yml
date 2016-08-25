@@ -1,0 +1,65 @@
+className: RmQryOptImp
+tid: 390
+triggers: [afterGet]
+persistence: None
+attributes:
+  - name: sfpType
+    attrId: 0 
+    type : String
+    maxLength: 40
+    mutable: false
+  - name: conType
+    attrId: 1 
+    type : String
+    maxLength: 40
+    mutable: false
+  - name: signalingRate
+    attrId: 2 
+    type : String
+    maxLength: 40
+    mutable: false
+  - name: optModem
+    attrId: 3 
+    type : String
+    maxLength: 40
+    mutable: false
+  - name: linkLength
+    attrId: 4 
+    type : String
+    maxLength: 40
+    mutable: false
+  - name: txWaveLength
+    attrId: 5 
+    type : String
+    maxLength: 40
+    mutable: false
+  - name: rxWaveLength
+    attrId: 6 
+    type : String
+    maxLength: 40
+    mutable: false
+  - name: vendorName
+    attrId: 7 
+    type : String
+    maxLength: 41
+    mutable: false
+  - name: vendorPN
+    attrId: 8 
+    type : String
+    maxLength: 41
+    mutable: false
+  - name: vendorSN
+    attrId: 9 
+    type : String
+    maxLength: 41
+    mutable: false
+  - name: dateCode
+    attrId: 10 
+    type : String
+    maxLength: 41
+    mutable: false
+  - name: txPowerRange
+    attrId: 11 
+    type : String
+    maxLength: 40
+    mutable: false

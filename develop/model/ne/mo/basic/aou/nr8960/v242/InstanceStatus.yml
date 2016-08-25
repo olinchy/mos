@@ -1,0 +1,19 @@
+className: InstanceStatus
+tid: 365
+attributes:
+  - name: ringId
+    attrId: 0
+    type: BYTE
+    mutable: false
+  - name: eastPortStatus
+    attrId: 1
+    type: BYTE
+    mutable: false
+  - name: westPortStatus
+    attrId: 2
+    type: BYTE
+    mutable: false
+  - name: protocolStatus
+    attrId: 3
+    type: BYTE
+    mutable: false

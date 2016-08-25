@@ -1,0 +1,5 @@
+name: ConnectStateEnum
+type: BYTE
+enum:
+   online: 0
+   offline: 1

@@ -1,0 +1,28 @@
+className: PortVlan_Provider
+baseClass: PortVlan_Details
+tid: 266
+triggers: [afterAdd, constraintAdd, constraintSet,afterSet]
+attributes:
+  - name: inActiveFlag
+    attrId: 0
+    type: Range
+    default: [[0]]
+    maxItems: 4094
+    mutable: true
+  - name: vlanTag
+    attrId: 1
+    type: Range
+    default: [[0]]
+    maxItems: 4094
+    mutable: true
+  - name: TPID
+    attrId: 2
+    type: WORD32
+    enum:
+      8100: 33024
+      88a8: 34984
+      9100: 37120
+      9200: 37376
+    default: 88a8
+    mutable: true
+

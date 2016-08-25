@@ -1,0 +1,12 @@
+className: OptInventory
+tid: 424
+triggers: [afterGet]
+persistence: None
+attributes:
+  - name: allOptDevice
+    attrId: 0
+    type: Set
+    maxItems: 3
+    items:
+      type: OptDevice  
+    mutable: true  

@@ -1,0 +1,34 @@
+className: LcptAllocTime
+attributes:
+  - name: year
+    attrId: 0
+    type: WORD16
+    mutable: false
+  - name: month
+    attrId: 1
+    type: BYTE
+    mutable: false
+  - name: day
+    attrId: 2
+    type: BYTE
+    mutable: false
+  - name: hour
+    attrId: 3
+    type: BYTE
+    mutable: false
+  - name: minute
+    attrId: 4
+    type: BYTE
+    mutable: false
+  - name: second
+    attrId: 5
+    type: BYTE
+    mutable: false
+  - name: milliSec
+    attrId: 6
+    type: WORD16
+    mutable: false
+  - name: week
+    attrId: 7
+    type: BYTE
+    mutable: false

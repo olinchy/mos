@@ -1,0 +1,7 @@
+name: LacpEthEnum
+type: BYTE
+default: open
+enum:
+    open: 0
+    close: 1
+   

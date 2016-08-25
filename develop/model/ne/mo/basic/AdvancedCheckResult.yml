@@ -1,0 +1,21 @@
+className: AdvancedCheckResult
+tid: 214
+persistence: None
+dynamic: true
+triggers: [afterGet]
+attributes: 
+  - name: isChecking
+    attrId: 0
+    type: bool
+    mutable: true
+  - name: errorNum
+    attrId: 1
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: errorCode
+    attrId: 2
+    type: String
+    maxLength: 1024
+    default: ""
+    mutable: true

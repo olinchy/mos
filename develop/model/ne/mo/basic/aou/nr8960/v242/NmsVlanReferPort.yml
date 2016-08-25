@@ -1,0 +1,9 @@
+className: NmsVlanReferPort
+tid: 497
+triggers: [recover]
+reference:
+  - name: portId
+    type: TrafficPort
+    isMulti: true
+    maxItems: 30
+    under: ResetPolicyInList      

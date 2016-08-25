@@ -1,0 +1,31 @@
+className: HotPatch
+baseClass: Package
+tid: 209
+triggers: [constraintDel]
+attributes: 
+  - name: status
+    attrId: 0  
+    type: PatchStatusEnum
+    default: backup
+    mutable: true
+actions:
+  customs:   
+    - name: Active
+      actionId: 2
+    - name: ActiveRsp
+      actionId: 102  
+    - name: Deactive
+      actionId: 5
+    - name: DeactiveRsp
+      actionId: 105
+children:
+   - name : PackageFile
+     id : 1
+     groupType : map
+     count : 125
+   - name : ActiveResult
+     id : 3
+     count : 1
+     autoCreate: True
+
+

@@ -1,0 +1,35 @@
+className: PmpVlanPriCfg
+tid: 404
+key:
+  type: user-defined
+triggers: [beforeAdd, constraintAdd]
+attributes:
+  - name: portId
+    attrId: 0
+    type: WORD32
+    mutable: true
+  - name: vlanPriStart
+    attrId: 1
+    type: BYTE
+    minimum: 0
+    maximum: 7
+    mutable: true
+  - name: vlanPriEnd
+    attrId: 2
+    type: BYTE
+    minimum: 0
+    maximum: 7
+    mutable: true
+reference:
+  - name: sourcePort
+    type: ChipPort
+    isMulti: false
+    under: DependencyPolicy
+children:
+   - name : VlanPriPerfData
+     type : PmpVlanPri
+     id : 1
+     count : 1
+     groupType : map
+     autoCreate: true
+

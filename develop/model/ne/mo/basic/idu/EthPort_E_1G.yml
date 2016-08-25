@@ -1,0 +1,59 @@
+className: EthPort_E_1G
+baseClass: PhyPort
+tid: 229
+attributes:
+  - name: portType
+    attrId: 0
+    type: PortTypeEnum
+    default: electric
+    mutable: false
+  - name: featureList
+    attrId: 1
+    type: FeatureList
+    default: [clock]
+    mutable: false
+children:
+  - name: PortMode
+    type: PortMode_E_1G
+    id: 1
+    autoCreate: true
+  - name: PmpRmon
+    id: 2
+    count : 1
+    autoCreate: true
+  - name: PmpLinkEth
+    id: 3
+    count : 1
+    autoCreate: true
+  - name: RmQryEthPort
+    id: 4
+    autoCreate: true
+  - name: LldpPort
+    id: 5
+    autoCreate: true
+  - name: ssmSwitch
+    type: SsmSwitch
+    id: 6
+    autoCreate: true
+  - name: LcptEndNode
+    id: 7
+    autoCreate: false
+  - name: EfmPort
+    id: 8
+    autoCreate: false
+  - name: ptpAsymComp
+    type: PtpAsymComp
+    id: 9
+    autoCreate: true
+  - name: LacpPort
+    id: 10
+    autoCreate: false
+  - name: EthPortLoopBack
+    id: 11
+    autoCreate: true
+  - name: PLACascadePort
+    id: 12
+    autoCreate: false
+  - name: PLACascadePTP
+    id: 13
+    autoCreate: false

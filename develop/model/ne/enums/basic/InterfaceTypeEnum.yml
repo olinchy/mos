@@ -1,0 +1,7 @@
+name: InterfaceTypeEnum
+type: BYTE
+default: RSSI
+enum:
+  RSSI: 0
+  XPD: 1
+

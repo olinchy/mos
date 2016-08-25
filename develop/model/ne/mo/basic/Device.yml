@@ -1,0 +1,37 @@
+className: Device
+tid: 202
+attributes:
+  - name: siteId
+    attrId: 0
+    type: String
+    maxLength: 255
+    mutable: true
+  - name: neId
+    attrId: 1
+    type: WORD32
+    mutable: true
+  - name: neName
+    attrId: 2
+    type: String
+    maxLength: 255
+    mutable: true
+  - name: neType
+    attrId: 3
+    type: String
+    maxLength: 10
+    mutable: false
+  - name: ipAddress
+    attrId: 4
+    type: IPv4Addr
+    default: 193.167.0.127
+    mutable: true
+  - name: netMask
+    attrId: 4
+    type: IPv4Addr
+    default: 255.255.255.0
+    mutable: true
+  - name: defaultGw
+    attrId: 4
+    type: IPv4Addr
+    default: 193.167.0.1
+    mutable: true

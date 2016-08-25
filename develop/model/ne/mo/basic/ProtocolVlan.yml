@@ -1,0 +1,42 @@
+className: ProtocolVlan
+tid: 176
+triggers: [constraintAdd]
+attributes:
+  - name: protocolVlanName
+    attrId: 0
+    type: String
+    maxLength: 19
+    mutable: true
+  - name: protocolType
+    attrId: 1
+    type: BYTE
+    enum:
+      IP: 1
+      IPX: 2
+      ARP: 3
+      RARP: 4
+    default: IP
+    mutable: true
+  - name: frameEncp
+    attrId: 2
+    type: BYTE
+    enum:
+      ETHII: 1
+      SNAP: 2
+      LLC: 3
+    default: ETHII
+    mutable: true
+  - name: newVlanId
+    attrId: 3
+    type: WORD16
+    minimum: 1
+    maximum: 4094
+    default: 200
+    mutable: true
+  - name: newPriority
+    attrId: 4
+    type: BYTE
+    minimum: 0
+    maximum: 7
+    default: 0
+    mutable: true

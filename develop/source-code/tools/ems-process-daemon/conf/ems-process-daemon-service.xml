@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<server>
+
+    <mbean code="com.zte.mos.process.daemon.EmsService" name="ems.process.daemon:service=MosEmsService"></mbean>
+
+</server>
+

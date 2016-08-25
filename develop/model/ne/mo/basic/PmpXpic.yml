@@ -1,0 +1,37 @@
+className: PmpXpic
+tid: 375
+triggers: [afterGet]
+persistence: None
+attributes:
+  - name: date
+    attrId: 0
+    type: Date
+    maxLength: 50
+    mutable: false
+  - name: validFlag
+    attrId: 1 
+    type : PmpValidFlagEnum
+    default: valid
+    mutable: false
+  - name: xpiMax
+    attrId: 2 
+    type : WORD32
+    mutable: false
+  - name: xpiMin
+    attrId: 3 
+    type : WORD32
+    mutable: false
+  - name: xpiAvg
+    attrId: 4 
+    type : WORD32
+    mutable: false
+  - name: xpiExeed
+    attrId: 5 
+    type : WORD32
+    mutable: false
+actions:
+  customs:
+    - name: Clear
+      actionId: 1
+    - name: ClearRsp
+      actionId: 101

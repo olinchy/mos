@@ -1,0 +1,6 @@
+name: LinkStatusEnum
+type: BYTE
+default: down
+enum:
+    down: 0
+    up: 1

@@ -1,0 +1,23 @@
+className: ProtocolLogCfg
+tid: 494
+attributes:
+  - name: cfm
+    attrId: 0
+    type: StateEnum
+    default: enable
+    mutable: true
+  - name: xstp
+    attrId: 1
+    type: StateEnum
+    default: enable
+    mutable: true
+  - name: erps
+    attrId: 2
+    type: StateEnum
+    default: enable
+    mutable: true
+  - name: elps
+    attrId: 3
+    type: StateEnum
+    default: enable
+    mutable: true

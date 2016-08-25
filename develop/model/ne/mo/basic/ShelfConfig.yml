@@ -1,0 +1,10 @@
+className: ShelfConfig
+tid: 166
+isAbstract : True
+attributes:
+  - name: ShelfCfgState
+    attrId: 0
+    type : StateEnum
+    default: enable
+    mutable: true
+    dynamic: true

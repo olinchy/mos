@@ -1,0 +1,8 @@
+className: Stm155Link
+baseClass: PhysicalLink
+tid: 52
+reference:
+  - name: aEnd
+    type: Stm155Port
+  - name: zEnd
+    type: Stm155Port

@@ -1,0 +1,6 @@
+name: SwitchEnum
+type: BYTE
+default: switchOff
+enum:
+  switchOff: 0
+  switchOn: 1

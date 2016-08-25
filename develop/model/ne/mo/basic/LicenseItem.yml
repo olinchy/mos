@@ -1,0 +1,42 @@
+className: LicenseItem
+tid: 194
+persistence: None
+isAbstract: True
+attributes: 
+  - name: type
+    attrId: 0
+    type: LicenseTypeEnum
+    default: invalidType
+    mutable: true
+  - name: state
+    attrId: 1
+    type: BYTE
+    enum:
+      ONA: 1
+      OFFA: 0
+      INVALIDA: 255
+    default: INVALIDA
+    mutable: true
+  - name: authResult
+    attrId: 2
+    type: BYTE
+    enum:
+      success: 0
+      fail: 1
+    default: success
+    mutable: true
+  - name: itemState
+    attrId: 3
+    type: WORD32
+    enum:
+      fail: 3
+      pass: 4
+      expired: 5
+      unauth: 255
+    default: unauth
+    mutable: true
+  - name: leftDays
+    attrId: 4
+    type: WORD32
+    default: 180
+    mutable: true

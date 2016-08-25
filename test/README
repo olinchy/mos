@@ -1,0 +1,2 @@
+run testcase command: 
+python kernel/framework/main.py -p ./projects/Test_Mos.xml

@@ -1,0 +1,73 @@
+className: PmpRf
+tid: 372
+triggers: [afterGet]
+persistence: None
+attributes:
+  - name: date
+    attrId: 0
+    type: Date
+    maxLength: 50
+    mutable: false
+  - name: validFlag
+    attrId: 1 
+    type : PmpValidFlagEnum
+    default: valid
+    mutable: false
+  - name: maxTxPow
+    attrId: 2 
+    type : FLOAT
+    mutable: false
+  - name: minTxPow
+    attrId: 3 
+    type : FLOAT
+    mutable: false
+  - name: avgTxPow
+    attrId: 4 
+    type : FLOAT
+    mutable: false
+  - name: maxRsl
+    attrId: 5 
+    type : FLOAT
+    mutable: false
+  - name: minRsl
+    attrId: 6 
+    type : FLOAT
+    mutable: false
+  - name: avgRsl
+    attrId: 7 
+    type : FLOAT
+    mutable: false
+  - name: perc999
+    attrId: 8 
+    type : FLOAT
+    mutable: false
+  - name: perc001
+    attrId: 9 
+    type : FLOAT
+    mutable: false
+  - name: percHigh
+    attrId: 10 
+    type : WORD32
+    mutable: false
+  - name: percLow
+    attrId: 11 
+    type : WORD32
+    mutable: false
+  - name: rlts1
+    attrId: 12 
+    type : WORD32
+    mutable: false
+  - name: rlts2
+    attrId: 13 
+    type : WORD32
+    mutable: false
+  - name: tlts
+    attrId: 14 
+    type : WORD32
+    mutable: false
+actions:
+  customs:
+    - name: Clear
+      actionId: 1
+    - name: ClearRsp
+      actionId: 101

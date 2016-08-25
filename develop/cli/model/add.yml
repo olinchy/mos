@@ -1,0 +1,11 @@
+name: add
+prompt: "<mo>$"
+params:
+  - name : dn
+    type : Dn
+  - name : moClass
+    type : MoClass
+  - name : mo
+    type : Mo
+msgType: method  
+exitWhenEmptyLine: True

@@ -1,0 +1,3 @@
+module: cli
+dependency:
+script: rm -rf $INSTALL_PREFIX/tools/bin/cli && ln -s ${CURRENT_DIR}/main.py  $INSTALL_PREFIX/tools/bin/cli

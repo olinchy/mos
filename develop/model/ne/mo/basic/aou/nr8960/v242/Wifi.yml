@@ -1,0 +1,70 @@
+className: Wifi
+tid: 570
+triggers: [beforeSet, action, recover]
+attributes: 
+  - name: workState
+    attrId: 0
+    type: BYTE
+    enum:
+      disable: 0
+      enable: 1 
+    default: enable
+    mutable: true
+  - name: autoActive
+    attrId: 1
+    type: BYTE
+    enum:
+      disable: 0
+      enable: 1 
+    default: disable
+    mutable: true
+  - name: SSID
+    attrId: 2
+    type: String
+    maxLength: 31
+    default: "NR8960"
+    mutable: true
+  - name: password
+    attrId: 3
+    type: String
+    maxLength: 32
+    default: "521e919b49cd832c2ec24109e84190d6"
+    mutable: true
+  - name: broadcast
+    attrId: 4
+    type: BYTE
+    enum:
+      disable: 0
+      enable: 1
+    default: enable
+    mutable: true
+actions:
+  customs:
+    - name: LedLight
+      actionId: 1
+    - name: LedLightRsp
+      actionId: 101
+    - name: SetPassword
+      actionId: 2
+      attributes:
+        - name: newSSID
+          attrId: 0  
+          type: String
+          maxLength: 31
+          mutable: true
+        - name: newPassword
+          attrId: 1  
+          type: String
+          maxLength: 32
+          mutable: true
+        - name: oldPassword
+          attrId: 2  
+          type: String
+          maxLength: 32
+          mutable: true
+    - name: SetPasswordRsp
+      actionId: 102
+    - name: WifiDefault
+      actionId: 3
+    - name: WifiDefaultRsp
+      actionId: 103

@@ -1,0 +1,67 @@
+className: PmpThresh
+tid: 511
+persistence: None
+attributes:
+  - name: xpiHigh
+    attrId: 0
+    type: BYTE
+    minimum: 0
+    maximum: 100
+    default: 35
+    mutable: false
+  - name: rslHigh
+    attrId: 1
+    type: WORD32
+    minimum: 0
+    maximum: 1000
+    default: 250
+    mutable: false
+  - name: rslHigh_uc
+    attrId: 1
+    type: WORD32
+    minimum: 0
+    maximum: 1000
+    default: 40
+    mutable: false
+  - name: rslLow
+    attrId: 2
+    type: WORD32
+    minimum: 0
+    maximum: 1000
+    default: 600
+    mutable: false
+  - name: rslLow_uc
+    attrId: 2
+    type: WORD32
+    minimum: 0
+    maximum: 1000
+    default: 60
+    mutable: false
+  - name: rlt1
+    attrId: 3
+    type: WORD32
+    minimum: 0
+    maximum: 1000
+    default: 350
+    mutable: false
+  - name: rlt2
+    attrId: 4
+    type: WORD32
+    minimum: 0
+    maximum: 1000
+    default: 600
+    mutable: false
+  - name: tlt
+    attrId: 5
+    type: WORD32
+    minimum: 900
+    maximum: 1300
+    default: 1250
+    mutable: false
+  - name: radioUtilizeHigh
+    attrId: 6
+    type: WORD32
+    minimum: 0
+    maximum: 100
+    default: 80
+    mutable: false

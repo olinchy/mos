@@ -1,0 +1,5 @@
+name: lsEx
+params:
+  - name : dn
+    type : Dn
+msgType: method  

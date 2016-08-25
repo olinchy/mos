@@ -1,0 +1,14 @@
+className: Rcmua
+baseClass: Board
+tid: 114
+attributes:
+   - name: boardType
+     attrId: 0
+     type: BoardTypeEnum
+     default: 8120rmu
+     mutable: false
+children:
+   - name : AirPort
+     id : 1
+     count : 1
+     autoCreate: true

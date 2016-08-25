@@ -1,0 +1,19 @@
+className: Rtuho
+baseClass: Board
+tid: 152
+attributes:
+   - name: boardType
+     attrId: 0
+     type: BoardTypeEnum
+     default: rtuho
+     mutable: false
+children:
+   - name : E1Port
+     id : 1
+     count : 8
+     autoCreate: true
+   - name : HDInfo
+     id : 2
+     count : 1
+     autoCreate: true
+

@@ -1,0 +1,15 @@
+className: NR8960AShelfConfig
+baseClass: ShelfConfig
+tid: 236
+persistence: All
+triggers: [afterSet]
+attributes:
+  - name: CurCfgScene
+    attrId: 0
+    type: BYTE
+    enum:
+      1plus0: 0
+      2plus0: 1
+      1plus1: 2
+    default: 1plus0
+    mutable: true

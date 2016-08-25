@@ -1,0 +1,82 @@
+className: PtpGlobal
+tid: 394
+triggers: [constraintSet]
+attributes:
+  - name: enableState
+    attrId: 0
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: ptpType
+    attrId: 1
+    type: PtpTypeEnum
+    default: Ptp_Oc
+    mutable: true
+  - name: domain
+    attrId: 2
+    type: BYTE
+    minimum: 0
+    maximum: 127
+    default: 0
+    mutable: true
+  - name: delayMeasure
+    attrId: 3
+    type: DelayMeasurementEnum
+    default: E2E
+    mutable: false
+  - name: slaveOnly
+    attrId: 4
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: algorithm
+    attrId: 5
+    type: PtpAlgorithmEnum
+    default: Manual
+    mutable: true
+  - name: twoStep
+    attrId: 6
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: priority1
+    attrId: 7
+    type: BYTE
+    minimum: 0
+    maximum: 255
+    default: 128
+    mutable: true
+  - name: priority2
+    attrId: 8
+    type: BYTE
+    minimum: 0
+    maximum: 255
+    default: 128
+    mutable: true
+  - name: clkAccuracy
+    attrId: 9
+    type: BYTE
+    minimum: 0
+    maximum: 255
+    default: 33
+    mutable: true
+  - name: clkClass
+    attrId: 10
+    type: BYTE
+    minimum: 0
+    maximum: 255
+    default: 248
+    mutable: true
+  - name: lossRateThres
+    attrId: 11
+    type: WORD16
+    minimum: 5
+    maximum: 15
+    default: 10
+    mutable: true
+children:
+  - name: PtpPorts
+    id: 1
+    count: 16
+    autoCreate: false
+

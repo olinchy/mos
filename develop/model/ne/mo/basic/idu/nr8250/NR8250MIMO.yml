@@ -1,0 +1,25 @@
+className: NR8250MIMO
+baseClass: MIMO
+tid: 583
+triggers: [afterAdd, afterDel, afterSet, recover]
+attributes:
+  - name: PrimaryAirPort
+    attrId: 0
+    type: BYTE
+    default: 0
+    mutable: true
+  - name: SecondaryAirPort
+    attrId: 1
+    type: BYTE
+    default: 0
+    mutable: true
+  - name: SpatPrimaryAirPort
+    attrId: 2
+    type: BYTE
+    default: 0
+    mutable: true
+  - name: SpatSecondaryAirPort
+    attrId: 3
+    type: BYTE
+    default: 0
+    mutable: true

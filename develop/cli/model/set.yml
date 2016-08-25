@@ -1,0 +1,9 @@
+name: set
+prompt: "<mo>$"
+params:
+  - name : dn
+    type : Dn
+  - name : mo
+    type : Mo
+msgType: method 
+exitWhenEmptyLine: True

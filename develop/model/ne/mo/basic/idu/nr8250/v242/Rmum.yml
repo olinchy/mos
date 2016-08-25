@@ -1,0 +1,20 @@
+className: Rmum
+baseClass: Board
+tid: 432
+persistence: None
+attributes:
+   - name: boardType
+     attrId: 0
+     type: BoardTypeEnum
+     default: rmum
+     mutable: false
+children:
+   - name : AirPort
+     id : 1
+     count : 2
+     autoCreate: true
+   - name : HDInfo
+     id : 2
+     count : 1
+     autoCreate: true
+

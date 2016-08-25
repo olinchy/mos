@@ -1,0 +1,31 @@
+className: RateLimit
+tid: 311
+isAbstract : True
+attributes:
+  - name: ingressEnable
+    attrId: 0
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: stormRate
+    attrId: 1
+    type: WORD32
+    minimum: 64
+    maximum: 10000000
+    default: 64
+    mutable: true
+  - name: ingressMaxRate
+    attrId: 2
+    type: WORD32
+    minimum: 64
+    maximum: 10000000
+    default: 64
+    mutable: true
+  - name: ingressBurstSize
+    attrId: 3
+    type: WORD32
+    minimum: 64
+    maximum: 10000000
+    default: 64
+    mutable: true
+

@@ -1,0 +1,58 @@
+className: NR8960AShelf
+baseClass: Shelf
+tid: 218
+persistence: None
+children:
+  - name: Board
+    type: AcmubInNR8960A
+    id: 1
+    count: 1
+    groupType: map
+    autoCreate: false
+  - name: TrafficUnit
+    id: 2
+    count: 2
+    groupType: map
+    autoCreate: {"0": AcmubTuTrafficUnit, "1": AcmubMuTrafficUnit}
+  - name: PLA
+    id: 3
+    groupType : map
+    count: 1
+    autoCreate: false
+  - name: TrafficPort
+    type: TrafficPort
+    id: 4
+    count: 5
+    groupType: map
+    autoCreate: false
+  - name: Antenna
+    id: 5
+    count: 6
+    autoCreate: false
+  - name: PmpEnvInfo
+    id: 6
+    count: 1
+    autoCreate: true
+#  - name: XPIC
+#    type: NR8960AXPIC
+#    id: 4
+#    count: 1
+#    autoCreate: true
+#  - name: NR8960AShelfConfig
+#    id: 6
+#    count: 1
+#    autoCreate: true
+  - name: ProtoIF
+    id: 7
+    groupType: map
+    autoCreate: false
+actions:
+  customs:
+    - name: SoftReboot
+      actionId: 1
+    - name: HardReboot
+      actionId: 2
+    - name: SoftRebootRsp
+      actionId: 101
+    - name: HardRebootRsp
+      actionId: 102

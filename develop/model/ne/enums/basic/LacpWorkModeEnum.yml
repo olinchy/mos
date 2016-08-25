@@ -1,0 +1,8 @@
+name: LacpWorkModeEnum
+type: BYTE
+default: active
+enum:
+  passive: 0
+  active: 1
+  onMode: 2
+   

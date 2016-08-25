@@ -1,0 +1,7 @@
+name: DelayMeasurementEnum
+type: BYTE
+default: E2E
+enum:
+  E2E      : 1
+  P2P      : 2
+  Disabled : 3

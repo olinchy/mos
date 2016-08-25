@@ -1,0 +1,21 @@
+className: EdiOut
+baseClass: PhyPort
+tid: 2
+triggers: [constraintSet]
+persistence: 
+attributes:
+  - name: portStat
+    attrId: 1
+    type: EdiAlarmModeEnum
+    default: Energized
+    mutable: true
+  - name: alarmType
+    attrId: 2
+    type: EdiAlarmTypeEnum
+    default: Manual
+    mutable: true
+  - name: maualPortStat
+    attrId: 3
+    type: EdiAlarmModeEnum
+    default: Energized
+    mutable: true

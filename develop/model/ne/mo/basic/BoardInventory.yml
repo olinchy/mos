@@ -1,0 +1,12 @@
+className: BoardInventory
+tid: 252
+persistence: None
+triggers: [afterGet]
+attributes:
+  - name: boardInventoryItems
+    attrId: 0
+    type: Set
+    maxItems: 30
+    items:
+      type: BoardInventoryItem
+    mutable: true

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<project>
+    <modules root="testcases">
+        <!--module name="Persistence" filePath="persistence/Persistence.py"/-->
+        <module name="transTest" filePath="casemodel/testcase_ems.yml"/>
+
+    </modules>
+    <config>
+        <devices>
+            <!--device id="1" type="EMS" version="02.04.04" port="8080"/-->
+        </devices>
+        <clis>
+            <cli name="cli1" address="http://127.0.0.1:54321" dnPrefix=""/>
+            <cli name="cli2" address="http://127.0.0.1:54321" dnPrefix=""/>
+        </clis>
+        <db connection="system/oracle@220.220.0.50:1521/u31" type="oracle"/>
+
+        <failureconfig failurePolicy="stopOnFailure"/>
+        <logconfig stdLevel="INFO" fileLevel="INFO"/>
+        <pressureconfig ispressure="yes" repetition="1"/>
+    </config>
+</project>

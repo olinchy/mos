@@ -1,0 +1,8 @@
+className: PtpAirTcSwitch
+tid: 589
+attributes:
+  - name: confState
+    attrId: 0
+    type: StateEnum
+    default: disable
+    mutable: true

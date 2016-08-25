@@ -1,0 +1,61 @@
+className: CmModule
+tid: 1005
+attributes:
+  - name: superTaskCount
+    attrId: 1
+    type: WORD32
+    default: 0
+    mutable: true
+
+children:
+   - name : CmSuperTask
+     id : 1
+     count : 10000
+     autoCreate: false
+
+actions:
+  customs:
+    - name: allocSuperTaskId
+      actionId: 1
+    - name: allocSuperTaskIdRsp
+      actionId: 101
+      attributes:
+        - name: superTaskID 
+          attrId: 0 
+          type: WORD32         
+          mutable: true
+    - name: downloadModifyTemplate
+      actionId: 2
+
+    - name: applyMutex
+      actionId: 3
+    - name: releaseMutex
+      actionId: 4
+    - name: forceReleaseMutex
+      actionId: 5
+    - name: queryAllMutex
+      actionId: 6
+    - name: batchApplyMutex
+      actionId: 7
+    - name: batchReleaseMutex
+      actionId: 8
+    - name: releaseTimeoutMutex
+      actionId: 9
+    - name: queryRole
+      actionId: 10
+    - name: compareConfigSet
+      actionId: 11
+    - name: exportConfigSet
+      actionId: 12
+    - name: queryParentNeLockEntity
+      actionId: 13
+    - name: queryTaskNeLockEntity
+      actionId: 14
+    - name: addParentNeLockEntity
+      actionId: 15
+    - name: addTaskNeLockEntity
+      actionId: 16
+    - name: removeAllNeLockEntityByLockType
+      actionId: 17
+    - name: removeNeLockEntityByGroupId
+      actionId: 18

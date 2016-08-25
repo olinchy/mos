@@ -1,0 +1,7 @@
+name: DataCheckModeEnum
+type: BYTE
+enum:
+  NoneCheck: 0
+  OddCheck: 1
+  EvenCheck: 2
+

@@ -1,0 +1,10 @@
+className: HQOSL0Node_noGen
+tid: 568
+triggers: [constraintAdd, constraintSet, constraintDel, beforeAdd, afterAdd]
+baseClass: HQOSL0Node
+children:
+  - name: L1
+    type: HQOSL1Node
+    id: 1
+    count: 8
+    autoCreate: false

@@ -1,0 +1,118 @@
+- name: test_setup_ref_success_1
+  steps:
+  - command: add /Ems/1/Ne/1;
+    connection: cli1
+    result: {result: 0}
+  - command: add /Ems/1/Ne/2;
+    connection: cli1
+    result: {result: 0}
+  - command: add /Ems/1/Ne/1/Product/1;
+    connection: cli1
+    result: {result: 0}
+  - command: add /Ems/1/Ne/2/Product/1;
+    connection: cli1
+    result: {result: 0}
+  - command: add /Ems/1/Ne/1/Product/1/CesRoute/1;
+    connection: cli1
+    result: {result: 0}
+  - command: add /Ems/1/Ne/2/Product/1/CesRoute/1;
+    connection: cli1
+    result: {result: 0}
+  - command: add /Ems/1/Ne/2/Product/1/CesRoute/2;
+    connection: cli1
+    result: {result: 0}
+- name: test_ref_add_success_2
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - command: add /Ems/1/CesService/1 aEnd /Ems/1/Ne/1/Product/1/CesRoute/1 zEnd /Ems/1/Ne/2/Product/1/CesRoute/1;
+    connection: cli1
+    result: {result: 0}
+  - command: get /Ems/1/Ne/1/Product/1/CesRoute/1
+    connection: cli1
+    result:
+      refBys: [/Ems/1/CesService/1]
+  - command: get /Ems/1/Ne/2/Product/1/CesRoute/1
+    connection: cli1
+    result:
+      refBys: [/Ems/1/CesService/1]
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Ems/1/CesService/1
+    connection: cli1
+    result: {result: 0}
+- name: test_ref_set_success_3
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - command: set /Ems/1/CesService/1 aEnd /Ems/1/Ne/1/Product/1/CesRoute/1 zEnd /Ems/1/Ne/2/Product/1/CesRoute/2;
+    connection: cli1
+    result: {result: 0}
+  - command: get /Ems/1/Ne/1/Product/1/CesRoute/1
+    connection: cli1
+    result:
+      refBys: [/Ems/1/CesService/1]
+  - command: get /Ems/1/Ne/2/Product/1/CesRoute/1
+    connection: cli1
+    result:
+      refBys: []
+  - command: get /Ems/1/Ne/2/Product/1/CesRoute/2
+    connection: cli1
+    result:
+      refBys: [/Ems/1/CesService/1]
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Ems/1/CesService/1
+    connection: cli1
+    result: {result: 0}
+- name: test_ref_del_success_4
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - command: del /Ems/1/CesService/1
+    connection: cli1
+    result: {result: 0}
+  - command: get /Ems/1/Ne/1/Product/1/CesRoute/1
+    connection: cli1
+    result:
+      refBys: []
+  - command: get /Ems/1/Ne/2/Product/1/CesRoute/1
+    connection: cli1
+    result:
+      refBys: []
+  - command: get /Ems/1/Ne/2/Product/1/CesRoute/2
+    connection: cli1
+    result:
+      refBys: []
+  - {command: commit, connection: cli1, result: null}
+  - command: get /Ems/1/CesService/1
+    connection: cli1
+    result: {result: 1}
+- name: test_ref_del_refedobj_success_5
+  steps:
+  - {command: starttrans, connection: cli1, result: null}
+  - command: add /Ems/1/CesService/1 aEnd /Ems/1/Ne/1/Product/1/CesRoute/1 zEnd /Ems/1/Ne/2/Product/1/CesRoute/1;
+    connection: cli1
+    result: {result: 0}
+  - {command: commit, connection: cli1, result: null}
+  - {command: starttrans, connection: cli1, result: null}
+  - command: del /Ems/1/Ne/1/Product/1/CesRoute/1
+    connection: cli1
+    result: {result: 0}
+  - command: get /Ems/1/Ne/2/Product/1/CesRoute/1
+    connection: cli1
+    result:
+      refBys: []
+  - command: get /Ems/1/CesService/1
+    connection: cli1
+    result: {result: 1}
+  - {command: commit, connection: cli1, result: null}
+- name: test_teardown_success_6
+  steps:
+  - command: del /Ems/1/Ne/1
+    connection: cli1
+    result: {result: 0}
+  - command: del /Ems/1/Ne/2
+    connection: cli1
+    result: {result: 0}
+  - command: get /Ems/1/Ne/1
+    connection: cli1
+    result: {result: 1}
+  - command: get /Ems/1/Ne/2
+    connection: cli1
+    result: {result: 1}

@@ -1,0 +1,29 @@
+className: RmeaTrafficUnit
+baseClass: TrafficUnit
+tid: 117
+triggers: [afterAdd, afterSet, recover]
+persistence: None
+attributes:
+  - name: featureList
+    attrId: 0
+    type: FeatureList
+    default: [airport]
+    mutable: false
+children:
+   - name : VE1Port
+     type : NativeVE1Port
+     id : 1
+     count : 48
+     autoCreate: true
+
+   - name : LogicAirPort
+     type : RmeaLogicAirPort
+     id : 2
+     count : 1
+     autoCreate: true
+   - name : EthPort
+     type : PhyPort
+     id : 3
+     count : 1
+     groupType : map
+     autoCreate: {"AIR-0": EthPort_Air}

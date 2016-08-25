@@ -1,0 +1,11 @@
+className: RtumTrafficUnit
+baseClass: TrafficUnit
+tid: 612
+triggers: [afterAdd, afterSet, afterDel, recover]
+children:
+   - name : EthPort
+     type : PhyPort
+     id : 1
+     count : 6
+     groupType : map
+     autoCreate: {"FE-1": [EthPort_E_FE, {displayName: "FE1"}], "FE-2": [EthPort_E_FE, {displayName: "FE2"}], "FE-3": [EthPort_E_FE, {displayName: "FE3"}], "FE-4": [EthPort_E_FE, {displayName: "FE4"}], "E-5": [EthPort_E_1G, {displayName: "GbE1"}], "E-6": [EthPort_E_1G, {displayName: "GbE2"}]}

@@ -1,0 +1,65 @@
+className: L2Frame
+tid: 411
+triggers: [recover]
+attributes:
+  - name: MSTP_00
+    attrId: 0
+    type: L2Frame_MSTP_00
+  - name: LACP_02
+    attrId: 1
+    type: L2Frame_LACP_02
+  - name: P8021X_03
+    attrId: 2
+    type: L2Frame_8021X_03
+  - name: Provider_08
+    attrId: 3
+    type: L2Frame_Provider_08
+  - name: LLDP_0E
+    attrId: 4
+    type: L2Frame_LLDP_0E
+  - name: Bridges_10
+    attrId: 5
+    type: L2Frame_Bridges_10
+  - name: GARP_2X
+    attrId: 6
+    type: L2Frame_GARP_2X
+  - name: MAC_04
+    attrId: 7
+    type: L2Frame_MAC_04
+  - name: Reserved_05
+    attrId: 8
+    type: L2Frame_Reserved_05
+  - name: Reserved_06
+    attrId: 9
+    type: L2Frame_Reserved_06
+  - name: E_LMI_07
+    attrId: 10
+    type: L2Frame_E_LMI_07
+  - name: Reserved_09
+    attrId: 11
+    type: L2Frame_Reserved_09
+  - name: Reserved_0A
+    attrId: 12
+    type: L2Frame_Reserved_0A
+  - name: Reserved_0B
+    attrId: 13
+    type: L2Frame_Reserved_0B
+  - name: Reserved_0C
+    attrId: 14
+    type: L2Frame_Reserved_0C
+  - name: MVRP_0D
+    attrId: 15
+    type: L2Frame_MVRP_0D
+  - name: Reserved_0F
+    attrId: 16
+    type: L2Frame_Reserved_0F
+  - name: Pause_01
+    attrId: 17
+    type: L2Frame_Pause_01
+  - name: OAM_02
+    attrId: 18
+    type: L2Frame_OAM_02
+  - name: PTP_0E
+    attrId: 19
+    type: L2Frame_PTP_0E
+

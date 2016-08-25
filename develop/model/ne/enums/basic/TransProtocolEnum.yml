@@ -1,0 +1,6 @@
+name: TransProtocolEnum
+type: BYTE
+default: UDP_IPV4
+enum:
+  UDP_IPV4   : 1
+  IEEE802_3  : 3

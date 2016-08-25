@@ -1,0 +1,8 @@
+className: ProtoIF
+tid: 440
+#triggers: [beforeSet,beforeAdd,constraintSet, constraintAdd]  
+reference:
+  - name: protoIF
+    type: ManagedObject
+    isMulti: false
+    under: DependencyPolicy

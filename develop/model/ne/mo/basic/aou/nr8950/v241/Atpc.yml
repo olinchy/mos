@@ -1,0 +1,48 @@
+className: Atpc
+tid: 503
+attributes: 
+  - name: state
+    attrId: 0
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: step
+    attrId: 1
+    type: BYTE
+    default: 0
+    mutable: true
+  - name: lowThreshold
+    attrId: 2
+    type: WORD16 
+    mutable: true  
+  - name: highThreshold
+    attrId: 3
+    type: WORD16   
+    mutable: true
+  - name: minTxPower
+    attrId: 4
+    type: CHAR
+    minimum: -20
+    maximum: 40
+    default: 0
+    mutable: true
+  - name: maxTxPower
+    attrId: 5
+    type: CHAR
+    minimum: -20
+    maximum: 40
+    default: 0
+    mutable: true
+  - name: enableLog
+    attrId: 6
+    type: WORD32
+    enum:
+      disable: 0
+      enable: 1 
+    default: disable
+    mutable: true
+triggers: [constraintSet]
+
+
+
+

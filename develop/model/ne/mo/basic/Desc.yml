@@ -1,0 +1,30 @@
+className: Desc
+tid: 505
+attributes:  
+  - name: tuName
+    attrId: 0
+    type: String
+    maxLength: 100
+    mutable: true
+    default: "UnNamed"
+  - name: linkid
+    attrId: 1
+    type: String
+    maxLength: 101
+    mutable: true
+  - name: tdmBandwidthRate
+    attrId: 2
+    type: WORD32
+    mutable: true
+    dynamic: true
+  - name: ethBandwidthRate
+    attrId: 3
+    type: WORD32
+    mutable: true
+    dynamic: true
+  - name: aircapacity
+    attrId: 4
+    type: WORD32
+    mutable: true
+    dynamic: true
+triggers: [afterGet]

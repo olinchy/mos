@@ -1,0 +1,28 @@
+className: SummerTime
+tid: 174
+attributes:
+  - name: startDate
+    attrId: 0
+    type: Date
+    mutable: true
+  - name: endDate
+    attrId: 1
+    type: Date
+    mutable: true
+  - name: step
+    attrId: 2
+    type: BYTE
+    minium: 1
+    maxinum: 10
+    default: 4
+    mutable: true
+  - name: state
+    attrId: 3
+    type: StateEnum
+    default: disable
+    mutable: true
+  - name: mode
+    attrId: 4
+    type: SummerModeEnum
+    default: Ordinary_Mode
+    mutable: true

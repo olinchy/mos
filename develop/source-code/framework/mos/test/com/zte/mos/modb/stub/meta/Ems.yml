@@ -1,0 +1,6 @@
+className: Ems
+children:
+   - name : Ne
+     id : 1
+     count : 15000
+     autoCreate: false

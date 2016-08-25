@@ -1,0 +1,43 @@
+className: PhyPort
+tid: 243
+isAbstract : True
+attributes:    
+  - name: oeState
+    attrId: 0
+    type: BYTE
+    enum:
+      optical: 0
+      electric: 1
+      none: 255
+    default: none
+    mutable: true
+  - name: CasCadeStatus
+    attrId: 1
+    type: BYTE
+    enum:
+      none: 0
+      ttmCasCade: 1
+    default: none
+    mutable: true
+  - name: CooperStatus
+    attrId: 2
+    type: BYTE
+    enum:
+      normal: 0
+      cooper: 1
+    default: normal
+    mutable: true
+  - name: displayName
+    attrId: 3
+    type: String
+    maxLength: 20
+    mutable: true
+  - name: availableStatus
+    attrId: 4
+    type: BYTE
+    default: available
+    enum:
+      unavailable: 0
+      available: 1
+    mutable: true
+

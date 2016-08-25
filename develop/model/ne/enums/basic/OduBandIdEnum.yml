@@ -1,0 +1,26 @@
+name: OduBandIdEnum
+type: BYTE
+default: unknown
+enum:
+    6G_L: 0   
+    6G_H: 1
+    7G  : 2
+    8G  : 3
+    10G : 4
+    11G : 5
+    13G : 6
+    15G : 7
+    18G_L : 8
+    18G_H : 9
+    23G : 10
+    26G : 11
+    28G : 12
+    32G : 13
+    38G_L : 14
+    38G_H : 15
+    42G_L : 16
+    42G_H : 17
+    unknown: 255
+
+
+

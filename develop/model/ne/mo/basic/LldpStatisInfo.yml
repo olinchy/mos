@@ -1,0 +1,51 @@
+className: LldpStatisInfo
+tid: 426
+persistence: None
+triggers: [afterGet]
+attributes:
+  - name: numOfAgedNeighbor
+    attrId: 0
+    type: WORD32
+    mutable: false
+  - name: numOfDiscardFrame
+    attrId: 1
+    type: WORD32
+    mutable: false
+  - name: numOfRxErrFrame
+    attrId: 2
+    type: WORD32
+    mutable: false
+  - name: numOfRxFrame
+    attrId: 3
+    type: WORD32
+    mutable: false
+  - name: numOfTxFrame
+    attrId: 4
+    type: WORD32
+    mutable: false
+  - name: numOfDelNeighbor
+    attrId: 5
+    type: WORD32
+    mutable: false
+  - name: numOfAddFailedNeighbor
+    attrId: 6
+    type: WORD32
+    mutable: false
+  - name: numOfAddNeighbor
+    attrId: 7
+    type: WORD32
+    mutable: false
+  - name: numOfDiscardTlv
+    attrId: 8
+    type: WORD32
+    mutable: false
+  - name: numOfUnknownTlv
+    attrId: 9
+    type: WORD32
+    mutable: false
+actions:
+  customs:
+    - name: LldpCmd
+      actionId: 1
+    - name: LldpCmdRsp
+      actionId: 101

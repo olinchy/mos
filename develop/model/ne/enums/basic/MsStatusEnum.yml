@@ -1,0 +1,8 @@
+name: MsStatusEnum
+type: BYTE
+default: Master
+enum:
+    Master: 0   
+    Slaver: 1
+
+

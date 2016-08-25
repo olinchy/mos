@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<DBTABLE name="NR8250_R_8000_RFSTATUS">
+  <DBRECORD>
+    <FIELD name="ucRackNo" value="1"/>
+    <FIELD name="ucShelfNo" value="1"/>
+    <FIELD name="ucTrafficUnitNo" value="5"/>
+    <FIELD name="ucSlotNo" value="5"/>
+    <FIELD name="ucLink" value="0"/>
+    <FIELD name="ucBandwidth" value="1"/>
+    <FIELD name="ucModulation" value="0"/>
+    <FIELD name="ucTxPower" value="0"/>
+    <FIELD name="ucRxLevel" value="0"/>
+    <FIELD name="ucTemp" value="0"/>
+    <FIELD name="ucMute" value="0"/>
+    <FIELD name="ucStatus" value="0"/>
+    <FIELD name="dwTxFreq" value="0"/>
+    <FIELD name="dwRxFreq" value="0"/>
+    <FIELD name="dwResv1" value="0"/>
+    <FIELD name="dwResv2" value="0"/>
+    <FIELD name="dwResv3" value="0"/>
+    <FIELD name="dwResv4" value="0"/>
+  </DBRECORD>
+  <DBRECORD>
+    <FIELD name="ucRackNo" value="1"/>
+    <FIELD name="ucShelfNo" value="1"/>
+    <FIELD name="ucTrafficUnitNo" value="5"/>
+    <FIELD name="ucSlotNo" value="6"/>
+    <FIELD name="ucLink" value="0"/>
+    <FIELD name="ucBandwidth" value="1"/>
+    <FIELD name="ucModulation" value="0"/>
+    <FIELD name="ucTxPower" value="0"/>
+    <FIELD name="ucRxLevel" value="0"/>
+    <FIELD name="ucTemp" value="0"/>
+    <FIELD name="ucMute" value="0"/>
+    <FIELD name="ucStatus" value="0"/>
+    <FIELD name="dwTxFreq" value="0"/>
+    <FIELD name="dwRxFreq" value="0"/>
+    <FIELD name="dwResv1" value="0"/>
+    <FIELD name="dwResv2" value="0"/>
+    <FIELD name="dwResv3" value="0"/>
+    <FIELD name="dwResv4" value="0"/>
+  </DBRECORD>
+</DBTABLE>

@@ -1,0 +1,6 @@
+name: ErpsV2VersionEnum
+type: BYTE
+default: erpsV2Mode
+enum:
+  compatibleMode: 1
+  erpsV2Mode: 2

@@ -1,0 +1,21 @@
+className: Clock
+tid : 496
+isAbstract: True
+persistence: None
+children:
+  - name : ClkGlobal
+    type : ClkGlobal
+    id : 1
+    autoCreate : True
+  - name : SsmGlobal
+    type : SsmGlobal
+    id : 2
+    autoCreate : True
+  - name : PtpGlobal
+    type : PtpGlobal
+    id : 3
+    autoCreate : True
+  - name : SysClkSource
+    type : SysClkSource
+    id : 4
+    autoCreate : True

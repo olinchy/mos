@@ -1,0 +1,8 @@
+className: TdmCascadeLink
+baseClass: PhysicalLink
+tid: 59
+reference:
+  - name: aEnd
+    type: TdmCascadePort
+  - name: zEnd
+    type: TdmCascadePort

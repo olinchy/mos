@@ -1,0 +1,6 @@
+name: StateEnum
+type: BYTE
+default: disable
+enum:
+  disable: 0
+  enable: 1 

@@ -1,0 +1,10 @@
+name: ClkChannelEnum
+type: BYTE
+default: Channel_0
+enum:
+    Channel_0: 0
+    Channel_1: 1
+    Channel_2: 2
+    Channel_3: 3
+    Channel_Max: 255
+

@@ -1,0 +1,76 @@
+className: BasicTlv
+attributes:
+  - name: basicTlvFlag
+    attrId: 0
+    type: WORD16
+    mutable: false
+  - name: chassisIdType
+    attrId: 1
+    type: String
+    maxLength: 24
+    mutable: false
+  - name: chassisId
+    attrId: 2
+    type: MacAddr
+    mutable: false
+  - name: portIdType
+    attrId: 3
+    type: String
+    maxLength: 24
+    mutable: false
+  - name: portDscp
+    attrId: 4
+    type: String
+    maxLength: 255
+    mutable: false
+  - name: sysName
+    attrId: 5
+    type: String
+    maxLength: 255
+    mutable: false
+  - name: sysDscp
+    attrId: 6
+    type: String
+    maxLength: 255
+    mutable: false
+  - name: sysCap
+    attrId: 7
+    type: String
+    maxLength: 128
+    mutable: false
+  - name: sysCapEnable
+    attrId: 8
+    type: String
+    maxLength: 128
+    mutable: false
+  - name: manaAddrType
+    attrId: 9
+    type: String
+    maxLength: 12
+    mutable: false
+  - name: manaAddr
+    attrId: 10
+    type: IPv4Addr
+    mutable: false
+  - name: subnetMask
+    attrId: 11
+    type: IPv4Addr
+    mutable: false
+  - name: manaAddrIfType
+    attrId: 12
+    type: String
+    maxLength: 20
+    mutable: false
+  - name: manaAddrOid
+    attrId: 13
+    type: String
+    maxLength: 128
+    mutable: false
+  - name: manaAddrIfId
+    attrId: 14
+    type: WORD32
+    mutable: false
+  - name: portId
+    type: String
+    maxLength: 255
+    mutable: false

@@ -1,0 +1,149 @@
+className: PmpHqos
+tid: 385
+triggers: [afterGet]
+persistence: None
+attributes:
+  - name: date
+    attrId: 0
+    type: Date
+    maxLength: 50
+    mutable: false
+  - name: validFlag
+    attrId: 1 
+    type : PmpValidFlagEnum
+    default: valid
+    mutable: false
+  - name: rxPacket0
+    attrId: 2 
+    type : WORD64
+    mutable: false
+  - name: rxBytes0
+    attrId: 3 
+    type : WORD64
+    mutable: false
+  - name: discardPacket0
+    attrId: 4 
+    type : WORD64
+    mutable: false
+  - name: discardByte0
+    attrId: 5 
+    type : WORD64
+    mutable: false
+  - name: rxPacket1
+    attrId: 6 
+    type : WORD64
+    mutable: false
+  - name: rxBytes1
+    attrId: 7 
+    type : WORD64
+    mutable: false
+  - name: discardPacket1
+    attrId: 8 
+    type : WORD64
+    mutable: false
+  - name: discardByte1
+    attrId: 9 
+    type : WORD64
+    mutable: false
+  - name: rxPacket2
+    attrId: 10 
+    type : WORD64
+    mutable: false
+  - name: rxBytes2
+    attrId: 11 
+    type : WORD64
+    mutable: false
+  - name: discardPacket2
+    attrId: 12 
+    type : WORD64
+    mutable: false
+  - name: discardByte2
+    attrId: 13 
+    type : WORD64
+    mutable: false
+  - name: rxPacket3
+    attrId: 14 
+    type : WORD64
+    mutable: false
+  - name: rxBytes3
+    attrId: 15 
+    type : WORD64
+    mutable: false
+  - name: discardPacket3
+    attrId: 16 
+    type : WORD64
+    mutable: false
+  - name: discardByte3
+    attrId: 17 
+    type : WORD64
+    mutable: false
+  - name: rxPacket4
+    attrId: 18 
+    type : WORD64
+    mutable: false
+  - name: rxBytes4
+    attrId: 19 
+    type : WORD64
+    mutable: false
+  - name: discardPacket4
+    attrId: 20 
+    type : WORD64
+    mutable: false
+  - name: discardByte4
+    attrId: 21 
+    type : WORD64
+    mutable: false
+  - name: rxPacket5
+    attrId: 22 
+    type : WORD64
+    mutable: false
+  - name: rxBytes5
+    attrId: 23 
+    type : WORD64
+    mutable: false
+  - name: discardPacket5
+    attrId: 24 
+    type : WORD64
+    mutable: false
+  - name: discardByte5
+    attrId: 25 
+    type : WORD64
+    mutable: false
+  - name: rxPacket6
+    attrId: 26 
+    type : WORD64
+    mutable: false
+  - name: rxBytes6
+    attrId: 27 
+    type : WORD64
+    mutable: false
+  - name: discardPacket6
+    attrId: 28 
+    type : WORD64
+    mutable: false
+  - name: discardByte6
+    attrId: 29 
+    type : WORD64
+    mutable: false
+  - name: rxPacket7
+    attrId: 30 
+    type : WORD64
+    mutable: false
+  - name: rxBytes7
+    attrId: 31 
+    type : WORD64
+    mutable: false
+  - name: discardPacket7
+    attrId: 32 
+    type : WORD64
+    mutable: false
+  - name: discardByte7
+    attrId: 33 
+    type : WORD64
+    mutable: false
+actions:
+  customs:
+    - name: Clear
+      actionId: 1
+    - name: ClearRsp
+      actionId: 101

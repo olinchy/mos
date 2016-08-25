@@ -1,0 +1,145 @@
+className: PmpRmon
+tid: 376
+triggers: [afterGet]
+persistence: None
+attributes:
+  - name: date
+    attrId: 0
+    type: Date
+    maxLength: 50
+    mutable: false
+  - name: validFlag
+    attrId: 1 
+    type : PmpValidFlagEnum
+    default: valid
+    mutable: false
+  - name: inOctects
+    attrId: 2 
+    type : WORD64
+    mutable: false
+  - name: outOctects
+    attrId: 3 
+    type : WORD64
+    mutable: false
+  - name: inPackets
+    attrId: 4 
+    type : WORD64
+    mutable: false
+  - name: outPackets
+    attrId: 5 
+    type : WORD64
+    mutable: false
+  - name: inUnder64Pkts
+    attrId: 6 
+    type : WORD64
+    mutable: false
+  - name: in64Pkts
+    attrId: 7 
+    type : WORD64
+    mutable: false
+  - name: out64Pkts
+    attrId: 8 
+    type : WORD64
+    mutable: false
+  - name: in65to127Pkts
+    attrId: 9 
+    type : WORD64
+    mutable: false
+  - name: out65to127Pkts
+    attrId: 10 
+    type : WORD64
+    mutable: false
+  - name: in128to255Pkts
+    attrId: 11 
+    type : WORD64
+    mutable: false
+  - name: out128to255Pkts
+    attrId: 12 
+    type : WORD64
+    mutable: false
+  - name: in256to511Pkts
+    attrId: 13 
+    type : WORD64
+    mutable: false
+  - name: out256to511Pkts
+    attrId: 14 
+    type : WORD64
+    mutable: false
+  - name: in512to1023Pkts
+    attrId: 15 
+    type : WORD64
+    mutable: false
+  - name: out512to1023Pkts
+    attrId: 16 
+    type : WORD64
+    mutable: false
+  - name: in1024to1518Pkts
+    attrId: 17 
+    type : WORD64
+    mutable: false
+  - name: out1024to1518Pkts
+    attrId: 18 
+    type : WORD64
+    mutable: false
+  - name: inCrcErrPkts
+    attrId: 19 
+    type : WORD64
+    mutable: false
+  - name: inOverSizePkts
+    attrId: 20 
+    type : WORD64
+    mutable: false
+  - name: inOverSizeErrPkts
+    attrId: 21 
+    type : WORD64
+    mutable: false
+  - name: inBroadPkts
+    attrId: 22 
+    type : WORD64
+    mutable: false
+  - name: outBroadPkts
+    attrId: 23 
+    type : WORD64
+    mutable: false
+  - name: inMulBroadPkts
+    attrId: 24 
+    type : WORD64
+    mutable: false
+  - name: outMulBroadPkts
+    attrId: 25 
+    type : WORD64
+    mutable: false
+  - name: rxQosDiscard
+    attrId: 26 
+    type : WORD64
+    mutable: false
+  - name: rxFilterDiscard
+    attrId: 27 
+    type : WORD64
+    mutable: false
+  - name: rxVlanIDErr
+    attrId: 28 
+    type : WORD64
+    mutable: false
+  - name: inPause
+    attrId: 29 
+    type : WORD64
+    mutable: false
+  - name: outPause
+    attrId: 30 
+    type : WORD64
+    mutable: false
+  - name: outOversizedPkt
+    attrId: 31 
+    type : WORD64
+    mutable: false
+  - name: inFragmentsPkt
+    attrId: 32 
+    type : WORD64
+    mutable: false
+actions:
+  customs:
+    - name: Clear
+      actionId: 1
+    - name: ClearRsp
+      actionId: 101

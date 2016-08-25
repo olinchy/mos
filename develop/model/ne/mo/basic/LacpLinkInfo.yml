@@ -1,0 +1,20 @@
+className: LacpLinkInfo
+tid: 500
+persistence: None
+dynamic: true
+triggers: [afterGet]
+attributes:
+  - name: index
+    attrId: 0
+    type: BYTE
+    mutable: false
+  - name: lacpMemLinkInfo
+    attrId: 1
+    type: Set
+    maxItems: 8
+    items:
+      type: LacpMemLinkInfo
+    mutable: false
+
+
+   

@@ -1,0 +1,12 @@
+className: SoftwarePackage
+tid: 1004021
+children:
+   - name : VersionPackage
+     id : 1
+     count : 100
+     autoCreate: false
+
+actions:
+  customs:
+    - name: queryPkgInfo
+      actionId: 1

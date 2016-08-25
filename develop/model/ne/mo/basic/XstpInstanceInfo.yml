@@ -1,0 +1,50 @@
+className: XstpInstanceInfo
+tid: 518
+triggers: [afterGet]
+persistence: None
+attributes:
+  - name: instanceId  
+    attrId: 0 
+    type: WORD32
+    mutable: false
+  - name: bridgeId
+    attrId: 1
+    type: XstpBridgeIdObj
+    mutable: false
+  - name: rootBridge
+    attrId: 2
+    type: XstpBridgeIdObj
+    mutable: false
+  - name: regionRootBridge
+    attrId: 3
+    type: XstpBridgeIdObj
+    mutable: false
+  - name: extPathCost
+    attrId: 4
+    type: WORD32
+    mutable: false
+  - name: intPathCost
+    attrId: 5
+    type: WORD32
+    mutable: false
+  - name: designateBridge
+    attrId: 6
+    type: XstpBridgeIdObj
+    mutable: false
+  - name: rootPort
+    attrId: 7
+    type: String
+    maxLength: 20
+    mutable: false
+  - name: rootPortPriority
+    attrId: 8
+    type: BYTE
+    mutable: false
+  - name: topochChgTime
+    attrId: 9
+    type: Date
+    mutable: false
+  - name: topochChgNum
+    attrId: 10
+    type: WORD32
+    mutable: false

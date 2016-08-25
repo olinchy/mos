@@ -1,0 +1,69 @@
+className: PmpTdm
+tid: 371
+triggers: [afterGet]
+persistence: None
+attributes:
+  - name: date
+    attrId: 0
+    type: Date 
+    maxLength: 50
+    mutable: false
+  - name: validFlag
+    attrId: 1 
+    type : PmpValidFlagEnum
+    default: valid
+    mutable: false
+  - name: mulES
+    attrId: 2 
+    type : WORD32
+    mutable: false
+  - name: mulSES
+    attrId: 3 
+    type : WORD32
+    mutable: false
+  - name: mulUAS
+    attrId: 4 
+    type : WORD32
+    mutable: false
+  - name: mulBBE
+    attrId: 5 
+    type : WORD32
+    mutable: false
+  - name: regES
+    attrId: 6 
+    type : WORD32
+    mutable: false
+  - name: regSES
+    attrId: 7 
+    type : WORD32
+    mutable: false
+  - name: regUAS
+    attrId: 8 
+    type : WORD32
+    mutable: false
+  - name: regBBE
+    attrId: 9 
+    type : WORD32
+    mutable: false
+  - name: maxRxPow
+    attrId: 10 
+    type : FLOAT
+    mutable: false
+  - name: minRxPow
+    attrId: 11 
+    type : FLOAT
+    mutable: false
+  - name: maxTxPow
+    attrId: 12 
+    type : FLOAT
+    mutable: false
+  - name: minTxPow
+    attrId: 13 
+    type : FLOAT
+    mutable: false
+actions:
+  customs:
+    - name: Clear
+      actionId: 1
+    - name: ClearRsp
+      actionId: 101

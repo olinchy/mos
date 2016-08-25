@@ -1,0 +1,6 @@
+name: AcrossLevelEnum
+type: BYTE
+default: vc4
+enum:
+   vc4: 0
+   vc12: 1

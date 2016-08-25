@@ -1,0 +1,20 @@
+className: EnvironmentInfo
+tid: 439
+persistence: None
+triggers: [afterGet]
+attributes:
+  - name: current
+    attrId: 0
+    type: WORD32
+    default: 0
+    mutable: true
+  - name: power
+    attrId: 1 
+    type: DOUBLE
+    default: 0
+    mutable: true
+  - name: temperature
+    attrId: 2 
+    type: CHAR
+    default: 0
+    mutable: true

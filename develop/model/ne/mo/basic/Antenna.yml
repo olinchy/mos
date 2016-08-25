@@ -1,0 +1,72 @@
+className: Antenna
+tid: 360
+attributes:  
+  - name: TrafficUnitNo
+    attrId: 0
+    type: BYTE
+    range: [[0,9],[255]]
+    default: 255
+    mutable: true
+  - name: AntennaManufacturers
+    attrId: 1
+    type: String
+    maxLength: 33
+    mutable: true
+  - name: AntennaSize
+    attrId: 2
+    type: String
+    maxLength: 33
+    mutable: true
+  - name: AntennaType
+    attrId: 3
+    type: String
+    maxLength: 33
+    mutable: true
+  - name: AntennaSN
+    attrId: 4
+    type: String
+    maxLength: 128
+    mutable: true
+  - name: Height
+    attrId: 5
+    type: String
+    maxLength: 128
+    mutable: true
+  - name: Azimuth
+    attrId: 6
+    type: String
+    maxLength: 128
+    mutable: true
+  - name: Elevation
+    attrId: 7
+    type: String
+    maxLength: 128
+    mutable: true
+  - name: AntennaInstallPolType
+    attrId: 8
+    type: BYTE
+    enum:
+      HType: 0
+      VType: 1
+    default: HType
+    mutable: true
+  - name: CombinerModel
+    attrId: 9
+    type: String
+    maxLength: 33
+    mutable: true
+  - name: CombinerType
+    attrId: 10
+    type: BYTE
+    enum:
+      Balance: 0
+      UnBalance: 1
+    default: Balance
+    mutable: true
+  - name: CombinerSN
+    attrId: 11
+    type: String
+    maxLength: 33
+    mutable: true
+
+

@@ -1,0 +1,9 @@
+name: VersionPkgTypeEnum
+type: BYTE
+enum:
+      SOFTWARE: 1      
+      PATCH: 2
+      FIRMWARE: 5
+      HOTPATCH: 6
+      AOU: 7
+      UNIFY: 10

@@ -1,0 +1,11 @@
+className: HttpPassage
+tid: 2503
+baseClass: ManagementPassage
+persistence: All
+attributes:
+  - name: url
+    attrId: 1
+    type: String
+    maxLength: 200
+    default: http://127.0.0.1:8080
+    mutable: true

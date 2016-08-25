@@ -1,0 +1,14 @@
+className: Workmode
+tid: 573
+isAbstract : True
+attributes:
+  - name: capacity
+    attrId: 0
+    type: BYTE
+    default: 1
+    mutable: true
+  - name: syncToRemote
+    attrId: 1
+    type: StateEnum
+    default: disable
+    mutable: true

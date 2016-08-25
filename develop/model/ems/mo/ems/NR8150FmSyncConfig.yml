@@ -1,0 +1,17 @@
+className: NR8150FmSyncConfig
+baseClass: FmSyncConfig
+tid: 333
+persistence: None
+override_attributes:
+  - name: neType
+    attrId: 2
+    type: String
+    default: mw.nr8150
+    maxLength: 64
+    mutable: true
+  - name: pollTaskName
+    attrId: 5
+    type: String
+    maxLength: 128
+    default: ZXMW 8150
+    mutable: false

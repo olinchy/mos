@@ -1,0 +1,33 @@
+className: EmsNode
+tid: 120008
+attributes:
+  - name: id
+    attrId: 0
+    type: String
+    maxLength: 256
+    mutable: true
+
+  - name: name
+    attrId: 1
+    type: String
+    maxLength: 256
+    mutable: true
+
+  - name: type
+    attrId: 2
+    type: String
+    maxLength: 256
+    default: "common_ems"
+    mutable: false
+children:
+  - name: EthPort
+    type: PhyPort
+    id: 1
+    count: 1
+    groupType : map
+    autoCreate: {"E-1":PhyPort}
+
+
+  
+
+

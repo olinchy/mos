@@ -1,0 +1,32 @@
+className: DSAttrTemplate
+isAbstract : True
+tid: 7002
+attributes:
+  - name: attrClass
+    attrId: 0
+    type: Array
+    maxItems: 500
+    items:
+      type: String
+    mutable: true
+  - name: attrName
+    attrId: 1
+    type: Array
+    maxItems: 500
+    items:
+      type: String
+    mutable: true
+  - name: attrType
+    attrId: 2
+    type: Array
+    maxItems: 500
+    items:
+      type: String
+    mutable: true
+  - name: attrValue
+    attrId: 3
+    type: Array
+    maxItems: 500
+    items:
+      type: String
+    mutable: true

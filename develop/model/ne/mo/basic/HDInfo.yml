@@ -1,0 +1,44 @@
+className: HDInfo
+tid: 215
+persistence: None
+triggers: [afterGet]
+attributes: 
+  - name: bomVer
+    attrId: 5
+    type: BYTE
+    default: 0
+    mutable: true
+  - name: pcbVer
+    attrId: 6
+    type: BYTE
+    default: 0
+    mutable: true
+  - name: epldVer
+    attrId: 7
+    type: BYTE
+    default: 0
+    mutable: true
+  - name: bootVer
+    attrId: 8
+    type: String
+    maxLength: 44
+    default: ""
+    mutable: true
+  - name: boardSN
+    attrId: 10
+    type: String
+    maxLength: 44
+    default: ""
+    mutable: true
+  - name: pcbVerInfo
+    attrId: 11
+    type: String
+    maxLength: 44
+    default: ""
+    mutable: true
+  - name: hardVerInfo
+    attrId: 12
+    type: String
+    maxLength: 20
+    default: ""
+    mutable: true

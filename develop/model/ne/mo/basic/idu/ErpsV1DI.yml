@@ -1,0 +1,13 @@
+className: ErpsV1DI
+tid: 608
+#triggers: [afterGet]
+persistence: None
+dynamic: true
+attributes:
+  - name: PortStateInfo
+    attrId: 0
+    type: Array 
+    maxItems: 2
+    items:
+        type: ErpsV1PortStateInfoObj 
+    mutable: true

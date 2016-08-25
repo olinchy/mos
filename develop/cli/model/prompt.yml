@@ -1,0 +1,21 @@
+name: prompt
+prompt: "$"
+subCmd:
+  - add
+  - del
+  - get
+  - getConfig
+  - set
+  - ls
+  - find
+  - findConfig
+  - action
+  - starttrans
+  - loadlink
+  - cd
+  - tree
+  - exit
+  - py
+exitWhenEmptyLine: False
+exitAfterSubCmd:
+  - exit

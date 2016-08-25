@@ -1,0 +1,13 @@
+className: SsmSwitch
+tid: 428
+attributes:
+  - name: confAble
+    attrId: 0
+    type: StateEnum
+    default: enable
+    mutable: true
+  - name: confState
+    attrId: 1
+    type: StateEnum
+    default: enable
+    mutable: true

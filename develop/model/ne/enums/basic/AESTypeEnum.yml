@@ -1,0 +1,6 @@
+name: AESTypeEnum
+type: BYTE
+default: AES128
+enum:
+  AES128: 0
+  AES256: 1 
