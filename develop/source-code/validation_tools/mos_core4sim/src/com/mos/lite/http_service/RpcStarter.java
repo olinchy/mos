@@ -3,6 +3,7 @@ package com.mos.lite.http_service;
 import com.zte.mos.util.tools.Prop;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
+import org.eclipse.jetty.webapp.WebAppContext;
 
 public class RpcStarter
 {
@@ -16,8 +17,8 @@ public class RpcStarter
     public void startup() throws Exception
     {
         server = new Server(Integer.parseInt(Prop.get("httpport")));
-        ServletContextHandler context =
-                new ServletContextHandler(ServletContextHandler.SESSIONS);
+        WebAppContext context =
+                new WebAppContext("./", "");
         context.setContextPath("/");
         server.setHandler(context);
         /*

@@ -1,8 +1,0 @@
-module: proxy_server
-dependency:
-  - mosjava
-script: |
-  export MOS_JAVA_OUTPUT=$(pwd)
-  mvn -q clean install package -DoutputPath=$MOS_JAVA_OUTPUT -Dlibpath=$MOS_JAVA_OUTPUT -f $CURRENT_DIR
-  chmod -R +x ${MOS_JAVA_OUTPUT}
-  mkdir ${MOS_JAVA_OUTPUT}/proxy
