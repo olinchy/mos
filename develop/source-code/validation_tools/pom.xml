@@ -12,16 +12,6 @@
         <version>1.2</version>
     </parent>
     <modules>
-        <module>ut_common</module>
-        <module>fm_stub</module>
         <module>mos_core4sim</module>
-        <module>simulator_bridge</module>
-        <module>ft_utils</module>
-        <module>uep_stub</module>
-        <module>uep_client_stub</module>
-        <module>preload_in_sim</module>
-        <module>sitereport_verify_stub</module>
-        <module>ft_reverse</module>
-        <module>ft_switch_model</module>
     </modules>
 </project>

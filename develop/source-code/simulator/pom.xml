@@ -59,12 +59,6 @@
     </build>
 
     <modules>
-        <module>address_server</module>
-        <module>mos_ne</module>
-        <module>moslite</module>
-        <module>rpc-tester</module>
-        <module>proxy_server</module>
-        <module>logger_service</module>
         <module>mos_sdn</module>
     </modules>
 

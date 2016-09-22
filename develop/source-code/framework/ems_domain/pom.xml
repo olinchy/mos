@@ -34,9 +34,5 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.zte.mos</groupId>
-            <artifactId>ut_common</artifactId>
-        </dependency>
     </dependencies>
 </project>

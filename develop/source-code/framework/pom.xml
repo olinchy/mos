@@ -14,18 +14,8 @@
 
     <modules>
         <module>mos</module>
-        <module>mos_daemon</module>
         <module>mos_domain</module>
-        <module>mos_container</module>
         <module>msg-framework</module>
-        <module>rpc-http</module>
-        <module>restful-http</module>
-        <module>snmp</module>
-        <module>concept_model</module>
-        <module>ems_domain</module>
-        <module>debugenv_in_ems</module>
         <module>debugenv_in_simulator</module>
-        <module>task-framework</module>
-        <module>services-access</module>
     </modules>
 </project>

@@ -16,19 +16,9 @@
         <module>expressions</module>
         <module>jsonrpc4j-master</module>
         <module>mos_java_util</module>
-        <module>mos_persistent</module>
         <module>odb_java</module>
-        <module>swing-lib</module>
         <module>mos_inf</module>
-        <module>message-shower</module>
-        <module>mos-process-daemon</module>
-        <module>ems-process-daemon</module>
         <module>smart_link</module>
-        <module>daemon</module>
-        <module>ueplogger</module>
         <module>standalone_logger</module>
-        <module>mo_binder</module>
-        <module>monitor</module>
-        <module>logging_service</module>
     </modules>
 </project>
