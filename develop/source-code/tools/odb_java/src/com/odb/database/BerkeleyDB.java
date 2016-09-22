@@ -44,15 +44,15 @@ public class BerkeleyDB<PK, T> implements PersistDB<PK, T>
             {
                 envStatusWatcher = new Timer();
                 final StatsConfig statsConfig = new StatsConfig();
-                envStatusWatcher.schedule(new TimerTask()
-                {
-                    @Override
-                    public void run()
-                    {
-                        logger.info("outputting env statues ------------------");
-                        logger.info(env.getStats(statsConfig));
-                    }
-                }, 1000, 60000);
+//                envStatusWatcher.schedule(new TimerTask()
+//                {
+//                    @Override
+//                    public void run()
+//                    {
+//                        logger.info("outputting env statues ------------------");
+//                        logger.info(env.getStats(statsConfig));
+//                    }
+//                }, 1000, 60000);
             }
         }
     }
