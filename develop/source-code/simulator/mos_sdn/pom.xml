@@ -65,7 +65,7 @@
                                     <filtering>true</filtering>
                                     <includes>
                                         <include>*.properties</include>
-                                        <include>ca.cert.pem</include>
+                                        <indlude>ca/</indlude>
                                     </includes>
                                 </resource>
                             </resources>
