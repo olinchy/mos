@@ -17,5 +17,6 @@
         <module>mos_domain</module>
         <module>msg-framework</module>
         <module>debugenv_in_simulator</module>
+        <module>concept_model</module>
     </modules>
 </project>

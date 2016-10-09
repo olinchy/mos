@@ -13,7 +13,6 @@ import com.zte.mos.type.Pair;
 import com.zte.mos.util.basic.Logger;
 import com.zte.mos.util.tools.JsonUtil;
 import com.zte.mos.util.tools.Prop;
-import org.apache.http.annotation.NotThreadSafe;
 import org.eclipse.jetty.server.Server;
 
 import java.net.MalformedURLException;
@@ -28,7 +27,6 @@ import static com.zte.mos.util.tools.JsonUtil.*;
  * make the interface better
  * not thread-safe
  */
-@NotThreadSafe
 public class MosServiceHttp implements MosService
 {
     public MosServiceHttp() throws MOSException

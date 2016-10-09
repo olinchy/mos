@@ -14,11 +14,13 @@
     <name>tools-parent</name>
     <modules>
         <module>expressions</module>
-        <module>jsonrpc4j-master</module>
         <module>mos_java_util</module>
         <module>odb_java</module>
         <module>mos_inf</module>
         <module>smart_link</module>
         <module>standalone_logger</module>
+        <module>logging_service</module>
+        <module>mos_persistent</module>
+        <module>jsonrpc4j-master</module>
     </modules>
 </project>

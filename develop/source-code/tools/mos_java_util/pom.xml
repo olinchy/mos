@@ -40,15 +40,19 @@
         </dependency>
         <dependency>
             <groupId>com.zte.mos.tools</groupId>
-            <artifactId>jsonrpc4j-master</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.zte.mos.tools</groupId>
             <artifactId>standalone_logger</artifactId>
         </dependency>
         <dependency>
             <groupId>org.yaml</groupId>
             <artifactId>snakeyaml</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.zte.mos.tools</groupId>
+            <artifactId>jsonrpc4j-master</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-server</artifactId>
         </dependency>
     </dependencies>
 </project>

@@ -1,8 +1,13 @@
 className: AirInterface
 tid: 2
 attributes:
-  - name: planed_frequency
+  - name: txFrequency
     attrId: 1
+    type: WORD16
+    default: 700
+    mutable: true
+  - name: rxFrequency
+    attrId: 2
     type: WORD16
     default: 700
     mutable: true
