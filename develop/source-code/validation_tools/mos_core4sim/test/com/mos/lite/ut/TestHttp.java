@@ -20,20 +20,11 @@ public class TestHttp
     @Test
     public void test() throws Throwable
     {
-        JsonRpcHttpClient client = new JsonRpcHttpClient(new URL("http://localhost:8081/goform/emsMsg/"));
-//        client.setHostNameVerifier(new HostnameVerifier()
-//        {
-//            @Override
-//            public boolean verify(String s, SSLSession sslSession)
-//            {
-//                return true;
-//            }
-//        });
-//        client.setSslContext(sslcontext);
+        JsonRpcHttpClient client = new JsonRpcHttpClient(new URL("http://localhost:8282/mos"));
 
         JsonNode node = client.invoke(
                 "login",
-                new Object[]{"EMS", "", "", JsonUtil.toNode(new Maybe<String>(UUID.randomUUID().toString()))},
+                new Object[]{"MOSSERVICE", "", "", JsonUtil.toNode(new Maybe<String>(UUID.randomUUID().toString()))},
                 JsonNode.class);
 //        @JsonRpcParam("sessionId") String sessionId,
 //        @JsonRpcParam("moList") JsonNode moList,

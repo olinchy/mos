@@ -33,27 +33,27 @@ public class AirInterface extends BaseManagementObject
     public AirInterface(DN dn)
     {
         super(dn);
-        txFrequency=700;
-        rxFrequency=700;
+        txFrequency=1480000l;
+        rxFrequency=1480000l;
     
     
     }
     public AirInterface()
     {
         super();
-        txFrequency=700;
-        rxFrequency=700;
+        txFrequency=1480000l;
+        rxFrequency=1480000l;
     
     
     }
    
-    @MoAttribute(field ="f_txFrequency", type = Type.WORD16)
+    @MoAttribute(field ="f_txFrequency", type = Type.WORD32)
 
-    public  Integer txFrequency;
+    public  Long txFrequency;
     
-    @MoAttribute(field ="f_rxFrequency", type = Type.WORD16)
+    @MoAttribute(field ="f_rxFrequency", type = Type.WORD32)
 
-    public  Integer rxFrequency;
+    public  Long rxFrequency;
     
    
    

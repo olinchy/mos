@@ -3,11 +3,11 @@ tid: 2
 attributes:
   - name: txFrequency
     attrId: 1
-    type: WORD16
-    default: 700
+    type: WORD32
+    default: 1480000
     mutable: true
   - name: rxFrequency
     attrId: 2
-    type: WORD16
-    default: 700
+    type: WORD32
+    default: 1480000
     mutable: true
