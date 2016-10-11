@@ -5,16 +5,19 @@ Data provider
 ## Installation
 
 ### Step #1 copy lib to maven repository
+```
 mkdir -p ~/.m2/repository/com/sleepycat/je/6.3.8/
 cp ../../lib/* ~/.m2/repository/com/sleepycat/je/6.3.8/
+```
 
 ### Step #2 build
 mvn clean install -DskipTests
 
 ### Step #3 start the web service
-cd simulator/mos_sdn/run\n
-chmod a+x run.sh\n
-./run.sh\n
+cd simulator/mos_sdn/run
+
+chmod a+x run.sh
+./run.sh
 
 ### Step #4 start cli in another terminal
 python mos/develop/cli/main.py http://localhost:8282/mos
