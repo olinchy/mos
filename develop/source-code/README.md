@@ -12,9 +12,9 @@ cp ../../lib/* ~/.m2/repository/com/sleepycat/je/6.3.8/
 mvn clean install -DskipTests
 
 ### Step #3 start the web service
-cd simulator/mos_sdn/run
-chmod a+x run.sh
-./run.sh
+cd simulator/mos_sdn/run\n
+chmod a+x run.sh\n
+./run.sh\n
 
 ### Step #4 start cli in another terminal
 python mos/develop/cli/main.py http://localhost:8282/mos
