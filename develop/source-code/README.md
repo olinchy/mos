@@ -24,6 +24,9 @@ in cli you can use 'TAB' key to know the next step
 
 command like this
 add /NE/[NENAME];
+
 add /NE/[NENAME]/AirInterface/LP-MWPS-ifIndex1 txFrequency [valueOfTx] rxFrequency [valueOfRx];
+
 add /NE/[NENAME]/AirInterface/LP-MWPS-ifIndex2 txFrequency [valueOfTx] rxFrequency [valueOfRx];
+
 
