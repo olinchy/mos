@@ -23,6 +23,7 @@ python mos/develop/cli/main.py http://localhost:8282/mos
 in cli you can use 'TAB' key to know the next step
 
 command like this
+
 add /NE/[NENAME];
 
 add /NE/[NENAME]/AirInterface/LP-MWPS-ifIndex1 txFrequency [valueOfTx] rxFrequency [valueOfRx];
