@@ -24,19 +24,19 @@ import static com.zte.mos.util.Singleton.getInstance;
 
 
 
-@Mo(tid=2)
-public class AirInterface extends BaseManagementObject
+@Mo(tid=3)
+public class Frequency extends BaseManagementObject
 {
 
     private static final long serialVersionUID = 1L;
 
-    public AirInterface(DN dn)
+    public Frequency(DN dn)
     {
         super(dn);
     
     
     }
-    public AirInterface()
+    public Frequency()
     {
         super();
     
@@ -44,21 +44,13 @@ public class AirInterface extends BaseManagementObject
     }
    
    
-    @MoChild
-    @MoSet(count=300)
-    public GroupOf300FrequencysInAirInterface txFrequency = new GroupOf300FrequencysInAirInterface(this, "txFrequency");
-    
-    @MoChild
-    @MoSet(count=300)
-    public GroupOf300FrequencysInAirInterface rxFrequency = new GroupOf300FrequencysInAirInterface(this, "rxFrequency");
-    
    
     
 
     public com.zte.mos.message.Mo afterGet() throws MOSException
     {
         AfterGetter<ManagementObject, com.zte.mos.message.Mo> getter;
-        if ((getter = mos.getAfterGetter(AirInterface.class)) == null)
+        if ((getter = mos.getAfterGetter(Frequency.class)) == null)
         {
             return super.afterGet();
         }

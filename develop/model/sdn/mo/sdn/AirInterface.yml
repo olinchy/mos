@@ -1,13 +1,13 @@
 className: AirInterface
 tid: 2
-attributes:
-  - name: txFrequency
-    attrId: 1
-    type: WORD32
-    default: 1480000
-    mutable: true
-  - name: rxFrequency
-    attrId: 2
-    type: WORD32
-    default: 1480000
-    mutable: true
+children:
+   - name : txFrequency
+     type: Frequency
+     id : 1
+     count : 300
+     autoCreate: false
+   - name : rxFrequency
+     type: Frequency
+     id : 2
+     count : 300
+     autoCreate: false
