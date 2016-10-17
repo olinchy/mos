@@ -1,7 +1,13 @@
 className: NE
 tid: 1
 children:
-   - name : AirInterface
+   - name : txFrequency
+     type: Frequency
      id : 1
-     count : 20
+     count : 300
+     autoCreate: false
+   - name : rxFrequency
+     type: Frequency
+     id : 2
+     count : 300
      autoCreate: false

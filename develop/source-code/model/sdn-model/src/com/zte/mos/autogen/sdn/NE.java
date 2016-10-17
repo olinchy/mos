@@ -45,8 +45,12 @@ public class NE extends BaseManagementObject
    
    
     @MoChild
-    @MoSet(count=20)
-    public GroupOf20AirInterfacesInNE AirInterface = new GroupOf20AirInterfacesInNE(this, "AirInterface");
+    @MoSet(count=300)
+    public GroupOf300FrequencysInNE txFrequency = new GroupOf300FrequencysInNE(this, "txFrequency");
+    
+    @MoChild
+    @MoSet(count=300)
+    public GroupOf300FrequencysInNE rxFrequency = new GroupOf300FrequencysInNE(this, "rxFrequency");
     
    
     

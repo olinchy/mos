@@ -19,7 +19,7 @@ public abstract class ConfigExecutor implements Executor
     public Result post(JsonNode result, MosService service) throws MOSException
     {
         ConfResultSet res = toObject(result.toString(), ConfResultSet.class);
-        service.autoCommit(res);
+        Result res1 = service.autoCommit(res);
 
         return res;
     }

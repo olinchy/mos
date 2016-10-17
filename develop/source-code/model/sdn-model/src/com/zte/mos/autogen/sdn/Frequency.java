@@ -24,7 +24,7 @@ import static com.zte.mos.util.Singleton.getInstance;
 
 
 
-@Mo(tid=3)
+@Mo(tid=2)
 public class Frequency extends BaseManagementObject
 {
 
